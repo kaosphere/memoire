@@ -1,0 +1,428 @@
+% Changer l'option these pour memoire ou thesepararticles selon le besoin
+\documentclass[letterpaper, twoside, 12pt,these,creativecommons,hyperref]{thETS} 
+%\documentclass[letterpaper, oneside, 12pt,memoire]{thETS} 
+%\documentclass[letterpaper, oneside, 12pt,thesepararticles]{thETS}
+
+\usepackage{times}
+\usepackage[pdftex]{graphicx} %Pour insérer des figures
+\usepackage[round]{natbibETS} %Pour faire les citations du genre Autheur (Année)
+% Pour faire une citation du genre Auteur (Année), utilisez la commande \citet
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multibib} %Pour faire la liste des références
+\newcites{refs}{LISTE DE RÉFÉRENCES}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}  % Symboles et fonctions mathématiques supplémentaires
+\usepackage{amssymb}  % Symboles math\'eatiques
+\usepackage{caption}
+\usepackage{url} % Prise en charge des url pour les référence
+\urlstyle{rm} % Hyphenation des références
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   IMPORTANT
+%%
+%%  Si vous créez un fichier PDF directement avec PDFLatex, et vous utilisez Acrobat Reader
+%% pour faire l'impression, n'oubliez-pas de changer l'option <<Mise à l'échelle>> pour la valeur
+%% <<Aucune>> pour que les marges soient imprimés correctement.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listfiles
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------
+
+% A décommenter et modifier si nécessaire dans le cas d'une maitrise
+%\diplome{
+%  DE LA\\
+%  MAÎTRISE EN GÉNIE LOGICIEL\\
+%  M.Ing.
+%}
+
+\title{titre du document}
+
+\author{Prénom NOM DE FAMILLE}
+\authorcopyright{Prénom Nom}
+
+\datesoutenance{``Date de soutenance''}
+
+\datedepot{``Date du dépôt au Bureau des cycles supérieurs''}
+
+\directeur{M. }{Prénom Nom}{Nom du département et institution}
+
+%\directeur{Mme.}{Prénom Nom}{Nom du département et institution}
+
+%\codirecteur{Mme.}{Prénom Nom}{département et institution}
+
+\president{M.}{Prénom Nom}{département et institution}
+
+\examinexterne{M.}{Prénom Nom}{département et institution}{}
+
+\jury{Mme.}{Prénom Nom}{département et institution}{}
+
+%------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\pagenumbering{Roman}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE TITRE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PRÉSENTATION JURY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\presentjury
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AVANT PROPOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{avantpropos}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+\end{avantpropos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REMERCIEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{remerciements}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+\end{remerciements}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SOMMAIRE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{sommaire}{mot-clé1, mot-clé2}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+
+Proin tempor eleifend tincidunt. Nulla facilisi. Nulla facilisi. Duis congue semper varius. Etiam nulla nulla, sollicitudin id consequat at, tincidunt quis arcu. Praesent adipiscing justo sed odio varius congue. Etiam viverra hendrerit eros, et dictum mi pellentesque in. Aliquam eu est eu arcu sollicitudin cursus nec a dui. Fusce accumsan, nisl in mollis viverra, est turpis elementum massa, at vulputate dui enim vitae felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eget ante ac lacus tincidunt placerat vel sed velit. In condimentum metus et ante dapibus eget gravida eros commodo. Nulla massa augue, ornare vitae faucibus sed, fermentum ultrices tortor.
+
+Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus.
+
+Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue.
+
+Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est.
+
+
+\end{sommaire}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABSTRACT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}{titre original}{keyword1, keyword2, keyword2, keyword2, keyword2, keyword2, keyword2, keyword2, keyword2, keyword2, keyword2, keyword2, keyword2, keyword2 }
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+
+Proin tempor eleifend tincidunt. Nulla facilisi. Nulla facilisi. Duis congue semper varius. Etiam nulla nulla, sollicitudin id consequat at, tincidunt quis arcu. Praesent adipiscing justo sed odio varius congue. Etiam viverra hendrerit eros, et dictum mi pellentesque in. Aliquam eu est eu arcu sollicitudin cursus nec a dui. Fusce accumsan, nisl in mollis viverra, est turpis elementum massa, at vulputate dui enim vitae felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eget ante ac lacus tincidunt placerat vel sed velit. In condimentum metus et ante dapibus eget gravida eros commodo. Nulla massa augue, ornare vitae faucibus sed, fermentum ultrices tortor.
+
+Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus.
+
+Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue.
+
+Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est.
+
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE DES MATIÈRES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LISTE DES TABLEAUX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LISTE DES FIGURES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LISTE DES ABBREVIATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{listofabbr}[3cm]
+%\item [ASC] Agence Spatiale Canadienne
+%\item [ASE] Agence Spatiale Européenne
+%\item [ETS] École de Technologie Supérieure
+%
+%\end{listofabbr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LISTE DES SYMBOLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{listofsymbols}[3cm]
+\item [$\textbf{a}$] Input feature vector
+\item [$\textbf{A}$] Complemented input feature vector
+\item [$\alpha$] FAM choice hyperparameter
+\item [$B_t$] New batch learning data block available that combines all available data up to a time $t$ (\emph{i.e.},$D_1 \cup ... \cup D_t$)
+\item [$\beta$] FAM learning hyperparameter
+\item [$\mathbf{c}$] Class input associated to $\textbf{a}$ for supervised learning
+\item [$C_k$] Label of class $k$
+\item [$|C_k|_\mathbf{LTM}$] Maximal number of samples per class in the long term memory
+\item [$D_t$] New incremental learning data block available at a time $t$
+\item [$D_t^\text{t}$] Training data set at a time $t$
+\item [$D_t^\text{v}$] Validation data set at a time $t$
+\item [$D_t^\text{f}$] Fitness estimation data set at a time $t$
+\item [$\delta_{e_1e_2}$] Particle diversity between two ensemble members $e_1$ and $e_2$
+\item [$\Delta$] Distance from a local best particle within which no personal best value can be memorized by other particles among the swarm
+\item [$\Delta\theta_{e_1e_2}$] Diversity between two classifiers $e_1$ and $e_2$ determined with a FAM specific indicator
+\item [$e_1,e_2$] Two ensemble members
+\item [$\textit{EoFAM}$] An ensemble of fuzzy ARTMAP networks
+\item [$\epsilon$] FAM match-tracking hyperparameter
+\item [$f(\textbf{h})$] Objective function for a fuzzy ARTMAP hyperparameter vector $\textbf{h}$ in a static optimization environment
+\item [$f(\textbf{h},t)$] Objective function for a fuzzy ARTMAP hyperparameter vector $\textbf{h}$ and at a time $t$ in a dynamic optimization environment
+\item [$f_e(\mathbf{h},t)$] Objective function defined by the generalization error rate.
+\item [$f_o(\textbf{h}_n,t)$] Objective function $o$ (during MOO)
+\item [$f_s(\mathbf{h},t)$] Objective function defined by the size of the $F_2$ layer (\emph{i.e.}, number of $F_2$ layer nodes)
+\item [$F^{ab}$] FAM map field
+\item [$F_1$] FAM input layer
+\item [$F_2$] FAM competitive hidden layer
+\item [$\textit{FAM}_\text{estimation}$] FAM network used to estimate fitness with the data set $D_t^\text{f}$
+\item [$\textit{FAM}_n$] FAM network associated to the best position of particle $n$
+\item [$\textit{FAM}_{n,o}$] FAM network associated to the best position of particle $n$ for the objective $o$ (during MOO)
+\item [$\textit{FAM}_\text{optimal}$] FAM network with the highest accuracy obtained after optimization on a learning block $D_t$
+\item [$\textit{FAM}_n^\text{start}$] FAM network that defines the initial state of the particle $n$ prior learning data block $D_t$. During mono-objective optimization it corresponds to the best position of particle $n$, while it is associated with the current position of particle $n$ during MOO.
+\item [$\textit{FAM}_\text{temp}$] Temporary fuzzy ARTMAP network used during fitness estimation
+
+\end{listofsymbols}
+
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CORPS DE LA THÈSE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+
+\reversemarginpar % pour que les marginpar s'amenent a GAUCHE du doc.
+
+\begin{introduction}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor.  In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum. Proin tempor eleifend tincidunt. Nulla facilisi. Nulla facilisi. Duis congue semper varius. Etiam nulla nulla, sollicitudin id consequat at, tincidunt quis arcu. Praesent adipiscing justo sed odio varius congue. Etiam viverra hendrerit eros, et dictum mi pellentesque in. Aliquam eu est eu arcu sollicitudin cursus nec a dui. Fusce accumsan, nisl in mollis viverra, est turpis elementum massa, at vulputate dui enim vitae felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eget ante ac lacus tincidunt placerat vel sed velit. In condimentum metus et ante dapibus eget gravida eros commodo. Nulla massa augue, ornare vitae faucibus sed, fermentum ultrices tortor. Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus. Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue. Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum. Proin tempor eleifend tincidunt. Nulla facilisi. Nulla facilisi. Duis congue semper varius. Etiam nulla nulla, sollicitudin id consequat at, tincidunt quis arcu. Praesent adipiscing justo sed odio varius congue. Etiam viverra hendrerit eros, et dictum mi pellentesque in. Aliquam eu est eu arcu sollicitudin cursus nec a dui. Fusce accumsan, nisl in mollis viverra, est turpis elementum massa, at vulputate dui enim vitae felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eget ante ac lacus tincidunt placerat vel sed velit. In condimentum metus et ante dapibus eget gravida eros commodo. Nulla massa augue, ornare vitae faucibus sed, fermentum ultrices tortor. Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendnormalfontum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus. Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue. Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est.
+\begin{figure}[ht]
+	\centering
+	\fbox{
+		\includegraphics{Figures/logoets.jpg}
+	}
+	\caption{Test de longue légende : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit}
+	\label{fig:logoets}
+\end{figure}
+Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendnormalfontum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus. Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue. Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est. Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendnormalfontum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus. Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue. Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est. Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendnormalfontum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus. Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue. Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est. Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendnormalfontum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus. Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue. Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est. Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendnormalfontum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus. Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue. Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est.
+
+
+\end{introduction}
+
+%\begin{revuedelitterature}
+%
+%Décommenter pour section revue de littérature, pour les thèses par article.
+%
+%\end{revuedelitterature}
+
+\chapter{Premier Chapitre: test de chapitre long pour vérifier le comportement de retour automatique à la ligne}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+
+\begin{align}
+   \beta = 8
+\end{align}
+\begin{align}
+   \gamma = \alpha \times 3
+\end{align}
+
+
+\section{Première Section du Premier Chapitre}
+
+Test de décallage d'énumérations
+\begin{enumerate}
+ \item test 1
+ \item test 2
+\end{enumerate}
+
+Test de décallage de puces
+
+\begin{itemize}
+ \item test 1
+ \item test 2
+\end{itemize}
+
+\subsection{Deuxième Sous-Division}
+<Texte>
+
+\subsubsection{Troisième Sous-Division}
+
+Vérification des références: \cite{Arica2002}.
+\\
+Vérification de href: \href{http://www.etsmtl.ca/Etudiants-actuels/Cycles-sup/Realisation-etudes/Guides-gabarits}{Link to Gabarit ETS}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula.
+\\
+Vérification de url: \url{http://www.etsmtl.ca/Etudiants-actuels/Cycles-sup/Realisation-etudes/Guides-gabarits}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula.
+\\
+Fig.~\ref{fig:logoets}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum, 
+%
+\begin{figure}[ht]
+	\centering
+	\fbox{
+		\includegraphics{Figures/logoets.jpg}
+	}
+	%\caption{Logo de l'École de Technologie Supérieure. Tiré de \cite{ETS2010}}
+	\caption{Distribution of horizontal velocity and streamlines in the vicinity of the nacelle for (a-c) non-operating turbine and (d-f) operating turbine ($U_{ref}$ = 20 m/s, the black circle indicates the position of the anemometer)}
+\end{figure}
+
+
+\begin{table}[ht]
+	\caption{Petit tableau: Encore une fois, test de legende de tableau plus longue pour vérifier le comportement de la liste}
+		\begin{tabular}{|c|c|c|c|}
+		\hline
+			blá & blá & blá & blá \\
+			\hline
+		\end{tabular}
+	\label{tab:UnTableau}
+\end{table}
+
+\chapter{Title of Second Chapter}
+
+\begin{figure}[ht]
+	\centering
+	\fbox{
+		\includegraphics{Figures/logoets.jpg}
+	}
+	\caption{Logo de l'École de Technologie Supérieure. \newline Tiré de \cite{ETS2010}}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\fbox{
+		\includegraphics{Figures/logoets.jpg}
+	}
+	\caption{Logo de l'École de Technologie Supérieure. \newline Tiré de \cite{ETS2010}}
+\end{figure}
+
+
+
+\chapter{Deuxième Chapitre}
+
+\chapter{Troisième Chapitre}
+
+\begin{conclusion}
+Texte de conclusion
+
+\end{conclusion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ANNEXE:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+
+
+\multiannexe % si on a plus d'une annexe
+%\include{annexe1}
+\chapter{Titre de l'annexe} 
+
+S'il y lieu
+
+\section{Première Section de l'Annexe}
+<Texte à inserer> 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum. Test citation \cite{Bha10}
+
+Tests de figure en annexe.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% On a crée les environiments figurep et tablep pour que les figures et
+% les tableaux de l'annexe n'apparaissent pas dans les listes de figures et tableaux
+%
+
+\begin{figureap}[ht]
+	\fbox{ % cette commande est nécéssaire pour encadrer les figures
+	\centering
+		\includegraphics{Figures/logoets.jpg}
+	}
+	\caption{Logo de l'ÉTS dans l'annexe. Ici on va mettre un peu plus de texte pour voir comment va être la présentation de
+	la légende dans ce cas.}
+	\label{fig:testap}
+\end{figureap}
+\begin{center}
+\begin{equation} 
+2*x=4 
+\end{equation}
+\end{center}
+
+\begin{tableap}[*ht]
+	\caption{Un autre tableau. Ici on va rédiger un peu plus de texte pour vérifier si la légende sera bien placé.}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+			{\bf titre} & {\bf titre} & {\bf titre} & {\bf titre} & {\bf titre} & {\bf titre} & {\bf titre} & {\bf titre} \\
+	  \hline
+			blá & blá & blá & blá & blá & blá & blá & blá \\
+	  \hline
+			blá & blá & blá & blá & blá & blá & blá & blá \\
+	  \hline
+			blá & blá & blá & blá & blá & blá & blá & blá \\
+	  \hline
+			blá & blá & blá & blá & blá & blá & blá & blá \\
+	  \hline
+			blá & blá & blá & blá & blá & blá & blá & blá \\
+	  \hline
+			blá & blá & blá & blá & blá & blá & blá & blá \\
+	  \hline
+		\end{tabular}
+	\label{tab:tableau_annexe}
+\end{tableap}
+
+Test citation \ref{fig:testap}.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+\begin{equation}
+x = 42
+\end{equation} 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc.
+
+\subsection{Test}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+
+\citerefs{Test} \citerefs{Test2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LISTE DE RÉFERENCES
+%
+% IMPORTANT:
+% Pour que ça marche:
+%   1. Compiler le document une fois
+%   2. Rouler la commande: << bibtex refs >>...cliquer sur le fichier update_refs.bat sur Windows
+%   3. Recompiler le document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Changement d'interligne pour passer en simple pour les références et la bibliographie.
+
+%\newpage
+\singlespacing
+%\nociterefs{*} %Ici vous devez inclure les références qui ne sont pas cités, ou étoiles pour toutes les réfs
+\bibliographystylerefs{bibETS}
+\addcontentsline{toc}{chapter}{LISTE DE RÉFÉRENCES}
+\bibliographyrefs{refs} % à décommanter et indiquer la liste des fichiers bib
+\onehalfspacing
+
+%------------------------------------------------------------------------------------------------------------------------------------------
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHIE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\singlespacing
+%\nocite{*}
+\bibliographystyle{bibETS}
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHIE}
+\bibliography{biblio} % à décommanter et indiquer la liste des fichiers bib
+\onehalfspacing
+
+\end{document}
