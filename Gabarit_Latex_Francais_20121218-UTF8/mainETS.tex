@@ -1,5 +1,5 @@
 % Changer l'option these pour memoire ou thesepararticles selon le besoin
-\documentclass[letterpaper, twoside, 12pt,these,creativecommons,hyperref]{thETS} 
+\documentclass[letterpaper, twoside, 12pt, memoire, creativecommons, hyperref]{thETS} 
 %\documentclass[letterpaper, oneside, 12pt,memoire]{thETS} 
 %\documentclass[letterpaper, oneside, 12pt,thesepararticles]{thETS}
 
@@ -35,22 +35,22 @@
 %------------------------------------------------------------------------------------------------------------------------------------------
 
 % A décommenter et modifier si nécessaire dans le cas d'une maitrise
-%\diplome{
-%  DE LA\\
-%  MAÎTRISE EN GÉNIE LOGICIEL\\
-%  M.Ing.
-%}
+\diplome{
+  DE LA\\
+  MAÎTRISE EN GÉNIE DE LA PRODUCTION AUTOMATISEE\\
+  M.Ing.
+}
 
-\title{titre du document}
+\title{utilisation de signaux électromyographiques pour le contrôle d'un bras robotique pour usagers de fauteuils roulants motorisés.}
 
-\author{Prénom NOM DE FAMILLE}
-\authorcopyright{Prénom Nom}
+\author{Alexandre JUMELINE}
+\authorcopyright{Alexandre Jumeline}
 
 \datesoutenance{``Date de soutenance''}
 
 \datedepot{``Date du dépôt au Bureau des cycles supérieurs''}
 
-\directeur{M. }{Prénom Nom}{Nom du département et institution}
+\directeur{M. }{Rachid Aissaoui}{Département de Génie de la Production Automatisée}
 
 %\directeur{Mme.}{Prénom Nom}{Nom du département et institution}
 
@@ -82,7 +82,11 @@
 % AVANT PROPOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{avantpropos}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+Ce projet a été réalisé en partenariat avec la societé Canadienne Kinova dans le but d'ajouter une interface de contrôle à leur bras robotique Jaco contrôlable par le biais d'un Joystick. 
+
+Le but principal était de prendre la suite du projet de maitrise de Véronique Maheu qui consistait en l'étude de la performance de différents classificateurs dans le cadre de la classification de mouvements à partir de huit canaux électromyographiques. 
+
+Le projet devait aussi se servir des paramètres cepstraux du signal électromyographiques. Pendant la réalisation, il s'est avéré que des caractéristiques du signal beaucoup plus simples permettent de discriminer suffisamment les mouvements effectués par l'utilisateur. De ce fait l'utilisation des paramètres cepstraux du signal a été abandonnée au profit d'une détection d'activité musculaire simple.
 \end{avantpropos}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -95,17 +99,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo just
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SOMMAIRE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{sommaire}{mot-clé1, mot-clé2}
+\begin{sommaire}{Kinova, jaco, contrôleur EMG, temps-réel, blessé médullaire}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+Les blessés médullaires de haut niveau lésionnel n’ont plus l’usage de leurs bras, mais conservent des capacités de mouvements résiduelles variant selon la hauteur de leur lésion. Ces capacités résiduelles concernent des mouvements restreints des doigts et des épaules principalement. Suivant le degré d’atteinte et la hauteur de la lésion de la moelle épinière, certaines personnes ne conservent pas suffisamment de liberté de mouvement dans leurs doigts pour utiliser ne serait-ce qu’un simple joystick. Pour ces personnes, les activités de la vie quotidienne (AVQ) deviennent des tâches très compliquées. 
 
-Proin tempor eleifend tincidunt. Nulla facilisi. Nulla facilisi. Duis congue semper varius. Etiam nulla nulla, sollicitudin id consequat at, tincidunt quis arcu. Praesent adipiscing justo sed odio varius congue. Etiam viverra hendrerit eros, et dictum mi pellentesque in. Aliquam eu est eu arcu sollicitudin cursus nec a dui. Fusce accumsan, nisl in mollis viverra, est turpis elementum massa, at vulputate dui enim vitae felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eget ante ac lacus tincidunt placerat vel sed velit. In condimentum metus et ante dapibus eget gravida eros commodo. Nulla massa augue, ornare vitae faucibus sed, fermentum ultrices tortor.
+La société canadienne Kinova a conçu un bras robotique, JACO, adaptable à un fauteuil roulant motorisé afin d’aider les personnes à mobilité réduite à effectuer leurs actions de la vie quotidienne plus facilement. En effet, celui-ci permet la saisie d’objets ou d’ouvrir des portes de manière intuitive en n’utilisant qu’un Joystick. Cependant les personnes n’ayant plus suffisamment d’activité musculaire dans les doigts ne peuvent donc pas profiter de ce progrès. Le but de ce projet est d’adapter l’utilisation du bras JACO aux personnes blessées médullaires en utilisant les signaux électromyographiques de 4 muscles résiduels au niveau du cou et de l’épaule. 
 
-Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in tellus in massa iaculis dignissim quis vitae ante. Duis in velit at nulla tempor elementum id in dolor. Nam mattis pulvinar mauris eu feugiat. Curabitur viverra laoreet tincidunt. Mauris sagittis metus in nisl lobortis faucibus pulvinar vitae dolor. Cras luctus hendrerit erat, ac fringilla purus tincidunt ac. Etiam fringilla pharetra justo a commodo. Duis risus nisl, aliquet ut hendrerit ut, pretium nec odio. Suspendisse tincidunt nisl et ipsum commodo sed dictum sapien scelerisque. Quisque vehicula fringilla velit, eget accumsan lorem consequat sit amet. In at ligula ipsum, feugiat luctus felis. Ut cursus blandit nulla quis bibendum. Sed varius ipsum vulputate erat tincidunt ut faucibus erat pharetra. Cras ultrices quam ut leo ullamcorper tristique. Praesent sapien massa, tempor id iaculis eu, bibendum in risus.
+L’acquisition des signaux EMG est faite avec des électrodes Delsys filtrées et pré-amplifiées en temps-réel à 2 kHz. Les électrodes sont placées sur quatre muscles présent chez les blessés médullaires de haut niveau : les deux trapèzes ainsi que les deux sternocléïdomastoïdiens. Ces muscles ont été choisis car ils permettent par leur seule activation de reconnaitre un mouvement donné : une élévation de l’épaule dans le cas des trapèzes et une rotation de la tête dans le cas des sternocléïdomastoïdiens.
 
-Suspendisse eu eros nibh. Pellentesque sodales suscipit risus, at pulvinar lorem porta sit amet. Nunc scelerisque tempor libero, eget elementum velit aliquet et. Curabitur in elit vel erat lobortis imperdiet. Nunc non massa vel nisl interdum consectetur ac in enim. Curabitur sed turpis purus. Donec imperdiet, nunc a faucibus fermentum, erat est viverra urna, eget suscipit nisi felis vel augue.
+L’énergie de Teager-Keiser est utilisée afin de déterminer si une activité musculaire est présente ou non, et chaque mouvement détecté peut être relié à une action du bras robot. Une calibration peut être effectuée pour chaque muscle afin de définir des seuils de détection personnalisés. Enfin un système de filtra prédicitif  temps réel a été intégré afin d’augmenter la sensibilité du système a des mouvements plus lents ou pour les personnes ayant moins de tonus musculaire.
 
-Maecenas risus purus, adipiscing in ultrices vitae, posuere sed enim. Proin odio nulla, dapibus non imperdiet malesuada, feugiat quis augue. Proin vehicula arcu eu purus ornare rhoncus. Etiam sit amet odio ligula, hendrerit eleifend dolor. Mauris non felis at ante blandit adipiscing. Morbi leo diam, congue nec suscipit aliquam, pellentesque vehicula arcu. Quisque non massa risus, at sagittis est.
+Ce projet constitue une avancée supplémentaire dans l’aide technique à la manipulation apportée aux blessés médullaire dans l’accomplissement de leurs tâches de la vie quotidienne. 
+
 
 
 \end{sommaire}
@@ -224,7 +229,7 @@ Donec mattis leo pulvinar nunc euismod ac imperdiet magna venenatis. Integer in 
 %
 %\end{revuedelitterature}
 
-\chapter{Premier Chapitre: test de chapitre long pour vérifier le comportement de retour automatique à la ligne}
+\chapter{mise en contexte}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
 
@@ -236,7 +241,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo just
 \end{align}
 
 
-\section{Première Section du Premier Chapitre}
+\section{Le Signal Électromyographique (EMG)}
 
 Test de décallage d'énumérations
 \begin{enumerate}
@@ -250,11 +255,6 @@ Test de décallage de puces
  \item test 1
  \item test 2
 \end{itemize}
-
-\subsection{Deuxième Sous-Division}
-<Texte>
-
-\subsubsection{Troisième Sous-Division}
 
 Vérification des références: \cite{Arica2002}.
 \\
@@ -284,7 +284,11 @@ Fig.~\ref{fig:logoets}, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 	\label{tab:UnTableau}
 \end{table}
 
-\chapter{Title of Second Chapter}
+\section{Les Blessés Médullaires}
+
+\section{Les aides techniques aux actions de la vie quotidienne (AVQ)}
+
+\chapter{Revue de Littérature}
 
 \begin{figure}[ht]
 	\centering
@@ -302,11 +306,72 @@ Fig.~\ref{fig:logoets}, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 	\caption{Logo de l'École de Technologie Supérieure. \newline Tiré de \cite{ETS2010}}
 \end{figure}
 
+\section{Classification EMG}
+
+\section{Systèmes Embarqués temps réels et EMG}
 
 
-\chapter{Deuxième Chapitre}
+\chapter{Problématique et Objectifs du Projet}
 
-\chapter{Troisième Chapitre}
+\chapter{Méthodologie}
+
+\section{Choix des Muslces}
+
+\section{Architecture Matérielle}
+
+\subsection{Électrodes}
+
+\subsection{Microcontrôleur}
+
+\subsection{Adaptation des Tensions}
+
+\subsection{Liaison à l'Ordinateur}
+
+\subsection{Liaison à Jaco}
+
+\subsection{Schéma matériel Global}
+
+\section{Choix des Caractéristiques du Signal à utiliser et des Outils algorithmiques et Mathématiques à Utiliser}
+
+\subsection{Découpage des fenêtres d'échantillons}
+
+\subsection{Détection d'activité musculaire}
+
+\subsubsection{Énergie de Teager-Keiser}
+
+\subsubsection{Vote à la majorité}
+
+\section{Calibrage}
+
+\section{Filtrage}
+
+\subsection{Description du Filtre}
+
+\subsection{Calibrage du Filtre}
+
+\section{Architecture Logicielle}
+
+\subsection{Firmware}
+
+\subsubsection{Fonctionnement et Configuration Globale du PIC32}
+
+\subsubsection{Alogorithme global}
+
+\subsection{Application de monitorage des signaux}
+
+\subsubsection{Choix des Librairies et des langages}
+
+\subsubsection{Fonctionnement Global et Schéma UML du Projet}
+
+\subsubsection{Lien avec Jaco et Mono}
+
+\section{Validation du Système}
+
+\subsection{Protocole de validation}
+
+\chapter{Résultats}
+
+\chapter{Discussion}
 
 \begin{conclusion}
 Texte de conclusion

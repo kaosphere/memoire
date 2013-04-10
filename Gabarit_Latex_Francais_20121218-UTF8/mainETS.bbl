@@ -1,0 +1,29 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arica et Yarman-Vural(2002)Arica, Nafiz et Fatos~T.
+  Yarman-Vural]{Arica2002}
+Arica, Nafiz et Fatos~T. Yarman-Vural.
+\newblock 2002.
+\newblock \og Optical Character Recognition for Cursive Handwriting\fg .
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, vol.~24, n$^{\circ}$~6, p. 801-813.
+
+\bibitem[Bhatia(2010)Bhatia, P.]{Bha10}
+Bhatia, P.
+\newblock 2010.
+\newblock \og Strategy for detection and localization of evil-twin transmitters
+  in wireless networks\fg .
+\newblock Master of computer science, Ottawa, Carleton University, 43~p.
+
+\bibitem[ÉTS(2010)]{ETS2010}
+ÉTS.
+\newblock 2010.
+\newblock \og Site web de l'ÉTS\fg .
+\newblock <\url{http://www.etsmtl.ca}>.
+
+\end{thebibliography}
