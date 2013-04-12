@@ -82,9 +82,9 @@
 % AVANT PROPOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{avantpropos}
-Ce projet a été réalisé en partenariat avec la societé Canadienne Kinova dans le but d'ajouter une interface de contrôle à leur bras robotique Jaco contrôlable par le biais d'un Joystick. 
+Ce projet a été réalisé en partenariat avec la société Canadienne Kinova dans le but d'ajouter une interface de contrôle à leur bras robotique Jaco contrôlable par le biais d'un Joystick. 
 
-Le but principal était de prendre la suite du projet de maitrise de Véronique Maheu qui consistait en l'étude de la performance de différents classificateurs dans le cadre de la classification de mouvements à partir de huit canaux électromyographiques. 
+Le but principal était de prendre la suite du projet de maîtrise de Véronique Maheu qui consistait en l'étude de la performance de différents classificateurs dans le cadre de la classification de mouvements à partir de huit canaux électromyographiques. 
 
 Le projet devait aussi se servir des paramètres cepstraux du signal électromyographiques. Pendant la réalisation, il s'est avéré que des caractéristiques du signal beaucoup plus simples permettent de discriminer suffisamment les mouvements effectués par l'utilisateur. De ce fait l'utilisation des paramètres cepstraux du signal a été abandonnée au profit d'une détection d'activité musculaire simple.
 \end{avantpropos}
@@ -118,7 +118,7 @@ Ce projet constitue une avancée supplémentaire dans l’aide technique à la m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ABSTRACT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}{titre original}{Kinova, jaco, EMG control, real time, spinal cord }
+\begin{abstract}{titre original}{Kinova, jaco, EMG control, real time, spinal cord injury }
 
 High level spinal cord injury victims don't have the capacity to use their arms, but still have control of several muscles depending on the level of injury. Those residual capacities are mostly finger and shoulder movements. Depending of the level of the injury, some people don't have enough residual muscular activity to move their fingers in order to control a simple joystick. For those people, daily life activities can be very hard to achieve. 
 
@@ -268,68 +268,148 @@ Ce chapitre a pour but de présenter les conditions de vie des personnes BM d'au
 
 \section{Le Signal Électromyographique (EMG)}
 
-Test de décallage d'énumérations
-\begin{enumerate}
- \item test 1
- \item test 2
-\end{enumerate}
-
-Test de décallage de puces
-
-\begin{itemize}
- \item test 1
- \item test 2
-\end{itemize}
-
-Vérification des références: \cite{Arica2002}.
-\\
-Vérification de href: \href{http://www.etsmtl.ca/Etudiants-actuels/Cycles-sup/Realisation-etudes/Guides-gabarits}{Link to Gabarit ETS}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula.
-\\
-Vérification de url: \url{http://www.etsmtl.ca/Etudiants-actuels/Cycles-sup/Realisation-etudes/Guides-gabarits}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula.
-\\
-Fig.~\ref{fig:logoets}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum, 
+%Test de décallage d'énumérations
+%\begin{enumerate}
+% \item test 1
+% \item test 2
+%\end{enumerate}
 %
-\begin{figure}[ht]
-	\centering
-	\fbox{
-		\includegraphics{Figures/logoets.jpg}
-	}
-	%\caption{Logo de l'École de Technologie Supérieure. Tiré de \cite{ETS2010}}
-	\caption{Distribution of horizontal velocity and streamlines in the vicinity of the nacelle for (a-c) non-operating turbine and (d-f) operating turbine ($U_{ref}$ = 20 m/s, the black circle indicates the position of the anemometer)}
-\end{figure}
-
-
-\begin{table}[ht]
-	\caption{Petit tableau: Encore une fois, test de legende de tableau plus longue pour vérifier le comportement de la liste}
-		\begin{tabular}{|c|c|c|c|}
-		\hline
-			blá & blá & blá & blá \\
-			\hline
-		\end{tabular}
-	\label{tab:UnTableau}
-\end{table}
+%Test de décallage de puces
+%
+%\begin{itemize}
+% \item test 1
+% \item test 2
+%\end{itemize}
+%
+%Vérification des références: \cite{Arica2002}.
+%\\
+%Vérification de href: \href{http://www.etsmtl.ca/Etudiants-actuels/Cycles-sup/Realisation-etudes/Guides-gabarits}{Link to Gabarit ETS}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula.
+%\\
+%Vérification de url: \url{http://www.etsmtl.ca/Etudiants-actuels/Cycles-sup/Realisation-etudes/Guides-gabarits}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula.
+%\\
+%Fig.~\ref{fig:logoets}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum, 
+%%
+%\begin{figure}[ht]
+%	\centering
+%	\fbox{
+%		\includegraphics{Figures/logoets.jpg}
+%	}
+%	%\caption{Logo de l'École de Technologie Supérieure. Tiré de \cite{ETS2010}}
+%	\caption{Distribution of horizontal velocity and streamlines in the vicinity of the nacelle for (a-c) non-operating turbine and (d-f) operating turbine ($U_{ref}$ = 20 m/s, the black circle indicates the position of the anemometer)}
+%\end{figure}
+%
+%
+%\begin{table}[ht]
+%	\caption{Petit tableau: Encore une fois, test de legende de tableau plus longue pour vérifier le comportement de la liste}
+%		\begin{tabular}{|c|c|c|c|}
+%		\hline
+%			blá & blá & blá & blá \\
+%			\hline
+%		\end{tabular}
+%	\label{tab:UnTableau}
+%\end{table}
 
 \chapter{Revue de Littérature}
 
-\begin{figure}[ht]
-	\centering
-	\fbox{
-		\includegraphics{Figures/logoets.jpg}
-	}
-	\caption{Logo de l'École de Technologie Supérieure. \newline Tiré de \cite{ETS2010}}
-\end{figure}
+%\begin{figure}[ht]
+%	\centering
+%	\fbox{
+%		\includegraphics{Figures/logoets.jpg}
+%	}
+%	\caption{Logo de l'École de Technologie Supérieure. \newline Tiré de \cite{ETS2010}}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%	\centering
+%	\fbox{
+%		\includegraphics{Figures/logoets.jpg}
+%	}
+%	\caption{Logo de l'École de Technologie Supérieure. \newline Tiré de \cite{ETS2010}}
+%\end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\fbox{
-		\includegraphics{Figures/logoets.jpg}
-	}
-	\caption{Logo de l'École de Technologie Supérieure. \newline Tiré de \cite{ETS2010}}
-\end{figure}
 
 \section{Classification EMG}
 
+L’analyse des signaux EMG et la détermination du mouvement effectué à partir de ceux-ci se divise en plusieurs grandes sous parties incluant chacune un algorithme bien précis. Chacune de ces parties peut être réalisée avec plusieurs algorithmes différents impliquant chacun des précisions, et une facilité d’implémentation différente. Des compromis doivent donc être faits entre la précision engendrée par un algorithme et sa complexité d’implémentation et d’exécution qui est souvent inversement proportionnelle. 
+
+La première étape de traitement des signaux EMG consiste à déterminer quand il y a une activité musculaire et quand il n’y en a pas. Celle-ci est appelé détection d’activité, ou détection d'onset, et c’est la première partie qui sera analysée. L’étape suivante est l’extraction des caractéristiques du signal qui pourront permettre ensuite au classificateur de déterminer quel mouvement a été effectué. Cette étude se concentrera autour des coefficients cepstraux du signal qui seront utilisé dans le classificateur. Enfin, une analyse de différents classificateurs sera effectuée, se basant sur les mêmes critères que les autres algorithmes, à savoir la précision, la facilité d’implémentation et le temps d’exécution. 
+
+Un point important est à souligner, et ce point constituera un premier point de cette étude : tous ces algorithmes mis bouts à bouts doivent, une fois le choix d’architecture effectué permettre de réaliser le traitement de quatre canaux EMG de manière temps réel.
+
+\subsection{Algorithmes de détection d'activité}
+
+La détection d’onset est le principe qui consiste à détecter le début d’une activité musculaire sur le signal EMG de manière automatique.  Pour ce faire, plusieurs algorithmes semblent bien fonctionner en combinant à la fois, une bonne précision et un nombre d’opérations flottantes à réaliser restreint. Cette détection d’onset permet d’économiser les ressources processeurs afin  de n’extraire les caractéristiques du signal que lorsque c’est utile et surtout de délimiter les zones d’activité musculaire pour la détection de mouvement. 
+Il existe ainsi plusieurs caractéristiques du signal qui peuvent être extraites afin de détecter un onset. Une première largement utilisée \citep{Chang1996, Englehart2003, Tenore2007, Maheu2011}est la méthode du Zero Crossing Rate (ZCR). Elle calcule le nombre de fois où la courbe du signal repasse par zero. 
+
+Un élément important est que \cite{Chang1996} ont développé cette méthode sur un DSP et semble fournir des résultats satisfaisants. Cette étude présente également la mise en place d’une dead zone sur l’algorithme de zero crossing, qui permet de réduire, voir de supprimer l’influence du bruit sur le ZCR.
+Le ZCR est une méthode simple à implémenter et très peu couteuse en ressources processeur pour la raison qu’elle ne nécéssite qu’un nombre d’addition égal N-1, N étant le nombre d’échantillons dans la fenêtre analysée. 
+
+\cite{Peleg2002} optent pour une méthode consistant à appliquer un seuil directement sur l’enveloppe du signal. Le signal est d’abord passé dans un filtre passe-haut à 30Hz, puis la valeur absolue du signal est faite, enfin, le signal est passé dans un filtre passe-bas à 2.5Hz. Cette méthode est une analogie de la méthode Mean Absolute Value (MAV), le filtre passe bas ayant pour but d’effectuer une moyenne des valeurs absolues du signal. Suite à cela, le seuil appliqué sur l’enveloppe est fixé comme étant 10 pourcents plus haut que la valeur de l’enveloppe de l’EMG au repos. 
+
+\cite{Tenore2007} utilisent également la méthode MAV sans toutefois préciser la manière dont ils ont choisi leur seuil de détection. 
+
+Une autre méthode simple à implémenter et peu couteuse en temps de calcul est la méthode de la Teager-Kaiser Energy (TKE) qui correspond à un taux de variation du signal. Elle a été utilisée par \cite{Maheu2011} comme une caractéristique du signal utilisée dans la classification, mais peut aussi être utilisée dans la détection d’onset comme l'ont montré \cite{li2007}. Elle ne constitue qu’une soustraction et deux multiplications par échantillon dans la fenêtre d’analyse. 
+
+\subsection{Caractéristiques du signal EMG utilisées}
+
+Une fois l’ctivité musculaire du signal EMG détectée, on cherche à déterminer quel mouvement a été effectué. Ce travail est effectué par un classificateur. Ce classificateur doit donc prendre des éléments de comparaison en compte pour déterminer l’action faite. Ces éléments doivent être significatifs du signal capté, et sont appelés des features, ou des caractéristiques. 
+Les caractéristiques extraites des signaux EMG sont nombreuses, aussi nous nous concentrerons sur celles ayant les meilleurs résultats dans la littérature. Ainsi la caractéristique ayant le plus de succès semble être l’auto-régression \citep{Chang1996, Peleg2002, Maheu2011}.
+
+L’auto-régression consiste à trouver les n+1 coefficients d’un polynôme d’ordre n qui, appliqué sur un signal aléatoire, permettra de retrouver une approche du signal réel. Plusieurs algorithmes permettent de retrouver ces coefficients autorégressifs (AR).
+
+\cite{Peleg2002} utilisent une auto-régression d’ordre 11. Cet ordre « a été déterminé de manière heuristique » \citep{Peleg2002}.
+
+\cite{Chang1996} ont choisi l'utilisation des coefficients AR mais également les coefficients cepstraux obtenus à partir des AR. Ils préconisent également de fixer l’ordre de l’AR à 4 en se basant sur la littérature et en justifiant par un compromis entre une bonne représentation du signal  et un temps de calcul court. 
+L’obtention des coefficients cepstraux à partir des coefficients AR se fait grâce à une relation mathématique récursive simple dépendant de l’ordre de l'auto-régression réalisée. 
+
+%TODO : ajouter une partie sur la discrimination des muscles
+
+
+\subsection{Classificateurs utilisés dans la détection de mouvements}
+
+%TODO : a refaire complètement car tres imcomplet dans les lectures dirigées.
+
 \section{Systèmes Embarqués temps réels et EMG}
+
+%TODO : introduction de la sous partie
+
+\subsection{Le traitement temps réel}
+
+Le temps réel au sens strict du terme en informatique, signifie que l’on doit savoir à tout instant combien de temps prendront les différentes actions réalisées par un programme. Ce temps peut s'exprimer de plusieurs manières, les deux principales étant le temps en secondes et le nombre d'instructions élémentaires d'une unité de calcul (microprocesseur, microcontrôleur).
+
+Dans notre cas, et comme fixé dans la littérature du contrôle par EMG, la contrainte principale est le temps de réaction et de calcul maximal à laquelle le système doit satisfaire. La littérature traitant de l’implémentation temps réelle de tels systèmes parle ainsi d’un délai de calcul maximal de 300 millisecondes afin que l’utilisateur humain ne ressente pas la latence du système \citep{Chu2007, Englehart2003}.
+
+\subsection{Méthodes d'acquisition du signal}
+
+La plupart des études utilisées pour cette revue utilisent des électrodes de surface pour faire leur reconnaissance de mouvements. Cependant, les manières de filtrer et d'échantillonner sont différentes à travers les études. Cette partie a pour but de les regrouper et de les comparer. 
+
+La plupart des études observent une fréquence d’échantillonnage de 1KHz permettant d’obtenir une bande utile théorique (respectant le théorême de Shannon) pour les signaux EMG allant jusqu’à 500Hz \citep{Chang1996, Chu2007, Englehart2003, Tenore2007}. 
+La plupart des signaux EMG bruts sont amplifiés avec des gains de l’ordre de 2000, sont passé dans des filtres passe bande entre 10 et 450 ou 500 Hz.
+
+\cite{Peleg2002} ont toutefois opté pour une fréquence d’échantillonnage à 500Hz, avec un filtre anti repliement à 250Hz, alors que \cite{Crawford2005} ont opté pour une fréquence d’échantillonnage à 2048 Hz.
+Lorsqu’elles sont mentionnées, la précision des ADC utilisés varie suivant les études, allant de 16 bits \citep{Englehart2003} à 12 bits \citep{Tenore2007, Fukuda2003}.
+
+\subsection{Fenêtrage du signal}
+
+Une fois l’activité musculaire détectée, le signal est analysé par fenêtres déterminées par rapport à un temps où à un nombre d’échantillons. Un pas d’incrément est également défini, afin de choisir si les fenêtres se recouvrent ou non. 
+
+La littérature étudiée fait état de beaucoup de fenêtres et de pas d’incréments différents. La plupart sont fixés de manière heuristique. Cependant, \cite{Englehart2003} évoquent le fait que cette fenêtre ne doit pas être trop grande de manière à ce que le temps de cette fenêtre et de son temps de traitement n’excède pas les 300ms de latence maximum au-delà desquels la latence est ressentie par l’utilisateur. Ainsi, leur fenêtre est fixée à 250ms avec un pas d’incrément à 125ms de manière à garder une marge suffisante pour le temps de calcul. 
+
+%TODO rajouter les infos de maheu
+
+\subsection{Matériel informatique utilisé dans la littérature}
+
+Les applications temps réelles se trouvent dans la littérature %TODO citer
+Toutefois, la plupart de ces application n'ont pas une définition toujours précise de la notion de temps réel. La plupart des articles présentent un système exécuté sur des machines puissantes, sur des systèmes d'exploitation souvent non temps réels %TODO citer
+Cela leur a permis d’y implanter des algorithmes puissants et coûteux en ressources comme le LDA, ou une transformation du signal en ondelettes.
+
+\cite{Englehart2003} ont également effectué une implémentation temps réelle d’algorighmes de reconnaissance de mouvement à partir de signaux EMG. Cette réalisation a été réalisée sous matlab et son extension de programmation temps réel sur un PC distant. Ainsi, la puissance de calcul était très grande, et ils ont également pu utiliser de gros algorithmes sans se soucier du nombre d’opérations à réaliser. 
+
+Cependant les application embarquées (au sens où elles sont embarquées sur des cartes électroniques autonomes, et non sur un ordinateur, même portable) sont rares.
+
+\cite{Chang1996} ont réalisé un montage électronique basé sur un DSP TMS320C31 de chez Texas Instruments. C’est un processeur 32bits comprenant un cœur à virgule flottante tournant à une fréquence de 20MHz, avec quatre niveaux de pipe-line permettant d’exécuter une instruction à chaque cycle d’horloge. Cette architecture leur a permis d’obtenir un temps total de traitement du signal entre 140 et 160 ms ce qui satisfait à la condition évoquée au début de l’étude concernant le respect d’un temps de réponse maximum de 300 ms. Toutefois, cette étude ayant été réalisée en 1996, il existe aujourd’hui quantité de DSP plus rapide et plus efficaces.
+
+\cite{Tenore2007} ont utilisé également un DSP de chez Texas Instruments : un TMS320VC5509A couplé à un ADC dédié de chez National Instruments. Ce DSP est un processor comprenant un cœur à virgule fixe exécutant des actions relativement simples, comme le calcul du ZCR du signal, le calcul de la longueur d’onde du signal et le MAV. Les indications sur le développement et le nombre d’opérations effectuées ne sont pas évoquées, toutefois, les opérations étant très simples, aucun problème de ressources calculatoire n’a du être rencontré dans cette réalisation. 
 
 
 \chapter{Problématique et Objectifs du Projet}

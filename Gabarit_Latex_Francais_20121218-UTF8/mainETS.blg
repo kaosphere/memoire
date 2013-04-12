@@ -1,8 +1,98 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: mainETS.aux
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: mainETS.aux
 The style file: bibETS.bst
 Database file #1: biblio.bib
-Warning--entry type for "ETS2010" isn't style-file defined
---line 145 of file biblio.bib
-Warning--string name "octobre" is undefined
---line 148 of file biblio.bib
-(There were 2 warnings)
+You're missing a field name---line 98 of file biblio.bib
+ : 
+ : %  author = {Marija Bojovic and Milan D. Savic},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 105 of file biblio.bib
+ : 
+ : %  author = {A. S. Britto and R. Sabourin and E. Lethelier and F. Bortolozzi and C. Y. Suen},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 114 of file biblio.bib
+ : 
+ : %  author = {Alceu S. Britto},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 122 of file biblio.bib
+ : 
+ : %  author = {Alceu S. Britto and Robert Sabourin and Flávio Bortolozzi and Chyng
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 134 of file biblio.bib
+ : 
+ : %  author = {A. S. Britto and Robert Sabourin and Flávio Bortolozzi and Chyng
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 145 of file biblio.bib
+ : 
+ : %  author = {Viola, P. and Jones, M.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 170 of file biblio.bib
+ : 
+ : %language = {English},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 185 of file biblio.bib
+ : 
+ : %author = {ÉTS},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 194 of file biblio.bib
+ : 
+ : % author        = "{Board of Trustees of the University of Illinois}",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 204 of file biblio.bib
+ : 
+ : %author = {Brands, S. and Chaum, D.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Bha10"
+You've used 9 entries,
+            2960 wiz_defined-function locations,
+            719 strings with 7578 characters,
+and the built_in function-call counts, 4502 in all, are:
+= -- 364
+> -- 421
+< -- 23
++ -- 117
+- -- 108
+* -- 451
+:= -- 724
+add.period$ -- 40
+call.type$ -- 9
+change.case$ -- 55
+chr.to.int$ -- 9
+cite$ -- 18
+duplicate$ -- 165
+empty$ -- 240
+format.name$ -- 119
+if$ -- 921
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 8
+newline$ -- 66
+num.names$ -- 36
+pop$ -- 77
+preamble$ -- 1
+purify$ -- 54
+quote$ -- 0
+skip$ -- 131
+stack$ -- 0
+substring$ -- 18
+swap$ -- 38
+text.length$ -- 21
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 99
+warning$ -- 0
+while$ -- 27
+width$ -- 0
+write$ -- 140
+(There were 10 error messages)

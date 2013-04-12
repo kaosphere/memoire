@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.4.11)  11 APR 2013 15:03
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.4.11)  12 APR 2013 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -805,7 +805,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<Figures/logocc.pdf, id=176, 121.45375pt x 43.16125pt>
+<Figures/logocc.pdf, id=205, 121.45375pt x 43.16125pt>
 File: Figures/logocc.pdf Graphic file (type pdf)
 
 <use Figures/logocc.pdf>
@@ -1070,90 +1070,74 @@ Underfull \hbox (badness 10000) detected at line 198
 
 ] [2]
 Chapitre 1
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 280.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 280.
-
-
-LaTeX Warning: Reference `fig:logoets' on page 3 undefined on input line 290.
-
-<Figures/logoets.jpg, id=371, 209.78375pt x 53.19875pt>
-File: Figures/logoets.jpg Graphic file (type jpg)
-
-<use Figures/logoets.jpg>
-Package pdftex.def Info: Figures/logoets.jpg used on input line 296.
-(pdftex.def)             Requested size: 209.78322pt x 53.19861pt.
-
-Overfull \hbox (61.54356pt too wide) in paragraph at lines 284--300
-\T1/ptm/m/n/12 Vérification de url : []$http : / / www . etsmtl . ca / Etudiant
-s-[]actuels / Cycles-[]sup / Realisation-[]etudes / Guides-[]gabarits$[],
- []
-
 [3
 
-] [4 <./Figures/logoets.jpg>]
-Chapitre 2
-File: Figures/logoets.jpg Graphic file (type jpg)
-<use Figures/logoets.jpg>
-Package pdftex.def Info: Figures/logoets.jpg used on input line 318.
-(pdftex.def)             Requested size: 209.78322pt x 53.19861pt.
-File: Figures/logoets.jpg Graphic file (type jpg)
- <use Figures/logoets.jpg>
-Package pdftex.def Info: Figures/logoets.jpg used on input line 326.
-(pdftex.def)             Requested size: 209.78322pt x 53.19861pt.
- [5
-
-] [6
+] [4
 
 ]
+Chapitre 2
+[5] [6] [7] [8]
+Overfull \hbox (21.54251pt too wide) in paragraph at lines 412--413
+[][]\T1/ptm/m/n/12 Tenore \T1/ptm/m/it/12 et al.[] \T1/ptm/m/n/12 ([]2007[]) on
+t uti-lisé éga-le-ment un DSP de chez Texas Ins-tru-ments : un TMS320VC5509A
+ []
+
+[9] [10]
 Chapitre 3
-[7] [8
+[11
+
+] [12
 
 ]
 Chapitre 4
-[9] [10]
+[13] [14]
 Overfull \vbox (339.64557pt too high) has occurred while \output is active []
 
 
-[11] [12
+[15] [16
 
 ]
 Chapitre 5
-[13] [14
+[17] [18
 
 ]
 Chapitre 6
-[15] [16
+[19] [20
 
-] [17] [18
+] [21] [22
 
 ]
 Annexe I
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 415.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 495.
+
+Package natbib Warning: Citation `Bha10' on page 23 undefined on input line 498
+.
+
+<Figures/logoets.jpg, id=538, 209.78375pt x 53.19875pt>
 File: Figures/logoets.jpg Graphic file (type jpg)
+
 <use Figures/logoets.jpg>
-Package pdftex.def Info: Figures/logoets.jpg used on input line 431.
+Package pdftex.def Info: Figures/logoets.jpg used on input line 511.
 (pdftex.def)             Requested size: 209.78322pt x 53.19861pt.
 Package hyperref Info: bookmark level for unknown figureap defaults to 0 on inp
-ut line 433.
+ut line 513.
 Package hyperref Info: bookmark level for unknown tableap defaults to 0 on inpu
-t line 443.
- [19] [20] (./refs.bbl [21] [22
+t line 523.
+ [23 <./Figures/logoets.jpg>] [24] (./refs.bbl
+[25] [26
 
-]) [23] (./mainETS.bbl
-[24
+]) [27] (./mainETS.bbl [28
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 514.
- [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 514.
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 594.
+[29]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 594.
  (./mainETS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 514.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 594.
 
 
  *File List*
@@ -1251,31 +1235,24 @@ Figures/logocc.pdf
 Figures/logocc.pdf
     umsa.fd    2009/06/22 v3.00 AMS symbols A
     umsb.fd    2009/06/22 v3.00 AMS symbols B
-  omsptm.fd    
-Figures/logoets.jpg
-Figures/logoets.jpg
-Figures/logoets.jpg
 Figures/logoets.jpg
     refs.bbl
  mainETS.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 514.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 594.
 Package rerunfilecheck Info: File `mainETS.out' has not changed.
-(rerunfilecheck)             Checksum: 5E72AFF503A33E80D022885652A84778;3205.
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 514.
+(rerunfilecheck)             Checksum: E8F88F07DE04DFD741654A9BD4CE051E;3846.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 594.
  ) 
 Here is how much of TeX's memory you used:
- 11153 strings out of 495030
- 159316 string characters out of 3180761
- 266945 words of memory out of 3000000
- 14034 multiletter control sequences out of 15000+200000
+ 11158 strings out of 495030
+ 159281 string characters out of 3180761
+ 266369 words of memory out of 3000000
+ 14031 multiletter control sequences out of 15000+200000
  38316 words of font info for 55 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,10n,45p,954b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,11n,45p,952b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
@@ -1288,10 +1265,10 @@ cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on mainETS.pdf (47 pages, 169118 bytes).
+Output written on mainETS.pdf (51 pages, 184356 bytes).
 PDF statistics:
- 568 PDF objects out of 1000 (max. 8388607)
- 496 compressed objects within 5 object streams
- 115 named destinations out of 1000 (max. 500000)
- 355 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 653 PDF objects out of 1000 (max. 8388607)
+ 580 compressed objects within 6 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
