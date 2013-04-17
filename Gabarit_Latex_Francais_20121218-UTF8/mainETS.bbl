@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -43,6 +43,15 @@ Englehart, Kevin et Bernard Hudgins.
   control\fg .
 \newblock \emph{Biomedical Engineering, IEEE Transactions on}, vol.~50,
   n$^{\circ}$~7, p. 848--854.
+
+\bibitem[Englehart\emph{ et~al.}(1999)Englehart, Kevin, Bernard Hudgins,
+  Philip~A Parker, et Maryhelen Stevenson]{englehart1999}
+Englehart, Kevin, Bernard Hudgins, Philip~A Parker, et Maryhelen Stevenson.
+\newblock 1999.
+\newblock \og Classification of the myoelectric signal using time-frequency
+  based representations\fg .
+\newblock \emph{Medical engineering \& physics}, vol.~21, n$^{\circ}$~6, p.
+  431--438.
 
 \bibitem[Fukuda\emph{ et~al.}(2003)Fukuda, Osamu, Toshio Tsuji, Makoto Kaneko,
   et Akira Otsuka]{Fukuda2003}

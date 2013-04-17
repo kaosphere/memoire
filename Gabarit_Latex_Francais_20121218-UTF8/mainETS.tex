@@ -362,12 +362,16 @@ L’auto-régression consiste à trouver les n+1 coefficients d’un polynôme d
 \cite{Chang1996} ont choisi l'utilisation des coefficients AR mais également les coefficients cepstraux obtenus à partir des AR. Ils préconisent également de fixer l’ordre de l’AR à 4 en se basant sur la littérature et en justifiant par un compromis entre une bonne représentation du signal  et un temps de calcul court. 
 L’obtention des coefficients cepstraux à partir des coefficients AR se fait grâce à une relation mathématique récursive simple dépendant de l’ordre de l'auto-régression réalisée. 
 
-%TODO : ajouter une partie sur la discrimination des muscles
-
 
 \subsection{Classificateurs utilisés dans la détection de mouvements}
 
 %TODO : a refaire complètement car tres imcomplet dans les lectures dirigées.
+
+Une fois les caractéristiques du signal calculées,  celles-ci sont entrées dans un classificateur qui, grâce à un apprentissage, permet de déterminer quel mouvement a été effectué par le sujet. Encore une fois, beaucoup d’algorithmes existent pour réaliser cette opération. Toutefois, beaucoup de ceux-ci sont très consommateurs en temps de calculs, comme les réseaux de neurones (RN), où les Linear Discriminent Analysis (LDA) qui ne semblent pas être utilisés dans des solutions embarquées temps réelles. 
+
+Toute fois \cite{englehart1999} ont montré que l'importance du choix du classificateur pour la reconnaissance de mouvements à partir de signaux EMG est limitée et que les gains en termes de performances de classificateurs complexes tels que les RN sont négligeables par rapport aux performances d'un classificateur plus simple comme le LDA.
+
+%TODO : ajouter une partie sur la discrimination des muscles
 
 \section{Systèmes Embarqués temps réels et EMG}
 
@@ -401,9 +405,10 @@ La littérature étudiée fait état de beaucoup de fenêtres et de pas d’incr
 
 Les applications temps réelles se trouvent dans la littérature %TODO citer
 Toutefois, la plupart de ces application n'ont pas une définition toujours précise de la notion de temps réel. La plupart des articles présentent un système exécuté sur des machines puissantes, sur des systèmes d'exploitation souvent non temps réels %TODO citer
-Cela leur a permis d’y implanter des algorithmes puissants et coûteux en ressources comme le LDA, ou une transformation du signal en ondelettes.
+Cela leur a permis d’y implanter des algorithmes puissants et coûteux en ressources comme le LDA %TODO citer
+, ou une transformation du signal en ondelettes. %TODO citer
 
-\cite{Englehart2003} ont également effectué une implémentation temps réelle d’algorighmes de reconnaissance de mouvement à partir de signaux EMG. Cette réalisation a été réalisée sous matlab et son extension de programmation temps réel sur un PC distant. Ainsi, la puissance de calcul était très grande, et ils ont également pu utiliser de gros algorithmes sans se soucier du nombre d’opérations à réaliser. 
+\cite{Englehart2003} ont également effectué une implémentation temps réelle d’algorithmes de reconnaissance de mouvement à partir de signaux EMG. Cette réalisation a été réalisée sous matlab et son extension de programmation temps réel sur un PC distant. Ainsi, la puissance de calcul était très grande, et ils ont également pu utiliser de gros algorithmes sans se soucier du nombre d’opérations à réaliser. %TODO refaire ce paragraphe
 
 Cependant les application embarquées (au sens où elles sont embarquées sur des cartes électroniques autonomes, et non sur un ordinateur, même portable) sont rares.
 

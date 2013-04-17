@@ -3,96 +3,96 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: mainETS.aux
 The style file: bibETS.bst
 Database file #1: biblio.bib
-You're missing a field name---line 98 of file biblio.bib
+You're missing a field name---line 122 of file biblio.bib
  : 
  : %  author = {Marija Bojovic and Milan D. Savic},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 105 of file biblio.bib
+You're missing a field name---line 129 of file biblio.bib
  : 
  : %  author = {A. S. Britto and R. Sabourin and E. Lethelier and F. Bortolozzi and C. Y. Suen},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 114 of file biblio.bib
+You're missing a field name---line 138 of file biblio.bib
  : 
  : %  author = {Alceu S. Britto},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 122 of file biblio.bib
+You're missing a field name---line 146 of file biblio.bib
  : 
  : %  author = {Alceu S. Britto and Robert Sabourin and Flávio Bortolozzi and Chyng
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 134 of file biblio.bib
+You're missing a field name---line 158 of file biblio.bib
  : 
  : %  author = {A. S. Britto and Robert Sabourin and Flávio Bortolozzi and Chyng
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 145 of file biblio.bib
+You're missing a field name---line 169 of file biblio.bib
  : 
  : %  author = {Viola, P. and Jones, M.},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 170 of file biblio.bib
+You're missing a field name---line 194 of file biblio.bib
  : 
  : %language = {English},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 185 of file biblio.bib
+You're missing a field name---line 209 of file biblio.bib
  : 
  : %author = {ÉTS},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 194 of file biblio.bib
+You're missing a field name---line 218 of file biblio.bib
  : 
  : % author        = "{Board of Trustees of the University of Illinois}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 204 of file biblio.bib
+You're missing a field name---line 228 of file biblio.bib
  : 
  : %author = {Brands, S. and Chaum, D.},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Bha10"
-You've used 9 entries,
+You've used 10 entries,
             2960 wiz_defined-function locations,
-            719 strings with 7578 characters,
-and the built_in function-call counts, 4502 in all, are:
-= -- 364
-> -- 421
-< -- 23
-+ -- 117
-- -- 108
-* -- 451
-:= -- 724
-add.period$ -- 40
-call.type$ -- 9
-change.case$ -- 55
-chr.to.int$ -- 9
-cite$ -- 18
-duplicate$ -- 165
-empty$ -- 240
-format.name$ -- 119
-if$ -- 921
+            726 strings with 7772 characters,
+and the built_in function-call counts, 5000 in all, are:
+= -- 403
+> -- 468
+< -- 26
++ -- 130
+- -- 120
+* -- 505
+:= -- 802
+add.period$ -- 44
+call.type$ -- 10
+change.case$ -- 61
+chr.to.int$ -- 10
+cite$ -- 20
+duplicate$ -- 184
+empty$ -- 267
+format.name$ -- 132
+if$ -- 1023
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 8
-newline$ -- 66
-num.names$ -- 36
-pop$ -- 77
+missing$ -- 9
+newline$ -- 72
+num.names$ -- 40
+pop$ -- 85
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 60
 quote$ -- 0
-skip$ -- 131
+skip$ -- 145
 stack$ -- 0
-substring$ -- 18
-swap$ -- 38
-text.length$ -- 21
+substring$ -- 20
+swap$ -- 43
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 99
+type$ -- 110
 warning$ -- 0
-while$ -- 27
+while$ -- 30
 width$ -- 0
-write$ -- 140
+write$ -- 154
 (There were 10 error messages)
