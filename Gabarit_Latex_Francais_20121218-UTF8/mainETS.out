@@ -5,14 +5,14 @@
 \BOOKMARK [1][]{section.12}{Le Signal \311lectromyographique \(EMG\)}{chapter.9}% 5
 \BOOKMARK [0][]{chapter.13}{Chapitre 2 Revue de Litt\351rature}{}% 6
 \BOOKMARK [1][]{section.14}{Classification EMG}{chapter.13}% 7
-\BOOKMARK [2][-]{subsection.15}{Algorithmes de d\351tection d'activit\351}{section.14}% 8
-\BOOKMARK [2][-]{subsection.16}{Caract\351ristiques du signal EMG utilis\351es}{section.14}% 9
-\BOOKMARK [2][-]{subsection.17}{Classificateurs utilis\351s dans la d\351tection de mouvements}{section.14}% 10
-\BOOKMARK [1][]{section.18}{Syst\350mes Embarqu\351s temps r\351els et EMG}{chapter.13}% 11
-\BOOKMARK [2][-]{subsection.19}{Le traitement temps r\351el}{section.18}% 12
-\BOOKMARK [2][-]{subsection.20}{M\351thodes d'acquisition du signal}{section.18}% 13
-\BOOKMARK [2][-]{subsection.21}{Fen\352trage du signal}{section.18}% 14
-\BOOKMARK [2][-]{subsection.22}{Mat\351riel informatique utilis\351 dans la litt\351rature}{section.18}% 15
+\BOOKMARK [2][-]{subsection.15}{Fen\352trage du signal}{section.14}% 8
+\BOOKMARK [2][-]{subsection.16}{Algorithmes de d\351tection d'activit\351}{section.14}% 9
+\BOOKMARK [2][-]{subsection.17}{Caract\351ristiques du signal EMG utilis\351es}{section.14}% 10
+\BOOKMARK [2][-]{subsection.18}{Classificateurs utilis\351s dans la d\351tection de mouvements}{section.14}% 11
+\BOOKMARK [1][]{section.19}{Syst\350mes Embarqu\351s temps r\351els et EMG}{chapter.13}% 12
+\BOOKMARK [2][-]{subsection.20}{Le traitement temps r\351el}{section.19}% 13
+\BOOKMARK [2][-]{subsection.21}{M\351thodes d'acquisition du signal}{section.19}% 14
+\BOOKMARK [2][-]{subsection.22}{Mat\351riel informatique utilis\351 dans la litt\351rature}{section.19}% 15
 \BOOKMARK [0][]{chapter.23}{Chapitre 3 Probl\351matique et Objectifs du Projet}{}% 16
 \BOOKMARK [0][]{chapter.24}{Chapitre 4 M\351thodologie}{}% 17
 \BOOKMARK [1][]{section.25}{Choix des Muslces}{chapter.24}% 18

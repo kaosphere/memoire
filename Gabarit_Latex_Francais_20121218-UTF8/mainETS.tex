@@ -328,18 +328,36 @@ Ce chapitre a pour but de présenter les conditions de vie des personnes BM d'au
 %\end{figure}
 
 
+La classification de mouvements grâce au signal EMG a été énormément étudiée dans la littérature. Toute fois, une partie seulement de ces études l'a traitée de manière temps réelle. Enfin un type d'application vient encore se démarquer dans ce sous ensemble : les applications embarquées. 
+
+Par application embarquée, nous entendons un système fonctionnant de manière autonome sur une carte électronique pouvant être déplacée facilement. Il faut donc enlever a ce sous ensemble toutes les applications réalisées sur ordinateurs. 
+
+La première partie de cette revue de littérature s’intéressera à la classification EMG en temps réel, tandis que la deuxième partie sera centrée sur les applications embarquées dont fait état la littérature dans son état actuel.
+
 \section{Classification EMG}
 
-L’analyse des signaux EMG et la détermination du mouvement effectué à partir de ceux-ci se divise en plusieurs grandes sous parties incluant chacune un algorithme bien précis. Chacune de ces parties peut être réalisée avec plusieurs algorithmes différents impliquant chacun des précisions, et une facilité d’implémentation différente. Des compromis doivent donc être faits entre la précision engendrée par un algorithme et sa complexité d’implémentation et d’exécution qui est souvent inversement proportionnelle. 
+L’analyse des signaux EMG et la détermination du mouvement effectuée à partir de ceux-ci se divise en plusieurs grandes sous-parties incluant chacune un algorithme bien précis. Chacune de ces parties peut être réalisée avec plusieurs algorithmes différents impliquant chacun une précision, et une facilité d’implémentation différente. Des compromis doivent donc être faits entre la précision engendrée par un algorithme et sa complexité d’implémentation et d’exécution qui est souvent inversement proportionnelle. 
 
-La première étape de traitement des signaux EMG consiste à déterminer quand il y a une activité musculaire et quand il n’y en a pas. Celle-ci est appelé détection d’activité, ou détection d'onset, et c’est la première partie qui sera analysée. L’étape suivante est l’extraction des caractéristiques du signal qui pourront permettre ensuite au classificateur de déterminer quel mouvement a été effectué. Cette étude se concentrera autour des coefficients cepstraux du signal qui seront utilisé dans le classificateur. Enfin, une analyse de différents classificateurs sera effectuée, se basant sur les mêmes critères que les autres algorithmes, à savoir la précision, la facilité d’implémentation et le temps d’exécution. 
+La première étape de traitement des signaux EMG consiste à déterminer quand il y a une activité musculaire et quand il n’y en a pas. Celle-ci est appelé détection d’activité, ou détection d'onset, et c’est la première partie qui sera analysée. L’étape suivante est l’extraction des caractéristiques du signal qui pourront permettre ensuite au classificateur de déterminer quel mouvement a été effectué. Enfin, une analyse de différents classificateurs sera effectuée, se basant sur les mêmes critères que les autres algorithmes, à savoir la précision, la facilité d’implémentation et le temps d’exécution. 
 
-Un point important est à souligner, et ce point constituera un premier point de cette étude : tous ces algorithmes mis bouts à bouts doivent, une fois le choix d’architecture effectué permettre de réaliser le traitement de quatre canaux EMG de manière temps réel.
+Un point important est à souligner, et ce point constituera un premier point de cette étude : tous ces algorithmes mis bouts à bouts doivent, une fois le choix d’architecture effectué permettre de réaliser le traitement de quatre canaux EMG en temps réel.
+
+\subsection{Fenêtrage du signal}
+
+Le signal électromyographique est découpé à des fins d'analyses et pour extraire les caractéristiques de celui-ci. La longueur de ces fenêtres est exprimée en temps ou en nombre d'échantillons. Un pas d’incrément est également défini, afin de choisir si les fenêtres se recouvrent ou non. 
+
+La littérature étudiée fait état de beaucoup de tailles de fenêtres et de pas d’incréments différents. La plupart sont fixés de manière heuristique. Cependant, \cite{Englehart2003} évoquent le fait que cette fenêtre ne doit pas être trop grande de manière à ce que le temps de cette fenêtre et de son temps de traitement n’excède pas les 300ms de latence maximum au-delà desquels la latence est ressentie par l’utilisateur. Ainsi, leur fenêtre est fixée à 250ms avec un pas d’incrément à 125ms de manière à garder une marge suffisante pour le temps de calcul. 
+
+Une fenêtre trop petite est sujette au biais de variance généré par les variation du signal et de ces caractéristiques qui peuvent jouer sur la précision du classificateur utilisé.
+
+Un compromis doit donc être fait sur la longueur des fenêtres utilisées entre la  précision du classificateur et son temps de réponse.
 
 \subsection{Algorithmes de détection d'activité}
 
+Une fois une fenêtre du signal acquise, la première étape est la détection d'activité musculaire, ou détection d'"onset". 
+
 La détection d’onset est le principe qui consiste à détecter le début d’une activité musculaire sur le signal EMG de manière automatique.  Pour ce faire, plusieurs algorithmes semblent bien fonctionner en combinant à la fois, une bonne précision et un nombre d’opérations flottantes à réaliser restreint. Cette détection d’onset permet d’économiser les ressources processeurs afin  de n’extraire les caractéristiques du signal que lorsque c’est utile et surtout de délimiter les zones d’activité musculaire pour la détection de mouvement. 
-Il existe ainsi plusieurs caractéristiques du signal qui peuvent être extraites afin de détecter un onset. Une première largement utilisée \citep{Chang1996, Englehart2003, Tenore2007, Maheu2011}est la méthode du Zero Crossing Rate (ZCR). Elle calcule le nombre de fois où la courbe du signal repasse par zero. 
+Il existe ainsi plusieurs caractéristiques du signal qui peuvent être extraites afin de détecter un onset. Une première largement utilisée \citep{Chang1996, Englehart2003, Tenore2007}est la méthode du Zero Crossing Rate (ZCR). Elle calcule le nombre de fois où la courbe du signal repasse par zero. 
 
 Un élément important est que \cite{Chang1996} ont développé cette méthode sur un DSP et semble fournir des résultats satisfaisants. Cette étude présente également la mise en place d’une dead zone sur l’algorithme de zero crossing, qui permet de réduire, voir de supprimer l’influence du bruit sur le ZCR.
 Le ZCR est une méthode simple à implémenter et très peu couteuse en ressources processeur pour la raison qu’elle ne nécéssite qu’un nombre d’addition égal N-1, N étant le nombre d’échantillons dans la fenêtre analysée. 
@@ -365,17 +383,22 @@ L’obtention des coefficients cepstraux à partir des coefficients AR se fait g
 
 \subsection{Classificateurs utilisés dans la détection de mouvements}
 
-%TODO : a refaire complètement car tres imcomplet dans les lectures dirigées.
-
-Une fois les caractéristiques du signal calculées,  celles-ci sont entrées dans un classificateur qui, grâce à un apprentissage, permet de déterminer quel mouvement a été effectué par le sujet. Encore une fois, beaucoup d’algorithmes existent pour réaliser cette opération. Toutefois, beaucoup de ceux-ci sont très consommateurs en temps de calculs, comme les réseaux de neurones (RN), où les Linear Discriminent Analysis (LDA) qui ne semblent pas être utilisés dans des solutions embarquées temps réelles. 
+Une fois les caractéristiques du signal calculées,  celles-ci sont entrées dans un classificateur qui, grâce à un apprentissage, permet de déterminer quel mouvement a été effectué par le sujet. Encore une fois, beaucoup d’algorithmes existent pour réaliser cette opération. Toutefois, beaucoup de ceux-ci sont très consommateurs en temps de calculs, comme les réseaux de neurones (RN), où les analyses linéaires discriminantes (LDA). 
 
 Toute fois \cite{englehart1999} ont montré que l'importance du choix du classificateur pour la reconnaissance de mouvements à partir de signaux EMG est limitée et que les gains en termes de performances de classificateurs complexes tels que les RN sont négligeables par rapport aux performances d'un classificateur plus simple comme le LDA.
 
-%TODO : ajouter une partie sur la discrimination des muscles
+Ceci étant dit nous nous intéresserons donc plus particulièrement aux deux études principales mettant en œuvre des dispositifs temps réels embarqués.
+
+\cite{Chang1996} utilisent dans leur application embarquée un algorithme utilisant les distances des maximums de vraisemblances (MMLD), tandis que \cite{Tenore2007} utilisent quant à eux un classificateur de type LDA.
+
 
 \section{Systèmes Embarqués temps réels et EMG}
 
-%TODO : introduction de la sous partie
+La littérature comprend très peu d'applications embarquées de traitement temps réel de signaux EMG. Ainsi un premier article de référence a été publié par \cite{Chang1996} et rapporte la réalisation du traitement de 4 électrodes EMG afin de contrôler un pointeur informatique dans le but de remplacer une souris. Cette étude fait référence dans notre projet car elle a été développée dans le but de venir en aide aux blessés médullaires de haut niveau. 
+
+Deux études de la même époque traitent ensuite également de traitement embarqué des EMG. \cite{martinez1999} utilisent un dsp, sans toutefois préciser lequel, pour traiter un canal EMG tandis \cite{Prasad1996} ont conçu une carte à base de DSP implantée dans un ordinateur pour acquérir et traiter cinq canaux EMG.
+
+Enfin l'étude la plus récente est celle de \cite{Tenore2007} qui présentent dans leur article avoir réalisé l'une des premières applications embarquées classifiant le signal EMG.
 
 \subsection{Le traitement temps réel}
 
@@ -391,30 +414,20 @@ La plupart des études observent une fréquence d’échantillonnage de 1KHz per
 La plupart des signaux EMG bruts sont amplifiés avec des gains de l’ordre de 2000, sont passé dans des filtres passe bande entre 10 et 450 ou 500 Hz.
 
 \cite{Peleg2002} ont toutefois opté pour une fréquence d’échantillonnage à 500Hz, avec un filtre anti repliement à 250Hz, alors que \cite{Crawford2005} ont opté pour une fréquence d’échantillonnage à 2048 Hz.
-Lorsqu’elles sont mentionnées, la précision des ADC utilisés varie suivant les études, allant de 16 bits \citep{Englehart2003} à 12 bits \citep{Tenore2007, Fukuda2003}.
+Lorsqu’elles sont mentionnées, la précision des ADC utilisés varie suivant les études, allant de 16 bits \citep{Englehart2003} à 12 bits \citep{Tenore2007, Fukuda2003, Prasad1996}.
 
-\subsection{Fenêtrage du signal}
-
-Une fois l’activité musculaire détectée, le signal est analysé par fenêtres déterminées par rapport à un temps où à un nombre d’échantillons. Un pas d’incrément est également défini, afin de choisir si les fenêtres se recouvrent ou non. 
-
-La littérature étudiée fait état de beaucoup de fenêtres et de pas d’incréments différents. La plupart sont fixés de manière heuristique. Cependant, \cite{Englehart2003} évoquent le fait que cette fenêtre ne doit pas être trop grande de manière à ce que le temps de cette fenêtre et de son temps de traitement n’excède pas les 300ms de latence maximum au-delà desquels la latence est ressentie par l’utilisateur. Ainsi, leur fenêtre est fixée à 250ms avec un pas d’incrément à 125ms de manière à garder une marge suffisante pour le temps de calcul. 
-
-%TODO rajouter les infos de maheu
 
 \subsection{Matériel informatique utilisé dans la littérature}
 
-Les applications temps réelles se trouvent dans la littérature %TODO citer
-Toutefois, la plupart de ces application n'ont pas une définition toujours précise de la notion de temps réel. La plupart des articles présentent un système exécuté sur des machines puissantes, sur des systèmes d'exploitation souvent non temps réels %TODO citer
-Cela leur a permis d’y implanter des algorithmes puissants et coûteux en ressources comme le LDA %TODO citer
-, ou une transformation du signal en ondelettes. %TODO citer
+La plupart des application trouvées dans la littérature n'ont pas une définition toujours précise de la notion de temps réel. La plupart des articles présentent un système exécuté sur des machines puissantes, sur des systèmes d'exploitation souvent non temps réels. 
 
-\cite{Englehart2003} ont également effectué une implémentation temps réelle d’algorithmes de reconnaissance de mouvement à partir de signaux EMG. Cette réalisation a été réalisée sous matlab et son extension de programmation temps réel sur un PC distant. Ainsi, la puissance de calcul était très grande, et ils ont également pu utiliser de gros algorithmes sans se soucier du nombre d’opérations à réaliser. %TODO refaire ce paragraphe
+\cite{Englehart2003} ont réalisé une implémentation temps réelle d’algorithmes de reconnaissance de mouvement à partir de signaux EMG. Cette réalisation a été réalisée sous matlab et son extension de programmation temps réel sur un PC distant.
 
-Cependant les application embarquées (au sens où elles sont embarquées sur des cartes électroniques autonomes, et non sur un ordinateur, même portable) sont rares.
+Si l'on s'interesse plus particulièrement aux applications embarquées, \cite{Chang1996} ont réalisé un montage électronique basé sur un DSP TMS320C31 de chez Texas Instruments. C’est un processeur 32bits comprenant un cœur à virgule flottante tournant à une fréquence de 20MHz, avec quatre niveaux de pipe-line permettant d’exécuter une instruction à chaque cycle d’horloge. Cette architecture leur a permis d’obtenir un temps total de traitement du signal entre 140 et 160 ms ce qui satisfait à la condition évoquée au début de l’étude concernant le respect d’un temps de réponse maximum de 300 ms. Toutefois, cette étude ayant été réalisée en 1996, il existe aujourd’hui quantité de DSP plus rapide et plus efficaces.
 
-\cite{Chang1996} ont réalisé un montage électronique basé sur un DSP TMS320C31 de chez Texas Instruments. C’est un processeur 32bits comprenant un cœur à virgule flottante tournant à une fréquence de 20MHz, avec quatre niveaux de pipe-line permettant d’exécuter une instruction à chaque cycle d’horloge. Cette architecture leur a permis d’obtenir un temps total de traitement du signal entre 140 et 160 ms ce qui satisfait à la condition évoquée au début de l’étude concernant le respect d’un temps de réponse maximum de 300 ms. Toutefois, cette étude ayant été réalisée en 1996, il existe aujourd’hui quantité de DSP plus rapide et plus efficaces.
+Toute fois cette étude, ainsi que celles de \cite{martinez1999} et de \cite{prasad1996} ont aujourd'hui autour d'une quinzaine d'années et le matériel informatique utilisé alors a aujourd'hui beaucoup évolué.
 
-\cite{Tenore2007} ont utilisé également un DSP de chez Texas Instruments : un TMS320VC5509A couplé à un ADC dédié de chez National Instruments. Ce DSP est un processor comprenant un cœur à virgule fixe exécutant des actions relativement simples, comme le calcul du ZCR du signal, le calcul de la longueur d’onde du signal et le MAV. Les indications sur le développement et le nombre d’opérations effectuées ne sont pas évoquées, toutefois, les opérations étant très simples, aucun problème de ressources calculatoire n’a du être rencontré dans cette réalisation. 
+\cite{Tenore2007} ont utilisé également un DSP de chez Texas Instruments : un TMS320VC5509A couplé à un ADC dédié de chez National Instruments. Ce DSP est un processor comprenant un cœur à virgule fixe exécutant des actions relativement simples, comme le calcul du ZCR du signal, le calcul de la longueur d’onde du signal et le MAV. Ce DSP leur a permis d'implémenter un classificateur LDA.
 
 
 \chapter{Problématique et Objectifs du Projet}
