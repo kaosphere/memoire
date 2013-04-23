@@ -157,6 +157,9 @@ This project represent a step towards technical assistance brought to spinal cor
 \item [AVQ] Activité de la vie quotidienne
 \item [TKE] Énergie de Teager-Keiser
 \item [ETS] École de Technologie Supérieure
+\item [CRC] Contrôle de redondance cyclique
+\item [SOF] Start of frame
+\item [EOF] End of frame
 
 \end{listofabbr}
 
@@ -436,15 +439,97 @@ Toute fois cette étude, ainsi que celles de \cite{martinez1999} et de \cite{pra
 
 \section{Choix des Muslces}
 
-\section{Architecture Matérielle}
+Le premier choix important est de choisir quels muscles seront utilisés pour réaliser la commande. 
+
+\section{Architecture Matérielle}\label{CHarchimat}
 
 \subsection{Électrodes}
 
+Le LIO travaille depuis maintenant plusieurs années avec des électrodes construites par la compagnie Delsys, ainsi 4 électrodes de type DE-2.3 ont été achetée pour le projet et se présentent comme sur la figure \ref{fig:de2.3}. 
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.42\linewidth]{Figures/de23.png}
+	}
+	\caption{Électrode Delsys DE-2.3.}
+	\label{fig:de2.3}
+\end{figure}
+
+Ces électrodes, contrairement au modèle moins cher DE-2.1 sont préamplifiées avec un gain de $1000 V/V \pm 1\%$ et pré-filtrées sur une bande passante de $20-450 Hz \pm 10\%$. Ceci nous permet de limiter les étapes de filtrage analogique avant de faire entrer le signal de l'électrode dans le microcontrôleur. 
+
+Les électrodes Delsys sont câblées avec du fil protégé des interférences électromagnétiques par un bouclier métallique relié à la masse du circuit. Pour que ce blindage soit efficace, le connecteur utilisé doit être également de bonne qualité. Pour ce faire, des connecteur de marque LEMO sont utilisés. Ces connecteurs sont utilisés dans beaucoup de domaines critiques demandant des connecteurs résistants au temps et aux interférences. 
+
+Ainsi les connecteurs LEMO femelle correspondants à ceux présents sur les câbles des électrodes ont été acquis afin de relier les électrodes au système.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.42\linewidth]{Figures/delsysneutre.png}
+	}
+	\caption{Électrode Delsys neutre.}
+	\label{fig:delsysneutre}
+\end{figure}
+
+Plusieurs électrodes neutres ont également été acquises. Ces électrodes sont nécessaire car c'est la référence utilisée pour mesurer la tension acquise sur les muscles. 
+
 \subsection{Microcontrôleur}
+
+
 
 \subsection{Adaptation des Tensions}
 
+Les électrodes étant alimentées en +5V/-5V, et le PIC32 fonctionnant à 3.3V, il est nécessaire d’adapter les signaux des électrodes de +5V/-5V à 0/3V. Pour ce faire, deux amplificateurs opérationnels sont nécessaires. Un montage inverseur ayant un gain de 1/3 ainsi qu’un montage sommateur inverseur afin que le signal soit compris dans des voltages positifs. %TODO détailler plus les étages d'amplis op
+De cette manière, le signal de chaque canal étant centré sur zéro, la tension de ce zéro doit se trouver au milieu de la plage de tension 0-3.3V. Le voltage à zéro désiré est donc d’environ 1.75V.
+La figure \ref{fig:adapttension} présente le schéma électronique utilisé sur chaque canal EMG avant de le connecter au PIC32.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/circuitadapt.png}
+	}
+	\caption{Circuit électronique d'adaptation de la tension de sortie des électrodes.}
+	\label{fig:adapttension}
+\end{figure}
+
+Cependant il est à souligner que la valeur exacte des composants électronique varie suivant leur tolérance (5\% pour les composants utilisés ici). Ainsi le voltage correspondant au 0 peut ainsi varier (1.72V, 1.68V, …) et un offset sera donc présent sur les valeurs enregistrées par le convertisseur du PIC. Le filtrage
+
+
 \subsection{Liaison à l'Ordinateur}
+
+L'architecture matérielle présentée au chapitre \ref{CHarchimat} a présentée la manière dont sont reliées les différentes composantes physiques du système. Cette partie a pour but de présenter la liaison série réalisée entre la carte électronique du PIC32 et l'ordinateur utilisé pour visualiser les signaux temps réels.
+
+Dans un premier temps, les niveaux de tensions du signal série délivré par le PIC32 ne sont pas compatibles avec ceux utilisés et transmis par l'ordinateur. En effet, le PIC fournit un signal entre 0V et +3.3V alors que les signaux du port série d'un ordinateur sont compris entre +12V et -12V. 
+
+Afin de faire la transition entre ces deux niveaux de tension, un composants électronique intégré est utilisé : un MAX3232, présenté sur la figure \ref{fig:max3232}.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/max3232.png}
+	}
+	\caption{Circuit de câblage type du composant max3232, extrait de la documentation officielle du composant produit par \cite{MAXIM3232}.}
+	\label{fig:max3232}
+\end{figure}
+
+Une fois la liaison physique réalisée, un protocole de transmission de données a été mis en place. En effet, les données arrivant sur le port série en RS-232 étant traitées octet par octet, il a fallu mettre en place une trame de données afin que celles-ci soit réceptionnées correctement, et permettant de vérifier que toutes les données reçues sont bien intègres.
+Le début de trame (SOF, Start of Frame) est constitué de 4 octets fixes, ne changeant jamais de valeur. Ceci constitue une protection contre une mauvaise détection de début de trame. En effet, la même séquence de quatre octets est très improbable de se présenter en tant que données, et de ce fait on aura peu de chance de détecter un mauvais début de trame. Viennent ensuite les données. La longueur en octets des données à transmettre sur la liaison série est facilement configurable et modifiable à la fois dans le programme du PIC32 et dans le programme de l'application de monitorage sur l'ordinateur.
+Ensuite, les deux octets suivants concernent le contrôle de redondance cyclique (CRC) qui permet de vérifier que la trame reçue n'a pas perdu d'information, ou n'a pas vu un de ses octets corrompu lors du transfert. Le CRC est une valeur sur 2 octets obtenue grâce à un calcul récursif simple dont l'opération mathématique principale est une division modulo 2 dont le reste est le CRC. %TODO : detailler CRC
+
+Le CRC est calculé en prenant pour entrée uniquement la partie données de la trame. A la réception d'une nouvelle trame, le CRC des données est calculé, puis comparé au CRC transmis dans la trame. Si les deux CRC sont identiques, c'est que la trame est intègre, sinon, la trame est considérée comme non valide, et les données ne sont pas enregistrées, car corrompues.
+
+Enfin, la fin de trame (EOF, End of Frame), est composé de 2 octets fixes qui ne changent pas non plus de valeur afin de détecter quand une fin de trame est réceptionnée. La figure \ref{fig:serialframe} présente le schéma global de la trame utilisée dans le cadre de la liaison série.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=\linewidth]{Figures/serialframe.png}
+	}
+	\caption{Format de la trame utilisée dans le cadre de la liaison série.}
+	\label{fig:serialframe}
+\end{figure}
+
+Cette trame est utilisée autant dans les données allant du PIC32 vers l'ordinateur que pour les commandes de calibration envoyée au PIC32 par l'ordinateur.
 
 \subsection{Liaison à Jaco}
 
@@ -477,6 +562,24 @@ Toute fois cette étude, ainsi que celles de \cite{martinez1999} et de \cite{pra
 \subsubsection{Alogorithme global}
 
 \subsection{Application de monitorage des signaux}
+
+Afin de pouvoir observer facilement les résultats de chaque portion de calculs effectués par le microcontrôleur, le PIC32 communique avec l’ordinateur par le biais d’une liaison série. 
+Une application pour l’ordinateur a donc été réalisée en C++ afin de visualiser les signaux en provenance de la carte. Cette interface utilise le framework Qt ainsi que la librairie Qwt permettant de tracer des graphiques. 
+Le firmware et l’application sont codés de manière à pouvoir changer facilement de mode d’affichage en fonction des courbes à tracer. Ainsi, on peut choisir de tracer les courbes des signaux EMG, les courbes des TKE ou bien des activités musculaires.      
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/desktop1.png}
+	}
+	\caption{Capture d'écran de l'application de monitorage des signaux.}
+	\label{fig:desktop1}
+\end{figure}
+
+On voit sur la figure \ref{fig:desktop1} qu’une activité est détectée sur chaque canal étudié, et on peut voir les signaux EMG visualisable sur la figure de gauche. Cette interface permet de pouvoir visualiser n’importe quelle variable utilisée dans le firmware. Ainsi, les calculs du TKE et d'activité musculaire peuvent également être visualisés en temps réel.
+Un ajout à l’application a également été fait de manière à pouvoir enregistrer dans un fichier un canal EMG échantillonné à 2KHz. Ceci permet de pouvoir faire des tests sur ce même signal en traitement différé dans Matlab par exemple.
+Cette interface met également en exergue la discrimination des mouvements possible en se basant uniquement sur la détection d’activité. En effet, les signaux EMG présentés ci-dessus sont ceux respectivement d’un trapèze gauche, d’un sternocléidomastoïdien gauche, d’un sternocléidomastoïdien droit et d’un trapèze droit acquis lors d’une contraction isométrique. Ainsi si une activité est détectée sur un des deux trapèzes, on est déjà capables de dire qu’un mouvement du bras droit ou gauche a été effectué. Il en va de même pour les muscles sternocléidomastoïdiens et une rotation de la tête à droite ou à gauche. 
+
 
 \subsubsection{Choix des Librairies et des langages}
 

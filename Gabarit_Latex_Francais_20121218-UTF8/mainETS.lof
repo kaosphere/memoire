@@ -1,1 +1,7 @@
 \select@language {french}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \IeC {\'E}lectrode Delsys DE-2.3.\relax }}{15}{figure.caption.28}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \IeC {\'E}lectrode Delsys neutre.\relax }}{16}{figure.caption.29}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Circuit \IeC {\'e}lectronique d'adaptation de la tension de sortie des \IeC {\'e}lectrodes.\relax }}{17}{figure.caption.32}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Circuit de c\IeC {\^a}blage type du composant max3232, extrait de la documentation officielle du composant produit par \cite {MAXIM3232}.\relax }}{18}{figure.caption.34}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Format de la trame utilis\IeC {\'e}e dans le cadre de la liaison s\IeC {\'e}rie.\relax }}{19}{figure.caption.35}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Capture d'\IeC {\'e}cran de l'application de monitorage des signaux.\relax }}{21}{figure.caption.52}

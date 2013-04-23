@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -90,6 +90,14 @@ Martinez, R, R~Munoz, L~Leija, PR~Hernandez, et Ja~Alvarez.
   BMES/EMBS Conference, 1999. Proceedings of the First Joint}.
 \newblock p. 641--vol.
 \newblock IEEE.
+
+\bibitem[Maxim Integrated Products~Inc(2007)Maxim Integrated Products~Inc,
+  a]{MAXIM3232}
+Maxim Integrated Products~Inc, a.
+\newblock 2007.
+\newblock \og Documentation des composants Max2222/Max3232/Max3237/Max3241\fg .
+\newblock
+  <\url{http://datasheets.maximintegrated.com/en/ds/MAX3222-MAX3241.pdf}>.
 
 \bibitem[Peleg\emph{ et~al.}(2002)Peleg, Dori, Eyal Braiman, Elad Yom-Tov, et
   Gideon~F Inbar]{Peleg2002}

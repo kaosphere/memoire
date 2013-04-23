@@ -18,33 +18,33 @@
 \BOOKMARK [1][]{section.25}{Choix des Muslces}{chapter.24}% 18
 \BOOKMARK [1][]{section.26}{Architecture Mat\351rielle}{chapter.24}% 19
 \BOOKMARK [2][-]{subsection.27}{\311lectrodes}{section.26}% 20
-\BOOKMARK [2][-]{subsection.28}{Microcontr\364leur}{section.26}% 21
-\BOOKMARK [2][-]{subsection.29}{Adaptation des Tensions}{section.26}% 22
-\BOOKMARK [2][-]{subsection.30}{Liaison \340 l'Ordinateur}{section.26}% 23
-\BOOKMARK [2][-]{subsection.31}{Liaison \340 Jaco}{section.26}% 24
-\BOOKMARK [2][-]{subsection.32}{Sch\351ma mat\351riel Global}{section.26}% 25
-\BOOKMARK [1][]{section.33}{Choix des Caract\351ristiques du Signal \340 utiliser et des Outils algorithmiques et Math\351matiques \340 Utiliser}{chapter.24}% 26
-\BOOKMARK [2][-]{subsection.34}{D\351coupage des fen\352tres d'\351chantillons}{section.33}% 27
-\BOOKMARK [2][-]{subsection.35}{D\351tection d'activit\351 musculaire}{section.33}% 28
-\BOOKMARK [3][-]{subsubsection.36}{\311nergie de Teager-Keiser}{subsection.35}% 29
-\BOOKMARK [3][-]{subsubsection.37}{Vote \340 la majorit\351}{subsection.35}% 30
-\BOOKMARK [1][]{section.38}{Calibrage}{chapter.24}% 31
-\BOOKMARK [1][]{section.39}{Filtrage}{chapter.24}% 32
-\BOOKMARK [2][-]{subsection.40}{Description du Filtre}{section.39}% 33
-\BOOKMARK [2][-]{subsection.41}{Calibrage du Filtre}{section.39}% 34
-\BOOKMARK [1][]{section.42}{Architecture Logicielle}{chapter.24}% 35
-\BOOKMARK [2][-]{subsection.43}{Firmware}{section.42}% 36
-\BOOKMARK [3][-]{subsubsection.44}{Fonctionnement et Configuration Globale du PIC32}{subsection.43}% 37
-\BOOKMARK [3][-]{subsubsection.45}{Alogorithme global}{subsection.43}% 38
-\BOOKMARK [2][-]{subsection.46}{Application de monitorage des signaux}{section.42}% 39
-\BOOKMARK [3][-]{subsubsection.47}{Choix des Librairies et des langages}{subsection.46}% 40
-\BOOKMARK [3][-]{subsubsection.48}{Fonctionnement Global et Sch\351ma UML du Projet}{subsection.46}% 41
-\BOOKMARK [3][-]{subsubsection.49}{Lien avec Jaco et Mono}{subsection.46}% 42
-\BOOKMARK [1][]{section.50}{Validation du Syst\350me}{chapter.24}% 43
-\BOOKMARK [2][-]{subsection.51}{Protocole de validation}{section.50}% 44
-\BOOKMARK [0][]{chapter.52}{Chapitre 5 R\351sultats}{}% 45
-\BOOKMARK [0][]{chapter.53}{Chapitre 6 Discussion}{}% 46
-\BOOKMARK [0][]{chapter*.54}{CONCLUSION}{}% 47
-\BOOKMARK [0][]{chapter.55}{Annexe I Titre de l'annexe}{}% 48
-\BOOKMARK [0][]{subsection.61}{LISTE DE R\311F\311RENCES}{}% 49
-\BOOKMARK [0][]{chapter*.62}{BIBLIOGRAPHIE}{}% 50
+\BOOKMARK [2][-]{subsection.30}{Microcontr\364leur}{section.26}% 21
+\BOOKMARK [2][-]{subsection.31}{Adaptation des Tensions}{section.26}% 22
+\BOOKMARK [2][-]{subsection.33}{Liaison \340 l'Ordinateur}{section.26}% 23
+\BOOKMARK [2][-]{subsection.36}{Liaison \340 Jaco}{section.26}% 24
+\BOOKMARK [2][-]{subsection.37}{Sch\351ma mat\351riel Global}{section.26}% 25
+\BOOKMARK [1][]{section.38}{Choix des Caract\351ristiques du Signal \340 utiliser et des Outils algorithmiques et Math\351matiques \340 Utiliser}{chapter.24}% 26
+\BOOKMARK [2][-]{subsection.39}{D\351coupage des fen\352tres d'\351chantillons}{section.38}% 27
+\BOOKMARK [2][-]{subsection.40}{D\351tection d'activit\351 musculaire}{section.38}% 28
+\BOOKMARK [3][-]{subsubsection.41}{\311nergie de Teager-Keiser}{subsection.40}% 29
+\BOOKMARK [3][-]{subsubsection.42}{Vote \340 la majorit\351}{subsection.40}% 30
+\BOOKMARK [1][]{section.43}{Calibrage}{chapter.24}% 31
+\BOOKMARK [1][]{section.44}{Filtrage}{chapter.24}% 32
+\BOOKMARK [2][-]{subsection.45}{Description du Filtre}{section.44}% 33
+\BOOKMARK [2][-]{subsection.46}{Calibrage du Filtre}{section.44}% 34
+\BOOKMARK [1][]{section.47}{Architecture Logicielle}{chapter.24}% 35
+\BOOKMARK [2][-]{subsection.48}{Firmware}{section.47}% 36
+\BOOKMARK [3][-]{subsubsection.49}{Fonctionnement et Configuration Globale du PIC32}{subsection.48}% 37
+\BOOKMARK [3][-]{subsubsection.50}{Alogorithme global}{subsection.48}% 38
+\BOOKMARK [2][-]{subsection.51}{Application de monitorage des signaux}{section.47}% 39
+\BOOKMARK [3][-]{subsubsection.53}{Choix des Librairies et des langages}{subsection.51}% 40
+\BOOKMARK [3][-]{subsubsection.54}{Fonctionnement Global et Sch\351ma UML du Projet}{subsection.51}% 41
+\BOOKMARK [3][-]{subsubsection.55}{Lien avec Jaco et Mono}{subsection.51}% 42
+\BOOKMARK [1][]{section.56}{Validation du Syst\350me}{chapter.24}% 43
+\BOOKMARK [2][-]{subsection.57}{Protocole de validation}{section.56}% 44
+\BOOKMARK [0][]{chapter.58}{Chapitre 5 R\351sultats}{}% 45
+\BOOKMARK [0][]{chapter.59}{Chapitre 6 Discussion}{}% 46
+\BOOKMARK [0][]{chapter*.60}{CONCLUSION}{}% 47
+\BOOKMARK [0][]{chapter.61}{Annexe I Titre de l'annexe}{}% 48
+\BOOKMARK [0][]{subsection.67}{LISTE DE R\311F\311RENCES}{}% 49
+\BOOKMARK [0][]{chapter*.68}{BIBLIOGRAPHIE}{}% 50
