@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.12)  23 APR 2013 17:28
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.12)  29 APR 2013 18:00
 entering extended mode
 **mainETS.tex
 
@@ -880,7 +880,12 @@ lus l'usage de leurs bras, mais conservent
 ]
 ("C:\Documents and Settings\lio\Mes documents\Alexandre Jumeline\GitHub\memoire
 \Gabarit_Latex_Francais_20121218-UTF8\mainETS.lof"
-Underfull \hbox (badness 2012) in paragraph at lines 5--5
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+  \T1/ptm/m/n/12 Figure[][][]Muscles sterno-cléïdo mastoïdien et 
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 8--8
   \T1/ptm/m/n/12 Figure[][][]Circuit de câblage type du composant max3232, extr
 ait de 
  []
@@ -1121,96 +1126,121 @@ Chapitre 3
 
 ]
 Chapitre 4
-<Figures/de23.png, id=537, 689.57625pt x 432.61626pt>
-File: Figures/de23.png Graphic file (type png)
- <use Figures/de23.png>
-Package pdftex.def Info: Figures/de23.png used on input line 454.
-(pdftex.def)             Requested size: 189.70792pt x 119.01274pt.
+<Figures/muscles.png, id=548, 638.385pt x 601.24625pt>
+File: Figures/muscles.png Graphic file (type png)
 
-[15 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/memo
-ire/Gabarit_Latex_Francais_20121218-UTF8/Figures/de23.png>]
-<Figures/delsysneutre.png, id=543, 469.755pt x 467.7475pt>
+<use Figures/muscles.png>
+Package pdftex.def Info: Figures/muscles.png used on input line 448.
+(pdftex.def)             Requested size: 271.01524pt x 255.24644pt.
+ [15 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/muscles.png>] [16] <Figures/d
+e23.png, id=561, 689.57625pt x 432.61626pt>
+File: Figures/de23.png Graphic file (type png)
+
+<use Figures/de23.png>
+Package pdftex.def Info: Figures/de23.png used on input line 480.
+(pdftex.def)             Requested size: 189.70792pt x 119.01274pt.
+ [17 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/de23.png>] <Figures/delsysneu
+tre.png, id=566, 469.755pt x 467.7475pt>
 File: Figures/delsysneutre.png Graphic file (type png)
 
 <use Figures/delsysneutre.png>
-Package pdftex.def Info: Figures/delsysneutre.png used on input line 469.
+Package pdftex.def Info: Figures/delsysneutre.png used on input line 495.
 (pdftex.def)             Requested size: 189.70792pt x 188.89426pt.
- [16 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
-oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/delsysneutre.png>]
-<Figures/circuitadapt.png, id=549, 772.8875pt x 500.87125pt>
+ [18 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/delsysneutre.png>] <Figures/i
+nverseur.png, id=573, 494.84875pt x 303.1325pt>
+File: Figures/inverseur.png Graphic file (type png)
+
+<use Figures/inverseur.png>
+Package pdftex.def Info: Figures/inverseur.png used on input line 516.
+(pdftex.def)             Requested size: 271.01524pt x 166.0157pt.
+ [19 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/inverseur.png>] <Figures/somm
+ateur.png, id=581, 464.73625pt x 327.2225pt>
+File: Figures/sommateur.png Graphic file (type png)
+
+<use Figures/sommateur.png>
+Package pdftex.def Info: Figures/sommateur.png used on input line 535.
+(pdftex.def)             Requested size: 271.01524pt x 190.82771pt.
+ [20 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/sommateur.png>] <Figures/circ
+uitadapt.png, id=590, 772.8875pt x 500.87125pt>
 File: Figures/circuitadapt.png Graphic file (type png)
 
 <use Figures/circuitadapt.png>
-Package pdftex.def Info: Figures/circuitadapt.png used on input line 490.
+Package pdftex.def Info: Figures/circuitadapt.png used on input line 562.
 (pdftex.def)             Requested size: 271.01524pt x 175.62854pt.
- [17 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+ [21 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
 oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/circuitadapt.png>] <Figures/m
-ax3232.png, id=556, 322.20375pt x 409.53pt>
+ax3232.png, id=599, 322.20375pt x 409.53pt>
 File: Figures/max3232.png Graphic file (type png)
 
 <use Figures/max3232.png>
-Package pdftex.def Info: Figures/max3232.png used on input line 510.
+Package pdftex.def Info: Figures/max3232.png used on input line 585.
 (pdftex.def)             Requested size: 271.01524pt x 344.48401pt.
- [18 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
-oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/max3232.png>] <Figures/serial
-frame.png, id=566, 958.58125pt x 56.21pt>
+ [22]
+<Figures/serialframe.png, id=609, 958.58125pt x 56.21pt>
 File: Figures/serialframe.png Graphic file (type png)
 
 <use Figures/serialframe.png>
-Package pdftex.def Info: Figures/serialframe.png used on input line 527.
+Package pdftex.def Info: Figures/serialframe.png used on input line 602.
 (pdftex.def)             Requested size: 451.6875pt x 26.48645pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 527--528
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 602--603
  [][] 
  []
 
-[19 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/memo
-ire/Gabarit_Latex_Francais_20121218-UTF8/Figures/serialframe.png>] [20]
-<Figures/desktop1.png, id=575, 767.86874pt x 633.36626pt>
+[23 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/memo
+ire/Gabarit_Latex_Francais_20121218-UTF8/Figures/max3232.png>] [24 <C:/Document
+s and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/memoire/Gabarit_Late
+x_Francais_20121218-UTF8/Figures/serialframe.png>] [25]
+<Figures/desktop1.png, id=622, 767.86874pt x 633.36626pt>
 File: Figures/desktop1.png Graphic file (type png)
 
 <use Figures/desktop1.png>
-Package pdftex.def Info: Figures/desktop1.png used on input line 574.
+Package pdftex.def Info: Figures/desktop1.png used on input line 649.
 (pdftex.def)             Requested size: 271.01524pt x 223.54674pt.
- [21 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
-oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/desktop1.png>] [22]
-Chapitre 5
-[23
+ [26 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/desktop1.png>] [27] [28
 
-] [24
+]
+Chapitre 5
+[29] [30
 
 ]
 Chapitre 6
-[25] [26
+[31] [32
 
-] [27] [28
+] [33] [34
 
 ]
 Annexe I
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 616.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 691.
 
-Package natbib Warning: Citation `Bha10' on page 29 undefined on input line 619
+Package natbib Warning: Citation `Bha10' on page 35 undefined on input line 694
 .
 
-<Figures/logoets.jpg, id=611, 209.78375pt x 53.19875pt>
+<Figures/logoets.jpg, id=662, 209.78375pt x 53.19875pt>
 File: Figures/logoets.jpg Graphic file (type jpg)
 
 <use Figures/logoets.jpg>
-Package pdftex.def Info: Figures/logoets.jpg used on input line 632.
+Package pdftex.def Info: Figures/logoets.jpg used on input line 707.
 (pdftex.def)             Requested size: 209.78322pt x 53.19861pt.
 Package hyperref Info: bookmark level for unknown figureap defaults to 0 on inp
-ut line 634.
+ut line 709.
 Package hyperref Info: bookmark level for unknown tableap defaults to 0 on inpu
-t line 644.
- [29 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
-oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/logoets.jpg>] [30]
+t line 719.
+ [35 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/logoets.jpg>] [36]
 ("C:\Documents and Settings\lio\Mes documents\Alexandre Jumeline\GitHub\memoire
-\Gabarit_Latex_Francais_20121218-UTF8\refs.bbl" [31] [32
+\Gabarit_Latex_Francais_20121218-UTF8\refs.bbl" [37] [38
 
-]) [33]
+]) [39]
 ("C:\Documents and Settings\lio\Mes documents\Alexandre Jumeline\GitHub\memoire
-\Gabarit_Latex_Francais_20121218-UTF8\mainETS.bbl" [34
+\Gabarit_Latex_Francais_20121218-UTF8\mainETS.bbl" [40
 
 ]
 Underfull \hbox (badness 6332) in paragraph at lines 96--101
@@ -1218,17 +1248,17 @@ Underfull \hbox (badness 6332) in paragraph at lines 96--101
 ion des com-po-sants
  []
 
-[35])
+[41])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 715.
-[36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 715.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 790.
+[42]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 790.
 
 ("C:\Documents and Settings\lio\Mes documents\Alexandre Jumeline\GitHub\memoire
 \Gabarit_Latex_Francais_20121218-UTF8\mainETS.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 715.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 790.
 
 
  *File List*
@@ -1325,8 +1355,11 @@ Figures/logocc.pdf
 Figures/logocc.pdf
     umsa.fd    2009/06/22 v3.00 AMS symbols A
     umsb.fd    2009/06/22 v3.00 AMS symbols B
+Figures/muscles.png
 Figures/de23.png
 Figures/delsysneutre.png
+Figures/inverseur.png
+Figures/sommateur.png
 Figures/circuitadapt.png
 Figures/max3232.png
 Figures/serialframe.png
@@ -1336,19 +1369,19 @@ Figures/logoets.jpg
  mainETS.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 715.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 790.
 Package rerunfilecheck Info: File `mainETS.out' has not changed.
-(rerunfilecheck)             Checksum: 54FA6A3E3A4F0F94883259A86534FA62;3896.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 715.
+(rerunfilecheck)             Checksum: 222A96554FD6A8F03A472179B21F536C;3896.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 790.
  ) 
 Here is how much of TeX's memory you used:
- 11124 strings out of 494045
- 161559 string characters out of 3148339
- 267261 words of memory out of 3000000
- 14080 multiletter control sequences out of 15000+200000
+ 11160 strings out of 494045
+ 162160 string characters out of 3148339
+ 267892 words of memory out of 3000000
+ 14101 multiletter control sequences out of 15000+200000
  38316 words of font info for 55 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 43i,11n,45p,952b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,10n,45p,952b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -1361,9 +1394,9 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on mainETS.pdf (58 pages, 1110645 bytes).
+Output written on mainETS.pdf (64 pages, 1465091 bytes).
 PDF statistics:
- 733 PDF objects out of 1000 (max. 8388607)
- 143 named destinations out of 1000 (max. 500000)
- 441 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 787 PDF objects out of 1000 (max. 8388607)
+ 155 named destinations out of 1000 (max. 500000)
+ 456 words of extra memory for PDF output out of 10000 (max. 10000000)
 
