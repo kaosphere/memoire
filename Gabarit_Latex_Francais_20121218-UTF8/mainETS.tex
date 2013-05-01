@@ -160,6 +160,7 @@ This project represent a step towards technical assistance brought to spinal cor
 \item [CRC] Contrôle de redondance cyclique
 \item [SOF] Start of frame
 \item [EOF] End of frame
+\item [ALU] Unité arithmétique et logique
 
 \end{listofabbr}
 
@@ -452,26 +453,28 @@ Le premier choix important est de choisir quels muscles seront utilisés pour r�
 \end{figure}
 
 
-D'autres muscles à considérer seraient également le muscle occipito-frontal qui opère l'élévation des sourcils. Toute fois, il est peu probable que les personnes blessées médullaires apprécie le fait d'avoir des électrodes collées sur le front en permanence. Ce muscles ne représente donc pas une alternative viable pour le projet, de même que pour tous les autres muscles faciaux.
+Un autre muscle à considérer serait également le muscle occipito-frontal qui opère l'élévation des sourcils. Toute fois, il est peu probable que les personnes blessées médullaires apprécient le fait d'avoir des électrodes collées sur le front en permanence. Ce muscle ne représente donc pas une alternative viable pour le projet, de même que pour tous les autres muscles faciaux.
 
-Une autre solution seraient les muscles fléchisseurs et extenseurs du poignet. Toute fois, ces muscles, sont innervés respectivement par les nerfs médian et radial dont les faisceaux passent par les dernières vertèbres cervicales ainsi que la première vertèbre thoracique. Ainsi, les blessés médullaire de haut niveau n'auront plus suffisamment, voir plus du tout d'activité résiduelle dans ces muscles.
+Une autre solution serait d'utiliser les muscles fléchisseurs et extenseurs du poignet. Toute fois, ces muscles sont innervés respectivement par les nerfs médian et radial dont les faisceaux passent par les dernières vertèbres cervicales ainsi que la première vertèbre thoracique. Ainsi, les blessés médullaire de haut niveau n'auront plus suffisamment, voir plus du tout d'activité résiduelle dans ces muscles.
 
-Un point vient également appuyer la sélection des muscles trapèzes et sterno-cléïdo mastoïdiens et qui va influencer la manière de développer le projet : l'acquisition de signaux EMG sur ces muscles n'implique pas de "cross-talk" c'est à dire qu'on ne voit pas l'activité d'un muscle sur l'enregistrement des autres. Cette observation a été réalisée au début de la réalisation du projet, après avoir effectué des tests préliminaires visuels. Ainsi, en faisant des mouvements simples de rotation de la tête et d'élévation des épaules, on ne voit qu'un seul muscle s'activer. Cette considération permet de faire un choix drastique sur la complexité du projet : on choisit de ne monitorer que des mouvements unitaires simples n'activant qu'un seul muscle. 
+Un point vient également appuyer la sélection des muscles trapèzes et sterno-cléïdo mastoïdiens et qui va influencer la manière de développer le projet : l'acquisition de signaux EMG sur ces muscles n'implique pas de "cross-talk" c'est à dire qu'on ne voit pas l'activité d'un muscle sur l'enregistrement des autres. Cette observation a été réalisée au début de la réalisation du projet, après avoir effectué des tests préliminaires. Ainsi, en faisant des mouvements simples de rotation de la tête et d'élévation des épaules, on ne voit qu'un seul muscle s'activer. Cette considération permet de faire un choix drastique sur la complexité du projet : on choisit de ne monitorer que des mouvements unitaires simples n'activant qu'un seul muscle. 
 
 Ainsi, on est capable d'établir un lien direct entre l'activité musculaire d'un muscle particulier et le mouvement réalisé. Lorsqu'une activité est détectée sur un muscle sterno-cléïdo mastoïdien, c'est qu'une rotation de la tête a été effectuée, et si une activité est détectée sur un trapèze, c'est une élévation de l'épaule qui a été réalisée.
 
 Ce postulat permet de réduire le temps de calcul nécessaire au traitement des signaux en enlevant complètement l'étape de classification. Ce choix comporte des points négatifs et des points positifs. Un atout majeur est de retirer toute la charge de calculs nécessaire pour le classificateur, et de concentrer ces calculs sur la détection d'activité musculaire ainsi que sur le filtrage numérique du signal. En contrepartie, le nombre de mouvements reconnus par le systèmes est réduit à quatre mouvements unitaires : un pour chaque muscle. 
 
-Cependant cette perte en diversité de mouvements pourra être en partie comblée par des stratégies de communication différentes pour ces mouvements. En effet, on pourra effectuer des mouvements prolongés ou bien des mouvements composés de plusieurs clics, ou activations courtes répétées. 
+Cependant cette perte en diversité de mouvements pourra être en partie comblée par des stratégies de communication différentes pour ces mouvements. En effet, on pourra effectuer des mouvements prolongés ou bien des mouvements composés de plusieurs clics, ou activations courtes répétées. Ces stratégies permettront d'étendre la diversité de commandes tout en ne reconnaissant que quatre mouvements. 
 
 
 \section{Architecture Matérielle}\label{CHarchimat}
 
-Une fois le choix des muscles arrêté, les premiers choix a effectuer seront les choix architecturaux, et dans un premier temps, ceux concernant l'architecture matérielle. Ce chapitre présente les choix matériels effectué pour la conception du système tout en argumentant pourquoi chaque choix a été fait et dans quel cadre.
+Une fois le choix des muscles arrêté, les premiers choix a effectuer seront les choix architecturaux, et dans un premier temps, ceux concernant l'architecture matérielle. Ce chapitre présente les choix matériels effectué pour la conception du système tout en argumentant pourquoi chaque choix a été effectué et dans quel cadre.
 
 \subsection{Électrodes}
 
-Le LIO travaille depuis maintenant plusieurs années avec des électrodes construites par la compagnie Delsys. Ainsi 4 électrodes de type DE-2.3 ont été achetée pour le projet et se présentent comme sur la figure \ref{fig:de2.3}. 
+Le choix des électrodes est une phase importante du projet car leur choix détermine la charge de travail qui va en résulter. En effet, des électrodes donnant un signal brut, très faible (la tension d'un signal EMG étant de l'ordre du millivolt) est impossible a exploité tel quel et nécessite des étape de filtrage et d'amplification avoir de pouvoir être échantillonné. Ainsi choisir ce type d'électrode ajoute une étape de conception électronique supplémentaire afin que le signal soit exploitable.
+
+Le LIO travaille depuis maintenant plusieurs années avec des électrodes construites par la compagnie Delsys : les électrodes DE-2.3 et se présentent comme sur la figure \ref{fig:de2.3}. 
 
 \begin{figure}
 	\centering
@@ -482,7 +485,7 @@ Le LIO travaille depuis maintenant plusieurs années avec des électrodes constr
 	\label{fig:de2.3}
 \end{figure}
 
-Ces électrodes, contrairement au modèle moins cher DE-2.1 sont pré-amplifiées avec un gain de $1000 V/V \pm 1\%$ et pré-filtrées sur une bande passante de $20-450 Hz \pm 10\%$. Ceci nous permet de limiter les étapes de filtrage analogique avant de faire entrer le signal de l'électrode dans le microcontrôleur. 
+Ces électrodes, contrairement au modèle moins cher DE-2.1 sont pré-amplifiées avec un gain de $1000 V/V \pm 1\%$ et pré-filtrées sur une bande passante de $20-450 Hz \pm 10\%$. Ceci nous permet de limiter les étapes de filtrage analogique avant de faire entrer le signal de l'électrode dans le microcontrôleur. En effet, le filtrage passe-bande déjà présent permet de garder la bande utile du signal EMG tout en limitant le bruit d'échantillonnage.
 
 Les électrodes sont câblées avec du fil blindé, protégeant des interférences électromagnétiques, le blindage étant relié à la masse du circuit. Pour que ce blindage soit efficace, le connecteur utilisé doit être également de bonne qualité. Pour ce faire, des connecteur de marque LEMO sont utilisés. Ces connecteurs sont utilisés dans beaucoup de domaines critiques demandant des connecteurs résistants au temps et aux interférences. 
 
@@ -501,6 +504,55 @@ Plusieurs électrodes neutres, comme présentée par la figure \ref{fig:delsysne
 
 \subsection{Microcontrôleur}
 
+Le deuxième choix matériel important concerne celui du microcontrôleur ou du contrôleur de signaux numériques (DSP). En effet, ce choix est déterminant car c'est lui qui opèrera tous les calculs nécessaires au bon fonctionnement du système. Son choix est donc à faire de manière réfléchie. 
+
+Avant de présenter le microcontrôleur choisi pour le projet, les différents critères de choix seront décrits dans un premier temps. 
+
+Un premier critère est le nombre d'opérations élémentaires par seconde effectué par le calculateur. En effet, le calculateur doit être capable d'effectuer les calculs et les algorithmes choisis pour la stratégie de reconnaissance de mouvement. Ce critère peut se mesurer de deux manières. La première est la fréquence de l'horloge principale du calculateur. Toute fois, même si celle-ci est un bon indicateur, suivant l'architecture du microcontrôleur, un processeur avec une horloge plus rapide qu'un autre peut parfois effectuer moins d'opérations par seconde que le plus lent. Ceci vient du fait que certains calculateur ont besoin de deux cycles d'horloge pour effectuer une opération, l'opération devant d'abord être chargée, puis exécutée. Certains microcontrôleurs parallélisent ces actions à l'aide d'un "pipeline" qui pendant qu'il exécute une opération, "précharge" l'opération suivante. Une autre unité permettant d'exprimer la rapidité de calcul d'un processeur est le nombre de millions d'instructions par seconde (MIPS). Cette valeur fait abstraction de la manière dont fonctionne le processeur, et donne directement le nombre de calculs par unité de temps que peut soutenir le composant.
+
+Une autre caractéristique concerne l'unité arithmétique et logique (ALU) du calculateur. Celle-ci peut être dite soit "à virgule fixe", soit "à virgule flottante". Une variable à virgule flottante est une variable permettant de stocker un nombre réel dans lequel on peut déplacer la place de la virgule, tout en ne changeant pas le nombre grâce à un exposant. C'est un système similaire à l'écriture scientifique mais appliqué à l'informatique. Ceci permet pour une taille de variable donnée en octets d'optimiser la précision d'un nombre flottant.
+
+La mémoire vive disponible dans le microcontrôleur est également un critère de sélection. En effet, dans le cas d'un fenêtrage de signal de $300 ms$ échantillonné à $2 KHz$, les données  d'une fenêtre représentent 600 échantillons, qui, stockés dans des entiers de 16 bits représentent une quantité de mémoire de 1200 octets, soit $1.2 Ko$. Sachant qu'il faut stocker une fenêtre pour la traiter et en acquérir une autre en même temps, le double de cet espace est nécessaire pour le traitement des fenêtres. 
+
+$2.4Ko$, mis à l'échelle des processeurs d'aujourd'hui ne représentent que très peu de données. Toute fois, pour un microcontrôleur, cet espace représente une contrainte forte. Contrairement à un microprocesseur qui utilise de la mémoire vive externe, la mémoire vive utilisée par un microcontrôleur est interne, et la taille de la mémoire disponible est donc très réduite. 
+
+Un élément supplémentaire de choix du contrôleur est le nombre et la diversité des entrées et sorties qu'il propose. En effet, le microcontrôleur doit avoir au moins quatre entrées analogiques auxquelles se connecteront les électrodes. Le système final devant également être intégrable au sein même de Jaco, et celui-ci utilisant un bus CAN (controler area network) dans ses communications interne, le microcontrôleur doit avoir une interface CAN. D'autres périphériques de communications comme des ports série seront également nécessaire. 
+
+Comme dit précédemment le système a pour but d'être intégré au bras Jaco, de ce fait, l'encombrement et la consommation énergétiques sont également un critère à prendre en compte.
+
+Enfin le dernier élément à prendre en compte est la dépense nécessaire pour mettre en place la solution choisie. Dans un premier temps, l'existence d'une carte de développement préconçue permet de commencer directement le développement du programme sans avoir à faire de carte électronique. Les logiciels et outils de compilation entrent également en ligne de compte, car ceux-ci sont souvent très coûteux. Le fait que ces outils soient également disponibles sur plusieurs systèmes d'exploitation est également un argument de choix, bien que moins important que tous ceux cités précédemment. 
+
+On étudie donc la classe de microcontrôleurs souvent utilisée dans la littérature : la classe TMS320 de Texas Instruments.
+Ces microcontrôleurs sont divisés en plusieurs gamme présentées dans le tableau \ref{tab:tms320}.
+
+\begin{table}[ht]
+	\caption{Gammes de microcontrôleurs/DSP TMS320 de Texas Instrument }
+		\begin{tabular}{|c|c|c|c|}
+		\hline
+			& C5000 & C6000 & Keystone Multicore\\
+	    \hline
+	    	Horloge & jusqu'à 300MHz & jusqu'à 1GHz & jusqu'à 16GHz\\
+	    \hline
+			Mémoire vive & 320Ko & 450Ko & DDR3 externe\\
+	    \hline
+	    	Prix du composant seul & \$2 - \$10 & \$5 - \$25 & \$30 - \$160\\
+	    \hline
+		\end{tabular}
+	\label{tab:tms320}
+\end{table}
+
+Les calculateur de type TMS320 sont des composants extrêmement gros et coûteux qui permettent d'effectuer des calculs très poussés à grande vitesse.  Toute fois, les prix des cartes d'évaluation varient entre 200 et 500 dollars, et les suites de développement logiciel ont un prix allant d'environ 800 à 8000 dollars en fonction des options. 
+
+Il en va de même pour les calculateurs de chez Texas Instruments moins performants, les composants ont de bonnes caractéristiques mais nécessitent l'utilisation d'une suite logicielle coûteuse. 
+
+Le LIO possédait depuis quelques mois une exemplaire d'un microcontrôleur PIC32 produit par la societé Microchip ainsi que les outils hardware de programmation et de debug fournis avec celui-ci. Ce microcontrôleur répond aux critères de choix pour le projet : il possède un ADC 10 bits qui sera suffisant pour le projet et pouvant aller jusqu’à 16 canaux. Il tourne à une cadence de 80 MIPS et dispose de beaucoup de périphériques de communication dont plusieurs liaisons séries ainsi que qu’un bus CAN. 
+
+Ce microcontrôleur possède un cœur à virgule fixe, et intègre également dans son jeu d'instruction des instructions DSP flottante incluant divers outils dont les FFT. La version utilisée possède également 128Ko de mémoire vive afin de pouvoir stocker une grande quantité de donnée.
+
+Un autre avantage du PIC32 est que la suite logicielle permettant son développement peut être utilisée dans un premier temps en version gratuite. Cette version n'inclut pas les options d'optimisation de code pendant la compilation, mais ces options ne sont pas indispensable à la réalisation du projet. 
+
+Pour des raisons économiques et pratique, le PIC32, comme présenté sur la figure \ref{fig:pic32} %TODO mettre photo pic32
+ a donc été choisi pour réaliser le système.
 
 
 \subsection{Adaptation des Tensions}

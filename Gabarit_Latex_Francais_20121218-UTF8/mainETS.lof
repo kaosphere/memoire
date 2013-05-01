@@ -1,10 +1,10 @@
 \select@language {french}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Muscles sterno-cl\IeC {\'e}\IeC {\"\i }do masto\IeC {\"\i }dien et muscles du cou. par Berichard (travail personnel d'apr\IeC {\`e}s Gray's Anatomy) [GFDL (http://www.gnu.org/copyleft/fdl.html) ou CC-BY-SA-3.0-2.5-2.0-1.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons\relax }}{15}{figure.caption.26}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \IeC {\'E}lectrode Delsys DE-2.3.\relax }}{17}{figure.caption.29}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \IeC {\'E}lectrode Delsys DE-2.3.\relax }}{18}{figure.caption.29}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces \IeC {\'E}lectrode Delsys neutre.\relax }}{18}{figure.caption.30}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \IeC {\'E}tage inverseur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{19}{figure.caption.33}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces \IeC {\'E}tage sommateur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{20}{figure.caption.35}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Circuit \IeC {\'e}lectronique d'adaptation de la tension de sortie des \IeC {\'e}lectrodes.\relax }}{21}{figure.caption.38}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Circuit de c\IeC {\^a}blage type du composant max3232, extrait de la documentation officielle du composant produit par \cite {MAXIM3232}.\relax }}{23}{figure.caption.40}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Format de la trame utilis\IeC {\'e}e dans le cadre de la liaison s\IeC {\'e}rie.\relax }}{24}{figure.caption.41}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Capture d'\IeC {\'e}cran de l'application de monitorage des signaux.\relax }}{26}{figure.caption.58}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \IeC {\'E}tage inverseur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{23}{figure.caption.34}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \IeC {\'E}tage sommateur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{23}{figure.caption.36}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Circuit \IeC {\'e}lectronique d'adaptation de la tension de sortie des \IeC {\'e}lectrodes.\relax }}{25}{figure.caption.39}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Circuit de c\IeC {\^a}blage type du composant max3232, extrait de la documentation officielle du composant produit par \cite {MAXIM3232}.\relax }}{26}{figure.caption.41}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Format de la trame utilis\IeC {\'e}e dans le cadre de la liaison s\IeC {\'e}rie.\relax }}{27}{figure.caption.42}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Capture d'\IeC {\'e}cran de l'application de monitorage des signaux.\relax }}{29}{figure.caption.59}

@@ -20,33 +20,33 @@
 \contentsline {section}{\numberline {4.2}Architecture Mat\IeC {\'e}rielle}{17}{section.27}
 \contentsline {subsection}{\numberline {4.2.1}\IeC {\'E}lectrodes}{17}{subsection.28}
 \contentsline {subsection}{\numberline {4.2.2}Microcontr\IeC {\^o}leur}{19}{subsection.31}
-\contentsline {subsection}{\numberline {4.2.3}Adaptation des Tensions}{19}{subsection.32}
-\contentsline {subsection}{\numberline {4.2.4}Liaison \IeC {\`a} l'Ordinateur}{22}{subsection.39}
-\contentsline {subsection}{\numberline {4.2.5}Liaison \IeC {\`a} Jaco}{25}{subsection.42}
-\contentsline {subsection}{\numberline {4.2.6}Sch\IeC {\'e}ma mat\IeC {\'e}riel Global}{25}{subsection.43}
-\contentsline {section}{\numberline {4.3}Choix des Caract\IeC {\'e}ristiques du Signal \IeC {\`a} utiliser et des Outils algorithmiques et Math\IeC {\'e}matiques \IeC {\`a} Utiliser}{25}{section.44}
-\contentsline {subsection}{\numberline {4.3.1}D\IeC {\'e}coupage des fen\IeC {\^e}tres d'\IeC {\'e}chantillons}{25}{subsection.45}
-\contentsline {subsection}{\numberline {4.3.2}D\IeC {\'e}tection d'activit\IeC {\'e} musculaire}{25}{subsection.46}
-\contentsline {subsubsection}{\numberline {4.3.2.1}\IeC {\'E}nergie de Teager-Keiser}{25}{subsubsection.47}
-\contentsline {subsubsection}{\numberline {4.3.2.2}Vote \IeC {\`a} la majorit\IeC {\'e}}{25}{subsubsection.48}
-\contentsline {section}{\numberline {4.4}Calibrage}{25}{section.49}
-\contentsline {section}{\numberline {4.5}Filtrage}{25}{section.50}
-\contentsline {subsection}{\numberline {4.5.1}Description du Filtre}{25}{subsection.51}
-\contentsline {subsection}{\numberline {4.5.2}Calibrage du Filtre}{25}{subsection.52}
-\contentsline {section}{\numberline {4.6}Architecture Logicielle}{25}{section.53}
-\contentsline {subsection}{\numberline {4.6.1}Firmware}{25}{subsection.54}
-\contentsline {subsubsection}{\numberline {4.6.1.1}Fonctionnement et Configuration Globale du PIC32}{25}{subsubsection.55}
-\contentsline {subsubsection}{\numberline {4.6.1.2}Alogorithme global}{25}{subsubsection.56}
-\contentsline {subsection}{\numberline {4.6.2}Application de monitorage des signaux}{25}{subsection.57}
-\contentsline {subsubsection}{\numberline {4.6.2.1}Choix des Librairies et des langages}{27}{subsubsection.59}
-\contentsline {subsubsection}{\numberline {4.6.2.2}Fonctionnement Global et Sch\IeC {\'e}ma UML du Projet}{27}{subsubsection.60}
-\contentsline {subsubsection}{\numberline {4.6.2.3}Lien avec Jaco et Mono}{27}{subsubsection.61}
-\contentsline {section}{\numberline {4.7}Validation du Syst\IeC {\`e}me}{27}{section.62}
-\contentsline {subsection}{\numberline {4.7.1}Protocole de validation}{27}{subsection.63}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 5}\hfil }\MakeUppercase {R\IeC {\'e}sultats}}}{29}{chapter.64}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{31}{chapter.65}
-\contentsline {chapter}{CONCLUSION}{33}{chapter*.66}
+\contentsline {subsection}{\numberline {4.2.3}Adaptation des Tensions}{22}{subsection.33}
+\contentsline {subsection}{\numberline {4.2.4}Liaison \IeC {\`a} l'Ordinateur}{25}{subsection.40}
+\contentsline {subsection}{\numberline {4.2.5}Liaison \IeC {\`a} Jaco}{28}{subsection.43}
+\contentsline {subsection}{\numberline {4.2.6}Sch\IeC {\'e}ma mat\IeC {\'e}riel Global}{28}{subsection.44}
+\contentsline {section}{\numberline {4.3}Choix des Caract\IeC {\'e}ristiques du Signal \IeC {\`a} utiliser et des Outils algorithmiques et Math\IeC {\'e}matiques \IeC {\`a} Utiliser}{28}{section.45}
+\contentsline {subsection}{\numberline {4.3.1}D\IeC {\'e}coupage des fen\IeC {\^e}tres d'\IeC {\'e}chantillons}{28}{subsection.46}
+\contentsline {subsection}{\numberline {4.3.2}D\IeC {\'e}tection d'activit\IeC {\'e} musculaire}{28}{subsection.47}
+\contentsline {subsubsection}{\numberline {4.3.2.1}\IeC {\'E}nergie de Teager-Keiser}{28}{subsubsection.48}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Vote \IeC {\`a} la majorit\IeC {\'e}}{28}{subsubsection.49}
+\contentsline {section}{\numberline {4.4}Calibrage}{28}{section.50}
+\contentsline {section}{\numberline {4.5}Filtrage}{28}{section.51}
+\contentsline {subsection}{\numberline {4.5.1}Description du Filtre}{28}{subsection.52}
+\contentsline {subsection}{\numberline {4.5.2}Calibrage du Filtre}{28}{subsection.53}
+\contentsline {section}{\numberline {4.6}Architecture Logicielle}{28}{section.54}
+\contentsline {subsection}{\numberline {4.6.1}Firmware}{28}{subsection.55}
+\contentsline {subsubsection}{\numberline {4.6.1.1}Fonctionnement et Configuration Globale du PIC32}{28}{subsubsection.56}
+\contentsline {subsubsection}{\numberline {4.6.1.2}Alogorithme global}{28}{subsubsection.57}
+\contentsline {subsection}{\numberline {4.6.2}Application de monitorage des signaux}{28}{subsection.58}
+\contentsline {subsubsection}{\numberline {4.6.2.1}Choix des Librairies et des langages}{30}{subsubsection.60}
+\contentsline {subsubsection}{\numberline {4.6.2.2}Fonctionnement Global et Sch\IeC {\'e}ma UML du Projet}{30}{subsubsection.61}
+\contentsline {subsubsection}{\numberline {4.6.2.3}Lien avec Jaco et Mono}{30}{subsubsection.62}
+\contentsline {section}{\numberline {4.7}Validation du Syst\IeC {\`e}me}{30}{section.63}
+\contentsline {subsection}{\numberline {4.7.1}Protocole de validation}{30}{subsection.64}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 5}\hfil }\MakeUppercase {R\IeC {\'e}sultats}}}{31}{chapter.65}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{33}{chapter.66}
+\contentsline {chapter}{CONCLUSION}{35}{chapter*.67}
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{35}{chapter.67}
-\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{37}{subsection.73}
-\contentsline {chapter}{BIBLIOGRAPHIE}{40}{chapter*.74}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{37}{chapter.68}
+\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{39}{subsection.74}
+\contentsline {chapter}{BIBLIOGRAPHIE}{42}{chapter*.75}
