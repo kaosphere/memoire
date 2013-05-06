@@ -502,7 +502,7 @@ Ainsi les connecteurs LEMO femelle correspondants à ceux présents sur les câb
 
 Plusieurs électrodes neutres, comme présentée par la figure \ref{fig:delsysneutre}, ont également été acquises. Ces électrodes sont nécessaire car c'est la référence utilisée pour mesurer la tension acquise sur les muscles. Elles seront positionnées sur une partie la moins charnue possible, comme par exemple la pointe du coude de l'utilisateur. Elles seront connectées directement à la référence du convertisseur analogique-numérique du microcontrôleur.
 
-\subsection{Microcontrôleur}
+\subsection{Microcontrôleur}\label{ch:microcon}
 
 Le deuxième choix matériel important concerne celui du microcontrôleur ou du contrôleur de signaux numériques (DSP). En effet, ce choix est déterminant car c'est lui qui opèrera tous les calculs nécessaires au bon fonctionnement du système. Son choix est donc à faire de manière réfléchie. 
 
@@ -553,6 +553,10 @@ Un autre avantage du PIC32 est que la suite logicielle permettant son développe
 
 Pour des raisons économiques et pratique, le PIC32, comme présenté sur la figure \ref{fig:pic32} %TODO mettre photo pic32
  a donc été choisi pour réaliser le système.
+ 
+Le modèle choisi pour le projet est le PIC32MX795F512L. C'est le modèle le plus rapide et le plus gros de la gamme. C'est également celui possédant le plus d'entrées et sorties différentes, ainsi que la quantité de mémoire vive la plus grande des microcontrôleurs produits par Microchip.
+
+Ce modèle a été choisi également car il est commercialisé par Microchip sur une carte de développement peu coûteuse. De plus cette carte de développement se présente sous la forme d'une petite carte pouvant être montée sur une carte fille permettant de connecter simplement d'autres composants aux entrées/sortie du PIC32. Le système complet est présenté sur la figure \ref{fig:pic32comp}.
 
 
 \subsection{Adaptation des Tensions}
@@ -660,11 +664,77 @@ Cette trame est utilisée autant dans les données allant du PIC32 vers l'ordina
 
 \subsection{Liaison à Jaco}
 
+Le fonctionnement interne de Jaco utilise un bus de type CAN comme mentionné dans le paragraphe \ref{ch:microcon}. Le bus CAN est un protocole de communication très répandu dans l'industrie et popularisé à l'origine par le secteur automobile. 
+
+C'est un bus série opérant en mode différentiel, c'est à dire que deux fils transportent le même signal de manière complémentaire, permettant un contrôle de l'intégrité des données. Ce bus comprend également une couche protocolaire définissant des types de messages à envoyer à une adresse sur le bus. 
+
+Dans un premier temps, il était impossible d'implanter directement le prototype du système directement dans le bras Jaco, ou même d'y faire rentrer des câbles pour s'y connecter. 
+
+Kinova livre avec le bras robotique des librairies de programmation permettant à un programme fait par un utilisateur de se connecter à Jaco et de lui envoyer des commandes ou des fichiers de configuration. 
+
+Le système au stade de prototype étant connecté un ordinateur par une liaison série, il est aisé de se servir de l'ordinateur comme intermédiaire entre le système de détection de mouvement et le bras Jaco lui-même.
+
+De ce fait, le programme de monitorage des données du système doit également s'interfacer avec Jaco de manière à lui transférer des commandes en fonction des mouvements détectés. Cette connexion est effectuée grâce à la liaison USB disponible sur Jaco et utilise les librairies de programmation fournie par Kinova.
+
 \subsection{Schéma matériel Global}
 
-\section{Choix des Caractéristiques du Signal à utiliser et des Outils algorithmiques et Mathématiques à Utiliser}
+La partie \ref{CHarchimat} présente les différentes composantes nécessaire à la réalisation matérielle du projet. Cette partie a pour but de synthétiser tous les choix effectuer de manière à donner du recul et un point de vue global du prototype entier. 
+
+Détaillons dans un premier temps les entrées et sorties du PIC32. 
+
+Contrairement à beaucoup d'autres microcontrôleurs plus petits, le PIC32 ne possède pas d'entrées/sorties qui soit re-localisables. C'est à dire que l'on n'est pas en mesure de choisir quel périphérique prend ses entrées et sorties sur des pattes spécifiques du composants. Ceci implique donc des contraintes de câblage pour relier les électrodes et la liaison série sur celui-ci. 
+
+Ainsi on voit sur la figure \ref{fig:cablagePic} que les quatre électrodes sont reliées via l'adaptation de tension au entrées anaologiques AN1, AN2, AN3 et AN4 du PIC32. 
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=\linewidth]{Figures/cablagePic.png}
+	}
+	\caption{Schéma bloc présentant le câblage de la partie électronique du projet}
+	\label{fig:cablagePic}
+\end{figure}
+
+L'électrode neutre est reliée au PIC par l'entrée VRef+ qui sert de référence de mesure pour le convertisseur analogique/numérique du microcontrôleur. 
+
+Une UART (Universal asynchronous receiver transmitter) du PIC32 est utilisée pour réaliser la liaison série à l'ordinateur. Les deux lignes de transmission et réception Tx et Rx sont reliées au Max3232 qui adapte les tensions entre le PIC et l'ordinateur par les entrées sorties U1Tx et U1Rx (UART 1 Tx et UART 1 Rx).
+
+Si l'on prend maintenant un point de vue plus haut, nous sommes en mesure d'étudier le système dans son ensemble comme le présente la figure \ref{fig:archiMatTot}.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=\linewidth]{Figures/archiMatTot.png}
+	}
+	\caption{Schéma bloc présentant le système global}
+	\label{fig:archiMatTot}
+\end{figure}
+
+Il est nécessaire de préciser que dans cette architecture, l'ordinateur ne sert que d'intermédiaire entre le microcontrôleur et Jaco. En effet, le microcontrôleur effectue la totalité des calculs. Le mouvement effectué par l'utilisateur est envoyé sur la liaison série à l'ordinateur qui transmet la commande choisie à Jaco via la liaison USB. 
+
+Il est également à noter que cette architecture va induire un délai de traitement impossible à quantifier précisément. En effet, l'ordinateur n'étant pas temps réel au sens strict, le temps entre l'information d'un mouvement effectué et le nouvement de Jaco (ou toute autre action) commandé par USB est imprédictible précisément et sera beaucoup plus long que si le PIC32 était relié à Jaco directement par un bus CAN. 
+
+Ainsi, les temps de traitement mesurés caractériseront uniquement la partie calculatoire effectuée sur le PIC32, et non le temps entre le signal perçu par l'électrode et la commande appliquée sur le bras robotique.
+
+\section{Choix des Caractéristiques du Signal à utiliser et des Outils algorithmiques et Mathématiques}
+
+Une fois les choix matériel effectués et le calculateur choisi, l'étape de réalisation suivante est le choix des calculs a effectuer pour le bon fonctionnement de la détection d'activité musculaire. 
+
+Cette partie se décomposera en plusieurs sous partie à des fin de compréhension. La première partie concernera la manière de découper les fenêtre d'échantillons du signal EMG. 
+
+La seconde partie concernera le coeur du projet : la détection d'activité musculaire et les outils mathématiques utilisés pour la réaliser. Dans un premier temps, l'utilisation de l'énergie de Teager-Keiser sera détaillée puis l'utilisation d'un vote à la majorité pour le lissage de la détection sera expliquée et enfin la calibration de la détection.
+
+Enfin une dernière partie détaillera le choix du filtre numérique appliqué sur le signal et la manière dont celui-ci est calibré pour chaque sujet et chaque canal EMG.
 
 \subsection{Découpage des fenêtres d'échantillons}
+
+Comme vu dans la revue de littérature, l'exploitation du signal EMG ne se fait pas échantillon par échantillon, le signal est découpé en fenêtre puis chaque fenêtre est utilisée pour calculer des caractéristiques. Ces caractéristiques sont utilisées dans un classificateur pour déterminer le mouvement effectué par l'utilisateur. 
+
+La taille de la fenêtre influe principalement sur les performance du classificateur, car une petite fenêtre induit un biais en raison de la variance du signal qui peut entraîner une classification fausse. 
+
+Le projet s'étant affranchi du classificateur, s'affranchit également du problème de fenêtrage du signal, dans le sens ou son choix ne joue que sur le temps de traitement de celui-ci, en effet, plus une fenêtre est longue plus le temps de calcul pour la traiter est long. 
+
+Toute fois, plus une fenêtre est courte, plus le délai avant de recevoir la prochaine fenêtre est également court.
 
 \subsection{Détection d'activité musculaire}
 
@@ -672,13 +742,13 @@ Cette trame est utilisée autant dans les données allant du PIC32 vers l'ordina
 
 \subsubsection{Vote à la majorité}
 
-\section{Calibrage}
+\subsubsection{Calibrage}
 
-\section{Filtrage}
+\subsection{Filtrage}
 
-\subsection{Description du Filtre}
+\subsubsection{Description du Filtre}
 
-\subsection{Calibrage du Filtre}
+\subsubsection{Calibrage du Filtre}
 
 \section{Architecture Logicielle}
 
@@ -690,24 +760,6 @@ Cette trame est utilisée autant dans les données allant du PIC32 vers l'ordina
 
 \subsection{Application de monitorage des signaux}
 
-Afin de pouvoir observer facilement les résultats de chaque portion de calculs effectués par le microcontrôleur, le PIC32 communique avec l’ordinateur par le biais d’une liaison série. 
-Une application pour l’ordinateur a donc été réalisée en C++ afin de visualiser les signaux en provenance de la carte. Cette interface utilise le framework Qt ainsi que la librairie Qwt permettant de tracer des graphiques. 
-Le firmware et l’application sont codés de manière à pouvoir changer facilement de mode d’affichage en fonction des courbes à tracer. Ainsi, on peut choisir de tracer les courbes des signaux EMG, les courbes des TKE ou bien des activités musculaires.      
-
-\begin{figure}
-	\centering
-	\fbox{
-		\includegraphics[width=0.6\linewidth]{Figures/desktop1.png}
-	}
-	\caption{Capture d'écran de l'application de monitorage des signaux.}
-	\label{fig:desktop1}
-\end{figure}
-
-On voit sur la figure \ref{fig:desktop1} qu’une activité est détectée sur chaque canal étudié, et on peut voir les signaux EMG visualisable sur la figure de gauche. Cette interface permet de pouvoir visualiser n’importe quelle variable utilisée dans le firmware. Ainsi, les calculs du TKE et d'activité musculaire peuvent également être visualisés en temps réel.
-Un ajout à l’application a également été fait de manière à pouvoir enregistrer dans un fichier un canal EMG échantillonné à 2KHz. Ceci permet de pouvoir faire des tests sur ce même signal en traitement différé dans Matlab par exemple.
-Cette interface met également en exergue la discrimination des mouvements possible en se basant uniquement sur la détection d’activité. En effet, les signaux EMG présentés ci-dessus sont ceux respectivement d’un trapèze gauche, d’un sternocléidomastoïdien gauche, d’un sternocléidomastoïdien droit et d’un trapèze droit acquis lors d’une contraction isométrique. Ainsi si une activité est détectée sur un des deux trapèzes, on est déjà capables de dire qu’un mouvement du bras droit ou gauche a été effectué. Il en va de même pour les muscles sternocléidomastoïdiens et une rotation de la tête à droite ou à gauche. 
-
-
 \subsubsection{Choix des Librairies et des langages}
 
 \subsubsection{Fonctionnement Global et Schéma UML du Projet}
@@ -718,7 +770,148 @@ Cette interface met également en exergue la discrimination des mouvements possi
 
 \subsection{Protocole de validation}
 
+\subsubsection{Mode de recrutement} 
+
+Les participants seront recrutés par affichage au sein du laboratoire de recherche de recherche en imagerie et orthopédie ainsi que dans le département de génie de la production automatisée.
+
+Critères d’inclusion :
+ 
+Les sujets seront des adultes volontaires de plus de 18 ans.
+
+Critères d’exclusion :
+
+Les personnes présentant des douleurs cervicales, sujettes à des torticolis fréquents, ou tout problème orthopédique relié à la ceinture scapulaire et cervicale, ainsi qu’ à des maux de tête réguliers seront exclues.
+
+\subsubsection{Principe de fonctionnement}
+
+La détection de l’activité musculaire se fera par un seuil appliqué sur l’énergie du signal  (TKE) du signal EMG échantillonné à 2KHz. Le but de ce protocole est de déterminer la sensibilité du système en le testant sur 10 sujets. L’activité musculaire générée lors d’un mouvement dépend de l’amplitude du mouvement effectué, ainsi que de la vitesse à laquelle le mouvement est effectué. Ainsi la validation s’effectuera en faisant effectuer au sujet plusieurs mouvements d’amplitudes différentes à des vitesses différentes. 
+
+\subsubsection{Protocole expérimental}
+
+Un capteur inertiel (Interlink, Microstrain) sera utilisé afin d’enregistrer l’angle de rotation de la tête ainsi que la vitesse angulaire du mouvement. Celui-ci sera disposé sur un casque de type casque d’écoute audio avec les oreilles comme point de repère de placement. 
+
+Un pointeur laser sera également disposé sur la tête du sujet afin que celui-ci puisse indiquer au sujet l’orientation précise de sa tête.
+ 
+L’angle visé sera indiqué au sujet par des marqueurs disposés devant lui et vers lesquels il devra tourner la tête en se repérant à l’aide du pointeur laser. La vitesse visée sera indiquée au sujet par le biais d’un métronome électronique. Le sujet devra réaliser le mouvement vers le marqueur indiqué en un temps de métronome. 
+
+\subsubsection{Déroulement des acquisitions}
+
+Le sujet sera assis devant une surface comportant les cibles qu’il devra viser avec le pointeur laser. Le pointeur laser ainsi que le capteur angulaire seront disposés sur un casque d’écoute audio qui sera placé sur les oreilles du sujet.
+Une étape de familiarisation au métronome et d’entrainement à la visée permettra au sujet de s’entrainer à effectuer le mouvement aux angles prévus à la bonne vitesse.
+
+Voici une liste des mesures qui seront prises pendant l’expérimentation : 
+
+\begin{itemize}
+ \item Angle de rotation de la tête 
+ \item Vitesse angulaire de rotation de la tête 
+ \item Signaux électromyographique du muscle sterno-cléïdo mastoïdien
+ \item Signal de détection d’activité musculaire
+\end{itemize}
+
+Et ce pour chaque combinaison d’angle et de vitesse de métronome ciblés.
+
+Le sujet devra réaliser des mouvements de rotation de la tête à des angles de $10$ degrés, $20$ degrés, $30$ degrés, $40$ degrés, $50$ degrés, $60$ degrés, $70$ degrés et $80$ degrés. Chaque déplacement angulaire sera effectué à des vitesses de métronomes de $60 bpm, 90 bpm, 120 bpm, 160 bpm$ et $200 bpm$ (battement par minute) . 
+
+L’ordre des vitesses et des angles sera tiré au hasard avant l’expérimentation pour chaque sujet.
+
+\subsubsection{Notes importantes}
+
+Après chaque mouvement un fichier devra être sauvé sous la forme aXXvYYY.csv où XX correspond a la valeur de l’angle visé lors de l’enregistrement et YYY correspond à la valeur du métronome utilisé pour l’enregistrement.
+
+A chaque acquisition, un monitoring sera effectué sur le programme Monitor afin de vérifier si le système a détecté une activité musculaire ou non. Le fichier de sauvegarde devra être sauvegardé dans le même dossier que les données du capteur angulaire sous la forme emgaXXvYYY.txt
+
+\subsubsection{Exemple de données récoltées}
+
+La figure \ref{fig:validExEMG} montre un exemple de la forme que prendront les données récoltées lors d’une acquisition sur une personne. % : (A20, A30, A40, A50, A60 correspondent à l’angle de rotation effectué, et V60, V90, V120, V160 et V200 correspondent aux vitesses du métronome pour l’acquisition)
+
+\begin{figure}
+	\begin{minipage}{0.35\textwidth}
+		\fbox{
+			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
+		}
+		\caption{Exemple de données d'angles de rotation de la tête}
+		\label{fig:validExAng}
+	\end{minipage}
+	
+	\hspace{0.1\textwidth}
+	
+	\begin{minipage}{0.35\textwidth}
+		\fbox{
+			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
+		}
+		\caption{Exemple de données d'angles de rotation de la tête}
+		\label{fig:validExAng}
+	\end{minipage}
+	
+	\vspace*{20mm}
+	
+	\begin{minipage}{0.35\textwidth}
+		\fbox{
+			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
+		}
+		\caption{Exemple de données d'angles de rotation de la tête}
+		\label{fig:validExAng}
+	\end{minipage}
+	
+	\hspace{0.1\textwidth}
+	
+	\begin{minipage}{0.35\textwidth}
+		\fbox{
+			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
+		}
+		\caption{Exemple de données d'angles de rotation de la tête}
+		\label{fig:validExAng}
+	\end{minipage}
+	
+	
+	
+\end{figure}
+
+
+Ces données représentent les valeurs brutes enregistrées grâce aux capteurs inertiel et EMG. 
+
+\subsubsection{Interprétation des données}
+
+Une fois les données acquises, 4 paramètres seront estimés pour évaluer la sensibilité du système correspondant au sujet testé : l’efficacité, le coefficient de l’angle maximum, le coefficient de la vitesse angulaire maximale ainsi que l’efficacité globale.
+
+Le paramètre de l’efficacité est définit comme le rapport entre le nombre de détections sur le nombre d’essais total comme montré par l'équation \ref{eq:validEff}.
+
+\begin{align}\label{eq:validEff}
+   Efficacite = \frac{Nb\ de\ détections}{Nb\ d'essais\ total} 
+\end{align}
+
+On est en mesure de donner une valeur entre 0 et 1 à l’efficacité du système pour une personne donnée. La valeur 1 indique que le système a détecté toutes les activités réalisées par la personne et la valeur 0 indique au contraire que le système n’en a détecté aucune. 
+
+Cependant ce paramètre ne prend pas en compte les angles et vitesses angulaires atteintes lors des expérimentations. On détermine donc un coefficient d’angle ainsi qu’un coefficient de vitesse angulaire, qui viendront pondérer le coefficient d’efficacité de chaque sujet. Ces coefficients seront basés sur l’angle maximum atteint par un sujet et la vitesse angulaire atteinte par un sujet. Ainsi les résultats seront pondérés relativement au sujet ayant atteint l’angle et la vitesse angulaire les plus grands. 
+
+Ainsi on fixe un angle maximum égal au plus grand atteint par un sujet, ce sujet aura un coefficient d’angle de 1. Les autres auront un coefficient défini comme le définit l'équation \ref{eq:validCoeffAng}. 
+
+\begin{align}\label{eq:validCoeffAng}
+   Coeff_{angle} = \frac{Angle\ max\ du\ sujet}{Angle\ max\ atteint\ par\ un\ sujet} 
+\end{align}
+
+De la même manière un coefficient de vitesse angulaire sera appliqué. On fixe une vitesse angulaire maximum atteinte par un sujet, celui-ci aura un coefficient de vitesse angulaire de 1. Les autres auront un coefficient défini comme le définit l'équation \ref{eq:validCoeffVit}.
+
+\begin{align}\label{eq:validCoeffVit}
+   Coeff_{vitesse} = \frac{Vitesse\ angulaire\ max\ du\ sujet}{Vitesse\ angulaire\ max\ atteint\ par\ un\ sujet} 
+\end{align}
+
+Cela nous permet donc de fixer une efficacité globale pour chaque sujet qui sera calculée à partir de l’équation suivante : 
+
+
+\subsubsection{Comparaison des données}
+
+Les valeurs d’efficacité globale de chaque sujet seront mises en commun et comparées les unes aux autres afin de savoir si le système fonctionne de manière similaire sur plusieurs personnes ou si ses performances sont variables d’une personne à l’autre.
+Une personne ayant une détection d’activité de $100\%$ aura une efficacité de 1, une personne ayant une détection d’activité de $0\%$ aura une efficacité de 0. Ainsi, plus un score d’efficacité est bon, plus il est proche de 1.
+Une efficacité moyenne, ainsi qu’une efficacité globale moyenne pourront être déterminées ainsi que leurs écarts types. Un seuil supérieur ou égal à la valeur de $0.75$ pour l’efficacité globale permettra d’indiquer que le système est acceptable. En comparant les performances des sujets, si un sujet obtient un score plus faible que les autres, les données nous permettront d’en étudier les causes, et permettront potentiellement de trouver des pistes d’amélioration du système.
+
 \chapter{Résultats}
+
+\section{Détection d'activité}
+
+\section{Temps de calcul et chronogrammes}
+
+\section{Validation du système}
 
 \chapter{Discussion}
 
