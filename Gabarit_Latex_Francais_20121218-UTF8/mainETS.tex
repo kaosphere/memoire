@@ -734,21 +734,67 @@ La taille de la fenêtre influe principalement sur les performance du classifica
 
 Le projet s'étant affranchi du classificateur, s'affranchit également du problème de fenêtrage du signal, dans le sens ou son choix ne joue que sur le temps de traitement de celui-ci, en effet, plus une fenêtre est longue plus le temps de calcul pour la traiter est long. 
 
-Toute fois, plus une fenêtre est courte, plus le délai avant de recevoir la prochaine fenêtre est également court.
+Toute fois, plus une fenêtre est courte, plus le délai avant de recevoir la prochaine fenêtre est également court. 
+
+Le choix du découpage en fenêtre du signal est donc ouvert et peut être fait en prenant tous les critères algorithmiques restant, à savoir le fonctionnement interne du PIC32, et des librairies qu'il met à disposition. 
+
+En effet, comme la partie \ref{CHfiltrage} le présentera, le PIC32 met à disposition une librairie flottante incluant une fonction effectuant le calcul d'une transformée de Fourrier rapide (Fast Fourrier Transfor - FFT). Ces fonctions sont nécessaires au filtrage appliqué sur le signal. Les fonctions de cette librairie étant spécialement prévue pour l'architecture du PIC32, celles-ci ont une vitesse d'exécution optimale. La fonction FFT fournie par la librairie PIC32 est disponible sous 3 formes : 
+
+\begin{itemize}
+ \item fft8
+ \item fft16
+ \item fft32
+\end{itemize}
+
+Le nombre mentionné dans chaque fonction correspond au nombre d'échantillons dans le signal sur lequel la fft sera calculée. Ainsi fft8 prend en paramètre une fenêtre de signal de 8 échantillons et renvoie une FFT sur 8 points.
+
+En conclusion, trois tailles de fenêtrage sont ici possibles de manière à faciliter le traitement du signal : 8, 16 et 32 échantillons. D'autres fenêtres seraient possible, mais il faudrait alors les découper en sous-fenêtres afin de pouvoir les filtrer. 
 
 \subsection{Détection d'activité musculaire}
 
+La détection d'activité musculaire est le coeur du projet de contrôle de Jaco par EMG. En effet, le fait de s'être affranchi d'un classificateur implique que cette étape se déroule de manière optimale et toujours cohérente.
+
+Une première partie présentera la caractéristique principale utilisée pour détecter les activité musculaire : l'énergie de Teager-Keiser (TKE). 
+
+Puis dans un second temps, le système de vote à la majorité sera détaillé. En effet, fixer un simple seuil sur le TKE du signal entraine une détection d'activité en changement d'état permanent, parfois à chaque nouvelle fenêtre. Le vote à la majorité permet de liser cette détection de manière à obtenir une détection d'activité continue sous la forme d'un échelon.
+
+Enfin, le système de calibration pour chaque muscule et chaque sujet sera présenté.
+
 \subsubsection{Énergie de Teager-Keiser}
+%TODO faire des tests sur la valeur absolue du tke pour voir si ca marche toujours. faire plein de screen shots a foutre la dedans.
 
 \subsubsection{Vote à la majorité}
 
 \subsubsection{Calibrage}
 
-\subsection{Filtrage}
+Une fois le système de détection d'activité musculaire défini, celui-ci doit ensuite être adapté à chaque utilisateur, et même à chaque muscle de cet utilisateur. En effet, chaque personne développe une force différente, de la même manière que chaque personne ne présente pas le même tonus musculaire lorsqu'il est au repos. 
 
-\subsubsection{Description du Filtre}
+Par exemple une personne stressée sera beaucoup plus contractée au niveau des trapèzes qu'une personne complètement détendue, et ce même sans avoir l'impression d'être contracté.
+
+De manière à calibrer efficacement le seuil de détection d'activité musculaire, il nous récolter deux information pour chaque muscle : 
+
+\begin{itemize}
+ \item le tonus musculaire au repos
+ \item le tonus musculaire en contraction isométrique maximum
+\end{itemize}
+
+On acquiers ces données en se basant sur le TKE d'un muscule lorsqu'il est au repos, ainsi que lorsqu'il est en contraction isométrique maximum, c'est à dire que le muscle se contracte au maximum, tout en maintenant l'articulation fixe. Les équations \ref{eq:calibZero} et \ref{eq:calibMax} présentent les calculs permettant d'optenir les données.
+
+\begin{align}\label{eq:validCoeffVit}
+   Tonus_{repos} = \frac{\sum{n=1}^{20}(TKE_{repos}(n))}{20} 
+\end{align}
+
+\begin{align}\label{eq:validCoeffVit}
+   Tonus_{max} = \frac{\sum{n=1}^{20}(TKE_{max}(x(n)))}{20} 
+\end{align}
+
+où $x(n)$ représente une fenêtre de 16 échantillons du signal brut.
+
+\subsection{Filtrage}\label{CHfiltrage}
 
 \subsubsection{Calibrage du Filtre}
+
+\subsubsection{Description du Filtre}
 
 \section{Architecture Logicielle}
 
