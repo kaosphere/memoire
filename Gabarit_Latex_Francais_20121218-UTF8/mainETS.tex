@@ -781,14 +781,31 @@ De manière à calibrer efficacement le seuil de détection d'activité musculai
 On acquiers ces données en se basant sur le TKE d'un muscule lorsqu'il est au repos, ainsi que lorsqu'il est en contraction isométrique maximum, c'est à dire que le muscle se contracte au maximum, tout en maintenant l'articulation fixe. Les équations \ref{eq:calibZero} et \ref{eq:calibMax} présentent les calculs permettant d'optenir les données.
 
 \begin{align}\label{eq:validCoeffVit}
-   Tonus_{repos} = \frac{\sum{n=1}^{20}(TKE_{repos}(n))}{20} 
+   Tonus_{repos} = \frac{\sum_{n=1}^{20}TKE(x_{repos}(n))}{20} 
 \end{align}
 
 \begin{align}\label{eq:validCoeffVit}
-   Tonus_{max} = \frac{\sum{n=1}^{20}(TKE_{max}(x(n)))}{20} 
+   Tonus_{max} = \frac{\sum_{n=1}^{20}TKE_{max}(x_{max}(n))}{20} 
 \end{align}
 
-où $x(n)$ représente une fenêtre de 16 échantillons du signal brut.
+où $x(n)$ représente une fenêtre de 16 échantillons du signal brut. On calcule donc la moyenne des TKE sur 20 fenêtre, ce qui correspond à une durée de $160ms$. 
+
+Ainsi, l'utilisateur reste au repos, ou bien rentre en contraction maximum, on actionne alors la calibration grâce à l'interface graphique sur l'ordinateur pour enregistrer les tonus de chaque muscle.
+
+Une fois les tonus musculaires recueillis, on sait maintenant qu'à chaque mouvement, l'utilisateur produira un signal EMG dont le TKE moyen sera entre son tonus de repos et son tonus maximum. 
+
+Toutefois, il est peu probable que le tonus maximum soit atteint pendant un mouvement. En effet, une contraction isométrique produit un signal beaucoup plus gros qu'une contraction dans un mouvement lent. Le seuil de détection devra donc se trouver entre les deux tonus, le plus proche possible du tonus de repos sans qu'un bruit occasionnellement plus élevé sur le canal ne puisse passer au dessus du seuil. 
+
+Le seuil a donc été fixé de manière heuristique à $1/4$ de l'intervalle entre le tonus de repos et le tonus maximum. La figure \ref{fig:seuilDetection} met en image la manière dont le seuil est fixé pour chaque muscle.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/archiMatTot.png}
+	}
+	\caption{Définition du seuil de détection d'activité musculaire pour un canal EMG}
+	\label{fig:seuilDetection}
+\end{figure}
 
 \subsection{Filtrage}\label{CHfiltrage}
 
