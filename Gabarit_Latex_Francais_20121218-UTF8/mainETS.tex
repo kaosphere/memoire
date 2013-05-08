@@ -763,9 +763,7 @@ Enfin, le système de calibration pour chaque muscule et chaque sujet sera prés
 \subsubsection{Énergie de Teager-Keiser}
 %TODO faire des tests sur la valeur absolue du tke pour voir si ca marche toujours. faire plein de screen shots a foutre la dedans.
 
-\subsubsection{Vote à la majorité}
-
-\subsubsection{Calibrage}
+\subsubsection{Calibrage du seuil de détection}
 
 Une fois le système de détection d'activité musculaire défini, celui-ci doit ensuite être adapté à chaque utilisateur, et même à chaque muscle de cet utilisateur. En effet, chaque personne développe une force différente, de la même manière que chaque personne ne présente pas le même tonus musculaire lorsqu'il est au repos. 
 
@@ -780,11 +778,11 @@ De manière à calibrer efficacement le seuil de détection d'activité musculai
 
 On acquiers ces données en se basant sur le TKE d'un muscule lorsqu'il est au repos, ainsi que lorsqu'il est en contraction isométrique maximum, c'est à dire que le muscle se contracte au maximum, tout en maintenant l'articulation fixe. Les équations \ref{eq:calibZero} et \ref{eq:calibMax} présentent les calculs permettant d'optenir les données.
 
-\begin{align}\label{eq:validCoeffVit}
+\begin{align}\label{eq:calibZero}
    Tonus_{repos} = \frac{\sum_{n=1}^{20}TKE(x_{repos}(n))}{20} 
 \end{align}
 
-\begin{align}\label{eq:validCoeffVit}
+\begin{align}\label{eq:calibMax}
    Tonus_{max} = \frac{\sum_{n=1}^{20}TKE_{max}(x_{max}(n))}{20} 
 \end{align}
 
@@ -801,11 +799,49 @@ Le seuil a donc été fixé de manière heuristique à $1/4$ de l'intervalle ent
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.6\linewidth]{Figures/archiMatTot.png}
+		\includegraphics[width=0.6\linewidth]{Figures/tkeSeuil2.png}
 	}
 	\caption{Définition du seuil de détection d'activité musculaire pour un canal EMG}
 	\label{fig:seuilDetection}
 \end{figure}
+
+\subsubsection{Vote à la majorité}
+
+Le seuil fixé sur le TKE pour la détection d'activité permet donc de déterminer lorsqu'un muscle est en activité ou non, en observant lorsque ce seuil est dépassé. Cependant, le TKE variant au cours d'un mouvement, il se peut que celui-ci repasse par des moments proches de 0, même pendant un mouvement.
+
+Ceci entraine alors une détection d'activité qui change alors souvent d'état comme le montre la figure \ref{fig:onsetSansVote}.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.42\linewidth]{Figures/onsetSansVote.png}
+	}
+	\caption{Détection d'activité musculaire brute, sans vote à la majorité.}
+	\label{fig:onsetSansVote}
+\end{figure}
+
+Une conséquence supplémentaire est que si le seuil se veut d'être le plus bas possible afin d'augmenter la sensibilité du système, plus il est bas, plus le système est susceptible de détecter des faux positifs. 
+
+Le choix du seuil de détection est donc difficile, voir impossible à choisir idéalement. En effet, un seuil trop haut ne sera plus assez sensible pour détecter des mouvements faibles et en ratera une parte, tandis qu'un seuil trop bas sera sensible mais détectera des faux positifs si le bruit sur le TKE le dépasse.
+
+Afin de remédier à ces deux problèmes, une méthode inspirée du vote à la majorité de \cite{Chang1996} a été mise en place. La méthode mise en place par \cite{Chang1996} consiste à comparer la caractéristique d'une fenêtre au seuil. Puis, pour déterminer la détection d'activité, on effectue un vote à la majorité sur les cinq dernières fenêtres. Si la majorité des fenêtre est au dessus du seuil, l'activité musculaire est mise à 1, sinon elle est mise à 0.
+
+Ce système permet d'éliminer la plupart des faux positifs. Toute fois, un inconvénient persiste. En effet, une fenêtre d'activation suffit à faire la différence entre une activité ou un repos. Ainsi, la détection d'activité peut toujours osciller entre 0 et 1, si la comparaison au seuil est différente à chaque nouvelle fenêtre, résultant en une activité en dents de scie comme sur la figure \ref{fig:onsetSansVote}.
+
+La méthode mise au point pour le système consiste à mettre deux seuils de majorité et de minorité séparés. Ainsi, sur 32 fenêtres d'échantillons, si 16 ou plus sont au dessus du seuil de TKE, l'activité musculaire est mise à 1, puis, pour que celle-ci retombe à 0, il faut que le nombre de fenêtres au dessus du seuil retombe en dessous de 10. Cela permet de ne pas faire des allers-retours entre 15 et 16 fenêtres activées, qui entrainent des discontinuitées de détection.
+
+Le résulstat de ce système de vote à la majorité est présenté par la figure \ref{fig:onsetAvecVote}.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/onsetAvecVote.png}
+	}
+	\caption{Détection d'activité musculaire avec vote à la majorité.}
+	\label{fig:onsetAvecVote}
+\end{figure}
+
+On observe qu'il n'y a plus de retour à 0 de la détection d'activité, et les faux positifs occasionnels ont également été retirés. Ce vote à la majorité provoque toute fois une légère latence de détection, en effet, il faut attendre que 16 fenêtres sur 32 soient au dessus du seuil de détection pour que l'activité soit détectée.
 
 \subsection{Filtrage}\label{CHfiltrage}
 
@@ -825,9 +861,9 @@ Le seuil a donc été fixé de manière heuristique à $1/4$ de l'intervalle ent
 
 \subsubsection{Choix des Librairies et des langages}
 
-\subsubsection{Fonctionnement Global et Schéma UML du Projet}
-
 \subsubsection{Lien avec Jaco et Mono}
+
+\subsubsection{Fonctionnement Global et Schéma UML du Projet}
 
 \section{Validation du Système}
 
