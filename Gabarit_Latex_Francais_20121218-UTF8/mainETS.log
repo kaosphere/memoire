@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.12)  8 MAY 2013 16:38
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.12)  9 MAY 2013 18:44
 entering extended mode
 **mainETS.tex
 
@@ -818,7 +818,7 @@ LaTeX Info: Redefining \nameref on input line 67.
 \MPnumerator=\count157
 \makeMPintoPDFobject=\count158
 \everyMPtoPDFconversion=\toks35
-) <Figures/logocc.pdf, id=247, 121.45375pt x 43.16125pt>
+) <Figures/logocc.pdf, id=251, 121.45375pt x 43.16125pt>
 File: Figures/logocc.pdf Graphic file (type pdf)
 
 <use Figures/logocc.pdf>
@@ -1140,7 +1140,7 @@ Chapitre 3
 
 ]
 Chapitre 4
-<Figures/muscles.png, id=618, 638.385pt x 601.24625pt>
+<Figures/muscles.png, id=627, 638.385pt x 601.24625pt>
 File: Figures/muscles.png Graphic file (type png)
 
 <use Figures/muscles.png>
@@ -1148,14 +1148,14 @@ Package pdftex.def Info: Figures/muscles.png used on input line 449.
 (pdftex.def)             Requested size: 271.01524pt x 255.24644pt.
  [15 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
 oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/muscles.png>] [16] <Figures/d
-e23.png, id=631, 689.57625pt x 432.61626pt>
+e23.png, id=640, 689.57625pt x 432.61626pt>
 File: Figures/de23.png Graphic file (type png)
 
 <use Figures/de23.png>
 Package pdftex.def Info: Figures/de23.png used on input line 483.
 (pdftex.def)             Requested size: 189.70792pt x 119.01274pt.
  [17]
-<Figures/delsysneutre.png, id=636, 469.755pt x 467.7475pt>
+<Figures/delsysneutre.png, id=645, 469.755pt x 467.7475pt>
 File: Figures/delsysneutre.png Graphic file (type png)
 
 <use Figures/delsysneutre.png>
@@ -1173,14 +1173,14 @@ LaTeX Warning: Reference `fig:pic32' on page 22 undefined on input line 554.
 LaTeX Warning: Reference `fig:pic32comp' on page 22 undefined on input line 559
 .
 
-<Figures/inverseur.png, id=657, 494.84875pt x 303.1325pt>
+<Figures/inverseur.png, id=666, 494.84875pt x 303.1325pt>
 File: Figures/inverseur.png Graphic file (type png)
 
 <use Figures/inverseur.png>
 Package pdftex.def Info: Figures/inverseur.png used on input line 572.
 (pdftex.def)             Requested size: 271.01524pt x 166.0157pt.
  [22]
-<Figures/sommateur.png, id=664, 464.73625pt x 327.2225pt>
+<Figures/sommateur.png, id=673, 464.73625pt x 327.2225pt>
 File: Figures/sommateur.png Graphic file (type png)
 
 <use Figures/sommateur.png>
@@ -1188,7 +1188,7 @@ Package pdftex.def Info: Figures/sommateur.png used on input line 591.
 (pdftex.def)             Requested size: 271.01524pt x 190.82771pt.
  [23 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
 oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/inverseur.png>] <Figures/circ
-uitadapt.png, id=673, 772.8875pt x 500.87125pt>
+uitadapt.png, id=682, 772.8875pt x 500.87125pt>
 File: Figures/circuitadapt.png Graphic file (type png)
 
 <use Figures/circuitadapt.png>
@@ -1196,7 +1196,7 @@ Package pdftex.def Info: Figures/circuitadapt.png used on input line 618.
 (pdftex.def)             Requested size: 271.01524pt x 175.62854pt.
  [24 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
 oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/sommateur.png>] <Figures/max3
-232.png, id=682, 322.20375pt x 409.53pt>
+232.png, id=691, 322.20375pt x 409.53pt>
 File: Figures/max3232.png Graphic file (type png)
 
 <use Figures/max3232.png>
@@ -1206,7 +1206,7 @@ Package pdftex.def Info: Figures/max3232.png used on input line 641.
 oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/circuitadapt.png>] [26 <C:/Do
 cuments and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/memoire/Gabari
 t_Latex_Francais_20121218-UTF8/Figures/max3232.png>]
-<Figures/serialframe.png, id=696, 958.58125pt x 56.21pt>
+<Figures/serialframe.png, id=705, 958.58125pt x 56.21pt>
 File: Figures/serialframe.png Graphic file (type png)
 
 <use Figures/serialframe.png>
@@ -1219,7 +1219,7 @@ Overfull \hbox (12.79999pt too wide) in paragraph at lines 658--659
 
 [27 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/memo
 ire/Gabarit_Latex_Francais_20121218-UTF8/Figures/serialframe.png>]
-<Figures/cablagePic.png, id=705, 794.97pt x 614.295pt>
+<Figures/cablagePic.png, id=714, 794.97pt x 614.295pt>
 File: Figures/cablagePic.png Graphic file (type png)
 
 <use Figures/cablagePic.png>
@@ -1230,7 +1230,7 @@ Overfull \hbox (12.79999pt too wide) in paragraph at lines 693--694
  [][] 
  []
 
-[28] <Figures/archiMatTot.png, id=711, 794.97pt x 233.37187pt>
+[28] <Figures/archiMatTot.png, id=720, 794.97pt x 233.37187pt>
 File: Figures/archiMatTot.png Graphic file (type png)
 
 <use Figures/archiMatTot.png>
@@ -1253,127 +1253,143 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 744.
- [32] [33]
-<Figures/tkeSeuil2.png, id=739, 806.01125pt x 700.6175pt>
+ [32]
+<Figures/tkeinstant.png, id=742, 1099.10625pt x 335.2525pt>
+File: Figures/tkeinstant.png Graphic file (type png)
+
+<use Figures/tkeinstant.png>
+Package pdftex.def Info: Figures/tkeinstant.png used on input line 778.
+(pdftex.def)             Requested size: 361.35136pt x 110.2193pt.
+ [33 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/tkeinstant.png>] <Figures/tke
+moy.png, id=750, 1084.05pt x 373.395pt>
+File: Figures/tkemoy.png Graphic file (type png)
+
+<use Figures/tkemoy.png>
+Package pdftex.def Info: Figures/tkemoy.png used on input line 789.
+(pdftex.def)             Requested size: 361.35136pt x 124.46278pt.
+ [34 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/tkemoy.png>] [35] <Figures/tk
+eSeuil2.png, id=765, 806.01125pt x 700.6175pt>
 File: Figures/tkeSeuil2.png Graphic file (type png)
 
 <use Figures/tkeSeuil2.png>
-Package pdftex.def Info: Figures/tkeSeuil2.png used on input line 803.
+Package pdftex.def Info: Figures/tkeSeuil2.png used on input line 833.
 (pdftex.def)             Requested size: 271.01524pt x 235.57692pt.
- [34]
-<Figures/onsetSansVote.png, id=746, 604.50844pt x 541.27219pt>
+
+<Figures/onsetSansVote.png, id=767, 604.50844pt x 541.27219pt>
 File: Figures/onsetSansVote.png Graphic file (type png)
 
 <use Figures/onsetSansVote.png>
-Package pdftex.def Info: Figures/onsetSansVote.png used on input line 818.
+Package pdftex.def Info: Figures/onsetSansVote.png used on input line 848.
 (pdftex.def)             Requested size: 189.70792pt x 169.85742pt.
- [35 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
-oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/tkeSeuil2.png>]
-<Figures/onsetAvecVote.png, id=757, 604.50844pt x 541.27219pt>
+ [36 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/tkeSeuil2.png>] [37 <C:/Docum
+ents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/memoire/Gabarit_L
+atex_Francais_20121218-UTF8/Figures/onsetSansVote.png (PNG copy)>]
+<Figures/onsetAvecVote.png, id=783, 604.50844pt x 541.27219pt>
 File: Figures/onsetAvecVote.png Graphic file (type png)
 
 <use Figures/onsetAvecVote.png>
-Package pdftex.def Info: Figures/onsetAvecVote.png used on input line 839.
+Package pdftex.def Info: Figures/onsetAvecVote.png used on input line 869.
 (pdftex.def)             Requested size: 271.01524pt x 242.66173pt.
- [36 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
-oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/onsetSansVote.png (PNG copy)>
-] [37 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/me
-moire/Gabarit_Latex_Francais_20121218-UTF8/Figures/onsetAvecVote.png (PNG copy)
->] [38] [39]
+ [38 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/onsetAvecVote.png (PNG copy)>
+] [39] [40] [41] [42] [43] [44] [45] [46]
 
-LaTeX Warning: Reference `fig:validExEMG' on page 40 undefined on input line 92
-4.
+LaTeX Warning: Reference `fig:validExEMG' on page 47 undefined on input line 10
+72.
 
-<Figures/validExAngle.png, id=776, 590.205pt x 513.41812pt>
+<Figures/validExAngle.png, id=855, 590.205pt x 513.41812pt>
 File: Figures/validExAngle.png Graphic file (type png)
 
 <use Figures/validExAngle.png>
-Package pdftex.def Info: Figures/validExAngle.png used on input line 930.
+Package pdftex.def Info: Figures/validExAngle.png used on input line 1078.
 (pdftex.def)             Requested size: 158.09337pt x 137.52013pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 930--931
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 1078--1079
 [][] 
  []
 
 File: Figures/validExAngle.png Graphic file (type png)
 <use Figures/validExAngle.png>
-Package pdftex.def Info: Figures/validExAngle.png used on input line 940.
+Package pdftex.def Info: Figures/validExAngle.png used on input line 1088.
 (pdftex.def)             Requested size: 158.09337pt x 137.52013pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 940--941
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 1088--1089
 [][] 
  []
 
 File: Figures/validExAngle.png Graphic file (type png)
 <use Figures/validExAngle.png>
-Package pdftex.def Info: Figures/validExAngle.png used on input line 950.
+Package pdftex.def Info: Figures/validExAngle.png used on input line 1098.
 (pdftex.def)             Requested size: 158.09337pt x 137.52013pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 950--951
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 1098--1099
 [][] 
  []
 
 File: Figures/validExAngle.png Graphic file (type png)
 <use Figures/validExAngle.png>
-Package pdftex.def Info: Figures/validExAngle.png used on input line 960.
+Package pdftex.def Info: Figures/validExAngle.png used on input line 1108.
 (pdftex.def)             Requested size: 158.09337pt x 137.52013pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 960--961
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 1108--1109
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 255.53763pt on input line 967.
+LaTeX Warning: Float too large for page by 255.53763pt on input line 1115.
 
-[40]
-
-LaTeX Warning: Command \' invalid in math mode on input line 980.
-
-Missing character: There is no é in font cmr12!
-
-LaTeX Warning: Command \' invalid in math mode on input line 980.
-
-Missing character: There is no é in font cmr12!
-[41] [42 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub
+[47] [48 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub
 /memoire/Gabarit_Latex_Francais_20121218-UTF8/Figures/validExAngle.png (PNG cop
-y)>] [43] [44]
-Chapitre 5
-[45
+y)>]
 
-] [46
+LaTeX Warning: Command \' invalid in math mode on input line 1128.
+
+Missing character: There is no é in font cmr12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 1128.
+
+Missing character: There is no é in font cmr12!
+[49] [50]
+Chapitre 5
+[51
+
+] [52
 
 ]
 Chapitre 6
-[47] [48
+[53] [54
 
-] [49] [50
+] [55] [56
 
 ]
 Annexe I
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1035.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1183.
 
-Package natbib Warning: Citation `Bha10' on page 51 undefined on input line 103
-8.
+Package natbib Warning: Citation `Bha10' on page 57 undefined on input line 118
+6.
 
-<Figures/logoets.jpg, id=829, 209.78375pt x 53.19875pt>
+<Figures/logoets.jpg, id=904, 209.78375pt x 53.19875pt>
 File: Figures/logoets.jpg Graphic file (type jpg)
 
 <use Figures/logoets.jpg>
-Package pdftex.def Info: Figures/logoets.jpg used on input line 1051.
+Package pdftex.def Info: Figures/logoets.jpg used on input line 1199.
 (pdftex.def)             Requested size: 209.78322pt x 53.19861pt.
 Package hyperref Info: bookmark level for unknown figureap defaults to 0 on inp
-ut line 1053.
+ut line 1201.
 Package hyperref Info: bookmark level for unknown tableap defaults to 0 on inpu
-t line 1063.
- [51 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
-oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/logoets.jpg>] [52]
+t line 1211.
+ [57 <C:/Documents and Settings/lio/Mes documents/Alexandre Jumeline/GitHub/mem
+oire/Gabarit_Latex_Francais_20121218-UTF8/Figures/logoets.jpg>] [58]
 ("C:\Documents and Settings\lio\Mes documents\Alexandre Jumeline\GitHub\memoire
-\Gabarit_Latex_Francais_20121218-UTF8\refs.bbl" [53] [54
+\Gabarit_Latex_Francais_20121218-UTF8\refs.bbl" [59] [60
 
-]) [55]
+]) [61]
 ("C:\Documents and Settings\lio\Mes documents\Alexandre Jumeline\GitHub\memoire
-\Gabarit_Latex_Francais_20121218-UTF8\mainETS.bbl" [56
+\Gabarit_Latex_Francais_20121218-UTF8\mainETS.bbl" [62
 
 ]
 Underfull \hbox (badness 6332) in paragraph at lines 96--101
@@ -1381,17 +1397,17 @@ Underfull \hbox (badness 6332) in paragraph at lines 96--101
 ion des com-po-sants
  []
 
-[57])
+[63])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1134.
-[58]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1134.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1282.
+[64]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1282.
 
 ("C:\Documents and Settings\lio\Mes documents\Alexandre Jumeline\GitHub\memoire
 \Gabarit_Latex_Francais_20121218-UTF8\mainETS.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1134.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1282.
 
 
  *File List*
@@ -1499,6 +1515,8 @@ Figures/serialframe.png
 Figures/cablagePic.png
 Figures/archiMatTot.png
   omsptm.fd    
+Figures/tkeinstant.png
+Figures/tkemoy.png
 Figures/tkeSeuil2.png
 Figures/onsetSansVote.png
 Figures/onsetAvecVote.png
@@ -1511,23 +1529,23 @@ Figures/logoets.jpg
  mainETS.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1134.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1282.
 
 Package rerunfilecheck Info: File `mainETS.out' has not changed.
-(rerunfilecheck)             Checksum: EF91C938E61B96B0C6832196371E07C7;4825.
+(rerunfilecheck)             Checksum: 0B4A9CA20A8112BD5C83437AF811C875;4902.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1134.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1282.
  ) 
 Here is how much of TeX's memory you used:
- 11273 strings out of 494045
- 164110 string characters out of 3148339
- 269903 words of memory out of 3000000
- 14168 multiletter control sequences out of 15000+200000
+ 11330 strings out of 494045
+ 164931 string characters out of 3148339
+ 270935 words of memory out of 3000000
+ 14198 multiletter control sequences out of 15000+200000
  38316 words of font info for 55 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  43i,11n,45p,1255b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1544,9 +1562,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
 rw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on mainETS.pdf (80 pages, 1330688 bytes).
+Output written on mainETS.pdf (86 pages, 1560223 bytes).
 PDF statistics:
- 966 PDF objects out of 1000 (max. 8388607)
- 193 named destinations out of 1000 (max. 500000)
- 569 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1048 PDF objects out of 1200 (max. 8388607)
+ 218 named destinations out of 1000 (max. 500000)
+ 587 words of extra memory for PDF output out of 10000 (max. 10000000)
 

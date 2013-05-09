@@ -123,69 +123,92 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Choix des Caract\IeC {\'e}ristiques du Signal \IeC {\`a} utiliser et des Outils algorithmiques et Math\IeC {\'e}matiques}{31}{section.47}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}D\IeC {\'e}coupage des fen\IeC {\^e}tres d'\IeC {\'e}chantillons}{31}{subsection.48}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}D\IeC {\'e}tection d'activit\IeC {\'e} musculaire}{32}{subsection.49}}
+\newlabel{CHdetect}{{4.3.2}{32}{Détection d'activité musculaire\relax }{subsection.49}{}}
+\citation{li2007}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.1}\IeC {\'E}nergie de Teager-Keiser}{33}{subsubsection.50}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.2}Calibrage du seuil de d\IeC {\'e}tection}{33}{subsubsection.51}}
-\newlabel{eq:calibZero}{{4.4}{34}{Calibrage du seuil de détection\relax }{equation.52}{}}
-\newlabel{eq:calibMax}{{4.5}{34}{Calibrage du seuil de détection\relax }{equation.53}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces D\IeC {\'e}finition du seuil de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire pour un canal EMG\relax }}{35}{figure.caption.54}}
-\newlabel{fig:seuilDetection}{{4.11}{35}{Définition du seuil de détection d'activité musculaire pour un canal EMG\relax \relax }{figure.caption.54}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.3}Vote \IeC {\`a} la majorit\IeC {\'e}}{35}{subsubsection.55}}
+\newlabel{eq:tke}{{4.4}{33}{Énergie de Teager-Keiser\relax }{equation.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces TKE instantan\IeC {\'e} calcul\IeC {\'e} sur un signal EMG\relax }}{33}{figure.caption.52}}
+\newlabel{fig:tkeinstant}{{4.11}{33}{TKE instantané calculé sur un signal EMG\relax \relax }{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces TKE moyen calcul\IeC {\'e} sur un signal EMG\relax }}{34}{figure.caption.53}}
+\newlabel{fig:tkemoy}{{4.12}{34}{TKE moyen calculé sur un signal EMG\relax \relax }{figure.caption.53}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.2}Calibrage du seuil de d\IeC {\'e}tection}{34}{subsubsection.54}}
+\newlabel{eq:calibZero}{{4.5}{35}{Calibrage du seuil de détection\relax }{equation.55}{}}
+\newlabel{eq:calibMax}{{4.6}{35}{Calibrage du seuil de détection\relax }{equation.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces D\IeC {\'e}finition du seuil de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire pour un canal EMG\relax }}{36}{figure.caption.57}}
+\newlabel{fig:seuilDetection}{{4.13}{36}{Définition du seuil de détection d'activité musculaire pour un canal EMG\relax \relax }{figure.caption.57}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.3}Vote \IeC {\`a} la majorit\IeC {\'e}}{36}{subsubsection.58}}
 \citation{Chang1996}
 \citation{Chang1996}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire brute, sans vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{36}{figure.caption.56}}
-\newlabel{fig:onsetSansVote}{{4.12}{36}{Détection d'activité musculaire brute, sans vote à la majorité.\relax \relax }{figure.caption.56}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire avec vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{37}{figure.caption.57}}
-\newlabel{fig:onsetAvecVote}{{4.13}{37}{Détection d'activité musculaire avec vote à la majorité.\relax \relax }{figure.caption.57}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Filtrage}{38}{subsection.58}}
-\newlabel{CHfiltrage}{{4.3.3}{38}{Filtrage\relax }{subsection.58}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3.1}Calibrage du Filtre}{38}{subsubsection.59}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3.2}Description du Filtre}{38}{subsubsection.60}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Architecture Logicielle}{38}{section.61}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Firmware}{38}{subsection.62}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.1}Fonctionnement et Configuration Globale du PIC32}{38}{subsubsection.63}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.2}Alogorithme global}{38}{subsubsection.64}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Application de monitorage des signaux}{38}{subsection.65}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2.1}Choix des Librairies et des langages}{38}{subsubsection.66}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2.2}Fonctionnement Global et Sch\IeC {\'e}ma UML du Projet}{38}{subsubsection.67}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2.3}Lien avec Jaco et Mono}{38}{subsubsection.68}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Validation du Syst\IeC {\`e}me}{38}{section.69}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Protocole de validation}{38}{subsection.70}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.1}Mode de recrutement}{38}{subsubsection.71}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.2}Principe de fonctionnement}{39}{subsubsection.72}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.3}Protocole exp\IeC {\'e}rimental}{39}{subsubsection.73}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.4}D\IeC {\'e}roulement des acquisitions}{39}{subsubsection.74}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.5}Notes importantes}{40}{subsubsection.75}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.6}Exemple de donn\IeC {\'e}es r\IeC {\'e}colt\IeC {\'e}es}{41}{subsubsection.76}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.7}Interpr\IeC {\'e}tation des donn\IeC {\'e}es}{41}{subsubsection.78}}
-\newlabel{eq:validEff}{{4.6}{41}{Interprétation des données\relax }{equation.79}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{42}{figure.caption.77}}
-\newlabel{fig:validExAng}{{4.14}{42}{Exemple de données d'angles de rotation de la tête\relax \relax }{figure.caption.77}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{42}{figure.caption.77}}
-\newlabel{fig:validExAng}{{4.15}{42}{Exemple de données d'angles de rotation de la tête\relax \relax }{figure.caption.77}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{42}{figure.caption.77}}
-\newlabel{fig:validExAng}{{4.16}{42}{Exemple de données d'angles de rotation de la tête\relax \relax }{figure.caption.77}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{42}{figure.caption.77}}
-\newlabel{fig:validExAng}{{4.17}{42}{Exemple de données d'angles de rotation de la tête\relax \relax }{figure.caption.77}{}}
-\newlabel{eq:validCoeffAng}{{4.7}{43}{Interprétation des données\relax }{equation.80}{}}
-\newlabel{eq:validCoeffVit}{{4.8}{43}{Interprétation des données\relax }{equation.81}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.8}Comparaison des donn\IeC {\'e}es}{43}{subsubsection.82}}
-\@writefile{toc}{\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 5}\hfil }\MakeUppercase {R\IeC {\'e}sultats}}}{45}{chapter.83}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}D\IeC {\'e}tection d'activit\IeC {\'e}}{45}{section.84}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Temps de calcul et chronogrammes}{45}{section.85}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Validation du syst\IeC {\`e}me}{45}{section.86}}
-\@writefile{toc}{\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{47}{chapter.87}}
-\@writefile{toc}{\contentsline {chapter}{CONCLUSION}{49}{chapter*.88}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire brute, sans vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{37}{figure.caption.59}}
+\newlabel{fig:onsetSansVote}{{4.14}{37}{Détection d'activité musculaire brute, sans vote à la majorité.\relax \relax }{figure.caption.59}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire avec vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{38}{figure.caption.60}}
+\newlabel{fig:onsetAvecVote}{{4.15}{38}{Détection d'activité musculaire avec vote à la majorité.\relax \relax }{figure.caption.60}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Filtrage}{39}{subsection.61}}
+\newlabel{CHfiltrage}{{4.3.3}{39}{Filtrage\relax }{subsection.61}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3.1}Concept}{39}{subsubsection.62}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3.2}Calibrage du Filtre}{40}{subsubsection.63}}
+\newlabel{eq:normalCalib}{{4.7}{41}{Calibrage du Filtre\relax }{equation.64}{}}
+\newlabel{eq:fftcalib}{{4.8}{41}{Calibrage du Filtre\relax }{equation.65}{}}
+\newlabel{eq:amplCalib}{{4.9}{41}{Calibrage du Filtre\relax }{equation.66}{}}
+\newlabel{eq:ampMoyCalib}{{4.10}{41}{Calibrage du Filtre\relax }{equation.67}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3.3}Description du Filtre}{42}{subsubsection.68}}
+\newlabel{eq:phaseFiltre}{{4.11}{42}{Description du Filtre\relax }{equation.69}{}}
+\newlabel{eq:probFiltre}{{4.12}{42}{Description du Filtre\relax }{equation.70}{}}
+\newlabel{eq:maxPostsnr}{{4.13}{42}{Description du Filtre\relax }{equation.71}{}}
+\newlabel{eq:etaFiltre}{{4.14}{43}{Description du Filtre\relax }{equation.72}{}}
+\newlabel{eq:newMagEta}{{4.15}{43}{Description du Filtre\relax }{equation.73}{}}
+\newlabel{eq:tsnr1}{{4.16}{43}{Description du Filtre\relax }{equation.74}{}}
+\newlabel{eq:tsnr2}{{4.17}{43}{Description du Filtre\relax }{equation.75}{}}
+\newlabel{eq:Gtnsr}{{4.18}{43}{Description du Filtre\relax }{equation.76}{}}
+\newlabel{eq:Gtsnr2}{{4.19}{44}{Description du Filtre\relax }{equation.77}{}}
+\newlabel{eq:reconFiltre1}{{4.20}{44}{Description du Filtre\relax }{equation.78}{}}
+\newlabel{eq:reconFiltre2}{{4.21}{44}{Description du Filtre\relax }{equation.79}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Architecture Logicielle}{45}{section.80}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Firmware}{45}{subsection.81}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.1}Fonctionnement et Configuration Globale du PIC32}{45}{subsubsection.82}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.2}Alogorithme global}{45}{subsubsection.83}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Application de monitorage des signaux}{45}{subsection.84}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2.1}Choix des Librairies et des langages}{45}{subsubsection.85}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2.2}Lien avec Jaco et Mono}{45}{subsubsection.86}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2.3}Fonctionnement Global et Sch\IeC {\'e}ma UML du Projet}{45}{subsubsection.87}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Validation du Syst\IeC {\`e}me}{45}{section.88}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Protocole de validation}{45}{subsection.89}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.1}Mode de recrutement}{45}{subsubsection.90}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.2}Principe de fonctionnement}{46}{subsubsection.91}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.3}Protocole exp\IeC {\'e}rimental}{46}{subsubsection.92}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.4}D\IeC {\'e}roulement des acquisitions}{46}{subsubsection.93}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.5}Notes importantes}{47}{subsubsection.94}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.6}Exemple de donn\IeC {\'e}es r\IeC {\'e}colt\IeC {\'e}es}{47}{subsubsection.95}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{48}{figure.caption.96}}
+\newlabel{fig:validExAng}{{4.16}{48}{Exemple de données d'angles de rotation de la tête\relax \relax }{figure.caption.96}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{48}{figure.caption.96}}
+\newlabel{fig:validExAng}{{4.17}{48}{Exemple de données d'angles de rotation de la tête\relax \relax }{figure.caption.96}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.18}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{48}{figure.caption.96}}
+\newlabel{fig:validExAng}{{4.18}{48}{Exemple de données d'angles de rotation de la tête\relax \relax }{figure.caption.96}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{48}{figure.caption.96}}
+\newlabel{fig:validExAng}{{4.19}{48}{Exemple de données d'angles de rotation de la tête\relax \relax }{figure.caption.96}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.7}Interpr\IeC {\'e}tation des donn\IeC {\'e}es}{49}{subsubsection.97}}
+\newlabel{eq:validEff}{{4.22}{49}{Interprétation des données\relax }{equation.98}{}}
+\newlabel{eq:validCoeffAng}{{4.23}{49}{Interprétation des données\relax }{equation.99}{}}
+\newlabel{eq:validCoeffVit}{{4.24}{50}{Interprétation des données\relax }{equation.100}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.8}Comparaison des donn\IeC {\'e}es}{50}{subsubsection.101}}
+\@writefile{toc}{\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 5}\hfil }\MakeUppercase {R\IeC {\'e}sultats}}}{51}{chapter.102}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}D\IeC {\'e}tection d'activit\IeC {\'e}}{51}{section.103}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Temps de calcul et chronogrammes}{51}{section.104}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Validation du syst\IeC {\`e}me}{51}{section.105}}
+\@writefile{toc}{\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{53}{chapter.106}}
+\@writefile{toc}{\contentsline {chapter}{CONCLUSION}{55}{chapter*.107}}
 \@writefile{toc}{\setcounter {tocdepth}{0}}
 \citation{Bha10}
-\@writefile{toc}{\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{51}{chapter.89}}
-\@writefile{lofigureap}{\contentsline {figureap}{\numberline {{I-1}}{\ignorespaces Logo de l'\IeC {\'E}TS dans l'annexe. Ici on va mettre un peu plus de texte pour voir comment va \IeC {\^e}tre la pr\IeC {\'e}sentation de la l\IeC {\'e}gende dans ce cas.\relax }}{51}{figureap.caption.91}}
-\newlabel{fig:testap}{{{I-1}}{51}{Logo de l'ÉTS dans l'annexe. Ici on va mettre un peu plus de texte pour voir comment va être la présentation de la légende dans ce cas.\relax \relax }{figureap.caption.91}{}}
-\@writefile{lotableap}{\contentsline {tableap}{\numberline {{I-1}}{\ignorespaces Un autre tableau. Ici on va r\IeC {\'e}diger un peu plus de texte pour v\IeC {\'e}rifier si la l\IeC {\'e}gende sera bien plac\IeC {\'e}.\relax }}{52}{tableap.caption.93}}
-\newlabel{tab:tableau_annexe}{{{I-1}}{52}{Un autre tableau. Ici on va rédiger un peu plus de texte pour vérifier si la légende sera bien placé.\relax \relax }{tableap.caption.93}{}}
-\@writefile{toc}{\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{53}{subsection.95}}
+\@writefile{toc}{\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{57}{chapter.108}}
+\@writefile{lofigureap}{\contentsline {figureap}{\numberline {{I-1}}{\ignorespaces Logo de l'\IeC {\'E}TS dans l'annexe. Ici on va mettre un peu plus de texte pour voir comment va \IeC {\^e}tre la pr\IeC {\'e}sentation de la l\IeC {\'e}gende dans ce cas.\relax }}{57}{figureap.caption.110}}
+\newlabel{fig:testap}{{{I-1}}{57}{Logo de l'ÉTS dans l'annexe. Ici on va mettre un peu plus de texte pour voir comment va être la présentation de la légende dans ce cas.\relax \relax }{figureap.caption.110}{}}
+\@writefile{lotableap}{\contentsline {tableap}{\numberline {{I-1}}{\ignorespaces Un autre tableau. Ici on va r\IeC {\'e}diger un peu plus de texte pour v\IeC {\'e}rifier si la l\IeC {\'e}gende sera bien plac\IeC {\'e}.\relax }}{58}{tableap.caption.112}}
+\newlabel{tab:tableau_annexe}{{{I-1}}{58}{Un autre tableau. Ici on va rédiger un peu plus de texte pour vérifier si la légende sera bien placé.\relax \relax }{tableap.caption.112}{}}
+\@writefile{toc}{\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{59}{subsection.114}}
 \bibstyle{bibETS}
 \bibdata{biblio}
-\@writefile{toc}{\contentsline {chapter}{BIBLIOGRAPHIE}{56}{chapter*.96}}
+\@writefile{toc}{\contentsline {chapter}{BIBLIOGRAPHIE}{62}{chapter*.115}}
 \bibcite{Chang1996}{{1}{1996}{{Chang\emph  { et~al.}}}{{Chang, Gwo-Ching, Wen-Juh Kang, Jer-Junn Luh, Cheng-Kung Cheng, Jin-Shin Lai, Jia-Jin~J Chen, et Te-Son Kuo}}}
 \bibcite{Chu2007}{{2}{2007}{{Chu\emph  { et~al.}}}{{Chu, Jun-Uk, Inhyuk Moon, Yun-Jung Lee, Shin-Ki Kim, et Mu-Seong Mun}}}
 \bibcite{Crawford2005}{{3}{2005}{{Crawford\emph  { et~al.}}}{{Crawford, Beau, Kai Miller, Pradeep Shenoy, et Rajesh Rao}}}

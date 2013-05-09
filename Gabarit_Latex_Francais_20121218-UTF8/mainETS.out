@@ -27,35 +27,36 @@
 \BOOKMARK [2][-]{subsection.48}{D\351coupage des fen\352tres d'\351chantillons}{section.47}% 27
 \BOOKMARK [2][-]{subsection.49}{D\351tection d'activit\351 musculaire}{section.47}% 28
 \BOOKMARK [3][-]{subsubsection.50}{\311nergie de Teager-Keiser}{subsection.49}% 29
-\BOOKMARK [3][-]{subsubsection.51}{Calibrage du seuil de d\351tection}{subsection.49}% 30
-\BOOKMARK [3][-]{subsubsection.55}{Vote \340 la majorit\351}{subsection.49}% 31
-\BOOKMARK [2][-]{subsection.58}{Filtrage}{section.47}% 32
-\BOOKMARK [3][-]{subsubsection.59}{Calibrage du Filtre}{subsection.58}% 33
-\BOOKMARK [3][-]{subsubsection.60}{Description du Filtre}{subsection.58}% 34
-\BOOKMARK [1][]{section.61}{Architecture Logicielle}{chapter.24}% 35
-\BOOKMARK [2][-]{subsection.62}{Firmware}{section.61}% 36
-\BOOKMARK [3][-]{subsubsection.63}{Fonctionnement et Configuration Globale du PIC32}{subsection.62}% 37
-\BOOKMARK [3][-]{subsubsection.64}{Alogorithme global}{subsection.62}% 38
-\BOOKMARK [2][-]{subsection.65}{Application de monitorage des signaux}{section.61}% 39
-\BOOKMARK [3][-]{subsubsection.66}{Choix des Librairies et des langages}{subsection.65}% 40
-\BOOKMARK [3][-]{subsubsection.67}{Fonctionnement Global et Sch\351ma UML du Projet}{subsection.65}% 41
-\BOOKMARK [3][-]{subsubsection.68}{Lien avec Jaco et Mono}{subsection.65}% 42
-\BOOKMARK [1][]{section.69}{Validation du Syst\350me}{chapter.24}% 43
-\BOOKMARK [2][-]{subsection.70}{Protocole de validation}{section.69}% 44
-\BOOKMARK [3][-]{subsubsection.71}{Mode de recrutement}{subsection.70}% 45
-\BOOKMARK [3][-]{subsubsection.72}{Principe de fonctionnement}{subsection.70}% 46
-\BOOKMARK [3][-]{subsubsection.73}{Protocole exp\351rimental}{subsection.70}% 47
-\BOOKMARK [3][-]{subsubsection.74}{D\351roulement des acquisitions}{subsection.70}% 48
-\BOOKMARK [3][-]{subsubsection.75}{Notes importantes}{subsection.70}% 49
-\BOOKMARK [3][-]{subsubsection.76}{Exemple de donn\351es r\351colt\351es}{subsection.70}% 50
-\BOOKMARK [3][-]{subsubsection.78}{Interpr\351tation des donn\351es}{subsection.70}% 51
-\BOOKMARK [3][-]{subsubsection.82}{Comparaison des donn\351es}{subsection.70}% 52
-\BOOKMARK [0][]{chapter.83}{Chapitre 5 R\351sultats}{}% 53
-\BOOKMARK [1][]{section.84}{D\351tection d'activit\351}{chapter.83}% 54
-\BOOKMARK [1][]{section.85}{Temps de calcul et chronogrammes}{chapter.83}% 55
-\BOOKMARK [1][]{section.86}{Validation du syst\350me}{chapter.83}% 56
-\BOOKMARK [0][]{chapter.87}{Chapitre 6 Discussion}{}% 57
-\BOOKMARK [0][]{chapter*.88}{CONCLUSION}{}% 58
-\BOOKMARK [0][]{chapter.89}{Annexe I Titre de l'annexe}{}% 59
-\BOOKMARK [0][]{subsection.95}{LISTE DE R\311F\311RENCES}{}% 60
-\BOOKMARK [0][]{chapter*.96}{BIBLIOGRAPHIE}{}% 61
+\BOOKMARK [3][-]{subsubsection.54}{Calibrage du seuil de d\351tection}{subsection.49}% 30
+\BOOKMARK [3][-]{subsubsection.58}{Vote \340 la majorit\351}{subsection.49}% 31
+\BOOKMARK [2][-]{subsection.61}{Filtrage}{section.47}% 32
+\BOOKMARK [3][-]{subsubsection.62}{Concept}{subsection.61}% 33
+\BOOKMARK [3][-]{subsubsection.63}{Calibrage du Filtre}{subsection.61}% 34
+\BOOKMARK [3][-]{subsubsection.68}{Description du Filtre}{subsection.61}% 35
+\BOOKMARK [1][]{section.80}{Architecture Logicielle}{chapter.24}% 36
+\BOOKMARK [2][-]{subsection.81}{Firmware}{section.80}% 37
+\BOOKMARK [3][-]{subsubsection.82}{Fonctionnement et Configuration Globale du PIC32}{subsection.81}% 38
+\BOOKMARK [3][-]{subsubsection.83}{Alogorithme global}{subsection.81}% 39
+\BOOKMARK [2][-]{subsection.84}{Application de monitorage des signaux}{section.80}% 40
+\BOOKMARK [3][-]{subsubsection.85}{Choix des Librairies et des langages}{subsection.84}% 41
+\BOOKMARK [3][-]{subsubsection.86}{Lien avec Jaco et Mono}{subsection.84}% 42
+\BOOKMARK [3][-]{subsubsection.87}{Fonctionnement Global et Sch\351ma UML du Projet}{subsection.84}% 43
+\BOOKMARK [1][]{section.88}{Validation du Syst\350me}{chapter.24}% 44
+\BOOKMARK [2][-]{subsection.89}{Protocole de validation}{section.88}% 45
+\BOOKMARK [3][-]{subsubsection.90}{Mode de recrutement}{subsection.89}% 46
+\BOOKMARK [3][-]{subsubsection.91}{Principe de fonctionnement}{subsection.89}% 47
+\BOOKMARK [3][-]{subsubsection.92}{Protocole exp\351rimental}{subsection.89}% 48
+\BOOKMARK [3][-]{subsubsection.93}{D\351roulement des acquisitions}{subsection.89}% 49
+\BOOKMARK [3][-]{subsubsection.94}{Notes importantes}{subsection.89}% 50
+\BOOKMARK [3][-]{subsubsection.95}{Exemple de donn\351es r\351colt\351es}{subsection.89}% 51
+\BOOKMARK [3][-]{subsubsection.97}{Interpr\351tation des donn\351es}{subsection.89}% 52
+\BOOKMARK [3][-]{subsubsection.101}{Comparaison des donn\351es}{subsection.89}% 53
+\BOOKMARK [0][]{chapter.102}{Chapitre 5 R\351sultats}{}% 54
+\BOOKMARK [1][]{section.103}{D\351tection d'activit\351}{chapter.102}% 55
+\BOOKMARK [1][]{section.104}{Temps de calcul et chronogrammes}{chapter.102}% 56
+\BOOKMARK [1][]{section.105}{Validation du syst\350me}{chapter.102}% 57
+\BOOKMARK [0][]{chapter.106}{Chapitre 6 Discussion}{}% 58
+\BOOKMARK [0][]{chapter*.107}{CONCLUSION}{}% 59
+\BOOKMARK [0][]{chapter.108}{Annexe I Titre de l'annexe}{}% 60
+\BOOKMARK [0][]{subsection.114}{LISTE DE R\311F\311RENCES}{}% 61
+\BOOKMARK [0][]{chapter*.115}{BIBLIOGRAPHIE}{}% 62

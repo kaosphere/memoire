@@ -750,7 +750,7 @@ Le nombre mentionné dans chaque fonction correspond au nombre d'échantillons d
 
 En conclusion, trois tailles de fenêtrage sont ici possibles de manière à faciliter le traitement du signal : 8, 16 et 32 échantillons. D'autres fenêtres seraient possible, mais il faudrait alors les découper en sous-fenêtres afin de pouvoir les filtrer. 
 
-\subsection{Détection d'activité musculaire}
+\subsection{Détection d'activité musculaire}\label{CHdetect}
 
 La détection d'activité musculaire est le coeur du projet de contrôle de Jaco par EMG. En effet, le fait de s'être affranchi d'un classificateur implique que cette étape se déroule de manière optimale et toujours cohérente.
 
@@ -762,6 +762,36 @@ Enfin, le système de calibration pour chaque muscule et chaque sujet sera prés
 
 \subsubsection{Énergie de Teager-Keiser}
 %TODO faire des tests sur la valeur absolue du tke pour voir si ca marche toujours. faire plein de screen shots a foutre la dedans.
+
+L'étude de \cite{li2007} a montré qu'une caractéristique du signal EMG est très efficace pour la détection d'activité musculaire automatique : l'énergie de Teager-Keiser (TKE). Cette caractéristique s'apparente à un taux de variation simple du signal en comparant un échantillon à son précédent et à son suivant. Le TKE se calcule comme présenté par l'équation \ref{eq:tke}.
+
+\begin{align}\label{eq:tke}
+   TKE(k) = x^2(k) - x(k-1)*x(k+1) 
+\end{align}
+
+Ainsi, une fois une fenêtre acquise complètement, le TKE instantané (sur chaque échantillon) est calculé. La figure \ref{fig:tkeinstant} montre le TKE instantané obtenu sur un signal EMG donné.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/tkeinstant.png}
+	}
+	\caption{TKE instantané calculé sur un signal EMG}
+	\label{fig:tkeinstant}
+\end{figure}
+
+Cependant, ce TKE par échantillon est difficile à utiliser directement, car il est très variable et fixer un seuil efficace pour détecter les activités serait très compliqué. Pour faciliter son exploitation, on effectue la moyenne du TKE sur toute la fenêtre, afin d'en obtenir sont enveloppe. De cette manière, un seuil de détection est applicable plus facilement. La figure \ref{fig:tkemoy} présente le passage du TKE instantané au TKE moyen.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/tkemoy.png}
+	}
+	\caption{TKE moyen calculé sur un signal EMG}
+	\label{fig:tkemoy}
+\end{figure}
+
+Une fois le TKE d'une fenêtre calculé, le but est de savoir si le muscle est activé ou non. Pour ce faire, un seuil doit être défini. Si le TKE de la fenêtre dépasse ce seuil, alors le muscle est considéré comme étant en activité.
 
 \subsubsection{Calibrage du seuil de détection}
 
@@ -845,9 +875,127 @@ On observe qu'il n'y a plus de retour à 0 de la détection d'activité, et les 
 
 \subsection{Filtrage}\label{CHfiltrage}
 
+Dans un premier temps, le système a été réalisé sans filtrage numérique. Ainsi le système fonctionnait uniquement en se basant sur la détection d'activité musculaire décrite au chapitre \ref{CHdetect}.
+
+Les tests ont été concluants concernant la détection d'activité seule. Cependant le système a présenté une faiblesse : pour être détecté, un mouvement doit être très ample et comporter une composante isométrique. Les mouvements simples et lents ne demandant pas beaucoup de force ne sont pas détectés par le système. 
+
+En résumé, le système manque de précision, et son utilisation chez des personnes blessées médullaires ayant potentiellement moins de tonus musculaire qu'une personne en bonne santé est alors compromise. 
+
+Une solution est de filtrer le signal EMG brut de manière à amplifier les phases d'activité musculaire et diminuer au maximum le bruit de mesure. 
+
+L'utilisation d'un filtre prédictif est donc préconisée pour effectuer ce travail. 
+
+Cette partie présente le filtre prédictif mis en place dans le système dans le but d'augmenter sa sensibilité tout en diminuant le bruit de mesure. Une brève description du filtre sera d'abord effectuée, puis le calibrage de celui-ci sera décrit dans une seconde partie, pour enfin terminer par la description détaillée du filtre et de son algorithme.
+
+\subsubsection{Concept}
+
+Le but du filtrage prédictif est de pouvoir prédire quelles partie du signal le filtre doit amplifier, et quelles parties de ce même signal il doit écraser.
+
+Dans notre cas, la partie du signal à écraser est le bruit analogique mesuré par les ADC du PIC32, tandis que la partie du signal à amplifier est le signal EMG généré par le muscle sur lequel est collé l'électrode.
+
+Le filtre ayant deux élément à reconnaitre (le bruit et le signal), il faut en caractériser un des deux, et définir que lorsque l'on ne le détecte pas, c'est que l'on est en présence de l'autre. Ainsi, on choisit de caractériser le bruit. Lorsque le système détecte la présence du bruit, alors le signal est écrasé, lorsqu'il ne le détecte pas, c'est qu'un EMG est présent dans le signal, il est alors amplifié.
+
+Pour caractériser le bruit, on utilise les caractéristiques fréquentielles du signal. Le but est donc d'isoler le spectre d'amplitude du bruit afin d'en faire un modèle de comparaison. On enregistre un signal sans EMG et on calcule le spectre d'amplitude moyen de ce signal. C'est la bande de base.
+
+Puis à chaque nouvelle fenêtre, on compare le spectre d'amplitude de cette fenêtre à celui de la bande de base pour calculer une probabilité de présence du bruit. Cette probabilité permet de fixer un gain qui amplifiera ou écrasera le spectre d'amplitude et donc par extension, le signal.
+
+Il est également à noter que l'on ne veut pas créer de déphasage du signal. La phase du signal sera donc isolée de la fft pour être réutilisée sans modification pour reconstruire le signal après que le spectre d'amplitude a été transformé.  
+
 \subsubsection{Calibrage du Filtre}
 
+Une fois le concept du filtre posé, le mode de fonctionnement précis du filtre va maintenant être détaillé. La première étape de la réalisation du filtre est son calibrage, ou l'enregistrement de la bande de base. 
+
+Le calibrage du filtre s'effectue sur une partie de signal où l'on est sur qu'aucun EMG ne sera présent. On demande donc à l'utilisateur de ne pas bouger pendant l'acquisition de la bande de base. 
+
+Le signal est alors acquis par fenêtre. Lorsqu'une fenêtre est acquise, on la normalise, c'est à dire qu'on retire sa moyenne à chaque échantillon (eq:normalCalib où $NFFT$ = 16), puis on calcule sa FFT (équation \ref{eq:fftcalib}).
+
+\begin{align}\label{eq:normalCalib}
+   x_{k=1}^{k=NFFT}(k) = x(k) - \frac{\sum_{n=1}^{NFFT}x(n)}{NFFT}
+\end{align}
+
+\begin{align}\label{eq:fftcalib}
+   fft = FFT_{16}(x(k)) 
+\end{align}
+
+Le $fft$ calculé par cette opération est donc un tableau de 16 nombres complexes représentant la transformée de fourrier de la fenêtre.
+
+Une fois cette FFT calculée, on met la phase du signal de côté pour ne garder que le spectre d'amplitude $M$ de la fenêtre (équation \ref{eq:amplCalib}).
+
+\begin{align}\label{eq:amplCalib}
+   M_{k=1}^{k=NFFT}(k) = \Vert fft(k) \Vert^2 
+\end{align}
+
+On garde ensuite en mémoire ce spectre d'amplitude, puis on répète l'opération sur 20 fenêtres. Une fois les 20 spectres d'amplitude acquis, on calcule le spectre d'amplitude moyen de ces 20 fenêtres (équation \ref{eq:ampMoyCalib}).
+
+\begin{align}\label{eq:ampMoyCalib}
+   BandeBase = \frac{\sum_{n=1}^{20}amplitude(n)}{20}
+\end{align}
+
+Ce spectre d'amplitude moyen constitue la bande de base qui sera comparée à chaque fenêtre du signal pour déterminer à chaque fenêtre la probabilité de présence du bruit dans le signal.
+
 \subsubsection{Description du Filtre}
+
+Une fois la bande de base du filtre calibrée, le filtre peut être mis en fonctionnement à chaque fenêtre de signal acquise. Cette partie détaille le fonctionnement algorithmique du filtre. 
+
+Une nouvelle fenêtre est acquise. Dans un premier temps, elle est sujette au même traitement que pour la calibration : elle est normalisée (équation \ref{eq:normalCalib}) puis sa FFT est calculée (équation \ref{eq:fftcalib}).
+
+Une fois la FFT obtenue, on sépare le spectre d'amplitude (équation \ref{eq:amplCalib}) de la phase $\phi$ qui cette fois-ci est aussi calculée (équation \ref{eq:phaseFiltre}). En effet, celle-ci sera nécessaire pour reconstruire le signal une fois que l'amplitude aura été modifiée.
+
+\begin{align}\label{eq:phaseFiltre}
+   \phi(k) = atan2(\Im(fft(k)), \Re(fft(k)))
+\end{align}
+
+On calcule ensuite la probabilité a posteriori $postsnr$ de présence du filtre en faisant le rapport entre le spectre d'amplitude de la fenêtre et le spectre d'amplitude moyen (équation \ref{eq:probFiltre}).
+
+\begin{align}\label{eq:probFiltre}
+   postsnr(k) = \frac{M(k)}{M_{Bande de base}} - 1
+\end{align}
+
+Cette probabilité est ensuite limitée pour ne pas créer de distorsion provoquée par une valeur trop petite (équation \ref{eq:maxPostsnr}).
+
+\begin{align}\label{eq:maxPostsnr}
+   postsnr(k) = \max(postsnr(k), 0.01)
+\end{align}
+
+On compare ensuite la probabilité obtenue avec la probabilité obtenue avec le spectre d'amplitude obtenue à la fenêtre précédente. Cette méthode est appelée méthode de la "décision adaptative" (équation \ref{eq:etaFiltre}). Une nouvelle amplitude est alors calculée en appliquant cette probabilité sur l'amplitude d'origine (équation \ref{eq:newMagEta}).
+
+\begin{align}\label{eq:etaFiltre}
+   eta(k) = \alpha * \frac{M(k-1)}{M_{Bande de base}} + (1 - \alpha) * postsnr(k)
+\end{align}
+
+\begin{align}\label{eq:newMagEta}
+   M_{new}(k) = \frac{eta}{eta+1} * M(k)
+\end{align}
+
+On calcule ensuite le gain à appliquer sur le spectre d'amplitude en comparant l'amplitude sur laquelle on a appliqué les probabilités a priori avec le spectre d'amplitude moyen (équation \ref{eq:tsnr1}, \ref{eq:tsnr2}, \ref{eq:Gtnsr} et \ref{eq:Gtsnr2}).
+
+ \begin{align}\label{eq:tsnr1}
+   tsnr(k) = \frac{M_{new}(k)}{M_{Bande de base}}
+\end{align}
+
+ \begin{align}\label{eq:tsnr2}
+   Gtsnr(k) = \frac{tsnr(k)}{tsnr(k)+1}
+\end{align}
+
+ \begin{align}\label{eq:Gtnsr}
+   Gtsnr(k) = \max(Gtsnr(k), 0.01)
+\end{align}
+
+\begin{align}\label{eq:Gtsnr2}
+   M_{new}(k) = Gtsnr * M(k)
+\end{align}
+
+Une fois la nouvelle amplitude calculée, il ne reste plus qu'à reconstruire la fft du signal, en réunissant l'amplitude et la phase (équation\ref{eq:reconFiltre1} et \ref{eq:reconFiltre2}).
+
+\begin{align}\label{eq:reconFiltre1}
+   \Re(fft(k)) = M_{new}(k) * cos(\phi(k))
+\end{align}
+
+\begin{align}\label{eq:reconFiltre2}
+   \Im(fft(k)) = -M_{new}(k) * sin(\phi(k))
+\end{align}
+
+Une fois fait, on effectue la transformée de fourrier inverse pour retrouver le signal EMG filtré.
 
 \section{Architecture Logicielle}
 
