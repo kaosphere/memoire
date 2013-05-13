@@ -999,35 +999,138 @@ Une fois fait, on effectue la transformée de fourrier inverse pour retrouver le
 
 \section{Architecture Logicielle}
 
+Les parties précédentes ont présenté l'architecture matérielle ainsi que les outils mathématiques utilisés dans le projet. La derniere grande partie technique à présenter restante est donc l'architecture logicielle. 
+
+En effet, tout en prenant en compte les choix effectués dans la partie précédente, la manière de les réaliser et de les connecter ensembles doit être présentée. 
+
+Ainsi, ce chapitre présentera d'abord le fonctionnement du firmware, c'est à dire le programme exécuté sur le PIC32 puis présentera le fonctionnement de l'application de monitorage des signaux, qui permet aussi la connexion du système au bras Jaco et qui est exécutée sur un ordinateur. 
+
 \subsection{Firmware}
+
+Le firmware est le nom donné à un programme tournant sur un microcontrôleur, ou sur une carte électronique. Ce firmware est un programme développé dans un langage dépendant du microcontrôleur choisi pour le projet. 
+
+Le PIC32 est programmable en langage C, ainsi qu'en assembleur bien qu'il soit peu utilisé, excepté pour les parties de code nécessitant une grande optimisation. 
+
+Cette partie décrira le fonctionnement du PIC32 ainsi que l'algorithme global du firmware. 
 
 \subsubsection{Fonctionnement et Configuration Globale du PIC32}
 
+Pour présenter le firmware, il est important de présenter la manière de fonctionner du PIC32. La différence principale entre un microcontrôleur et un ordinateur moderne est qu'il est impossible d'exécuter plusieurs programmes en parallèle sur un microcontrôleur. En effet, c'est le système d'exploitation qui permet dans un ordinateur de paralléliser les opérations effectuées. 
+
+Ainsi, un microcontôleur n'effectue qu'une seule série d'opérations : celle de son programme. Un programme est une suite d'instructions élémentaires compilées dans un fichier binaire. Cette suite d'instruction est inscrite dans la mémoire de programme du microcontrôleur et chaque instruction possède une adresse dans cette mémoire. Le compteur de programme (PC - program counter) et un nombre contenant l'adresse mémoire de l'instruction en cours. Une fois que cette instruction est finie, le PC est incrémenté pour passer à l'instruction suivante et jusqu'à ce que le programme se termine. 
+
+Cependant le microcontrôleur possède des périphériques dédiés capables d'effectuer les opérations pour lesquelles ils sont prévus sans influencer le déroulement du programme principal. Par exemple, le convertisseur analogique-numérique (ADC) enregistre les échantillons du signal sans que cela ait à figurer dans le programme. 
+
+Ces périphériques possèdent des interruptions, qui permettent de signifier au programme lorsque des données sont accessibles. Ces interruptions sont déclenchées quand une condition est remplie et sont une fonction spécifique qui n'est exécutée que lorsque la condition est remplie. Par exemple, il est possible de configurer l'ADC du PIC32 pour qu'il déclenche une interruption à chaque fois qu'il a fini d'acquérir 16 samples. 
+
+Lorsqu'une interruption est déclenchée par un périphérique, le déroulement du programme est arrêté. L'adresse de l'instruction où il s'est arrêté est mise en mémoire, puis le code de la fonction d'interruption est exécuté. Une fois que cette fonction est terminée, le programme reprend son cours normal à l'adresse qui avait préalablement été mise en mémoire. 
+
+Ce système d'interruption permet d'effectuer automatiquement des opérations comme l'acquisition d'un signal, ou l'envoi et la réception de messages sur le port série sans influencer le programme principal, et donc gagner du temps de calcul. 
+
+Cependant, les interruptions bloquent le cours normal du programme principal. Les interruptions doivent donc être le plus courtes possibles pour ne pas perdre trop de temps dedans. 
+
+Il est donc important de bien choisir quels calculs sont effectués dans les interruptions, et quels calculs sont faits dans le programme principal. 
+
+Une interruptions peut également être interrompue par une autre interruption. Un système de priorité détermine l'ordre dans lequel ces interruptions ont lieu. Une interruption ne pourra jamais interrompre une autre interruption ayant une priorité plus haute. Ainsi l'interruption encours se terminera avant que l'autre puisse s'effectuer. 
+
+Ainsi, les deux périphériques utilisés dans le système fonctionneront à base d'interruptions, à savoir l'ADC permettant l'acquisition des quatre canaux, et l'UARTT permettant la communication série. 
+
+L'ADC du PIC32 permet de scanner plusieurs entrées les unes après les autres. Ainsi il faut donc multiplier la fréquence d'échantillonnage par le nombre de canaux afin de pouvoir acquérir tous les canaux à la bonne fréquence. On fixe donc la fréquence d'échantillonnage à 8KHz pour que chaque canal soit échantillonné à 2KHz. 
+
+L'interruption de l'ADC est configurée pour être déclenchée après avoir acquis le plus d'échantillons possible, soit 8 échantillons. Ainsi, tous les 8 échantillons, correspondant à 2 échantillons par canal, l'interruption de l'ADC est déclenchée. 
+
+L'UARTT du PIC32 quant à elle possède deux interruptions, une pour l'envoi de données, et l'autre pour la réception. Ces interruptions sont déclenchées respectivement à l'envoi et à la réception d'un octet complet. Ainsi, à chaque octet reçu, celui-ci est mis en mémoire dans l'interruption, et à chaque octet envoyé, on met l'octet suivant dans le "buffer" d'envoi.
+
 \subsubsection{Alogorithme global}
+
+Une fois le fonctionnement global du PIC32 et de ses interruption décrit, l'algorithme du programme principal ainsi que ceux des interruptions peuvent maintenant être présentés en détail. %TODO
 
 \subsection{Application de monitorage des signaux}
 
+La partie firmware ayant été présentée, le dernier élément technique du projet est la réalisation du programme de monitorage des signaux. Cette application est un programme tournant sur un ordinateur. L'ordinateur, grâce aux données reçues à travers la liaison série, est en mesure d'afficher les données acquises ou calculées par le PIC32. 
+
+Ceci a été utile lors de la réalisation dans un premier temps à des fins de débogage, puis après pour l'utilisation même du système. En effet, l'interface graphique permet de lancer les phases de calibration du système, pour calibrer les seuils de détection d'activité musculaire, et pour calibrer la bande de base du filtre. 
+
+Ce programme permet également de faire le lien entre le PIC32 et le bras robotique JACO. Cette partie a nécessité l'ajout d'une surcouche logicielle supplémentaire pour cause d'incompatibilité de langages comme le présentera la partie \ref{CHMono}.
+
+Enfin la conception complète, à savoir le diagramme UML du programme ainsi que son algorithme principal seront détaillés, ainsi que toute les fonctionnalités finales du programme.
+
 \subsubsection{Choix des Librairies et des langages}
 
-\subsubsection{Lien avec Jaco et Mono}
+Le choix des langages de programmation ont été effectués au début du projet. En lisant la documentation fournie par Kinova, il s'est avéré possible d'interfacer Jaco avec un programme C++. De plus, l'état de l'art de la robotique moderne utilise largement le langage C++, qui en est devenu un des standards. 
+
+En effet, le framework open source ROS (Robotic Operating System) est intégralement développé en C++ et Python, deux langages facilement interfaçables. 
+
+La librairie Qt est une librairie graphique open source qui permet la création facile et multi plateforme d'interface graphique robuste. Cette librairie est l'une des plus complète existant aujourd'hui et possède des modules supplémentaires multi plateforme en grand nombre, comme un module réseau, des bases de données, la gestion des fichiers ou encore l'utilisations d'architectures modèle-vue déjà implémentés. Ceci permet d'ouvrir beaucoup d'option pour la suite du développement du projet, dans le cas où de nouveaux éléments viendraient à y être ajoutés. 
+
+La combinaisons de ces arguments a donc logiquement tourné le choix du langage informatique principal du programme vers le langage C++.
+
+Cependant, après plusieurs mois de développement, il s'est avéré que l'utilisation des librairies de Kinova doive se faire en passant par une couche logicielle supplémentaire : Mono. Cette partie est détaillée dans la partie suivante.
+
+En effet, les librairies de Kinova ont été nativement réalisée en langage C\#. Le C\# est un langage développé par Microsoft et qui est de ce fait, conçu pour fonctionner de manière optimale sous Windows. Afin d'augmenter les possibilités de développement en C\#, une librairie a été conçue par la communauté open source afin de rendre le C\# utilisable sur d'autres systèmes d'exploitation comme linux ou MacOS.  
+
+\subsubsection{Lien avec Jaco et Mono}\label{CHMono}
+
+Le but du projet étant de contrôler le bras JACO, il est nécessaire d’utiliser l’interface de programmation (API) de Kinova pour le contrôler. Cette librairie permet la connexion du bras JACO au programme via USB, et implémente toutes les méthodes permettant d'envoyer des ordres précis à JACO. Ces ordres peuvent être des ordres de configuration du bras, oubien des commandes pour lire des valeurs d'état du bras (courant dans les articulation, température des moteurs, angles des articulations, ...), des commandes de déplacements des articulations, ou mêmes des trajectoires de mouvement. 
+
+L’API Kinova a été réalisée intégralement en C\#, et est donc inutilisable directement par un programme codé en C++ pur. Dans sa documentation, Kinova préconise l'utilisation d'un framework appelé Mono pour l'utiliser depuis un programme C++.
+
+Mono est une librairie permettant de mettre a disposition des structures de données (classes, fonctions… ) du monde C++ accessibles au monde .NET (C\#) et inversement. De ce fait, un programme C++ peut déclarer des objets définis en C\# et utiliser ses méthodes.
+
+Le monde .NET permet de créer, à la compilation un type de fichiers appelés des Assembly. Ce sont des fichiers de type .exe ou .dll directement générés par du C\#. Dans le cas du système, le but est d’avoir accès au code contenu dans les fichiers dll de Kinova.
+
+L’API kinova est constituée de sept DLL regroupant diverses classes et fonctions utiles à l’utilisation de JACO. Plutôt que d’importer les 7 dll de kinova dans mono, et de devoir aller chercher chaque classe ou fonction dans le bon Assembly, il a été conseillé par un ingénieur Kinova d'encapsuler toutes les
+classes et fonctions requises et de générer une nouvelle DLL unique regroupant toutes ces fonctions. Cela permet de n'appeler qu'un seul fichier .dll ne contenant uniquement que les fonctions et classes dont on a besoin pour la réalisation du système. Cela permet un code beaucoup plus propre et beaucoup moins lourd à réaliser tant qu’à assimiler.
+
+On crée ensuite une classe JACO en C++. Cette classe propose toutes les méthodes de la classe C\# de l'API Kinova. Toute fois, les méthodes de cette classe contiennent les appels aux fonctions C\# grâce à Mono. De cette manière, JACO est interfacé comme une classe normale, et aucun code concernant Mono ne sort de cette classe. 
+
+Tous ces étages réalisés permettent de faire abstraction de toute la partie gérée par Mono et d’utiliser l’API de Kinova comme si celle-ci était accessible directement en C++. Le schéma \ref{fig:mono} résume l'utilisation des librairie Kinova dans le système.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/mono.png}
+	}
+	\caption{Interfaçage de l'API Kinova à travers Mono.}
+	\label{fig:mono}
+\end{figure}
+
+En synthétisant :
+\begin{itemize}
+ \item On écrit un programme C\# regroupant toutes les fonctions de la librairie Kinova dont ont a besoin. Ce programme fait appel directement aux fichiers .dll fournis par Kinova. 
+ \item On construit un nouvel assembly : APIWrapper.dll qui sera appelé dans le programme de monitorage
+ \item Grâce à Mono, on charge les classes et méthode de APIWrapper dans le programme C++ grâce à une classe Jaco
+ \item Le programme se connecte à Jaco en appelant les méthodes de la classe Jaco
+\end{itemize}
+
+
 
 \subsubsection{Fonctionnement Global et Schéma UML du Projet}
 
 \section{Validation du Système}
 
+Le système ayant maintenant été décrit dans son ensemble, il est maintenant important de présenté la manière utilisée pour valider ses performance sur un utilisateur. La partie suivante présente le protocole de validation de performances du système tel qu'il a été présenté en commité d'éthique en mai 2013, et présente les expérimentation prévues.
+
 \subsection{Protocole de validation}
 
 \subsubsection{Mode de recrutement} 
 
-Les participants seront recrutés par affichage au sein du laboratoire de recherche de recherche en imagerie et orthopédie ainsi que dans le département de génie de la production automatisée.
+Les participants seront recrutés par affichage au sein du laboratoire de recherche de recherche en imagerie et orthopédie ainsi que dans le département de génie de la production automatisée. Ils devront répondre aux critères suivants : 
 
-Critères d’inclusion :
- 
-Les sujets seront des adultes volontaires de plus de 18 ans.
+\begin{itemize}
+ \item Critères d'inclusion
+ \begin{itemize}
+ 	\item Les sujets seront des adultes volontaires de plus de 18 ans.
+ \end{itemize}
+ \item Critères d'exclusion, le sujet de devra pas être sujet à :
+  \begin{itemize}
+ 	\item des douleurs cervicales
+ 	\item des torticolis fréquents
+ 	\item tout problème orthopédique de la ceinture scapulaire et cervicale
+ 	\item des maux de tête réguliers
+ \end{itemize}
+\end{itemize}
 
-Critères d’exclusion :
-
-Les personnes présentant des douleurs cervicales, sujettes à des torticolis fréquents, ou tout problème orthopédique relié à la ceinture scapulaire et cervicale, ainsi qu’ à des maux de tête réguliers seront exclues.
 
 \subsubsection{Principe de fonctionnement}
 
@@ -1040,6 +1143,17 @@ Un capteur inertiel (Interlink, Microstrain) sera utilisé afin d’enregistrer 
 Un pointeur laser sera également disposé sur la tête du sujet afin que celui-ci puisse indiquer au sujet l’orientation précise de sa tête.
  
 L’angle visé sera indiqué au sujet par des marqueurs disposés devant lui et vers lesquels il devra tourner la tête en se repérant à l’aide du pointeur laser. La vitesse visée sera indiquée au sujet par le biais d’un métronome électronique. Le sujet devra réaliser le mouvement vers le marqueur indiqué en un temps de métronome. 
+
+La figure \ref{fig:rotationtete} décrit l'angle de rotation de la tête à effectuer par le sujet.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/rotationtete.png}
+	}
+	\caption{Description de l'angle de rotation de la tête.}
+	\label{fig:rotationtete}
+\end{figure}
 
 \subsubsection{Déroulement des acquisitions}
 
