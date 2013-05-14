@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.4.11)  13 MAY 2013 17:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.4.11)  14 MAY 2013 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -893,6 +893,12 @@ Underfull \hbox (badness 2012) in paragraph at lines 8--8
 ait de 
  []
 
+
+Underfull \hbox (badness 2435) in paragraph at lines 21--21
+  \T1/ptm/m/n/12 Figure[][][]Capture d'écran de l'interface graphique du progra
+mme de 
+ []
+
 [17])
 \tf@lof=\write7
 \openout7 = `mainETS.lof'.
@@ -1135,20 +1141,20 @@ Chapitre 3
 
 ]
 Chapitre 4
-<Figures/muscles.png, id=636, 638.385pt x 601.24625pt>
+<Figures/muscles.png, id=645, 638.385pt x 601.24625pt>
 File: Figures/muscles.png Graphic file (type png)
 
 <use Figures/muscles.png>
 Package pdftex.def Info: Figures/muscles.png used on input line 449.
 (pdftex.def)             Requested size: 271.01524pt x 255.24644pt.
  [15 <./Figures/muscles.png>] [16]
-<Figures/de23.png, id=649, 689.57625pt x 432.61626pt>
+<Figures/de23.png, id=658, 689.57625pt x 432.61626pt>
 File: Figures/de23.png Graphic file (type png)
  <use Figures/de23.png>
 Package pdftex.def Info: Figures/de23.png used on input line 483.
 (pdftex.def)             Requested size: 189.70792pt x 119.01274pt.
 
-[17] <Figures/delsysneutre.png, id=654, 469.755pt x 467.7475pt>
+[17] <Figures/delsysneutre.png, id=663, 469.755pt x 467.7475pt>
 File: Figures/delsysneutre.png Graphic file (type png)
 
 <use Figures/delsysneutre.png>
@@ -1162,220 +1168,254 @@ LaTeX Warning: Reference `fig:pic32' on page 22 undefined on input line 554.
 LaTeX Warning: Reference `fig:pic32comp' on page 22 undefined on input line 559
 .
 
-<Figures/inverseur.png, id=675, 494.84875pt x 303.1325pt>
+<Figures/inverseur.png, id=684, 494.84875pt x 303.1325pt>
 File: Figures/inverseur.png Graphic file (type png)
 
 <use Figures/inverseur.png>
-Package pdftex.def Info: Figures/inverseur.png used on input line 572.
+Package pdftex.def Info: Figures/inverseur.png used on input line 573.
 (pdftex.def)             Requested size: 271.01524pt x 166.0157pt.
  [22]
-<Figures/sommateur.png, id=682, 464.73625pt x 327.2225pt>
+<Figures/sommateur.png, id=691, 464.73625pt x 327.2225pt>
 File: Figures/sommateur.png Graphic file (type png)
 
 <use Figures/sommateur.png>
-Package pdftex.def Info: Figures/sommateur.png used on input line 591.
+Package pdftex.def Info: Figures/sommateur.png used on input line 592.
 (pdftex.def)             Requested size: 271.01524pt x 190.82771pt.
  [23 <./Figures/inverseur.png>]
-<Figures/circuitadapt.png, id=691, 772.8875pt x 500.87125pt>
+<Figures/circuitadapt.png, id=700, 772.8875pt x 500.87125pt>
 File: Figures/circuitadapt.png Graphic file (type png)
 
 <use Figures/circuitadapt.png>
-Package pdftex.def Info: Figures/circuitadapt.png used on input line 618.
+Package pdftex.def Info: Figures/circuitadapt.png used on input line 619.
 (pdftex.def)             Requested size: 271.01524pt x 175.62854pt.
  [24 <./Figures/sommateur.png>]
-<Figures/max3232.png, id=700, 322.20375pt x 409.53pt>
+<Figures/max3232.png, id=709, 322.20375pt x 409.53pt>
 File: Figures/max3232.png Graphic file (type png)
 
 <use Figures/max3232.png>
-Package pdftex.def Info: Figures/max3232.png used on input line 641.
+Package pdftex.def Info: Figures/max3232.png used on input line 642.
 (pdftex.def)             Requested size: 271.01524pt x 344.48401pt.
  [25 <./Figures/circuitadapt.png>] [26 <./Figures/max3232.png>] <Figures/serial
-frame.png, id=715, 958.58125pt x 56.21pt>
+frame.png, id=724, 958.58125pt x 56.21pt>
 File: Figures/serialframe.png Graphic file (type png)
 
 <use Figures/serialframe.png>
-Package pdftex.def Info: Figures/serialframe.png used on input line 658.
+Package pdftex.def Info: Figures/serialframe.png used on input line 659.
 (pdftex.def)             Requested size: 451.6875pt x 26.48645pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 658--659
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 659--660
  [][] 
  []
 
 [27 <./Figures/serialframe.png>]
-<Figures/cablagePic.png, id=724, 794.97pt x 614.295pt>
+<Figures/cablagePic.png, id=733, 794.97pt x 614.295pt>
 File: Figures/cablagePic.png Graphic file (type png)
 
 <use Figures/cablagePic.png>
-Package pdftex.def Info: Figures/cablagePic.png used on input line 693.
+Package pdftex.def Info: Figures/cablagePic.png used on input line 694.
 (pdftex.def)             Requested size: 451.6875pt x 349.03635pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 693--694
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 694--695
  [][] 
  []
 
-[28] <Figures/archiMatTot.png, id=730, 794.97pt x 233.37187pt>
+[28] <Figures/archiMatTot.png, id=739, 794.97pt x 233.37187pt>
 File: Figures/archiMatTot.png Graphic file (type png)
 
 <use Figures/archiMatTot.png>
-Package pdftex.def Info: Figures/archiMatTot.png used on input line 708.
+Package pdftex.def Info: Figures/archiMatTot.png used on input line 709.
 (pdftex.def)             Requested size: 451.6875pt x 132.59958pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 708--709
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 709--710
  [][] 
  []
 
 [29 <./Figures/cablagePic.png>] [30 <./Figures/archiMatTot.png>] [31]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 744.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 745.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 744.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 745.
  [32]
-<Figures/tkeinstant.png, id=752, 1099.10625pt x 335.2525pt>
+<Figures/tkeinstant.png, id=761, 1099.10625pt x 335.2525pt>
 File: Figures/tkeinstant.png Graphic file (type png)
 
 <use Figures/tkeinstant.png>
-Package pdftex.def Info: Figures/tkeinstant.png used on input line 778.
+Package pdftex.def Info: Figures/tkeinstant.png used on input line 779.
 (pdftex.def)             Requested size: 361.35136pt x 110.2193pt.
  [33 <./Figures/tkeinstant.png>]
-<Figures/tkemoy.png, id=760, 1084.05pt x 373.395pt>
+<Figures/tkemoy.png, id=769, 1084.05pt x 373.395pt>
 File: Figures/tkemoy.png Graphic file (type png)
  <use Figures/tkemoy.png>
-Package pdftex.def Info: Figures/tkemoy.png used on input line 789.
+Package pdftex.def Info: Figures/tkemoy.png used on input line 790.
 (pdftex.def)             Requested size: 361.35136pt x 124.46278pt.
 
 [34 <./Figures/tkemoy.png>] [35]
-<Figures/tkeSeuil2.png, id=775, 806.01125pt x 700.6175pt>
+<Figures/tkeSeuil2.png, id=784, 806.01125pt x 700.6175pt>
 File: Figures/tkeSeuil2.png Graphic file (type png)
 
 <use Figures/tkeSeuil2.png>
-Package pdftex.def Info: Figures/tkeSeuil2.png used on input line 833.
+Package pdftex.def Info: Figures/tkeSeuil2.png used on input line 834.
 (pdftex.def)             Requested size: 271.01524pt x 235.57692pt.
 
-<Figures/onsetSansVote.png, id=777, 604.50844pt x 541.27219pt>
+<Figures/onsetSansVote.png, id=786, 604.50844pt x 541.27219pt>
 File: Figures/onsetSansVote.png Graphic file (type png)
 
 <use Figures/onsetSansVote.png>
-Package pdftex.def Info: Figures/onsetSansVote.png used on input line 848.
+Package pdftex.def Info: Figures/onsetSansVote.png used on input line 849.
 (pdftex.def)             Requested size: 189.70792pt x 169.85742pt.
  [36 <./Figures/tkeSeuil2.png>] [37 <./Figures/onsetSansVote.png (PNG copy)>]
-<Figures/onsetAvecVote.png, id=793, 604.50844pt x 541.27219pt>
+<Figures/onsetAvecVote.png, id=802, 604.50844pt x 541.27219pt>
 File: Figures/onsetAvecVote.png Graphic file (type png)
 
 <use Figures/onsetAvecVote.png>
-Package pdftex.def Info: Figures/onsetAvecVote.png used on input line 869.
+Package pdftex.def Info: Figures/onsetAvecVote.png used on input line 870.
 (pdftex.def)             Requested size: 271.01524pt x 242.66173pt.
  [38 <./Figures/onsetAvecVote.png (PNG copy)>]
 [39] [40] [41] [42] [43] [44]
-Overfull \hbox (3.66066pt too wide) in paragraph at lines 1024--1025
+Overfull \hbox (3.66066pt too wide) in paragraph at lines 1025--1026
 []\T1/ptm/m/n/12 Ces pé-ri-phé-riques pos-sèdent des in-ter-rup-tions, qui per-
 mettent de si-gni-fier au pro-gramme lorsque
  []
 
-[45] [46] [47] [48] [49] <Figures/mono.png, id=880, 284.56313pt x 170.88844pt>
-File: Figures/mono.png Graphic file (type png)
+[45] [46] <Figures/mainloop.png, id=876, 386.94562pt x 652.68843pt>
+File: Figures/mainloop.png Graphic file (type png)
 
-<use Figures/mono.png>
-Package pdftex.def Info: Figures/mono.png used on input line 1093.
+<use Figures/mainloop.png>
+Package pdftex.def Info: Figures/mainloop.png used on input line 1059.
+(pdftex.def)             Requested size: 271.01524pt x 457.14769pt.
+ [47]
+<Figures/adc.png, id=882, 386.94562pt x 652.68843pt>
+File: Figures/adc.png Graphic file (type png)
+ <use Figures/adc.png>
+Package pdftex.def Info: Figures/adc.png used on input line 1076.
+(pdftex.def)             Requested size: 271.01524pt x 457.14769pt.
+
+[48 <./Figures/mainloop.png>] [49 <./Figures/adc.png>] [50] [51]
+<Figures/mono.png, id=902, 284.56313pt x 170.88844pt>
+File: Figures/mono.png Graphic file (type png)
+ <use Figures/mono.png>
+Package pdftex.def Info: Figures/mono.png used on input line 1128.
 (pdftex.def)             Requested size: 361.35136pt x 217.02328pt.
- [50 <./Figures/mono.png>] [51]
-<Figures/rotationtete.png, id=891, 284.56313pt x 227.34938pt>
+
+[52] <Figures/ClassDiagram.png, id=908, 680.5425pt x 415.5525pt>
+File: Figures/ClassDiagram.png Graphic file (type png)
+
+<use Figures/ClassDiagram.png>
+Package pdftex.def Info: Figures/ClassDiagram.png used on input line 1149.
+(pdftex.def)             Requested size: 361.35136pt x 220.64758pt.
+ [53 <./Figures/mono.png>]
+
+LaTeX Warning: Reference `fig:gui2' on page 54 undefined on input line 1164.
+
+[54 <./Figures/ClassDiagram.png>]
+
+LaTeX Warning: Reference `fig:gui3' on page 55 undefined on input line 1166.
+
+<Figures/gui1.png, id=919, 301.125pt x 254.45062pt>
+File: Figures/gui1.png Graphic file (type png)
+ <use Figures/gui1.png>
+Package pdftex.def Info: Figures/gui1.png used on input line 1174.
+(pdftex.def)             Requested size: 361.35136pt x 305.37027pt.
+
+[55 <./Figures/gui1.png>] [56]
+<Figures/rotationtete.png, id=929, 284.56313pt x 227.34938pt>
 File: Figures/rotationtete.png Graphic file (type png)
 
 <use Figures/rotationtete.png>
-Package pdftex.def Info: Figures/rotationtete.png used on input line 1153.
+Package pdftex.def Info: Figures/rotationtete.png used on input line 1222.
 (pdftex.def)             Requested size: 271.01524pt x 216.54613pt.
- [52] [53 <./Figures/rotationtete.png>]
+ [57 <./Figures/rotationtete.png>] [58]
 
-LaTeX Warning: Reference `fig:validExEMG' on page 54 undefined on input line 11
-86.
+LaTeX Warning: Reference `fig:validExEMG' on page 59 undefined on input line 12
+55.
 
-<Figures/validExAngle.png, id=900, 590.205pt x 513.41812pt>
+<Figures/validExAngle.png, id=940, 590.205pt x 513.41812pt>
 File: Figures/validExAngle.png Graphic file (type png)
 
 <use Figures/validExAngle.png>
-Package pdftex.def Info: Figures/validExAngle.png used on input line 1192.
+Package pdftex.def Info: Figures/validExAngle.png used on input line 1261.
 (pdftex.def)             Requested size: 158.09337pt x 137.52013pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 1192--1193
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 1261--1262
 [][] 
  []
 
 File: Figures/validExAngle.png Graphic file (type png)
 <use Figures/validExAngle.png>
-Package pdftex.def Info: Figures/validExAngle.png used on input line 1202.
+Package pdftex.def Info: Figures/validExAngle.png used on input line 1271.
 (pdftex.def)             Requested size: 158.09337pt x 137.52013pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 1202--1203
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 1271--1272
 [][] 
  []
 
 File: Figures/validExAngle.png Graphic file (type png)
 <use Figures/validExAngle.png>
-Package pdftex.def Info: Figures/validExAngle.png used on input line 1212.
+Package pdftex.def Info: Figures/validExAngle.png used on input line 1281.
 (pdftex.def)             Requested size: 158.09337pt x 137.52013pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 1212--1213
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 1281--1282
 [][] 
  []
 
 File: Figures/validExAngle.png Graphic file (type png)
 <use Figures/validExAngle.png>
-Package pdftex.def Info: Figures/validExAngle.png used on input line 1222.
+Package pdftex.def Info: Figures/validExAngle.png used on input line 1291.
 (pdftex.def)             Requested size: 158.09337pt x 137.52013pt.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 1222--1223
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 1291--1292
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 255.53763pt on input line 1229.
+LaTeX Warning: Float too large for page by 255.53763pt on input line 1298.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 1242.
+LaTeX Warning: Command \' invalid in math mode on input line 1311.
 
 Missing character: There is no é in font cmr12!
 
-LaTeX Warning: Command \' invalid in math mode on input line 1242.
+LaTeX Warning: Command \' invalid in math mode on input line 1311.
 
 Missing character: There is no é in font cmr12!
-[54] [55 <./Figures/validExAngle.png (PNG copy)>] [56] [57] [58
-
-]
+[59] [60 <./Figures/validExAngle.png (PNG copy)>] [61] [62]
 Chapitre 5
-[59] [60
+[63
+
+] [64
 
 ]
 Chapitre 6
-[61] [62
+[65] [66
 
-] [63] [64
+] [67] [68
 
 ]
 Annexe I
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1297.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1366.
 
-Package natbib Warning: Citation `Bha10' on page 65 undefined on input line 130
-0.
+Package natbib Warning: Citation `Bha10' on page 69 undefined on input line 136
+9.
 
-<Figures/logoets.jpg, id=955, 209.78375pt x 53.19875pt>
+<Figures/logoets.jpg, id=989, 209.78375pt x 53.19875pt>
 File: Figures/logoets.jpg Graphic file (type jpg)
 
 <use Figures/logoets.jpg>
-Package pdftex.def Info: Figures/logoets.jpg used on input line 1313.
+Package pdftex.def Info: Figures/logoets.jpg used on input line 1382.
 (pdftex.def)             Requested size: 209.78322pt x 53.19861pt.
 Package hyperref Info: bookmark level for unknown figureap defaults to 0 on inp
-ut line 1315.
+ut line 1384.
 Package hyperref Info: bookmark level for unknown tableap defaults to 0 on inpu
-t line 1325.
- [65 <./Figures/logoets.jpg>] [66] (./refs.bbl
-[67] [68
+t line 1394.
+ [69 <./Figures/logoets.jpg>] [70] (./refs.bbl
+[71] [72
 
-]) [69] (./mainETS.bbl [70
+]) [73] (./mainETS.bbl [74
 
 ]
 Underfull \hbox (badness 6332) in paragraph at lines 96--101
@@ -1383,15 +1423,15 @@ Underfull \hbox (badness 6332) in paragraph at lines 96--101
 -tion des com-po-sants
  []
 
-[71])
+[75])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1396.
-[72]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1396.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1465.
+[76]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1465.
  (./mainETS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1396.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1465.
 
 
  *File List*
@@ -1505,7 +1545,11 @@ Figures/tkemoy.png
 Figures/tkeSeuil2.png
 Figures/onsetSansVote.png
 Figures/onsetAvecVote.png
+Figures/mainloop.png
+Figures/adc.png
 Figures/mono.png
+Figures/ClassDiagram.png
+Figures/gui1.png
 Figures/rotationtete.png
 Figures/validExAngle.png
 Figures/validExAngle.png
@@ -1516,23 +1560,23 @@ Figures/logoets.jpg
  mainETS.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1396.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1465.
 
 Package rerunfilecheck Info: File `mainETS.out' has not changed.
-(rerunfilecheck)             Checksum: AC1EF8605706F5F1E2038659027A79FC;4840.
+(rerunfilecheck)             Checksum: E4679406CCEAF04281802E7542B06901;4843.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1396.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1465.
  ) 
 Here is how much of TeX's memory you used:
- 11456 strings out of 495030
- 164259 string characters out of 3180761
- 271280 words of memory out of 3000000
- 14206 multiletter control sequences out of 15000+200000
+ 11494 strings out of 495030
+ 164902 string characters out of 3180761
+ 271630 words of memory out of 3000000
+ 14232 multiletter control sequences out of 15000+200000
  38316 words of font info for 55 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,11n,45p,1255b,580s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1549,10 +1593,10 @@ s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on mainETS.pdf (94 pages, 1523902 bytes).
+Output written on mainETS.pdf (98 pages, 1677449 bytes).
 PDF statistics:
- 1102 PDF objects out of 1200 (max. 8388607)
- 960 compressed objects within 10 object streams
- 228 named destinations out of 1000 (max. 500000)
- 597 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1139 PDF objects out of 1200 (max. 8388607)
+ 988 compressed objects within 10 object streams
+ 236 named destinations out of 1000 (max. 500000)
+ 617 words of extra memory for PDF output out of 10000 (max. 10000000)
 

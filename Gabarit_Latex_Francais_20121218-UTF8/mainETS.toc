@@ -38,27 +38,27 @@
 \contentsline {subsection}{\numberline {4.4.1}Firmware}{45}{subsection.81}
 \contentsline {subsubsection}{\numberline {4.4.1.1}Fonctionnement et Configuration Globale du PIC32}{45}{subsubsection.82}
 \contentsline {subsubsection}{\numberline {4.4.1.2}Alogorithme global}{47}{subsubsection.83}
-\contentsline {subsection}{\numberline {4.4.2}Application de monitorage des signaux}{47}{subsection.84}
-\contentsline {subsubsection}{\numberline {4.4.2.1}Choix des Librairies et des langages}{48}{subsubsection.85}
-\contentsline {subsubsection}{\numberline {4.4.2.2}Lien avec Jaco et Mono}{49}{subsubsection.86}
-\contentsline {subsubsection}{\numberline {4.4.2.3}Fonctionnement Global et Sch\IeC {\'e}ma UML du Projet}{51}{subsubsection.88}
-\contentsline {section}{\numberline {4.5}Validation du Syst\IeC {\`e}me}{51}{section.89}
-\contentsline {subsection}{\numberline {4.5.1}Protocole de validation}{51}{subsection.90}
-\contentsline {subsubsection}{\numberline {4.5.1.1}Mode de recrutement}{51}{subsubsection.91}
-\contentsline {subsubsection}{\numberline {4.5.1.2}Principe de fonctionnement}{51}{subsubsection.92}
-\contentsline {subsubsection}{\numberline {4.5.1.3}Protocole exp\IeC {\'e}rimental}{52}{subsubsection.93}
-\contentsline {subsubsection}{\numberline {4.5.1.4}D\IeC {\'e}roulement des acquisitions}{52}{subsubsection.95}
-\contentsline {subsubsection}{\numberline {4.5.1.5}Notes importantes}{53}{subsubsection.96}
-\contentsline {subsubsection}{\numberline {4.5.1.6}Exemple de donn\IeC {\'e}es r\IeC {\'e}colt\IeC {\'e}es}{54}{subsubsection.97}
-\contentsline {subsubsection}{\numberline {4.5.1.7}Interpr\IeC {\'e}tation des donn\IeC {\'e}es}{54}{subsubsection.99}
-\contentsline {subsubsection}{\numberline {4.5.1.8}Comparaison des donn\IeC {\'e}es}{56}{subsubsection.103}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 5}\hfil }\MakeUppercase {R\IeC {\'e}sultats}}}{59}{chapter.104}
-\contentsline {section}{\numberline {5.1}D\IeC {\'e}tection d'activit\IeC {\'e}}{59}{section.105}
-\contentsline {section}{\numberline {5.2}Temps de calcul et chronogrammes}{59}{section.106}
-\contentsline {section}{\numberline {5.3}Validation du syst\IeC {\`e}me}{59}{section.107}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{61}{chapter.108}
-\contentsline {chapter}{CONCLUSION}{63}{chapter*.109}
+\contentsline {subsection}{\numberline {4.4.2}Application de monitorage des signaux}{50}{subsection.86}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Choix des Librairies et des langages}{50}{subsubsection.87}
+\contentsline {subsubsection}{\numberline {4.4.2.2}Lien avec Jaco et Mono}{51}{subsubsection.88}
+\contentsline {subsubsection}{\numberline {4.4.2.3}Fonctionnement Global et Sch\IeC {\'e}ma UML du Projet}{53}{subsubsection.90}
+\contentsline {section}{\numberline {4.5}Validation du Syst\IeC {\`e}me}{56}{section.93}
+\contentsline {subsection}{\numberline {4.5.1}Protocole de validation}{56}{subsection.94}
+\contentsline {subsubsection}{\numberline {4.5.1.1}Mode de recrutement}{56}{subsubsection.95}
+\contentsline {subsubsection}{\numberline {4.5.1.2}Principe de fonctionnement}{56}{subsubsection.96}
+\contentsline {subsubsection}{\numberline {4.5.1.3}Protocole exp\IeC {\'e}rimental}{57}{subsubsection.97}
+\contentsline {subsubsection}{\numberline {4.5.1.4}D\IeC {\'e}roulement des acquisitions}{58}{subsubsection.99}
+\contentsline {subsubsection}{\numberline {4.5.1.5}Notes importantes}{58}{subsubsection.100}
+\contentsline {subsubsection}{\numberline {4.5.1.6}Exemple de donn\IeC {\'e}es r\IeC {\'e}colt\IeC {\'e}es}{59}{subsubsection.101}
+\contentsline {subsubsection}{\numberline {4.5.1.7}Interpr\IeC {\'e}tation des donn\IeC {\'e}es}{59}{subsubsection.103}
+\contentsline {subsubsection}{\numberline {4.5.1.8}Comparaison des donn\IeC {\'e}es}{61}{subsubsection.107}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 5}\hfil }\MakeUppercase {R\IeC {\'e}sultats}}}{63}{chapter.108}
+\contentsline {section}{\numberline {5.1}D\IeC {\'e}tection d'activit\IeC {\'e}}{63}{section.109}
+\contentsline {section}{\numberline {5.2}Temps de calcul et chronogrammes}{63}{section.110}
+\contentsline {section}{\numberline {5.3}Validation du syst\IeC {\`e}me}{63}{section.111}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{65}{chapter.112}
+\contentsline {chapter}{CONCLUSION}{67}{chapter*.113}
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{65}{chapter.110}
-\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{67}{subsection.116}
-\contentsline {chapter}{BIBLIOGRAPHIE}{70}{chapter*.117}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{69}{chapter.114}
+\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{71}{subsection.120}
+\contentsline {chapter}{BIBLIOGRAPHIE}{74}{chapter*.121}

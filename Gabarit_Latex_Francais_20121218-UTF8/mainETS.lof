@@ -14,9 +14,13 @@
 \contentsline {figure}{\numberline {4.13}{\ignorespaces D\IeC {\'e}finition du seuil de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire pour un canal EMG\relax }}{36}{figure.caption.57}
 \contentsline {figure}{\numberline {4.14}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire brute, sans vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{37}{figure.caption.59}
 \contentsline {figure}{\numberline {4.15}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire avec vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{38}{figure.caption.60}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Interfa\IeC {\c c}age de l'API Kinova \IeC {\`a} travers Mono.\relax }}{50}{figure.caption.87}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Description de l'angle de rotation de la t\IeC {\^e}te.\relax }}{53}{figure.caption.94}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{55}{figure.caption.98}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{55}{figure.caption.98}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{55}{figure.caption.98}
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{55}{figure.caption.98}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Boucle inifinie du programme principal.\relax }}{48}{figure.caption.84}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Routine d'interruption du firmware.\relax }}{49}{figure.caption.85}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Interfa\IeC {\c c}age de l'API Kinova \IeC {\`a} travers Mono.\relax }}{53}{figure.caption.89}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Diagramme UML du programme de monitoring.\relax }}{54}{figure.caption.91}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{55}{figure.caption.92}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Description de l'angle de rotation de la t\IeC {\^e}te.\relax }}{57}{figure.caption.98}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{60}{figure.caption.102}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{60}{figure.caption.102}
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{60}{figure.caption.102}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{60}{figure.caption.102}

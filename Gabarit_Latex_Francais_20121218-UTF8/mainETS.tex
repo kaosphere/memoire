@@ -551,12 +551,13 @@ Ce microcontrôleur possède un cœur à virgule fixe, et intègre également da
 
 Un autre avantage du PIC32 est que la suite logicielle permettant son développement peut être utilisée dans un premier temps en version gratuite. Cette version n'inclut pas les options d'optimisation de code pendant la compilation, mais ces options ne sont pas indispensable à la réalisation du projet. 
 
-Pour des raisons économiques et pratique, le PIC32, comme présenté sur la figure \ref{fig:pic32} %TODO mettre photo pic32
+Pour des raisons économiques et pratique, le PIC32, comme présenté sur la figure \ref{fig:pic32} %TODO mettre photos pic32
  a donc été choisi pour réaliser le système.
  
 Le modèle choisi pour le projet est le PIC32MX795F512L. C'est le modèle le plus rapide et le plus gros de la gamme. C'est également celui possédant le plus d'entrées et sorties différentes, ainsi que la quantité de mémoire vive la plus grande des microcontrôleurs produits par Microchip.
 
 Ce modèle a été choisi également car il est commercialisé par Microchip sur une carte de développement peu coûteuse. De plus cette carte de développement se présente sous la forme d'une petite carte pouvant être montée sur une carte fille permettant de connecter simplement d'autres composants aux entrées/sortie du PIC32. Le système complet est présenté sur la figure \ref{fig:pic32comp}.
+%TODO mettre photos pic32
 
 
 \subsection{Adaptation des Tensions}
@@ -1043,7 +1044,41 @@ L'UARTT du PIC32 quant à elle possède deux interruptions, une pour l'envoi de 
 
 \subsubsection{Alogorithme global}
 
-Une fois le fonctionnement global du PIC32 et de ses interruption décrit, l'algorithme du programme principal ainsi que ceux des interruptions peuvent maintenant être présentés en détail. %TODO
+Une fois le fonctionnement global du PIC32 et de ses interruption décrit, l'algorithme du programme principal ainsi que ceux des interruptions peuvent maintenant être présentés en détail. 
+
+Nous nous intéressons dans un premier temps au fonctionnement du programme principal, puis les algorithmes des deux interruptions principales seront détaillés. 
+
+Le programme principal du firmware commence par initialiser tous les périphériques du PIC32 qui seront utilisés, ainsi que l'horloge principale et les configurations des interruptions. C'est à ce moment que l'ADC et le port série sont configurés. 
+
+Une fois les initialisations effectuée, le programme entre dans une boucle infinie qui constitue la colonne vertébrale du programme. Les actions réalisée par cette boucle sont présentée par la figure \ref{fig:mainloop}.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/mainloop.png}
+	}
+	\caption{Boucle inifinie du programme principal.}
+	\label{fig:mainloop}
+\end{figure}
+
+La boucle commence ainsi par vérifier si une commande à été reçue sur le port série. Les commandes reçue sur le port série sont les commandes de calibration du système. Ainsi chaque commande est constituée du type de calibration a effectuer, c'est à dire une calibration du tonus maximum, une calibration du tonus au repos ou bien la calibration de la bande de base du filtre, et le numéro du canal sur lequel effectuer cette calibration. 
+
+On vérifie ensuite si une fenêtre de signal a été acquise en entier. Si c'est le cas, cette fenêtre est filtrée, puis passée dans la fonction de détection d'activités. Enfin les données calculées sont envoyée sur le port série pour être monitorées.
+
+Il est à noter que le filtrage n'est effectué que si la calibration de la bande de base a bien eu lieu précédemment, mais ce test n'est pas affiché sur le diagramme à des fins de clarté. 
+
+Cette partie montre comment le signal est traité, présentons maintenant comment celui-ci est acquis. La figure \ref{fig:adc} présente la routine d'interruption de l'ADC du PIC32. Celle-ci est déclenchée à chaque fois que 8 échantillons ont été acquis en tout, soit 2 échantillons par canal. 
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/adc.png}
+	}
+	\caption{Routine d'interruption du firmware.}
+	\label{fig:adc}
+\end{figure}
+
+Il est à noter que deux tableaux de données sont utilisés pour chaque canal. L'un des tableau est rempli au fur et à mesure par l'ADC pendant que l'autre est traité, c'est à dire filtré puis passé à la détection d'activité. Une fois qu'un tableau est rempli par l'ADC, celui-ci est passé en phase de traitement, et l'autre est rempli à nouveau par l'ADC. Il est donc nécessaire que le tableau à traiter le soit avant qu'une nouvelle fenêtre ne soit acquise, sinon des données seront perdues. 
 
 \subsection{Application de monitorage des signaux}
 
@@ -1103,9 +1138,43 @@ En synthétisant :
  \item Le programme se connecte à Jaco en appelant les méthodes de la classe Jaco
 \end{itemize}
 
-
-
 \subsubsection{Fonctionnement Global et Schéma UML du Projet}
+
+Le logiciel de monitorage des signaux est un programme basé autour de l'interface graphique réalisée grace à la librairie Qt. Le diagramme UML du programme est présenté par la figure \ref{fig:uml}.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/ClassDiagram.png}
+	}
+	\caption{Diagramme UML du programme de monitoring.}
+	\label{fig:uml}
+\end{figure}
+
+MainWindow est la classe principale de l'interface graphique, c'est elle qui contient tous les éléments graphiques de l'interface. Elle dialogue avec les autres classe afin d'en afficher les données entrantes et sortantes. 
+
+La classe SerialHandler est l'objet qui gère tout ce qui touche à la communication série. Il possède une méthode de réception des données qui tourne dans un processus séparé du reste du programme.
+
+La classe EMG est la classe contenant toutes les données EMG reçues du PIC32. Lorsqu'une donnée est reçue, elle est réceptionnée par l'objet SerialHandler qui met à jour les données dans la classe EMG. MainWindow va ensuite chercher les données dans la classe EMG afin de les afficher dans l'interface. 
+
+La classe JacoArm est la classe décrite dans la partie précédente qui fait le lien avec les méthodes des librairies de Kinova à travers Mono. C'est dans cette classe que Mono est utilisé.
+
+L'interface graphique réalisée possède plusieurs onglet permettant chacun de visualiser un signal pour les quatre canaux. La figure \ref{fig:gui1} montre la fenêtre de visualisation des signaux EMG pour les quatre canaux. Un autre onglet permet de visualiser le TKE, un autre la détection d'activité musculaire et un dernier permet de monitorer une fft. 
+
+Deux onglet supplémentaires viennent s'ajouter aux quatre onglets de visualisation des signaux. Le premier, présenté par la figure \ref{fig:gui2} permet le contrôle de Jaco. En effet, Jaco étant normalement contrôlé par son joystick, il faut donc activer ou désactiver son contrôle par l'API. Cette fenêtre permet également de visualiser le statut de cette connexion et de visualiser les information renvoyées par Jaco. 
+
+Enfin le dernier onglet présenté sur la figure \ref{fig:gui3} permet d'envoyer les commandes de calibration au PIC32. Ces calibrations sont la calibration du tonus au repos, du tonus maximum et de la bande de base pour le filtre, et ce pour chaque canal EMG.
+
+%TODO rajouter les deux figures manquantes.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/gui1.png}
+	}
+	\caption{Capture d'écran de l'interface graphique du programme de monitorage des données EMG.}
+	\label{fig:gui1}
+\end{figure}
 
 \section{Validation du Système}
 
