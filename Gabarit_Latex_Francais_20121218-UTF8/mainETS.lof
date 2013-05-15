@@ -1,5 +1,5 @@
 \select@language {french}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Muscles sterno-cl\IeC {\'e}\IeC {\"\i }do masto\IeC {\"\i }dien et muscles du cou. par Berichard (travail personnel d'apr\IeC {\`e}s Gray's Anatomy) [GFDL (http://www.gnu.org/copyleft/fdl.html) ou CC-BY-SA-3.0-2.5-2.0-1.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons\relax }}{15}{figure.caption.26}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Muscle sterno-cl\IeC {\'e}\IeC {\"\i }do masto\IeC {\"\i }dien et muscles du cou. par Berichard (travail personnel d'apr\IeC {\`e}s Gray's Anatomy) [GFDL (http://www.gnu.org/copyleft/fdl.html) ou CC-BY-SA-3.0-2.5-2.0-1.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons\relax }}{15}{figure.caption.26}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces \IeC {\'E}lectrode Delsys DE-2.3.\relax }}{18}{figure.caption.29}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces \IeC {\'E}lectrode Delsys neutre.\relax }}{18}{figure.caption.30}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces \IeC {\'E}tage inverseur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{23}{figure.caption.34}
@@ -19,8 +19,10 @@
 \contentsline {figure}{\numberline {4.18}{\ignorespaces Interfa\IeC {\c c}age de l'API Kinova \IeC {\`a} travers Mono.\relax }}{53}{figure.caption.89}
 \contentsline {figure}{\numberline {4.19}{\ignorespaces Diagramme UML du programme de monitoring.\relax }}{54}{figure.caption.91}
 \contentsline {figure}{\numberline {4.20}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{55}{figure.caption.92}
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Description de l'angle de rotation de la t\IeC {\^e}te.\relax }}{57}{figure.caption.98}
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{60}{figure.caption.102}
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{60}{figure.caption.102}
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{60}{figure.caption.102}
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{60}{figure.caption.102}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{56}{figure.caption.93}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{57}{figure.caption.94}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Description de l'angle de rotation de la t\IeC {\^e}te.\relax }}{59}{figure.caption.100}
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{61}{figure.caption.104}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Exemple de donn\IeC {\'e}es de vitesse anglulaires de rotation de la t\IeC {\^e}te\relax }}{61}{figure.caption.104}
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Exemple de donn\IeC {\'e}es d'EMG de rotation de la t\IeC {\^e}te\relax }}{61}{figure.caption.104}
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Exemple de donn\IeC {\'e}es de d\IeC {\'e}tection d'activit\IeC {\'e} \relax }}{61}{figure.caption.104}

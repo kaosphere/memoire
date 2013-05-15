@@ -440,14 +440,14 @@ Toute fois cette étude, ainsi que celles de \cite{martinez1999} et de \cite{pra
 
 \section{Choix des Muslces}
 
-Le premier choix important est de choisir quels muscles seront utilisés pour réaliser la commande. Dans un premier temps, le critère principal est que les muscles choisis doivent toujours être fonctionnels chez les blessés médullaires. Ainsi, les muscles choisis par \cite{Chang1996}, les trapèzes et les sterno-cléïdo mastoïdiens sont considérer comme un choix judicieux dans un premier temps. En effet, ces deux muscles sont innervés en partie par des nerfs passant par la seconde vertèbre cervicale, ainsi, la plupart des blessés médullaires conserveront au moins une activité résiduelle dans ces muscles. 
+Le premier choix important est de choisir quels muscles seront utilisés pour réaliser la commande. Dans un premier temps, le critère principal est que les muscles choisis doivent toujours être fonctionnels chez les blessés médullaires. Ainsi, les muscles choisis par \cite{Chang1996}, les trapèzes et les sterno-cléïdo mastoïdiens sont considérés comme un choix judicieux dans un premier temps. En effet, ces deux muscles sont innervés en partie par des nerfs passant par la seconde vertèbre cervicale, ainsi, la plupart des blessés médullaires conserveront au moins une activité résiduelle dans ces muscles. 
 
 \begin{figure}
 	\centering
 	\fbox{
 		\includegraphics[width=0.6\linewidth]{Figures/muscles.png}
 	}
-	\caption{Muscles sterno-cléïdo mastoïdien et muscles du cou.
+	\caption{Muscle sterno-cléïdo mastoïdien et muscles du cou.
 	par Berichard (travail personnel d'après Gray's Anatomy) [GFDL (http://www.gnu.org/copyleft/fdl.html) ou CC-BY-SA-3.0-2.5-2.0-1.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons}
 	\label{fig:muscles}
 \end{figure}
@@ -463,16 +463,16 @@ Ainsi, on est capable d'établir un lien direct entre l'activité musculaire d'u
 
 Ce postulat permet de réduire le temps de calcul nécessaire au traitement des signaux en enlevant complètement l'étape de classification. Ce choix comporte des points négatifs et des points positifs. Un atout majeur est de retirer toute la charge de calculs nécessaire pour le classificateur, et de concentrer ces calculs sur la détection d'activité musculaire ainsi que sur le filtrage numérique du signal. En contrepartie, le nombre de mouvements reconnus par le systèmes est réduit à quatre mouvements unitaires : un pour chaque muscle. 
 
-Cependant cette perte en diversité de mouvements pourra être en partie comblée par des stratégies de communication différentes pour ces mouvements. En effet, on pourra effectuer des mouvements prolongés ou bien des mouvements composés de plusieurs clics, ou activations courtes répétées. Ces stratégies permettront d'étendre la diversité de commandes tout en ne reconnaissant que quatre mouvements. 
+Cependant cette perte en diversité de mouvements pourra être en partie comblée par des stratégies de communication différentes pour ces mouvements. En effet, on pourra effectuer des mouvements prolongés ou bien des mouvements composés de plusieurs activations courtes répétées. Ces stratégies permettront d'étendre la diversité de commande tout en ne reconnaissant que quatre mouvements. 
 
 
 \section{Architecture Matérielle}\label{CHarchimat}
 
-Une fois le choix des muscles arrêté, les premiers choix a effectuer seront les choix architecturaux, et dans un premier temps, ceux concernant l'architecture matérielle. Ce chapitre présente les choix matériels effectué pour la conception du système tout en argumentant pourquoi chaque choix a été effectué et dans quel cadre.
+Une fois le choix des muscles arrêté, les premiers choix a effectuer seront les choix architecturaux, et dans un premier temps, ceux concernant l'architecture matérielle. Ce chapitre présente les choix matériels effectués pour la conception du système tout en argumentant pourquoi chaque choix a été effectué et dans quel cadre.
 
 \subsection{Électrodes}
 
-Le choix des électrodes est une phase importante du projet car leur choix détermine la charge de travail qui va en résulter. En effet, des électrodes donnant un signal brut, très faible (la tension d'un signal EMG étant de l'ordre du millivolt) est impossible a exploité tel quel et nécessite des étape de filtrage et d'amplification avoir de pouvoir être échantillonné. Ainsi choisir ce type d'électrode ajoute une étape de conception électronique supplémentaire afin que le signal soit exploitable.
+Le choix des électrodes est une phase importante du projet car leur choix détermine la charge de travail qui va en résulter. En effet, des électrodes donnant un signal brut, très faible (la tension d'un signal EMG étant de l'ordre du millivolt) est impossible a exploiter tel quel et nécessite des étape de filtrage et d'amplification avant de pouvoir être échantillonné. Ainsi choisir ce type d'électrode ajoute une étape de conception électronique supplémentaire afin que le signal soit exploitable.
 
 Le LIO travaille depuis maintenant plusieurs années avec des électrodes construites par la compagnie Delsys : les électrodes DE-2.3 et se présentent comme sur la figure \ref{fig:de2.3}. 
 
@@ -487,9 +487,9 @@ Le LIO travaille depuis maintenant plusieurs années avec des électrodes constr
 
 Ces électrodes, contrairement au modèle moins cher DE-2.1 sont pré-amplifiées avec un gain de $1000 V/V \pm 1\%$ et pré-filtrées sur une bande passante de $20-450 Hz \pm 10\%$. Ceci nous permet de limiter les étapes de filtrage analogique avant de faire entrer le signal de l'électrode dans le microcontrôleur. En effet, le filtrage passe-bande déjà présent permet de garder la bande utile du signal EMG tout en limitant le bruit d'échantillonnage.
 
-Les électrodes sont câblées avec du fil blindé, protégeant des interférences électromagnétiques, le blindage étant relié à la masse du circuit. Pour que ce blindage soit efficace, le connecteur utilisé doit être également de bonne qualité. Pour ce faire, des connecteur de marque LEMO sont utilisés. Ces connecteurs sont utilisés dans beaucoup de domaines critiques demandant des connecteurs résistants au temps et aux interférences. 
+Les électrodes sont câblées avec du fil blindé, protégeant des interférences électromagnétiques, le blindage étant relié à la masse du circuit. Pour que ce blindage soit efficace, le connecteur utilisé doit être également de bonne qualité. Pour ce faire, des connecteurs de marque LEMO sont utilisés. Ces connecteurs sont utilisés dans beaucoup de domaines critiques demandant des connecteurs résistants au temps et aux interférences. 
 
-Ainsi les connecteurs LEMO femelle correspondants à ceux présents sur les câbles des électrodes ont été acquis afin de relier les électrodes au système.
+Ainsi les connecteurs LEMO femelles correspondant à ceux présents sur les câbles des électrodes ont été acquis afin de relier les électrodes au système.
 
 \begin{figure}
 	\centering
@@ -500,7 +500,7 @@ Ainsi les connecteurs LEMO femelle correspondants à ceux présents sur les câb
 	\label{fig:delsysneutre}
 \end{figure}
 
-Plusieurs électrodes neutres, comme présentée par la figure \ref{fig:delsysneutre}, ont également été acquises. Ces électrodes sont nécessaire car c'est la référence utilisée pour mesurer la tension acquise sur les muscles. Elles seront positionnées sur une partie la moins charnue possible, comme par exemple la pointe du coude de l'utilisateur. Elles seront connectées directement à la référence du convertisseur analogique-numérique du microcontrôleur.
+Plusieurs électrodes neutres, comme présentées par la figure \ref{fig:delsysneutre}, ont également été acquises. Ces électrodes sont nécessaires car c'est la référence utilisée pour mesurer la tension acquise sur les muscles. Elles seront positionnées sur une partie la moins charnue possible, comme par exemple la pointe du coude de l'utilisateur. Elles seront connectées directement à la référence du convertisseur analogique-numérique du microcontrôleur.
 
 \subsection{Microcontrôleur}\label{ch:microcon}
 
@@ -508,17 +508,17 @@ Le deuxième choix matériel important concerne celui du microcontrôleur ou du 
 
 Avant de présenter le microcontrôleur choisi pour le projet, les différents critères de choix seront décrits dans un premier temps. 
 
-Un premier critère est le nombre d'opérations élémentaires par seconde effectué par le calculateur. En effet, le calculateur doit être capable d'effectuer les calculs et les algorithmes choisis pour la stratégie de reconnaissance de mouvement. Ce critère peut se mesurer de deux manières. La première est la fréquence de l'horloge principale du calculateur. Toute fois, même si celle-ci est un bon indicateur, suivant l'architecture du microcontrôleur, un processeur avec une horloge plus rapide qu'un autre peut parfois effectuer moins d'opérations par seconde que le plus lent. Ceci vient du fait que certains calculateur ont besoin de deux cycles d'horloge pour effectuer une opération, l'opération devant d'abord être chargée, puis exécutée. Certains microcontrôleurs parallélisent ces actions à l'aide d'un "pipeline" qui pendant qu'il exécute une opération, "précharge" l'opération suivante. Une autre unité permettant d'exprimer la rapidité de calcul d'un processeur est le nombre de millions d'instructions par seconde (MIPS). Cette valeur fait abstraction de la manière dont fonctionne le processeur, et donne directement le nombre de calculs par unité de temps que peut soutenir le composant.
+Un premier critère est le nombre d'opérations élémentaires par seconde effectuées par le calculateur. En effet, le calculateur doit être capable d'effectuer les calculs et les algorithmes choisis pour la stratégie de reconnaissance de mouvement. Ce critère peut se mesurer de deux manières. La première est la fréquence de l'horloge principale du calculateur. Toute fois, même si celle-ci est un bon indicateur, suivant l'architecture du microcontrôleur, un processeur avec une horloge plus rapide qu'un autre peut parfois effectuer moins d'opérations par seconde que le plus lent. Ceci vient du fait que certains calculateurs ont besoin de deux cycles d'horloge pour effectuer une opération, l'opération devant d'abord être chargée, puis exécutée. Certains microcontrôleurs parallélisent ces actions à l'aide d'un "pipeline" qui pendant qu'il exécute une opération, "précharge" l'opération suivante. Une autre unité permettant d'exprimer la rapidité de calcul d'un processeur est le nombre de millions d'instructions par seconde (MIPS). Cette valeur fait abstraction de la manière dont fonctionne le processeur, et donne directement le nombre de calculs par unité de temps que peut soutenir le composant.
 
 Une autre caractéristique concerne l'unité arithmétique et logique (ALU) du calculateur. Celle-ci peut être dite soit "à virgule fixe", soit "à virgule flottante". Une variable à virgule flottante est une variable permettant de stocker un nombre réel dans lequel on peut déplacer la place de la virgule, tout en ne changeant pas le nombre grâce à un exposant. C'est un système similaire à l'écriture scientifique mais appliqué à l'informatique. Ceci permet pour une taille de variable donnée en octets d'optimiser la précision d'un nombre flottant.
 
-La mémoire vive disponible dans le microcontrôleur est également un critère de sélection. En effet, dans le cas d'un fenêtrage de signal de $300 ms$ échantillonné à $2 KHz$, les données  d'une fenêtre représentent 600 échantillons, qui, stockés dans des entiers de 16 bits représentent une quantité de mémoire de 1200 octets, soit $1.2 Ko$. Sachant qu'il faut stocker une fenêtre pour la traiter et en acquérir une autre en même temps, le double de cet espace est nécessaire pour le traitement des fenêtres. 
+La mémoire vive disponible dans le microcontrôleur est également un critère de sélection. En effet, dans le cas d'un fenêtrage de signal de $300 ms$ échantillonné à $2 KHz$, les données  d'une fenêtre représentent 600 échantillons, qui, stockés dans des entiers de 16 bits représentent une quantité de mémoire de 1200 octets, soit environ $1.2 Ko$. Sachant qu'il faut stocker une fenêtre pour la traiter et en acquérir une autre en même temps, le double de cet espace est nécessaire pour le traitement des fenêtres. 
 
 $2.4Ko$, mis à l'échelle des processeurs d'aujourd'hui ne représentent que très peu de données. Toute fois, pour un microcontrôleur, cet espace représente une contrainte forte. Contrairement à un microprocesseur qui utilise de la mémoire vive externe, la mémoire vive utilisée par un microcontrôleur est interne, et la taille de la mémoire disponible est donc très réduite. 
 
-Un élément supplémentaire de choix du contrôleur est le nombre et la diversité des entrées et sorties qu'il propose. En effet, le microcontrôleur doit avoir au moins quatre entrées analogiques auxquelles se connecteront les électrodes. Le système final devant également être intégrable au sein même de Jaco, et celui-ci utilisant un bus CAN (controler area network) dans ses communications interne, le microcontrôleur doit avoir une interface CAN. D'autres périphériques de communications comme des ports série seront également nécessaire. 
+Un élément supplémentaire de choix du contrôleur est le nombre et la diversité des entrées et sorties qu'il propose. En effet, le microcontrôleur doit avoir au moins quatre entrées analogiques auxquelles se connecteront les électrodes. Le système final devant également être intégrable au sein même de Jaco, et celui-ci utilisant un bus CAN (controler area network) dans ses communications interne, le microcontrôleur doit avoir une interface CAN. D'autres périphériques de communications comme des ports série seront également nécessaires. 
 
-Comme dit précédemment le système a pour but d'être intégré au bras Jaco, de ce fait, l'encombrement et la consommation énergétiques sont également un critère à prendre en compte.
+Comme dit précédemment le système a pour but d'être intégré au bras Jaco, de ce fait, l'encombrement et la consommation énergétique sont également un critère à prendre en compte.
 
 Enfin le dernier élément à prendre en compte est la dépense nécessaire pour mettre en place la solution choisie. Dans un premier temps, l'existence d'une carte de développement préconçue permet de commencer directement le développement du programme sans avoir à faire de carte électronique. Les logiciels et outils de compilation entrent également en ligne de compte, car ceux-ci sont souvent très coûteux. Le fait que ces outils soient également disponibles sur plusieurs systèmes d'exploitation est également un argument de choix, bien que moins important que tous ceux cités précédemment. 
 
@@ -547,16 +547,16 @@ Il en va de même pour les calculateurs de chez Texas Instruments moins performa
 
 Le LIO possédait depuis quelques mois une exemplaire d'un microcontrôleur PIC32 produit par la societé Microchip ainsi que les outils hardware de programmation et de debug fournis avec celui-ci. Ce microcontrôleur répond aux critères de choix pour le projet : il possède un ADC 10 bits qui sera suffisant pour le projet et pouvant aller jusqu’à 16 canaux. Il tourne à une cadence de 80 MIPS et dispose de beaucoup de périphériques de communication dont plusieurs liaisons séries ainsi que qu’un bus CAN. 
 
-Ce microcontrôleur possède un cœur à virgule fixe, et intègre également dans son jeu d'instruction des instructions DSP flottante incluant divers outils dont les FFT. La version utilisée possède également 128Ko de mémoire vive afin de pouvoir stocker une grande quantité de donnée.
+Ce microcontrôleur possède un cœur à virgule fixe, et intègre également dans son jeu d'instructions des instructions DSP flottantes incluant divers outils dont les FFT. La version utilisée possède également 128Ko de mémoire vive afin de pouvoir stocker une grande quantité de données.
 
-Un autre avantage du PIC32 est que la suite logicielle permettant son développement peut être utilisée dans un premier temps en version gratuite. Cette version n'inclut pas les options d'optimisation de code pendant la compilation, mais ces options ne sont pas indispensable à la réalisation du projet. 
+Un autre avantage du PIC32 est que la suite logicielle permettant son développement peut être utilisée dans un premier temps en version gratuite. Cette version n'inclut pas les options d'optimisation de code pendant la compilation, mais ces options ne sont pas indispensables à la réalisation du projet. 
 
-Pour des raisons économiques et pratique, le PIC32, comme présenté sur la figure \ref{fig:pic32} %TODO mettre photos pic32
+Pour des raisons économiques et pratiques, le PIC32, comme présenté sur la figure \ref{fig:pic32} %TODO mettre photos pic32
  a donc été choisi pour réaliser le système.
  
 Le modèle choisi pour le projet est le PIC32MX795F512L. C'est le modèle le plus rapide et le plus gros de la gamme. C'est également celui possédant le plus d'entrées et sorties différentes, ainsi que la quantité de mémoire vive la plus grande des microcontrôleurs produits par Microchip.
 
-Ce modèle a été choisi également car il est commercialisé par Microchip sur une carte de développement peu coûteuse. De plus cette carte de développement se présente sous la forme d'une petite carte pouvant être montée sur une carte fille permettant de connecter simplement d'autres composants aux entrées/sortie du PIC32. Le système complet est présenté sur la figure \ref{fig:pic32comp}.
+Ce modèle a été choisi également car il est commercialisé par Microchip sur une carte de développement peu coûteuse. De plus cette carte de développement se présente sous la forme d'une petite carte pouvant être montée sur une carte fille permettant de connecter simplement d'autres composants aux entrées/sorties du PIC32. Le système complet est présenté sur la figure \ref{fig:pic32comp}.
 %TODO mettre photos pic32
 
 
@@ -581,7 +581,7 @@ La fonction de transfert de cet étage d'amplification peut être calculée par 
    Vout = -Vin \times ( \frac{R2}{R1} )
 \end{align}
 
-Cet étage permet théoriquement d'amener la tension entre $-5V$ et $+5V$ à une tension comprise entre $-1.5V$ et $+1.5V$. En pratique, à cause des variation de valeurs des composants, et des caractéristiques de l'amplificateur opérationnel utilisé (imperfections statiques, tension d'offset), la tension est ramenée entre $-1.75V$ et $1.5V$.
+Cet étage permet théoriquement d'amener la tension entre $-5V$ et $+5V$ à une tension comprise entre $-1.5V$ et $+1.5V$. En pratique, à cause des variations de valeurs des composants, et des caractéristiques de l'amplificateur opérationnel utilisé (imperfections statiques, tension d'offset), la tension est ramenée entre $-1.75V$ et $1.5V$.
 
 Le deuxième étage est un offset réalisé par un montage sommateur inverseur permettant de repasser la plage de tension dans un intervalle positif. Le montage est décrit par la figure \ref{fig:sommateur1}. 
 
@@ -621,19 +621,18 @@ La figure \ref{fig:adapttension} présente le schéma électronique utilisé sur
 	\label{fig:adapttension}
 \end{figure}
 
-Cependant il est à souligner que la valeur exacte des composants électronique varie suivant leur tolérance (5\% pour les composants utilisés ici). Ainsi le voltage correspondant au 0 peut ainsi varier (1.72V, 1.68V, …) et un offset sera donc présent sur les valeurs enregistrées par le convertisseur du PIC. 
+Cependant il est à souligner que la valeur exacte des composants électroniques varie suivant leur tolérance (5\% pour les composants utilisés ici). Ainsi le voltage correspondant au 0 peut ainsi varier (1.72V, 1.68V, …) et un offset sera donc présent sur les valeurs enregistrées par le convertisseur du PIC. 
 
 Le schéma \ref{fig:adapttension} présente les valeurs de composants pratiques pour la réalisation du circuit. Celles-ci sont définies en tenant compte des imperfections statiques des amplificateurs et des variations des composants.
 
 
 \subsection{Liaison à l'Ordinateur}
 
-L'architecture matérielle présentée au chapitre \ref{CHarchimat}%TODO : changer ca
- a présentée la manière dont sont reliées les différentes composantes physiques du système. Cette partie a pour but de présenter la liaison série réalisée entre la carte électronique du PIC32 et l'ordinateur utilisé pour visualiser les signaux temps réels.
+Une fois les électrodes connectée au microcontrôleur, celui-ci doit maintenant être connecté à l'ordinateur. Cette partie a pour but de présenter la liaison série réalisée entre la carte électronique du PIC32 et l'ordinateur utilisé pour visualiser les signaux en temps réel.
 
-Dans un premier temps, les niveaux de tensions du signal série délivré par le PIC32 ne sont pas compatibles avec ceux utilisés et transmis par l'ordinateur. En effet, le PIC fournit un signal entre 0V et +3.3V alors que les signaux du port série d'un ordinateur sont compris entre +12V et -12V. 
+Dans un premier temps, les niveaux de tension du signal série délivré par le PIC32 ne sont pas compatibles avec ceux utilisés et transmis par l'ordinateur. En effet, le PIC fournit un signal entre 0V et +3.3V alors que les signaux du port série d'un ordinateur sont compris entre +12V et -12V. 
 
-Afin de faire la transition entre ces deux niveaux de tension, un composants électronique intégré est utilisé : un MAX3232, présenté sur la figure \ref{fig:max3232}.
+Afin de faire la transition entre ces deux niveaux de tension, un composant électronique intégré est utilisé : un MAX3232, présenté sur la figure \ref{fig:max3232}.
 
 \begin{figure}
 	\centering
@@ -675,7 +674,7 @@ Kinova livre avec le bras robotique des librairies de programmation permettant �
 
 Le système au stade de prototype étant connecté un ordinateur par une liaison série, il est aisé de se servir de l'ordinateur comme intermédiaire entre le système de détection de mouvement et le bras Jaco lui-même.
 
-De ce fait, le programme de monitorage des données du système doit également s'interfacer avec Jaco de manière à lui transférer des commandes en fonction des mouvements détectés. Cette connexion est effectuée grâce à la liaison USB disponible sur Jaco et utilise les librairies de programmation fournie par Kinova.
+De ce fait, le programme de monitorage des données du système doit également s'interfacer avec Jaco de manière à lui transférer des commandes en fonction des mouvements détectés. Cette connexion est effectuée grâce à la liaison USB disponible sur Jaco et utilise les librairies de programmation fournies par Kinova.
 
 \subsection{Schéma matériel Global}
 
@@ -713,7 +712,7 @@ Si l'on prend maintenant un point de vue plus haut, nous sommes en mesure d'étu
 
 Il est nécessaire de préciser que dans cette architecture, l'ordinateur ne sert que d'intermédiaire entre le microcontrôleur et Jaco. En effet, le microcontrôleur effectue la totalité des calculs. Le mouvement effectué par l'utilisateur est envoyé sur la liaison série à l'ordinateur qui transmet la commande choisie à Jaco via la liaison USB. 
 
-Il est également à noter que cette architecture va induire un délai de traitement impossible à quantifier précisément. En effet, l'ordinateur n'étant pas temps réel au sens strict, le temps entre l'information d'un mouvement effectué et le nouvement de Jaco (ou toute autre action) commandé par USB est imprédictible précisément et sera beaucoup plus long que si le PIC32 était relié à Jaco directement par un bus CAN. 
+Il est également à noter que cette architecture va induire un délai de traitement impossible à quantifier précisément. En effet, l'ordinateur n'étant pas temps réel au sens strict, le temps entre l'information d'un mouvement effectué et le nouvement de Jaco (ou toute autre action) commandé par USB est imprévisible précisément et sera beaucoup plus long que si le PIC32 était relié à Jaco directement par un bus CAN. 
 
 Ainsi, les temps de traitement mesurés caractériseront uniquement la partie calculatoire effectuée sur le PIC32, et non le temps entre le signal perçu par l'électrode et la commande appliquée sur le bras robotique.
 
@@ -731,7 +730,7 @@ Enfin une dernière partie détaillera le choix du filtre numérique appliqué s
 
 Comme vu dans la revue de littérature, l'exploitation du signal EMG ne se fait pas échantillon par échantillon, le signal est découpé en fenêtre puis chaque fenêtre est utilisée pour calculer des caractéristiques. Ces caractéristiques sont utilisées dans un classificateur pour déterminer le mouvement effectué par l'utilisateur. 
 
-La taille de la fenêtre influe principalement sur les performance du classificateur, car une petite fenêtre induit un biais en raison de la variance du signal qui peut entraîner une classification fausse. 
+La taille de la fenêtre influe principalement sur les performances du classificateur, car une petite fenêtre induit un biais en raison de la variance du signal qui peut entraîner une classification fausse. 
 
 Le projet s'étant affranchi du classificateur, s'affranchit également du problème de fenêtrage du signal, dans le sens ou son choix ne joue que sur le temps de traitement de celui-ci, en effet, plus une fenêtre est longue plus le temps de calcul pour la traiter est long. 
 
@@ -739,7 +738,7 @@ Toute fois, plus une fenêtre est courte, plus le délai avant de recevoir la pr
 
 Le choix du découpage en fenêtre du signal est donc ouvert et peut être fait en prenant tous les critères algorithmiques restant, à savoir le fonctionnement interne du PIC32, et des librairies qu'il met à disposition. 
 
-En effet, comme la partie \ref{CHfiltrage} le présentera, le PIC32 met à disposition une librairie flottante incluant une fonction effectuant le calcul d'une transformée de Fourrier rapide (Fast Fourrier Transfor - FFT). Ces fonctions sont nécessaires au filtrage appliqué sur le signal. Les fonctions de cette librairie étant spécialement prévue pour l'architecture du PIC32, celles-ci ont une vitesse d'exécution optimale. La fonction FFT fournie par la librairie PIC32 est disponible sous 3 formes : 
+En effet, comme la partie \ref{CHfiltrage} le présentera, le PIC32 met à disposition une librairie flottante incluant une fonction effectuant le calcul d'une transformée de Fourrier rapide (Fast Fourrier Transfor - FFT). Ces fonctions sont nécessaires au filtrage appliqué sur le signal. Les fonctions de cette librairie étant spécialement prévues pour l'architecture du PIC32, celles-ci ont une vitesse d'exécution optimale. La fonction FFT fournie par la librairie PIC32 est disponible sous 3 formes : 
 
 \begin{itemize}
  \item fft8
@@ -755,11 +754,11 @@ En conclusion, trois tailles de fenêtrage sont ici possibles de manière à fac
 
 La détection d'activité musculaire est le coeur du projet de contrôle de Jaco par EMG. En effet, le fait de s'être affranchi d'un classificateur implique que cette étape se déroule de manière optimale et toujours cohérente.
 
-Une première partie présentera la caractéristique principale utilisée pour détecter les activité musculaire : l'énergie de Teager-Keiser (TKE). 
+Une première partie présentera la caractéristique principale utilisée pour détecter les activités musculaires : l'énergie de Teager-Keiser (TKE). 
 
-Puis dans un second temps, le système de vote à la majorité sera détaillé. En effet, fixer un simple seuil sur le TKE du signal entraine une détection d'activité en changement d'état permanent, parfois à chaque nouvelle fenêtre. Le vote à la majorité permet de liser cette détection de manière à obtenir une détection d'activité continue sous la forme d'un échelon.
+Puis dans un second temps, le système de vote à la majorité sera détaillé. En effet, fixer un simple seuil sur le TKE du signal entraine une détection d'activité en changement d'état permanent, parfois à chaque nouvelle fenêtre. Le vote à la majorité permet de lisser cette détection de manière à obtenir une détection d'activité continue sous la forme d'un échelon.
 
-Enfin, le système de calibration pour chaque muscule et chaque sujet sera présenté.
+Enfin, le système de calibration pour chaque muscle et chaque sujet sera présenté.
 
 \subsubsection{Énergie de Teager-Keiser}
 %TODO faire des tests sur la valeur absolue du tke pour voir si ca marche toujours. faire plein de screen shots a foutre la dedans.
@@ -781,7 +780,7 @@ Ainsi, une fois une fenêtre acquise complètement, le TKE instantané (sur chaq
 	\label{fig:tkeinstant}
 \end{figure}
 
-Cependant, ce TKE par échantillon est difficile à utiliser directement, car il est très variable et fixer un seuil efficace pour détecter les activités serait très compliqué. Pour faciliter son exploitation, on effectue la moyenne du TKE sur toute la fenêtre, afin d'en obtenir sont enveloppe. De cette manière, un seuil de détection est applicable plus facilement. La figure \ref{fig:tkemoy} présente le passage du TKE instantané au TKE moyen.
+Cependant, ce TKE par échantillon est difficile à utiliser directement, car il est très variable et fixer un seuil efficace pour détecter les activités serait très compliqué. Pour faciliter son exploitation, on effectue la moyenne du TKE sur toute la fenêtre, afin d'en obtenir son enveloppe. De cette manière, un seuil de détection est applicable plus facilement. La figure \ref{fig:tkemoy} présente le passage du TKE instantané au TKE moyen.
 
 \begin{figure}
 	\centering
@@ -798,16 +797,16 @@ Une fois le TKE d'une fenêtre calculé, le but est de savoir si le muscle est a
 
 Une fois le système de détection d'activité musculaire défini, celui-ci doit ensuite être adapté à chaque utilisateur, et même à chaque muscle de cet utilisateur. En effet, chaque personne développe une force différente, de la même manière que chaque personne ne présente pas le même tonus musculaire lorsqu'il est au repos. 
 
-Par exemple une personne stressée sera beaucoup plus contractée au niveau des trapèzes qu'une personne complètement détendue, et ce même sans avoir l'impression d'être contracté.
+Par exemple une personne stressée sera beaucoup plus contractée au niveau des trapèzes qu'une personne complètement détendue, et ce même sans avoir l'impression d'être contractée.
 
-De manière à calibrer efficacement le seuil de détection d'activité musculaire, il nous récolter deux information pour chaque muscle : 
+De manière à calibrer efficacement le seuil de détection d'activité musculaire, il nous faut récolter deux information pour chaque muscle : 
 
 \begin{itemize}
  \item le tonus musculaire au repos
  \item le tonus musculaire en contraction isométrique maximum
 \end{itemize}
 
-On acquiers ces données en se basant sur le TKE d'un muscule lorsqu'il est au repos, ainsi que lorsqu'il est en contraction isométrique maximum, c'est à dire que le muscle se contracte au maximum, tout en maintenant l'articulation fixe. Les équations \ref{eq:calibZero} et \ref{eq:calibMax} présentent les calculs permettant d'optenir les données.
+On acquiert ces données en se basant sur le TKE d'un muscule lorsqu'il est au repos, ainsi que lorsqu'il est en contraction isométrique maximum, c'est à dire que le muscle se contracte au maximum, tout en maintenant l'articulation fixe. Les équations \ref{eq:calibZero} et \ref{eq:calibMax} présentent les calculs permettant d'obtenir les données.
 
 \begin{align}\label{eq:calibZero}
    Tonus_{repos} = \frac{\sum_{n=1}^{20}TKE(x_{repos}(n))}{20} 
@@ -817,7 +816,7 @@ On acquiers ces données en se basant sur le TKE d'un muscule lorsqu'il est au r
    Tonus_{max} = \frac{\sum_{n=1}^{20}TKE_{max}(x_{max}(n))}{20} 
 \end{align}
 
-où $x(n)$ représente une fenêtre de 16 échantillons du signal brut. On calcule donc la moyenne des TKE sur 20 fenêtre, ce qui correspond à une durée de $160ms$. 
+où $x(n)$ représente une fenêtre de 16 échantillons du signal brut. On calcule donc la moyenne des TKE sur 20 fenêtres, ce qui correspond à une durée de $160ms$. 
 
 Ainsi, l'utilisateur reste au repos, ou bien rentre en contraction maximum, on actionne alors la calibration grâce à l'interface graphique sur l'ordinateur pour enregistrer les tonus de chaque muscle.
 
@@ -859,9 +858,9 @@ Afin de remédier à ces deux problèmes, une méthode inspirée du vote à la m
 
 Ce système permet d'éliminer la plupart des faux positifs. Toute fois, un inconvénient persiste. En effet, une fenêtre d'activation suffit à faire la différence entre une activité ou un repos. Ainsi, la détection d'activité peut toujours osciller entre 0 et 1, si la comparaison au seuil est différente à chaque nouvelle fenêtre, résultant en une activité en dents de scie comme sur la figure \ref{fig:onsetSansVote}.
 
-La méthode mise au point pour le système consiste à mettre deux seuils de majorité et de minorité séparés. Ainsi, sur 32 fenêtres d'échantillons, si 16 ou plus sont au dessus du seuil de TKE, l'activité musculaire est mise à 1, puis, pour que celle-ci retombe à 0, il faut que le nombre de fenêtres au dessus du seuil retombe en dessous de 10. Cela permet de ne pas faire des allers-retours entre 15 et 16 fenêtres activées, qui entrainent des discontinuitées de détection.
+La méthode mise au point pour le système consiste à mettre deux seuils de majorité et de minorité séparés. Ainsi, sur 32 fenêtres d'échantillons, si 16 ou plus sont au dessus du seuil de TKE, l'activité musculaire est mise à 1, puis, pour que celle-ci retombe à 0, il faut que le nombre de fenêtres au dessus du seuil retombe en dessous de 10. Cela permet de ne pas faire des allers-retours entre 15 et 16 fenêtres activées, qui entrainent des discontinuités de détection.
 
-Le résulstat de ce système de vote à la majorité est présenté par la figure \ref{fig:onsetAvecVote}.
+Le résultat de ce système de vote à la majorité est présenté par la figure \ref{fig:onsetAvecVote}.
 
 \begin{figure}
 	\centering
@@ -892,7 +891,7 @@ Cette partie présente le filtre prédictif mis en place dans le système dans l
 
 Le but du filtrage prédictif est de pouvoir prédire quelles partie du signal le filtre doit amplifier, et quelles parties de ce même signal il doit écraser.
 
-Dans notre cas, la partie du signal à écraser est le bruit analogique mesuré par les ADC du PIC32, tandis que la partie du signal à amplifier est le signal EMG généré par le muscle sur lequel est collé l'électrode.
+Dans notre cas, la partie du signal à écraser est le bruit analogique mesuré par les ADC du PIC32, tandis que la partie du signal à amplifier est le signal EMG généré par le muscle sur lequel est collée l'électrode.
 
 Le filtre ayant deux élément à reconnaitre (le bruit et le signal), il faut en caractériser un des deux, et définir que lorsque l'on ne le détecte pas, c'est que l'on est en présence de l'autre. Ainsi, on choisit de caractériser le bruit. Lorsque le système détecte la présence du bruit, alors le signal est écrasé, lorsqu'il ne le détecte pas, c'est qu'un EMG est présent dans le signal, il est alors amplifié.
 
@@ -918,7 +917,7 @@ Le signal est alors acquis par fenêtre. Lorsqu'une fenêtre est acquise, on la 
    fft = FFT_{16}(x(k)) 
 \end{align}
 
-Le $fft$ calculé par cette opération est donc un tableau de 16 nombres complexes représentant la transformée de fourrier de la fenêtre.
+La $fft$ calculée par cette opération est donc un tableau de 16 nombres complexes représentant la transformée de fourrier de la fenêtre.
 
 Une fois cette FFT calculée, on met la phase du signal de côté pour ne garder que le spectre d'amplitude $M$ de la fenêtre (équation \ref{eq:amplCalib}).
 
@@ -958,7 +957,7 @@ Cette probabilité est ensuite limitée pour ne pas créer de distorsion provoqu
    postsnr(k) = \max(postsnr(k), 0.01)
 \end{align}
 
-On compare ensuite la probabilité obtenue avec la probabilité obtenue avec le spectre d'amplitude obtenue à la fenêtre précédente. Cette méthode est appelée méthode de la "décision adaptative" (équation \ref{eq:etaFiltre}). Une nouvelle amplitude est alors calculée en appliquant cette probabilité sur l'amplitude d'origine (équation \ref{eq:newMagEta}).
+On compare ensuite la probabilité obtenue avec la celle obtenue avec le spectre d'amplitude de la fenêtre précédente. Cette méthode est appelée méthode de la "décision adaptative" (équation \ref{eq:etaFiltre}). Une nouvelle amplitude est alors calculée en appliquant cette probabilité sur l'amplitude d'origine (équation \ref{eq:newMagEta}).
 
 \begin{align}\label{eq:etaFiltre}
    eta(k) = \alpha * \frac{M(k-1)}{M_{Bande de base}} + (1 - \alpha) * postsnr(k)
@@ -1034,23 +1033,23 @@ Il est donc important de bien choisir quels calculs sont effectués dans les int
 
 Une interruptions peut également être interrompue par une autre interruption. Un système de priorité détermine l'ordre dans lequel ces interruptions ont lieu. Une interruption ne pourra jamais interrompre une autre interruption ayant une priorité plus haute. Ainsi l'interruption encours se terminera avant que l'autre puisse s'effectuer. 
 
-Ainsi, les deux périphériques utilisés dans le système fonctionneront à base d'interruptions, à savoir l'ADC permettant l'acquisition des quatre canaux, et l'UARTT permettant la communication série. 
+Ainsi, les deux périphériques utilisés dans le système fonctionneront à base d'interruptions, à savoir l'ADC permettant l'acquisition des quatre canaux, et l'UART permettant la communication série. 
 
 L'ADC du PIC32 permet de scanner plusieurs entrées les unes après les autres. Ainsi il faut donc multiplier la fréquence d'échantillonnage par le nombre de canaux afin de pouvoir acquérir tous les canaux à la bonne fréquence. On fixe donc la fréquence d'échantillonnage à 8KHz pour que chaque canal soit échantillonné à 2KHz. 
 
 L'interruption de l'ADC est configurée pour être déclenchée après avoir acquis le plus d'échantillons possible, soit 8 échantillons. Ainsi, tous les 8 échantillons, correspondant à 2 échantillons par canal, l'interruption de l'ADC est déclenchée. 
 
-L'UARTT du PIC32 quant à elle possède deux interruptions, une pour l'envoi de données, et l'autre pour la réception. Ces interruptions sont déclenchées respectivement à l'envoi et à la réception d'un octet complet. Ainsi, à chaque octet reçu, celui-ci est mis en mémoire dans l'interruption, et à chaque octet envoyé, on met l'octet suivant dans le "buffer" d'envoi.
+L'UART du PIC32 quant à elle possède deux interruptions, une pour l'envoi de données, et l'autre pour la réception. Ces interruptions sont déclenchées respectivement à l'envoi et à la réception d'un octet complet. Ainsi, à chaque octet reçu, celui-ci est mis en mémoire dans l'interruption, et à chaque octet envoyé, on met l'octet suivant dans le "buffer" d'envoi.
 
 \subsubsection{Alogorithme global}
 
-Une fois le fonctionnement global du PIC32 et de ses interruption décrit, l'algorithme du programme principal ainsi que ceux des interruptions peuvent maintenant être présentés en détail. 
+Une fois le fonctionnement global du PIC32 et de ses interruptions décrit, l'algorithme du programme principal ainsi que ceux des interruptions peuvent maintenant être présentés en détail. 
 
 Nous nous intéressons dans un premier temps au fonctionnement du programme principal, puis les algorithmes des deux interruptions principales seront détaillés. 
 
 Le programme principal du firmware commence par initialiser tous les périphériques du PIC32 qui seront utilisés, ainsi que l'horloge principale et les configurations des interruptions. C'est à ce moment que l'ADC et le port série sont configurés. 
 
-Une fois les initialisations effectuée, le programme entre dans une boucle infinie qui constitue la colonne vertébrale du programme. Les actions réalisée par cette boucle sont présentée par la figure \ref{fig:mainloop}.
+Une fois les initialisations effectuées, le programme entre dans une boucle infinie qui constitue la colonne vertébrale du programme. Les actions réalisée par cette boucle sont présentées par la figure \ref{fig:mainloop}.
 
 \begin{figure}
 	\centering
@@ -1061,9 +1060,9 @@ Une fois les initialisations effectuée, le programme entre dans une boucle infi
 	\label{fig:mainloop}
 \end{figure}
 
-La boucle commence ainsi par vérifier si une commande à été reçue sur le port série. Les commandes reçue sur le port série sont les commandes de calibration du système. Ainsi chaque commande est constituée du type de calibration a effectuer, c'est à dire une calibration du tonus maximum, une calibration du tonus au repos ou bien la calibration de la bande de base du filtre, et le numéro du canal sur lequel effectuer cette calibration. 
+La boucle commence ainsi par vérifier si une commande à été reçue sur le port série. Les commandes reçues sur le port série sont les commandes de calibration du système. Ainsi chaque commande est constituée du type de calibration a effectuer, c'est à dire une calibration du tonus maximum, une calibration du tonus au repos ou bien la calibration de la bande de base du filtre, et le numéro du canal sur lequel effectuer cette calibration. 
 
-On vérifie ensuite si une fenêtre de signal a été acquise en entier. Si c'est le cas, cette fenêtre est filtrée, puis passée dans la fonction de détection d'activités. Enfin les données calculées sont envoyée sur le port série pour être monitorées.
+On vérifie ensuite si une fenêtre de signal a été acquise en entier. Si c'est le cas, cette fenêtre est filtrée, puis passée dans la fonction de détection d'activités. Enfin les données calculées sont envoyées sur le port série pour être monitorées.
 
 Il est à noter que le filtrage n'est effectué que si la calibration de la bande de base a bien eu lieu précédemment, mais ce test n'est pas affiché sur le diagramme à des fins de clarté. 
 
@@ -1078,7 +1077,7 @@ Cette partie montre comment le signal est traité, présentons maintenant commen
 	\label{fig:adc}
 \end{figure}
 
-Il est à noter que deux tableaux de données sont utilisés pour chaque canal. L'un des tableau est rempli au fur et à mesure par l'ADC pendant que l'autre est traité, c'est à dire filtré puis passé à la détection d'activité. Une fois qu'un tableau est rempli par l'ADC, celui-ci est passé en phase de traitement, et l'autre est rempli à nouveau par l'ADC. Il est donc nécessaire que le tableau à traiter le soit avant qu'une nouvelle fenêtre ne soit acquise, sinon des données seront perdues. 
+Il est à noter que deux tableaux de données sont utilisés pour chaque canal. L'un des tableaux est rempli au fur et à mesure par l'ADC pendant que l'autre est traité, c'est à dire filtré puis passé à la détection d'activité. Une fois qu'un tableau est rempli par l'ADC, celui-ci est passé en phase de traitement, et l'autre est rempli à nouveau par l'ADC. Il est donc nécessaire que le tableau à traiter le soit avant qu'une nouvelle fenêtre ne soit acquise, sinon des données seront perdues. 
 
 \subsection{Application de monitorage des signaux}
 
@@ -1086,7 +1085,7 @@ La partie firmware ayant été présentée, le dernier élément technique du pr
 
 Ceci a été utile lors de la réalisation dans un premier temps à des fins de débogage, puis après pour l'utilisation même du système. En effet, l'interface graphique permet de lancer les phases de calibration du système, pour calibrer les seuils de détection d'activité musculaire, et pour calibrer la bande de base du filtre. 
 
-Ce programme permet également de faire le lien entre le PIC32 et le bras robotique JACO. Cette partie a nécessité l'ajout d'une surcouche logicielle supplémentaire pour cause d'incompatibilité de langages comme le présentera la partie \ref{CHMono}.
+Ce programme permet également de faire le lien entre le PIC32 et le bras robotique JACO. Cette partie a nécessité l'ajout d'une sur-couche logicielle supplémentaire pour cause d'incompatibilité de langages comme le présentera la partie \ref{CHMono}.
 
 Enfin la conception complète, à savoir le diagramme UML du programme ainsi que son algorithme principal seront détaillés, ainsi que toute les fonctionnalités finales du programme.
 
@@ -1094,11 +1093,11 @@ Enfin la conception complète, à savoir le diagramme UML du programme ainsi que
 
 Le choix des langages de programmation ont été effectués au début du projet. En lisant la documentation fournie par Kinova, il s'est avéré possible d'interfacer Jaco avec un programme C++. De plus, l'état de l'art de la robotique moderne utilise largement le langage C++, qui en est devenu un des standards. 
 
-En effet, le framework open source ROS (Robotic Operating System) est intégralement développé en C++ et Python, deux langages facilement interfaçables. 
+En effet, le framework open source ROS (Robot Operating System) est intégralement développé en C++ et Python, deux langages facilement interfaçables. 
 
-La librairie Qt est une librairie graphique open source qui permet la création facile et multi plateforme d'interface graphique robuste. Cette librairie est l'une des plus complète existant aujourd'hui et possède des modules supplémentaires multi plateforme en grand nombre, comme un module réseau, des bases de données, la gestion des fichiers ou encore l'utilisations d'architectures modèle-vue déjà implémentés. Ceci permet d'ouvrir beaucoup d'option pour la suite du développement du projet, dans le cas où de nouveaux éléments viendraient à y être ajoutés. 
+La librairie Qt est une librairie graphique libre qui permet la création facile et multi plateforme d'interfaces graphiques robustes. Cette librairie est l'une des plus complète existant aujourd'hui et possède des modules supplémentaires multi plateforme en grand nombre, comme un module réseau, des bases de données, la gestion des fichiers ou encore l'utilisation d'architectures modèle-vue déjà implémentées. Ceci permet d'ouvrir beaucoup d'options pour la suite du développement du projet, dans le cas où de nouveaux éléments viendraient à y être ajoutés. 
 
-La combinaisons de ces arguments a donc logiquement tourné le choix du langage informatique principal du programme vers le langage C++.
+La combinaison de ces arguments a donc logiquement tourné le choix du langage informatique principal du programme vers le langage C++.
 
 Cependant, après plusieurs mois de développement, il s'est avéré que l'utilisation des librairies de Kinova doive se faire en passant par une couche logicielle supplémentaire : Mono. Cette partie est détaillée dans la partie suivante.
 
@@ -1106,7 +1105,7 @@ En effet, les librairies de Kinova ont été nativement réalisée en langage C\
 
 \subsubsection{Lien avec Jaco et Mono}\label{CHMono}
 
-Le but du projet étant de contrôler le bras JACO, il est nécessaire d’utiliser l’interface de programmation (API) de Kinova pour le contrôler. Cette librairie permet la connexion du bras JACO au programme via USB, et implémente toutes les méthodes permettant d'envoyer des ordres précis à JACO. Ces ordres peuvent être des ordres de configuration du bras, oubien des commandes pour lire des valeurs d'état du bras (courant dans les articulation, température des moteurs, angles des articulations, ...), des commandes de déplacements des articulations, ou mêmes des trajectoires de mouvement. 
+Le but du projet étant de contrôler le bras JACO, il est nécessaire d’utiliser l’interface de programmation (API) de Kinova pour le contrôler. Cette librairie permet la connexion du bras JACO au programme via USB, et implémente toutes les méthodes permettant d'envoyer des ordres précis à JACO. Ces ordres peuvent être des ordres de configuration du bras, ou bien des commandes pour lire des valeurs d'état du bras (courant dans les articulation, température des moteurs, angles des articulations, ...), des commandes de déplacements des articulations, ou mêmes des trajectoires de mouvement. 
 
 L’API Kinova a été réalisée intégralement en C\#, et est donc inutilisable directement par un programme codé en C++ pur. Dans sa documentation, Kinova préconise l'utilisation d'un framework appelé Mono pour l'utiliser depuis un programme C++.
 
@@ -1140,7 +1139,7 @@ En synthétisant :
 
 \subsubsection{Fonctionnement Global et Schéma UML du Projet}
 
-Le logiciel de monitorage des signaux est un programme basé autour de l'interface graphique réalisée grace à la librairie Qt. Le diagramme UML du programme est présenté par la figure \ref{fig:uml}.
+Le logiciel de monitorage des signaux est un programme basé autour de l'interface graphique réalisée grâce à la librairie Qt. Le diagramme UML du programme est présenté par la figure \ref{fig:uml}.
 
 \begin{figure}
 	\centering
@@ -1151,9 +1150,9 @@ Le logiciel de monitorage des signaux est un programme basé autour de l'interfa
 	\label{fig:uml}
 \end{figure}
 
-MainWindow est la classe principale de l'interface graphique, c'est elle qui contient tous les éléments graphiques de l'interface. Elle dialogue avec les autres classe afin d'en afficher les données entrantes et sortantes. 
+MainWindow est la classe principale de l'interface graphique, c'est elle qui contient tous les éléments graphiques de l'interface. Elle dialogue avec les autres classes afin d'en afficher les données entrantes et sortantes. 
 
-La classe SerialHandler est l'objet qui gère tout ce qui touche à la communication série. Il possède une méthode de réception des données qui tourne dans un processus séparé du reste du programme.
+La classe SerialHandler est l'objet qui gère tout ce qui touche à la communication série. Elle possède une méthode de réception des données qui tourne dans un processus séparé du reste du programme.
 
 La classe EMG est la classe contenant toutes les données EMG reçues du PIC32. Lorsqu'une donnée est reçue, elle est réceptionnée par l'objet SerialHandler qui met à jour les données dans la classe EMG. MainWindow va ensuite chercher les données dans la classe EMG afin de les afficher dans l'interface. 
 
@@ -1161,7 +1160,7 @@ La classe JacoArm est la classe décrite dans la partie précédente qui fait le
 
 L'interface graphique réalisée possède plusieurs onglet permettant chacun de visualiser un signal pour les quatre canaux. La figure \ref{fig:gui1} montre la fenêtre de visualisation des signaux EMG pour les quatre canaux. Un autre onglet permet de visualiser le TKE, un autre la détection d'activité musculaire et un dernier permet de monitorer une fft. 
 
-Deux onglet supplémentaires viennent s'ajouter aux quatre onglets de visualisation des signaux. Le premier, présenté par la figure \ref{fig:gui2} permet le contrôle de Jaco. En effet, Jaco étant normalement contrôlé par son joystick, il faut donc activer ou désactiver son contrôle par l'API. Cette fenêtre permet également de visualiser le statut de cette connexion et de visualiser les information renvoyées par Jaco. 
+Deux onglet supplémentaires viennent s'ajouter aux quatre onglets de visualisation des signaux. Le premier, présenté par la figure \ref{fig:gui2} permet le contrôle de Jaco. En effet, Jaco étant normalement contrôlé par son joystick, il faut donc activer ou désactiver son contrôle par l'API. Cette fenêtre permet également de visualiser le statut de cette connexion et de visualiser les informations renvoyées par Jaco. 
 
 Enfin le dernier onglet présenté sur la figure \ref{fig:gui3} permet d'envoyer les commandes de calibration au PIC32. Ces calibrations sont la calibration du tonus au repos, du tonus maximum et de la bande de base pour le filtre, et ce pour chaque canal EMG.
 
@@ -1175,6 +1174,25 @@ Enfin le dernier onglet présenté sur la figure \ref{fig:gui3} permet d'envoyer
 	\caption{Capture d'écran de l'interface graphique du programme de monitorage des données EMG.}
 	\label{fig:gui1}
 \end{figure}
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/gui2.png}
+	}
+	\caption{Capture d'écran de l'interface graphique du programme de monitorage des données EMG.}
+	\label{fig:gui2}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/gui3.png}
+	}
+	\caption{Capture d'écran de l'interface graphique du programme de monitorage des données EMG.}
+	\label{fig:gui3}
+\end{figure}
+
 
 \section{Validation du Système}
 
@@ -1252,49 +1270,40 @@ A chaque acquisition, un monitoring sera effectué sur le programme Monitor afin
 
 \subsubsection{Exemple de données récoltées}
 
-La figure \ref{fig:validExEMG} montre un exemple de la forme que prendront les données récoltées lors d’une acquisition sur une personne. % : (A20, A30, A40, A50, A60 correspondent à l’angle de rotation effectué, et V60, V90, V120, V160 et V200 correspondent aux vitesses du métronome pour l’acquisition)
+Les figures \ref{fig:validExAng}, \ref{fig:validExEMG}, \ref{fig:validExVit} et \ref{fig:validExOnset} montrent un exemple de la forme que prendront les données récoltées lors d’une acquisition sur une personne : (A20, A30, A40, A50, A60 correspondent à l’angle de rotation effectué, et V60, V90, V120, V160 et V200 correspondent aux vitesses du métronome pour l’acquisition)
 
 \begin{figure}
-	\begin{minipage}{0.35\textwidth}
+	\begin{minipage}{0.40\textwidth}
 		\fbox{
 			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
 		}
 		\caption{Exemple de données d'angles de rotation de la tête}
 		\label{fig:validExAng}
 	\end{minipage}
-	
 	\hspace{0.1\textwidth}
-	
-	\begin{minipage}{0.35\textwidth}
+	\begin{minipage}{0.40\textwidth}
 		\fbox{
-			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
+			\includegraphics[width=\textwidth]{Figures/validExVit.png}
 		}
-		\caption{Exemple de données d'angles de rotation de la tête}
-		\label{fig:validExAng}
+		\caption{Exemple de données de vitesse anglulaires de rotation de la tête}
+		\label{fig:validExVit}
 	\end{minipage}
-	
 	\vspace*{20mm}
-	
-	\begin{minipage}{0.35\textwidth}
+	\begin{minipage}{0.40\textwidth}
 		\fbox{
-			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
+			\includegraphics[width=\textwidth]{Figures/validExEmg.png}
 		}
-		\caption{Exemple de données d'angles de rotation de la tête}
-		\label{fig:validExAng}
+		\caption{Exemple de données d'EMG de rotation de la tête}
+		\label{fig:validExEMG}
 	\end{minipage}
-	
 	\hspace{0.1\textwidth}
-	
-	\begin{minipage}{0.35\textwidth}
+	\begin{minipage}{0.40\textwidth}
 		\fbox{
-			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
+			\includegraphics[width=\textwidth]{Figures/validExOnset.png}
 		}
-		\caption{Exemple de données d'angles de rotation de la tête}
-		\label{fig:validExAng}
+		\caption{Exemple de données de détection d'activité }
+		\label{fig:validExOnset}
 	\end{minipage}
-	
-	
-	
 \end{figure}
 
 
