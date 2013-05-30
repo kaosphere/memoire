@@ -1,62 +1,62 @@
 \BOOKMARK [0][]{chapter*.8}{INTRODUCTION}{}% 1
 \BOOKMARK [0][]{chapter.9}{Chapitre 1 mise en contexte}{}% 2
 \BOOKMARK [1][]{section.10}{Les Bless\351s M\351dullaires}{chapter.9}% 3
-\BOOKMARK [1][]{section.11}{Les aides techniques aux actions de la vie quotidienne \(AVQ\)}{chapter.9}% 4
-\BOOKMARK [1][]{section.12}{Le Signal \311lectromyographique \(EMG\)}{chapter.9}% 5
-\BOOKMARK [0][]{chapter.13}{Chapitre 2 Revue de Litt\351rature}{}% 6
-\BOOKMARK [1][]{section.14}{Classification EMG}{chapter.13}% 7
-\BOOKMARK [2][-]{subsection.15}{Fen\352trage du signal}{section.14}% 8
-\BOOKMARK [2][-]{subsection.16}{Algorithmes de d\351tection d'activit\351}{section.14}% 9
-\BOOKMARK [2][-]{subsection.17}{Caract\351ristiques du signal EMG utilis\351es}{section.14}% 10
-\BOOKMARK [2][-]{subsection.18}{Classificateurs utilis\351s dans la d\351tection de mouvements}{section.14}% 11
-\BOOKMARK [1][]{section.19}{Syst\350mes Embarqu\351s temps r\351els et EMG}{chapter.13}% 12
-\BOOKMARK [2][-]{subsection.20}{Le traitement temps r\351el}{section.19}% 13
-\BOOKMARK [2][-]{subsection.21}{M\351thodes d'acquisition du signal}{section.19}% 14
-\BOOKMARK [2][-]{subsection.22}{Mat\351riel informatique utilis\351 dans la litt\351rature}{section.19}% 15
-\BOOKMARK [0][]{chapter.23}{Chapitre 3 Probl\351matique et Objectifs du Projet}{}% 16
-\BOOKMARK [0][]{chapter.24}{Chapitre 4 M\351thodologie}{}% 17
-\BOOKMARK [1][]{section.25}{Choix des Muslces}{chapter.24}% 18
-\BOOKMARK [1][]{section.27}{Architecture Mat\351rielle}{chapter.24}% 19
-\BOOKMARK [2][-]{subsection.28}{\311lectrodes}{section.27}% 20
-\BOOKMARK [2][-]{subsection.31}{Microcontr\364leur}{section.27}% 21
-\BOOKMARK [2][-]{subsection.33}{Adaptation des Tensions}{section.27}% 22
-\BOOKMARK [2][-]{subsection.40}{Liaison \340 l'Ordinateur}{section.27}% 23
-\BOOKMARK [2][-]{subsection.43}{Liaison \340 Jaco}{section.27}% 24
-\BOOKMARK [2][-]{subsection.44}{Sch\351ma mat\351riel Global}{section.27}% 25
-\BOOKMARK [1][]{section.47}{Choix des Caract\351ristiques du Signal \340 utiliser et des Outils algorithmiques et Math\351matiques}{chapter.24}% 26
-\BOOKMARK [2][-]{subsection.48}{D\351coupage des fen\352tres d'\351chantillons}{section.47}% 27
-\BOOKMARK [2][-]{subsection.49}{D\351tection d'activit\351 musculaire}{section.47}% 28
-\BOOKMARK [3][-]{subsubsection.50}{\311nergie de Teager-Keiser}{subsection.49}% 29
-\BOOKMARK [3][-]{subsubsection.54}{Calibrage du seuil de d\351tection}{subsection.49}% 30
-\BOOKMARK [3][-]{subsubsection.58}{Vote \340 la majorit\351}{subsection.49}% 31
-\BOOKMARK [2][-]{subsection.61}{Filtrage}{section.47}% 32
-\BOOKMARK [3][-]{subsubsection.62}{Concept}{subsection.61}% 33
-\BOOKMARK [3][-]{subsubsection.63}{Calibrage du Filtre}{subsection.61}% 34
-\BOOKMARK [3][-]{subsubsection.68}{Description du Filtre}{subsection.61}% 35
-\BOOKMARK [1][]{section.80}{Architecture Logicielle}{chapter.24}% 36
-\BOOKMARK [2][-]{subsection.81}{Firmware}{section.80}% 37
-\BOOKMARK [3][-]{subsubsection.82}{Fonctionnement et Configuration Globale du PIC32}{subsection.81}% 38
-\BOOKMARK [3][-]{subsubsection.83}{Alogorithme global}{subsection.81}% 39
-\BOOKMARK [2][-]{subsection.86}{Application de monitorage des signaux}{section.80}% 40
-\BOOKMARK [3][-]{subsubsection.87}{Choix des Librairies et des langages}{subsection.86}% 41
-\BOOKMARK [3][-]{subsubsection.88}{Lien avec Jaco et Mono}{subsection.86}% 42
-\BOOKMARK [3][-]{subsubsection.90}{Fonctionnement Global et Sch\351ma UML du Projet}{subsection.86}% 43
-\BOOKMARK [1][]{section.95}{Validation du Syst\350me}{chapter.24}% 44
-\BOOKMARK [2][-]{subsection.96}{Protocole de validation}{section.95}% 45
-\BOOKMARK [3][-]{subsubsection.97}{Mode de recrutement}{subsection.96}% 46
-\BOOKMARK [3][-]{subsubsection.98}{Principe de fonctionnement}{subsection.96}% 47
-\BOOKMARK [3][-]{subsubsection.99}{Protocole exp\351rimental}{subsection.96}% 48
-\BOOKMARK [3][-]{subsubsection.101}{D\351roulement des acquisitions}{subsection.96}% 49
-\BOOKMARK [3][-]{subsubsection.102}{Notes importantes}{subsection.96}% 50
-\BOOKMARK [3][-]{subsubsection.103}{Exemple de donn\351es r\351colt\351es}{subsection.96}% 51
-\BOOKMARK [3][-]{subsubsection.105}{Interpr\351tation des donn\351es}{subsection.96}% 52
-\BOOKMARK [3][-]{subsubsection.109}{Comparaison des donn\351es}{subsection.96}% 53
-\BOOKMARK [0][]{chapter.110}{Chapitre 5 R\351sultats}{}% 54
-\BOOKMARK [1][]{section.111}{D\351tection d'activit\351}{chapter.110}% 55
-\BOOKMARK [1][]{section.112}{Temps de calcul et chronogrammes}{chapter.110}% 56
-\BOOKMARK [1][]{section.113}{Validation du syst\350me}{chapter.110}% 57
-\BOOKMARK [0][]{chapter.114}{Chapitre 6 Discussion}{}% 58
-\BOOKMARK [0][]{chapter*.115}{CONCLUSION}{}% 59
-\BOOKMARK [0][]{chapter.116}{Annexe I Titre de l'annexe}{}% 60
-\BOOKMARK [0][]{subsection.122}{LISTE DE R\311F\311RENCES}{}% 61
-\BOOKMARK [0][]{chapter*.123}{BIBLIOGRAPHIE}{}% 62
+\BOOKMARK [1][]{section.12}{Les aides techniques aux actions de la vie quotidienne \(AVQ\)}{chapter.9}% 4
+\BOOKMARK [1][]{section.13}{Le Signal \311lectromyographique \(EMG\)}{chapter.9}% 5
+\BOOKMARK [0][]{chapter.14}{Chapitre 2 Revue de Litt\351rature}{}% 6
+\BOOKMARK [1][]{section.15}{Classification EMG}{chapter.14}% 7
+\BOOKMARK [2][-]{subsection.16}{Fen\352trage du signal}{section.15}% 8
+\BOOKMARK [2][-]{subsection.17}{Algorithmes de d\351tection d'activit\351}{section.15}% 9
+\BOOKMARK [2][-]{subsection.18}{Caract\351ristiques du signal EMG utilis\351es}{section.15}% 10
+\BOOKMARK [2][-]{subsection.19}{Classificateurs utilis\351s dans la d\351tection de mouvements}{section.15}% 11
+\BOOKMARK [1][]{section.20}{Syst\350mes Embarqu\351s temps r\351els et EMG}{chapter.14}% 12
+\BOOKMARK [2][-]{subsection.21}{Le traitement temps r\351el}{section.20}% 13
+\BOOKMARK [2][-]{subsection.22}{M\351thodes d'acquisition du signal}{section.20}% 14
+\BOOKMARK [2][-]{subsection.23}{Mat\351riel informatique utilis\351 dans la litt\351rature}{section.20}% 15
+\BOOKMARK [0][]{chapter.24}{Chapitre 3 Probl\351matique et Objectifs du Projet}{}% 16
+\BOOKMARK [0][]{chapter.25}{Chapitre 4 M\351thodologie}{}% 17
+\BOOKMARK [1][]{section.26}{Choix des Muslces}{chapter.25}% 18
+\BOOKMARK [1][]{section.28}{Architecture Mat\351rielle}{chapter.25}% 19
+\BOOKMARK [2][-]{subsection.29}{\311lectrodes}{section.28}% 20
+\BOOKMARK [2][-]{subsection.32}{Microcontr\364leur}{section.28}% 21
+\BOOKMARK [2][-]{subsection.34}{Adaptation des Tensions}{section.28}% 22
+\BOOKMARK [2][-]{subsection.41}{Liaison \340 l'Ordinateur}{section.28}% 23
+\BOOKMARK [2][-]{subsection.44}{Liaison \340 Jaco}{section.28}% 24
+\BOOKMARK [2][-]{subsection.45}{Sch\351ma mat\351riel Global}{section.28}% 25
+\BOOKMARK [1][]{section.48}{Choix des Caract\351ristiques du Signal \340 utiliser et des Outils algorithmiques et Math\351matiques}{chapter.25}% 26
+\BOOKMARK [2][-]{subsection.49}{D\351coupage des fen\352tres d'\351chantillons}{section.48}% 27
+\BOOKMARK [2][-]{subsection.50}{D\351tection d'activit\351 musculaire}{section.48}% 28
+\BOOKMARK [3][-]{subsubsection.51}{\311nergie de Teager-Keiser}{subsection.50}% 29
+\BOOKMARK [3][-]{subsubsection.55}{Calibrage du seuil de d\351tection}{subsection.50}% 30
+\BOOKMARK [3][-]{subsubsection.59}{Vote \340 la majorit\351}{subsection.50}% 31
+\BOOKMARK [2][-]{subsection.62}{Filtrage}{section.48}% 32
+\BOOKMARK [3][-]{subsubsection.63}{Concept}{subsection.62}% 33
+\BOOKMARK [3][-]{subsubsection.64}{Calibrage du Filtre}{subsection.62}% 34
+\BOOKMARK [3][-]{subsubsection.69}{Description du Filtre}{subsection.62}% 35
+\BOOKMARK [1][]{section.81}{Architecture Logicielle}{chapter.25}% 36
+\BOOKMARK [2][-]{subsection.82}{Firmware}{section.81}% 37
+\BOOKMARK [3][-]{subsubsection.83}{Fonctionnement et Configuration Globale du PIC32}{subsection.82}% 38
+\BOOKMARK [3][-]{subsubsection.84}{Alogorithme global}{subsection.82}% 39
+\BOOKMARK [2][-]{subsection.87}{Application de monitorage des signaux}{section.81}% 40
+\BOOKMARK [3][-]{subsubsection.88}{Choix des Librairies et des langages}{subsection.87}% 41
+\BOOKMARK [3][-]{subsubsection.89}{Lien avec Jaco et Mono}{subsection.87}% 42
+\BOOKMARK [3][-]{subsubsection.91}{Fonctionnement Global et Sch\351ma UML du Projet}{subsection.87}% 43
+\BOOKMARK [1][]{section.96}{Validation du Syst\350me}{chapter.25}% 44
+\BOOKMARK [2][-]{subsection.97}{Protocole de validation}{section.96}% 45
+\BOOKMARK [3][-]{subsubsection.98}{Mode de recrutement}{subsection.97}% 46
+\BOOKMARK [3][-]{subsubsection.99}{Principe de fonctionnement}{subsection.97}% 47
+\BOOKMARK [3][-]{subsubsection.100}{Protocole exp\351rimental}{subsection.97}% 48
+\BOOKMARK [3][-]{subsubsection.102}{D\351roulement des acquisitions}{subsection.97}% 49
+\BOOKMARK [3][-]{subsubsection.103}{Notes importantes}{subsection.97}% 50
+\BOOKMARK [3][-]{subsubsection.104}{Exemple de donn\351es r\351colt\351es}{subsection.97}% 51
+\BOOKMARK [3][-]{subsubsection.106}{Interpr\351tation des donn\351es}{subsection.97}% 52
+\BOOKMARK [3][-]{subsubsection.110}{Comparaison des donn\351es}{subsection.97}% 53
+\BOOKMARK [0][]{chapter.111}{Chapitre 5 R\351sultats}{}% 54
+\BOOKMARK [1][]{section.112}{D\351tection d'activit\351}{chapter.111}% 55
+\BOOKMARK [1][]{section.113}{Temps de calcul et chronogrammes}{chapter.111}% 56
+\BOOKMARK [1][]{section.114}{Validation du syst\350me}{chapter.111}% 57
+\BOOKMARK [0][]{chapter.115}{Chapitre 6 Discussion}{}% 58
+\BOOKMARK [0][]{chapter*.116}{CONCLUSION}{}% 59
+\BOOKMARK [0][]{chapter.117}{Annexe I Titre de l'annexe}{}% 60
+\BOOKMARK [0][]{subsection.123}{LISTE DE R\311F\311RENCES}{}% 61
+\BOOKMARK [0][]{chapter*.124}{BIBLIOGRAPHIE}{}% 62

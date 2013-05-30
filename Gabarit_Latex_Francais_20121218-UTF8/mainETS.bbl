@@ -1,9 +1,24 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Apparelyzed(2008)]{apparelyzed2008}
+Apparelyzed.
+\newblock 2008.
+\newblock \og Types of Paralysis - Quadriplegia (Tetraplegia) and Paraplegia\fg
+  .
+\newblock <\url{http://www.apparelyzed.com/paralysis.html}>.
+
+\bibitem[Berichard(2008)]{sternoWiki}
+Berichard.
+\newblock 2008.
+\newblock \og Muscle sterno-cleido mastoidien. Anatomie humaine. Travail
+  personnel d'après Gray's Anatomy\fg .
+\newblock
+  <\url{http://commons.wikimedia.org/wiki/File:Muscle_sterno-cléido_mastoidien.png}>.
 
 \bibitem[Chang\emph{ et~al.}(1996)Chang, Gwo-Ching, Wen-Juh Kang, Jer-Junn Luh,
   Cheng-Kung Cheng, Jin-Shin Lai, Jia-Jin~J Chen, et Te-Son Kuo]{Chang1996}
@@ -128,5 +143,12 @@ Tenore, Francesco, Ander Ramos, Amir Fahmy, Soumyadipta Acharya, Ralph
   2007. 29th Annual International Conference of the IEEE}.
 \newblock p. 6145--6148.
 \newblock IEEE.
+
+\bibitem[Vsion(2005)Vsion, translation by~Medium69]{rachisWiki}
+Vsion, translation by~Medium69.
+\newblock 2005.
+\newblock \og Les différentes régions de la colonne vertébrale.\fg .
+\newblock
+  <\url{http://commons.wikimedia.org/wiki/File:Spinal_column_curvature_(french).png}>.
 
 \end{thebibliography}
