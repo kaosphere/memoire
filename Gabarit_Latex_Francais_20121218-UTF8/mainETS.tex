@@ -252,7 +252,7 @@ En résumé cette étude présente la conception d'un système de contrôle d'un
 %
 %\end{revuedelitterature}
 
-\chapter{mise en contexte}\label{CHmiseencontexte}
+\chapter{mise en contexte}
 
 Les personnes BM sont aujourd'hui en mesure de pouvoir continuer à garder une autonomie partielle dans leur vie quotidienne grâce à la combinaison de plusieurs progrès technologiques. Les fauteuils roulants motorisés sont, par exemple, une part de ce progrès qui contribue à permettre au BM de garder une certaine mobilité, et sont le point d'encrage d'autres aides techniques dont fait partie le bras robotique Jaco.
 
@@ -261,7 +261,7 @@ Ce chapitre a pour but de présenter les conditions de vie des personnes BM d'au
 
 \section{Les Blessés Médullaires}
 
-Les blessés médullaires sont des personnes victimes d'une lésion de la colonne vertébrale et plus précisément de la moelle épinière. Cette lésion peut avoir des conséquence grave sur la vie de la personne. Elle peut entraîner des paralysies ou des pertes sensorielles complètes ou partielles de différentes parties du corps. Cette lésion peut être de plusieurs natures différentes, en fonction de la hauteur de celle-ci, et de son importance. 
+Les blessés médullaires (BM) sont des personnes victimes d'une lésion de la colonne vertébrale et plus précisément de la moelle épinière. Cette lésion peut avoir des conséquence grave sur la vie de la personne. Elle peut entraîner des paralysies ou des pertes sensorielles complètes ou partielles de différentes parties du corps. Cette lésion peut être de plusieurs natures différentes, en fonction de la hauteur de celle-ci, et de son importance. 
 
 La hauteur de la lésion détermine quelles parties du corps sera touchée. Cette hauteur est décrite par le nom de la vertèbre correspondante. La figure \ref{fig:rachis} présente les quatre régions principales du rachis qui servent à nommer les vertèbres. Le cou est composé de 7 vertèbres cervicales. Ces vertèbres sont nommées à partir du crâne en descendant de C1 à C7. Par exemple, C1 correspond à la première vertèbre cervicale. 
 
@@ -280,75 +280,124 @@ Enfin, les vertèbres pelviennes ou sacrées terminent la colonne vertébrales. 
 	\label{fig:rachis}
 \end{figure}
 
-La hauteur de la lésion s'exprime donc en fonction de la vertèbre correspondante. La hauteur de la lésion influe sur les conséquence de celle-ci. En effet, plusieurs nerfs sortent de la moelle épinière à chaque vertèbre. Ainsi une coupure de la moelle épinière entrainera une perte de connexion nerveuse pour tous les nerfs situés en dessous de la lésion. Il en résulte que plus la lésion est haute, plus l'incapacité qui en résulte est grande. 
+La hauteur de la lésion s'exprime donc en fonction de la vertèbre correspondante. La hauteur de la lésion influe sur les conséquence de celle-ci. En effet, plusieurs nerfs sortent de la moelle épinière à chaque vertèbre. Ainsi une coupure de la moelle épinière entraînera une perte de connexion nerveuse pour tous les nerfs situés en dessous de la lésion. Il en résulte que plus la lésion est haute, plus l'incapacité qui en résulte est grande. 
 
-La deuxième caractéristique de la lésion est son type. Celle-ci peut être soit complète, soit incomplète. Une lésion complète correspond à une coupure nette de toute conduction nerveuse située en dessous de la liaison, tandis qu'une lésion incomplète peut, suivant la lésion conserver les conductions nerveuses passant dans la partie de la moelle épinière non lésée.
+Le projet portant principalement sur les personnes BM de haut niveau, les conséquences d'une lésion entre C1 et C8 seront présentées plus en détails. Le tableau \ref{tab:hauteurlesion} présente les conséquences motrices et sensorielles d'une lésion médullaire au niveau des vertèbre cervicale en fonction de la vertèbre touchée \citep{apparelyzed2008}.
 
-Le tableau \ref{tab:typelesion} présente les quatre grand types de lésions médullaires et leurs conséquence sur les pertes sensorielles et motrices qui en résultent \citep{apparelyzed2008}.
+\begin{table}[ht]
+	\caption{Conséquence motrices en fonction de la hauteur de la lésion médullaire.}
+		\begin{tabular}{|c|c|}
+		\hline
+	    	 	C7 - C8 & Mouvements complets du cou et de la tête \\
+	    	 	& Bons mouvements des épaules\\
+	    	 	& Système nerveux parasympathique compromis, Possibilité d'hyperréflexie autonome\\
+	    	 	& Paralysie complète du tronc et des jambes\\
+	    	 	& Mouvement partiel des doigts, bons mouvement du reste du bras\\
+	    \hline
+	    	 	C6 & Aucun mouvement des doigts, pas d'extension du coude ni de flexion du poignet\\
+	    \hline
+	    		C5 & Aucun mouvement du poignet\\
+	    	\hline
+	    		C4 & Mouvements du cou dépendamment de la force musculaire résiduelle \\
+	    		& Mouvements limités des épaules\\
+	    		& Aucun mouvement du coude\\
+		\hline
+			C1 - C3 & Mouvements de la tête limités en fonction du tonus musculaire résiduel\\
+			 & Paralysie complète des bras\\
+			 & utilisation des muscles du thorax et diaphragme pour respirer impossible\\	    
+	    \hline
+		\end{tabular}
+	\label{tab:hauteurlesion}
+\end{table}
+
+La deuxième caractéristique de la lésion est son type. Celle-ci peut être soit complète, soit incomplète. Une lésion complète correspond à une coupure nette de toute conduction nerveuse située en dessous de la lésion, tandis qu'une lésion incomplète peut, suivant la lésion conserver les conductions nerveuses passant dans la partie de la moelle épinière non lésée.
+
+Le tableau \ref{tab:typelesion} présente les quatre grands types de lésions médullaires incomplète et leurs conséquence sur les pertes sensorielles et motrices qui en résultent \citep{apparelyzed2008}.
+
+\begin{table}[ht]
+	\caption{Types de lésions de la moelle épinière et conséquences.}
+		\begin{tabular}{|c|c|}
+		\hline
+	    	 	Syndrome cordonal antérieur & Partie frontale de la moelle épinière endommagée\\
+	    	 	& Perte de sensation de douleur, toucher et chaleur\\
+	    	 	& Possibilité de retrouver un mouvement plus tard\\
+	    \hline
+	    	 	Syndrome cordonal postérieur & Partie dorsale de la moelle épinière endommagée\\
+	    	 	& Conservation du tonus musculaire et des sensations \\
+	    	 	& Perte de coordination des mouvements des membres\\
+	    \hline
+	    		Syndrome cordonal central & Centre de la moelle épinière endommagé\\
+	    		& Perte de l'usage des bras\\
+	    		& Conservation possible de certaines fonctions des jambes\\
+	    		& Contrôle des intestins et de la vessie possible \\
+	    		& Guérison progressive possible\\
+	    	\hline
+	    		Syndrome de Brown-Séquard & Dommages concentrés sur un côté seulement de la moelle \\
+	    		& Perte de mouvement du côté de la lésion mais conservation des sensations\\
+	    		& Perte des sensation du côté opposé mais conservation des mouvements\\
+	    \hline
+		\end{tabular}
+	\label{tab:typelesion}
+\end{table}
+
+Au regard de ces informations, on peut déduire que chaque personne aura besoin d'une assistance spécialisée dépendant du type de sa lésion et de sa hauteur. Le BM de niveau C1-C3 seront complètement dépendant, et auront même besoin d'une aide à la respiration. 
+
+De même que pour se déplacer et réaliser les action de la vie quotidienne, ces personnes nécessiteront des aides. Ces aides sont présentées dans la partie suivante.
 
 \section{Les aides techniques aux actions de la vie quotidienne (AVQ)}
 
+Chaque BM a un profil singulier en fonction de la hauteur de sa lésion et de la nature de celle-ci. Ceci implique que chaque personne aura besoin d'une aide particulière pour l'aider à vivre au quotidien. Pour ce faire,  l'avancée de la technologie dans le domaine de la santé a permis de concevoir des appareil améliorant grandement les conditions de vie de ces personnes. Ces appareils sont appelés les aides techniques. 
+
+\subsection{Les aides techniques en général}
+
+Les aides techniques se présentent sous beaucoup de forme, et peuvent être très simples comme un simple crochet pour attraper des objets, comme très complexes comme par exemple un bras robotique manipulateur. On retrouve une diversité d'objet ayant tous pour but de venir en aide aux personnes dans leurs AVQ, que ce soit, pour s'habiller, se déplacer, se nourrir, se laver, se lever ou communiquer. Les matelas anti-escarres, les orthèses et les bas de contention sont également considérés comme des aides techniques.
+
+Notre étude se concentrera sur les aides techniques en rapport avec le projet, à savoir les fauteuil roulants motorisés (FRM) et le bras manipulateur Jaco.
+
+Les FRM sont une des aides techniques les plus importantes pour les personnes paralysées, car elle leur permet de pouvoir se déplacer de manière autonome ou presque (le transfert dans le fauteuil devant être assisté). Toute fois, suivant le niveau de lésion d'un BM, celui-ci pourra ne pas être en mesure de s'en servir efficacement. En effet, un BM de niveau suppérieur à C6 ne pourra pas se servir d'un \textit{joystick}, du fait qu'il ne possède plus de mouvement résiduel dans les doigts. 
+
+Pour palier ce problème, les concepteurs d'aides techniques ont du mettre au point des méthodes de contrôle de ces aides adaptées au personnes n'ayant plus l'usage de leur mains. Ainsi, des manettes de contrôles ont été rajoutées sur les côtés de la tête, activées lorsqu'elles sont poussées par l'action du cou. Un contrôle par le souffle a également été inventé, grâce à un tube placé devant la tête de la personne, dans lequel celle-ci pourra souffler ou aspirer.
+
+Ces faits dénotent une volonté de diversifier les interfaces de contrôle des aides technique afin qu'un maximum de personne puisse les utiliser efficacement.
+
+\subsection{Le bras manipulateur Jaco}
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/jacofull.jpg}
+	}
+	\caption{Bras manipulateur Jaco, tiré de \cite{Kinova2012} avec l'autorisation de Kinova}
+	\label{fig:jacofull}
+\end{figure}
+
+Jaco (figure \ref{fig:jacofull}) est un bras robotique manipulateur conçu par la société canadienne Kinova depuis 2006, et a pour but d'aider les personnes en FRM dans leurs AVQ. Il est conçu pour être monté directement sur le FMR d'une personne et est contrôlable à l'aide d'un \textit{joystick}.
+
+Le bras pèse au total 5.7 Kg, a un rayon d'action de 90 cm et peut porter une charge allant jusqu'à 1.5 Kg lorsque le bras est en demi-extension et 1 Kg lorsqu'il est en extension complète. Il est composé de 7 degrés de liberté (DDL) lui permettant toutes les combinaisons de translations et rotations dans l'espace et possède une main articulée de 3 doigts permettant la saisie de petits objets.
+
+L'utilisation principale de ce robot réside donc dans la préhension d'objets, l'ouvertures de portes, permettant ainsi à une personne en fauteuil roulant et sans usage de ses bras de se déplacer chez lui, de boire et de manger.
+
+Le \textit{joystick} du bras possède trois axes et plusieurs bouton afin de contrôler tous les mouvements possible. De ce fait, une bonne dextérité est nécessaire pour l'utiliser efficacement, ce qui pause problème aux personnes BM de haut niveau.
+
+Jaco est également livré avec une suite logicielle intégrée permettant de configurer le bras grâce à une liaison USB. Une bibliothèque de programmation est également fournie. Celle-ci permet de contrôler Jaco et de récupérer les informations générée par celui-ci dans un programme externe, conçu par l'utilisateur. 
+
+Cette solution permet une grande liberté et ouvre la possibilité à tout un chacun de pouvoir développer une nouvelle méthode de contrôle pour le bras.
+
 \section{Le Signal Électromyographique (EMG)}
 
-%Test de décallage d'énumérations
-%\begin{enumerate}
-% \item test 1
-% \item test 2
-%\end{enumerate}
-%
-%Test de décallage de puces
-%
-%\begin{itemize}
-% \item test 1
-% \item test 2
-%\end{itemize}
-%
-%Vérification des références: \cite{Arica2002}.
-%\\
-%Vérification de href: \href{http://www.etsmtl.ca/Etudiants-actuels/Cycles-sup/Realisation-etudes/Guides-gabarits}{Link to Gabarit ETS}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula.
-%\\
-%Vérification de url: \url{http://www.etsmtl.ca/Etudiants-actuels/Cycles-sup/Realisation-etudes/Guides-gabarits}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula.
-%\\
-%Fig.~\ref{fig:logoets}, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum, 
-%%
-%\begin{figure}[ht]
-%	\centering
-%	\fbox{
-%		\includegraphics{Figures/logoets.jpg}
-%	}
-%	%\caption{Logo de l'École de Technologie Supérieure. Tiré de \cite{ETS2010}}
-%	\caption{Distribution of horizontal velocity and streamlines in the vicinity of the nacelle for (a-c) non-operating turbine and (d-f) operating turbine ($U_{ref}$ = 20 m/s, the black circle indicates the position of the anemometer)}
-%\end{figure}
-%
-%
-%\begin{table}[ht]
-%	\caption{Petit tableau: Encore une fois, test de legende de tableau plus longue pour vérifier le comportement de la liste}
-%		\begin{tabular}{|c|c|c|c|}
-%		\hline
-%			blá & blá & blá & blá \\
-%			\hline
-%		\end{tabular}
-%	\label{tab:UnTableau}
-%\end{table}
+L'électromyographie consiste en l'acquisition de l'activité électrique présente sur un muscle lors de sa contraction. Le signal peut être acquis en surface grâce à une électrode collée directement sur la peau au dessus du muscle, ou directement à l'intérieur du muscle de manière invasive à l'aide d'une aiguille.
+
+Le signal généré par un muscle s'exprime en millivolts (mV) et permet l'analyse de l'activité musculaire d'une personne. L'EMG est utilisé surtout en médecine pour la détection de problèmes liés au système nerveux chez un patient.
+
+Le mécanisme de contraction musculaire part du système nerveux central qui envoie un signal nerveux de contraction volontaire à un muscle. Ce signal est transporté jusqu'aux muscles en passant par la moelle épinière puis par un nerf moteur. C'est ce nerf moteur qui transmet le potentiel électrique à chaque fibre musculaire présente dans le muscle. 
+
+Chaque fibre musculaire est alors parcourue par un potentiel d'action tel que décrit sur la figure. Les fibres musculaires actionnées lors d'un mouvement sont recrutées aléatoirement et change à chaque mouvement. Ce mécanisme permet de retarder la fatigue musculaire en répartissant la charge sur des fibres différentes.
+
+Le signal EMG généré est constitué de la somme de tous les potentiels d'action musculaires des fibres recruté pour le mouvement et se présente comme sur la figure \ref{fig:emg}.
+%TODO : ajouter figure EMG
+
 
 \chapter{Revue de Littérature}
-
-%\begin{figure}[ht]
-%	\centering
-%	\fbox{
-%		\includegraphics{Figures/logoets.jpg}
-%	}
-%	\caption{Logo de l'École de Technologie Supérieure. \newline Tiré de \cite{ETS2010}}
-%\end{figure}
-%
-%\begin{figure}[ht]
-%	\centering
-%	\fbox{
-%		\includegraphics{Figures/logoets.jpg}
-%	}
-%	\caption{Logo de l'École de Technologie Supérieure. \newline Tiré de \cite{ETS2010}}
-%\end{figure}
-
 
 La classification de mouvements grâce au signal EMG a été énormément étudiée dans la littérature. Toute fois, une partie seulement de ces études l'a traitée de manière temps réelle. Enfin un type d'application vient encore se démarquer dans ce sous ensemble : les applications embarquées. 
 
@@ -451,10 +500,35 @@ Toute fois cette étude, ainsi que celles de \cite{martinez1999} et de \cite{pra
 
 \cite{Tenore2007} ont utilisé également un DSP de chez Texas Instruments : un TMS320VC5509A couplé à un ADC dédié de chez National Instruments. Ce DSP est un processor comprenant un cœur à virgule fixe exécutant des actions relativement simples, comme le calcul du ZCR du signal, le calcul de la longueur d’onde du signal et le MAV. Ce DSP leur a permis d'implémenter un classificateur LDA.
 
-
 \chapter{Problématique et Objectifs du Projet}
 
-\chapter{Méthodologie}\label{CHmethodo}
+Aujourd'hui, l'avancée des technologies dans le domaine de la santé a permis de gros progrès médicaux, y compris dans le domaine de la réadaptation et de l'aide à la personne. Cette avancée a permis la conception d'aides techniques de plus en plus évoluées et capable d'améliorer sensiblement les condition de vie des personnes dépendantes, et plus particulièrement des blessés médullaires. 
+
+Cependant, les personnes les plus sévèrement touchées par des blessures de la moelle épinières ne peuvent profiter de certaines de ces avancées, car elles n'ont plus la capacité de se servir de ces aides efficacement. 
+
+Connaissant ces paramètres, la société Kinova produisant le bras robotique manipulateur Jaco, a décidé de développer une nouvelle interface de contrôle de Jaco afin que des personnes ne possédant plus l'usage de leurs doigts soient capable d'exploiter le potentiel du robot.
+
+Pour cela, l'utilisation du signal EMG a été préconisée à la suite du projet de maîtrise \cite{Maheu2011}, aujourd'hui employée de Kinova. L'enjeu de ce projet est donc en grande partie économique pour la societé Kinova, qui sera alors en mesure d'élargir sont panel de clients potentiels.
+
+L'étude de la littérature a également permis de constater que les applications de contrôles par EMG en temps réel étaient rares et encore plus lorsqu'on en vient à parler d'application embarquée.
+
+Ceci permet ainsi d'ajouter un enjeu purement scientifique au projet en participant à l'avancée scientifique du monde des technologies de la santé.
+
+Les objectifs du projet sont les suivants : 
+
+\begin{itemize}
+ \item Réaliser un prototype embarqué capable de reconnaître le mouvement effectué par l'utilisateur en temps réel et en utilisant les signaux EMG de la personne.
+ \item Respecter la contrainte temps-réelle fixée par la littérature de 300ms
+ \item Effectuer un traitement simultané de quatre canaux EMG
+ \item Appliquer une commande sur le bras robotique Jaco en fonction du mouvement détecté
+\end{itemize}
+
+Le but principal n'est pas la réalisation d'un produit fini, mais l'établissement d'une preuve de concept pour cette application. La réalisation doit donc permettre de dire si la réalisation d'un tel produit est faisable ou non, et quels choix sont préconisés pour ce faire.
+
+Le projet est réalisé en partenariat avec le CRSNG et la société Kinova sous la forme d'un projet ENGAGE. 
+
+\chapter{Méthodologie}
+\label{CHmethodo}
 
 \section{Choix des Muslces}
 

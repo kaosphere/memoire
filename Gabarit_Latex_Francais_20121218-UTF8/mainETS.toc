@@ -2,63 +2,65 @@
 \contentsline {chapter}{INTRODUCTION}{1}{chapter*.8}
 \contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 1}\hfil }\MakeUppercase {mise en contexte}}}{3}{chapter.9}
 \contentsline {section}{\numberline {1.1}Les Bless\IeC {\'e}s M\IeC {\'e}dullaires}{3}{section.10}
-\contentsline {section}{\numberline {1.2}Les aides techniques aux actions de la vie quotidienne (AVQ)}{5}{section.12}
-\contentsline {section}{\numberline {1.3}Le Signal \IeC {\'E}lectromyographique (EMG)}{5}{section.13}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 2}\hfil }\MakeUppercase {Revue de Litt\IeC {\'e}rature}}}{7}{chapter.14}
-\contentsline {section}{\numberline {2.1}Classification EMG}{7}{section.15}
-\contentsline {subsection}{\numberline {2.1.1}Fen\IeC {\^e}trage du signal}{8}{subsection.16}
-\contentsline {subsection}{\numberline {2.1.2}Algorithmes de d\IeC {\'e}tection d'activit\IeC {\'e}}{8}{subsection.17}
-\contentsline {subsection}{\numberline {2.1.3}Caract\IeC {\'e}ristiques du signal EMG utilis\IeC {\'e}es}{10}{subsection.18}
-\contentsline {subsection}{\numberline {2.1.4}Classificateurs utilis\IeC {\'e}s dans la d\IeC {\'e}tection de mouvements}{11}{subsection.19}
-\contentsline {section}{\numberline {2.2}Syst\IeC {\`e}mes Embarqu\IeC {\'e}s temps r\IeC {\'e}els et EMG}{11}{section.20}
-\contentsline {subsection}{\numberline {2.2.1}Le traitement temps r\IeC {\'e}el}{12}{subsection.21}
-\contentsline {subsection}{\numberline {2.2.2}M\IeC {\'e}thodes d'acquisition du signal}{12}{subsection.22}
-\contentsline {subsection}{\numberline {2.2.3}Mat\IeC {\'e}riel informatique utilis\IeC {\'e} dans la litt\IeC {\'e}rature}{13}{subsection.23}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 3}\hfil }\MakeUppercase {Probl\IeC {\'e}matique et Objectifs du Projet}}}{15}{chapter.24}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 4}\hfil }\MakeUppercase {M\IeC {\'e}thodologie}}}{17}{chapter.25}
-\contentsline {section}{\numberline {4.1}Choix des Muslces}{17}{section.26}
-\contentsline {section}{\numberline {4.2}Architecture Mat\IeC {\'e}rielle}{19}{section.28}
-\contentsline {subsection}{\numberline {4.2.1}\IeC {\'E}lectrodes}{19}{subsection.29}
-\contentsline {subsection}{\numberline {4.2.2}Microcontr\IeC {\^o}leur}{21}{subsection.32}
-\contentsline {subsection}{\numberline {4.2.3}Adaptation des Tensions}{24}{subsection.34}
-\contentsline {subsection}{\numberline {4.2.4}Liaison \IeC {\`a} l'Ordinateur}{27}{subsection.41}
-\contentsline {subsection}{\numberline {4.2.5}Liaison \IeC {\`a} Jaco}{29}{subsection.44}
-\contentsline {subsection}{\numberline {4.2.6}Sch\IeC {\'e}ma mat\IeC {\'e}riel Global}{30}{subsection.45}
-\contentsline {section}{\numberline {4.3}Choix des Caract\IeC {\'e}ristiques du Signal \IeC {\`a} utiliser et des Outils algorithmiques et Math\IeC {\'e}matiques}{33}{section.48}
-\contentsline {subsection}{\numberline {4.3.1}D\IeC {\'e}coupage des fen\IeC {\^e}tres d'\IeC {\'e}chantillons}{33}{subsection.49}
-\contentsline {subsection}{\numberline {4.3.2}D\IeC {\'e}tection d'activit\IeC {\'e} musculaire}{34}{subsection.50}
-\contentsline {subsubsection}{\numberline {4.3.2.1}\IeC {\'E}nergie de Teager-Keiser}{35}{subsubsection.51}
-\contentsline {subsubsection}{\numberline {4.3.2.2}Calibrage du seuil de d\IeC {\'e}tection}{36}{subsubsection.55}
-\contentsline {subsubsection}{\numberline {4.3.2.3}Vote \IeC {\`a} la majorit\IeC {\'e}}{38}{subsubsection.59}
-\contentsline {subsection}{\numberline {4.3.3}Filtrage}{41}{subsection.62}
-\contentsline {subsubsection}{\numberline {4.3.3.1}Concept}{41}{subsubsection.63}
-\contentsline {subsubsection}{\numberline {4.3.3.2}Calibrage du Filtre}{42}{subsubsection.64}
-\contentsline {subsubsection}{\numberline {4.3.3.3}Description du Filtre}{44}{subsubsection.69}
-\contentsline {section}{\numberline {4.4}Architecture Logicielle}{46}{section.81}
-\contentsline {subsection}{\numberline {4.4.1}Firmware}{47}{subsection.82}
-\contentsline {subsubsection}{\numberline {4.4.1.1}Fonctionnement et Configuration Globale du PIC32}{47}{subsubsection.83}
-\contentsline {subsubsection}{\numberline {4.4.1.2}Alogorithme global}{49}{subsubsection.84}
-\contentsline {subsection}{\numberline {4.4.2}Application de monitorage des signaux}{52}{subsection.87}
-\contentsline {subsubsection}{\numberline {4.4.2.1}Choix des Librairies et des langages}{52}{subsubsection.88}
-\contentsline {subsubsection}{\numberline {4.4.2.2}Lien avec Jaco et Mono}{53}{subsubsection.89}
-\contentsline {subsubsection}{\numberline {4.4.2.3}Fonctionnement Global et Sch\IeC {\'e}ma UML du Projet}{55}{subsubsection.91}
-\contentsline {section}{\numberline {4.5}Validation du Syst\IeC {\`e}me}{58}{section.96}
-\contentsline {subsection}{\numberline {4.5.1}Protocole de validation}{59}{subsection.97}
-\contentsline {subsubsection}{\numberline {4.5.1.1}Mode de recrutement}{59}{subsubsection.98}
-\contentsline {subsubsection}{\numberline {4.5.1.2}Principe de fonctionnement}{60}{subsubsection.99}
-\contentsline {subsubsection}{\numberline {4.5.1.3}Protocole exp\IeC {\'e}rimental}{60}{subsubsection.100}
-\contentsline {subsubsection}{\numberline {4.5.1.4}D\IeC {\'e}roulement des acquisitions}{60}{subsubsection.102}
-\contentsline {subsubsection}{\numberline {4.5.1.5}Notes importantes}{62}{subsubsection.103}
-\contentsline {subsubsection}{\numberline {4.5.1.6}Exemple de donn\IeC {\'e}es r\IeC {\'e}colt\IeC {\'e}es}{62}{subsubsection.104}
-\contentsline {subsubsection}{\numberline {4.5.1.7}Interpr\IeC {\'e}tation des donn\IeC {\'e}es}{62}{subsubsection.106}
-\contentsline {subsubsection}{\numberline {4.5.1.8}Comparaison des donn\IeC {\'e}es}{65}{subsubsection.110}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 5}\hfil }\MakeUppercase {R\IeC {\'e}sultats}}}{67}{chapter.111}
-\contentsline {section}{\numberline {5.1}D\IeC {\'e}tection d'activit\IeC {\'e}}{67}{section.112}
-\contentsline {section}{\numberline {5.2}Temps de calcul et chronogrammes}{67}{section.113}
-\contentsline {section}{\numberline {5.3}Validation du syst\IeC {\`e}me}{67}{section.114}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{69}{chapter.115}
-\contentsline {chapter}{CONCLUSION}{71}{chapter*.116}
+\contentsline {section}{\numberline {1.2}Les aides techniques aux actions de la vie quotidienne (AVQ)}{6}{section.14}
+\contentsline {subsection}{\numberline {1.2.1}Les aides techniques en g\IeC {\'e}n\IeC {\'e}ral}{6}{subsection.15}
+\contentsline {subsection}{\numberline {1.2.2}Le bras manipulateur Jaco}{7}{subsection.16}
+\contentsline {section}{\numberline {1.3}Le Signal \IeC {\'E}lectromyographique (EMG)}{8}{section.18}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 2}\hfil }\MakeUppercase {Revue de Litt\IeC {\'e}rature}}}{11}{chapter.19}
+\contentsline {section}{\numberline {2.1}Classification EMG}{11}{section.20}
+\contentsline {subsection}{\numberline {2.1.1}Fen\IeC {\^e}trage du signal}{12}{subsection.21}
+\contentsline {subsection}{\numberline {2.1.2}Algorithmes de d\IeC {\'e}tection d'activit\IeC {\'e}}{12}{subsection.22}
+\contentsline {subsection}{\numberline {2.1.3}Caract\IeC {\'e}ristiques du signal EMG utilis\IeC {\'e}es}{14}{subsection.23}
+\contentsline {subsection}{\numberline {2.1.4}Classificateurs utilis\IeC {\'e}s dans la d\IeC {\'e}tection de mouvements}{15}{subsection.24}
+\contentsline {section}{\numberline {2.2}Syst\IeC {\`e}mes Embarqu\IeC {\'e}s temps r\IeC {\'e}els et EMG}{15}{section.25}
+\contentsline {subsection}{\numberline {2.2.1}Le traitement temps r\IeC {\'e}el}{16}{subsection.26}
+\contentsline {subsection}{\numberline {2.2.2}M\IeC {\'e}thodes d'acquisition du signal}{16}{subsection.27}
+\contentsline {subsection}{\numberline {2.2.3}Mat\IeC {\'e}riel informatique utilis\IeC {\'e} dans la litt\IeC {\'e}rature}{17}{subsection.28}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 3}\hfil }\MakeUppercase {Probl\IeC {\'e}matique et Objectifs du Projet}}}{19}{chapter.29}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 4}\hfil }\MakeUppercase {M\IeC {\'e}thodologie}}}{21}{chapter.30}
+\contentsline {section}{\numberline {4.1}Choix des Muslces}{21}{section.31}
+\contentsline {section}{\numberline {4.2}Architecture Mat\IeC {\'e}rielle}{23}{section.33}
+\contentsline {subsection}{\numberline {4.2.1}\IeC {\'E}lectrodes}{23}{subsection.34}
+\contentsline {subsection}{\numberline {4.2.2}Microcontr\IeC {\^o}leur}{25}{subsection.37}
+\contentsline {subsection}{\numberline {4.2.3}Adaptation des Tensions}{28}{subsection.39}
+\contentsline {subsection}{\numberline {4.2.4}Liaison \IeC {\`a} l'Ordinateur}{31}{subsection.46}
+\contentsline {subsection}{\numberline {4.2.5}Liaison \IeC {\`a} Jaco}{33}{subsection.49}
+\contentsline {subsection}{\numberline {4.2.6}Sch\IeC {\'e}ma mat\IeC {\'e}riel Global}{34}{subsection.50}
+\contentsline {section}{\numberline {4.3}Choix des Caract\IeC {\'e}ristiques du Signal \IeC {\`a} utiliser et des Outils algorithmiques et Math\IeC {\'e}matiques}{37}{section.53}
+\contentsline {subsection}{\numberline {4.3.1}D\IeC {\'e}coupage des fen\IeC {\^e}tres d'\IeC {\'e}chantillons}{37}{subsection.54}
+\contentsline {subsection}{\numberline {4.3.2}D\IeC {\'e}tection d'activit\IeC {\'e} musculaire}{38}{subsection.55}
+\contentsline {subsubsection}{\numberline {4.3.2.1}\IeC {\'E}nergie de Teager-Keiser}{39}{subsubsection.56}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Calibrage du seuil de d\IeC {\'e}tection}{40}{subsubsection.60}
+\contentsline {subsubsection}{\numberline {4.3.2.3}Vote \IeC {\`a} la majorit\IeC {\'e}}{42}{subsubsection.64}
+\contentsline {subsection}{\numberline {4.3.3}Filtrage}{45}{subsection.67}
+\contentsline {subsubsection}{\numberline {4.3.3.1}Concept}{45}{subsubsection.68}
+\contentsline {subsubsection}{\numberline {4.3.3.2}Calibrage du Filtre}{46}{subsubsection.69}
+\contentsline {subsubsection}{\numberline {4.3.3.3}Description du Filtre}{48}{subsubsection.74}
+\contentsline {section}{\numberline {4.4}Architecture Logicielle}{50}{section.86}
+\contentsline {subsection}{\numberline {4.4.1}Firmware}{51}{subsection.87}
+\contentsline {subsubsection}{\numberline {4.4.1.1}Fonctionnement et Configuration Globale du PIC32}{51}{subsubsection.88}
+\contentsline {subsubsection}{\numberline {4.4.1.2}Alogorithme global}{53}{subsubsection.89}
+\contentsline {subsection}{\numberline {4.4.2}Application de monitorage des signaux}{56}{subsection.92}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Choix des Librairies et des langages}{56}{subsubsection.93}
+\contentsline {subsubsection}{\numberline {4.4.2.2}Lien avec Jaco et Mono}{57}{subsubsection.94}
+\contentsline {subsubsection}{\numberline {4.4.2.3}Fonctionnement Global et Sch\IeC {\'e}ma UML du Projet}{59}{subsubsection.96}
+\contentsline {section}{\numberline {4.5}Validation du Syst\IeC {\`e}me}{62}{section.101}
+\contentsline {subsection}{\numberline {4.5.1}Protocole de validation}{63}{subsection.102}
+\contentsline {subsubsection}{\numberline {4.5.1.1}Mode de recrutement}{63}{subsubsection.103}
+\contentsline {subsubsection}{\numberline {4.5.1.2}Principe de fonctionnement}{64}{subsubsection.104}
+\contentsline {subsubsection}{\numberline {4.5.1.3}Protocole exp\IeC {\'e}rimental}{64}{subsubsection.105}
+\contentsline {subsubsection}{\numberline {4.5.1.4}D\IeC {\'e}roulement des acquisitions}{64}{subsubsection.107}
+\contentsline {subsubsection}{\numberline {4.5.1.5}Notes importantes}{66}{subsubsection.108}
+\contentsline {subsubsection}{\numberline {4.5.1.6}Exemple de donn\IeC {\'e}es r\IeC {\'e}colt\IeC {\'e}es}{66}{subsubsection.109}
+\contentsline {subsubsection}{\numberline {4.5.1.7}Interpr\IeC {\'e}tation des donn\IeC {\'e}es}{66}{subsubsection.111}
+\contentsline {subsubsection}{\numberline {4.5.1.8}Comparaison des donn\IeC {\'e}es}{69}{subsubsection.115}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 5}\hfil }\MakeUppercase {R\IeC {\'e}sultats}}}{71}{chapter.116}
+\contentsline {section}{\numberline {5.1}D\IeC {\'e}tection d'activit\IeC {\'e}}{71}{section.117}
+\contentsline {section}{\numberline {5.2}Temps de calcul et chronogrammes}{71}{section.118}
+\contentsline {section}{\numberline {5.3}Validation du syst\IeC {\`e}me}{71}{section.119}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{73}{chapter.120}
+\contentsline {chapter}{CONCLUSION}{75}{chapter*.121}
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{73}{chapter.117}
-\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{75}{subsection.123}
-\contentsline {chapter}{BIBLIOGRAPHIE}{78}{chapter*.124}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{77}{chapter.122}
+\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{79}{subsection.128}
+\contentsline {chapter}{BIBLIOGRAPHIE}{82}{chapter*.129}

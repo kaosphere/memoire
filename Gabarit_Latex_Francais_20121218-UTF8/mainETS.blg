@@ -1,6 +1,8 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: mainETS.aux
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: mainETS.aux
 Case mismatch error between cite keys prasad1996 and Prasad1996
----line 86 of file mainETS.aux
+---line 97 of file mainETS.aux
  : \citation{prasad1996
  :                     }
 I'm skipping whatever remains of this command
@@ -18,55 +20,98 @@ Warning--string name "aout" is undefined
 --line 160 of file biblio.bib
 Warning--entry type for "apparelyzed2008" isn't style-file defined
 --line 165 of file biblio.bib
-You're missing a field name---line 174 of file biblio.bib
+Warning--entry type for "Kinova2012" isn't style-file defined
+--line 172 of file biblio.bib
+You're missing a field name---line 181 of file biblio.bib
  : 
  : %  author = {Marija Bojovic and Milan D. Savic},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 181 of file biblio.bib
+You're missing a field name---line 188 of file biblio.bib
  : 
  : %  author = {A. S. Britto and R. Sabourin and E. Lethelier and F. Bortolozzi and C. Y. Suen},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 190 of file biblio.bib
+You're missing a field name---line 197 of file biblio.bib
  : 
  : %  author = {Alceu S. Britto},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 198 of file biblio.bib
+You're missing a field name---line 205 of file biblio.bib
  : 
  : %  author = {Alceu S. Britto and Robert Sabourin and Flávio Bortolozzi and Chyng
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 210 of file biblio.bib
+You're missing a field name---line 217 of file biblio.bib
  : 
  : %  author = {A. S. Britto and Robert Sabourin and Flávio Bortolozzi and Chyng
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 221 of file biblio.bib
+You're missing a field name---line 228 of file biblio.bib
  : 
  : %  author = {Viola, P. and Jones, M.},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 246 of file biblio.bib
+You're missing a field name---line 253 of file biblio.bib
  : 
  : %language = {English},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 261 of file biblio.bib
+You're missing a field name---line 268 of file biblio.bib
  : 
  : %author = {ÉTS},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 270 of file biblio.bib
+You're missing a field name---line 277 of file biblio.bib
  : 
  : % author        = "{Board of Trustees of the University of Illinois}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 280 of file biblio.bib
+You're missing a field name---line 287 of file biblio.bib
  : 
  : %author = {Brands, S. and Chaum, D.},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Bha10"
+You've used 17 entries,
+            2960 wiz_defined-function locations,
+            765 strings with 9044 characters,
+and the built_in function-call counts, 7549 in all, are:
+= -- 627
+> -- 622
+< -- 35
++ -- 176
+- -- 159
+* -- 688
+:= -- 1198
+add.period$ -- 74
+call.type$ -- 17
+change.case$ -- 88
+chr.to.int$ -- 17
+cite$ -- 34
+duplicate$ -- 296
+empty$ -- 477
+format.name$ -- 178
+if$ -- 1567
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 11
+newline$ -- 116
+num.names$ -- 68
+pop$ -- 160
+preamble$ -- 1
+purify$ -- 87
+quote$ -- 0
+skip$ -- 244
+stack$ -- 0
+substring$ -- 34
+swap$ -- 57
+text.length$ -- 28
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 187
+warning$ -- 0
+while$ -- 51
+width$ -- 0
+write$ -- 250
 (There were 11 error messages)
