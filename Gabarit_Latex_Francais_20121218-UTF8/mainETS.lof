@@ -1,30 +1,33 @@
 \select@language {french}
 \contentsline {figure}{\numberline {1.1}{\ignorespaces R\IeC {\'e}gions de la colonne vert\IeC {\'e}brale humaine. Tir\IeC {\'e} de \cite {rachisWiki} sous la licence Creative Commons.\relax }}{4}{figure.caption.11}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Bras manipulateur Jaco, tir\IeC {\'e} de \cite {Kinova2012} avec l'autorisation de Kinova\relax }}{8}{figure.caption.17}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Muscle sterno-cl\IeC {\'e}\IeC {\"\i }do masto\IeC {\"\i }dien et muscles du cou.Tir\IeC {\'e} de \cite {sternoWiki} sous la licence Creative Commons.\relax }}{21}{figure.caption.32}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \IeC {\'E}lectrode Delsys DE-2.3.\relax }}{24}{figure.caption.35}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \IeC {\'E}lectrode Delsys neutre.\relax }}{24}{figure.caption.36}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \IeC {\'E}tage inverseur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{29}{figure.caption.40}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces \IeC {\'E}tage sommateur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{30}{figure.caption.42}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Circuit \IeC {\'e}lectronique d'adaptation de la tension de sortie des \IeC {\'e}lectrodes.\relax }}{31}{figure.caption.45}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Circuit de c\IeC {\^a}blage type du composant max3232, extrait de la documentation officielle du composant produit par \cite {MAXIM3232}.\relax }}{32}{figure.caption.47}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Format de la trame utilis\IeC {\'e}e dans le cadre de la liaison s\IeC {\'e}rie.\relax }}{33}{figure.caption.48}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Sch\IeC {\'e}ma bloc pr\IeC {\'e}sentant le c\IeC {\^a}blage de la partie \IeC {\'e}lectronique du projet\relax }}{35}{figure.caption.51}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Sch\IeC {\'e}ma bloc pr\IeC {\'e}sentant le syst\IeC {\`e}me global\relax }}{36}{figure.caption.52}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces TKE instantan\IeC {\'e} calcul\IeC {\'e} sur un signal EMG\relax }}{39}{figure.caption.58}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces TKE moyen calcul\IeC {\'e} sur un signal EMG\relax }}{40}{figure.caption.59}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces D\IeC {\'e}finition du seuil de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire pour un canal EMG\relax }}{42}{figure.caption.63}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire brute, sans vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{43}{figure.caption.65}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire avec vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{44}{figure.caption.66}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Boucle inifinie du programme principal.\relax }}{54}{figure.caption.90}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Routine d'interruption du firmware.\relax }}{55}{figure.caption.91}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Interfa\IeC {\c c}age de l'API Kinova \IeC {\`a} travers Mono.\relax }}{59}{figure.caption.95}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Diagramme UML du programme de monitoring.\relax }}{60}{figure.caption.97}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{61}{figure.caption.98}
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{62}{figure.caption.99}
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{63}{figure.caption.100}
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Description de l'angle de rotation de la t\IeC {\^e}te.\relax }}{65}{figure.caption.106}
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{67}{figure.caption.110}
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Exemple de donn\IeC {\'e}es de vitesse anglulaires de rotation de la t\IeC {\^e}te\relax }}{67}{figure.caption.110}
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Exemple de donn\IeC {\'e}es d'EMG de rotation de la t\IeC {\^e}te\relax }}{67}{figure.caption.110}
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Exemple de donn\IeC {\'e}es de d\IeC {\'e}tection d'activit\IeC {\'e} \relax }}{67}{figure.caption.110}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Signal EMG\relax }}{9}{figure.caption.19}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Muscle sterno-cl\IeC {\'e}\IeC {\"\i }do masto\IeC {\"\i }dien et muscles du cou.Tir\IeC {\'e} de \cite {sternoWiki} sous la licence Creative Commons.\relax }}{21}{figure.caption.33}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \IeC {\'E}lectrode Delsys DE-2.3.\relax }}{24}{figure.caption.36}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \IeC {\'E}lectrode Delsys neutre.\relax }}{24}{figure.caption.37}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \IeC {\'E}tage inverseur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{29}{figure.caption.41}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \IeC {\'E}tage sommateur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{30}{figure.caption.43}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Circuit \IeC {\'e}lectronique d'adaptation de la tension de sortie des \IeC {\'e}lectrodes.\relax }}{31}{figure.caption.46}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Circuit de c\IeC {\^a}blage type du composant max3232, extrait de la documentation officielle du composant produit par \cite {MAXIM3232}.\relax }}{32}{figure.caption.48}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Format de la trame utilis\IeC {\'e}e dans le cadre de la liaison s\IeC {\'e}rie.\relax }}{33}{figure.caption.49}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Sch\IeC {\'e}ma bloc pr\IeC {\'e}sentant le c\IeC {\^a}blage de la partie \IeC {\'e}lectronique du projet\relax }}{35}{figure.caption.52}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Sch\IeC {\'e}ma bloc pr\IeC {\'e}sentant le syst\IeC {\`e}me global\relax }}{36}{figure.caption.53}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces TKE instantan\IeC {\'e} calcul\IeC {\'e} sur un signal EMG\relax }}{39}{figure.caption.59}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces TKE moyen calcul\IeC {\'e} sur un signal EMG\relax }}{40}{figure.caption.60}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces D\IeC {\'e}finition du seuil de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire pour un canal EMG\relax }}{42}{figure.caption.64}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire brute, sans vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{43}{figure.caption.66}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire avec vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{44}{figure.caption.67}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Boucle inifinie du programme principal.\relax }}{54}{figure.caption.91}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Routine d'interruption du firmware.\relax }}{55}{figure.caption.92}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Interfa\IeC {\c c}age de l'API Kinova \IeC {\`a} travers Mono.\relax }}{59}{figure.caption.96}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Diagramme UML du programme de monitoring.\relax }}{60}{figure.caption.98}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{61}{figure.caption.99}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{62}{figure.caption.100}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{63}{figure.caption.101}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Description de l'angle de rotation de la t\IeC {\^e}te.\relax }}{65}{figure.caption.107}
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te\relax }}{67}{figure.caption.111}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Exemple de donn\IeC {\'e}es de vitesse anglulaires de rotation de la t\IeC {\^e}te\relax }}{67}{figure.caption.111}
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Exemple de donn\IeC {\'e}es d'EMG de rotation de la t\IeC {\^e}te\relax }}{67}{figure.caption.111}
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Exemple de donn\IeC {\'e}es de d\IeC {\'e}tection d'activit\IeC {\'e} \relax }}{67}{figure.caption.111}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces R\IeC {\'e}sultats de la d\IeC {\'e}tection d'activit\IeC {\'e} musculaire sur un canal EMG\relax }}{71}{figure.caption.119}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Contr\IeC {\^o}le de Jaco par canaux EMG\relax }}{72}{figure.caption.120}

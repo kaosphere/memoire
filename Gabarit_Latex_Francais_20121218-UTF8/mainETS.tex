@@ -394,7 +394,15 @@ Le mécanisme de contraction musculaire part du système nerveux central qui env
 Chaque fibre musculaire est alors parcourue par un potentiel d'action tel que décrit sur la figure. Les fibres musculaires actionnées lors d'un mouvement sont recrutées aléatoirement et change à chaque mouvement. Ce mécanisme permet de retarder la fatigue musculaire en répartissant la charge sur des fibres différentes.
 
 Le signal EMG généré est constitué de la somme de tous les potentiels d'action musculaires des fibres recruté pour le mouvement et se présente comme sur la figure \ref{fig:emg}.
-%TODO : ajouter figure EMG
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=1\linewidth]{Figures/emg.png}
+	}
+	\caption{Signal EMG}
+	\label{fig:emg}
+\end{figure}
 
 
 \chapter{Revue de Littérature}
@@ -1437,9 +1445,48 @@ Une efficacité moyenne, ainsi qu’une efficacité globale moyenne pourront êt
 
 \chapter{Résultats}
 
-\section{Détection d'activité}
+le projet et sa conception étant maintenant détaillé, cette partie va maintenant présenter les résultats obtenus. Dans un premier temps, le comportement global du projet sera évoqué. Les temps de calculs du système seront présentés. Enfin les résultats obtenus sur 10 sujets de tests humains seront présentés. 
+
+Ces résultats seront analysés dans la discussion.
+
+\section{Performances globales}
+
+
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/onset.png}
+	}
+	\caption{Résultats de la détection d'activité musculaire sur un canal EMG}
+	\label{fig:onset}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/montageglobal.png}
+	}
+	\caption{Contrôle de Jaco par canaux EMG}
+	\label{fig:montageglobal}
+\end{figure}
+
 
 \section{Temps de calcul et chronogrammes}
+
+Une donnée importante à collecter dans la spécification du projet est le temps de calcul nécessaire pour effectuer les calculs critiques du système, à savoir la détection d'activité musculaire et le filtrage du signal.
+
+La filtrage ayant été mis en place seulement dans un second temps, le temps de calcul nécessaire à la détection d'activité musculaire sur les quatre canaux EMG a d'abbord été enregistré. 
+
+Pour ce faire, l'opération réalisée consiste à mettre une sortie du PIC32 à l'état haut au moment où le calcul commence, puis à la remettre à l'état bas lorsque le calcul est effectué. Le signal est ensuite enregistré à l'aide d'un oscilloscope. Le temps passé à l'état haut est ensuite mesuré et utilisé comme temps de référence. 
+
+La figure \ref{fig:chronoonset} montre le chronogramme enregistré pour la détection d'activité des quatre canaux EMG. Le temps de calcul nécessaire à la détection d'activité sur les quatre canaux est de 1.23 ms.
+
+%TODO : rajouter figure chronoonset
+
+La même opération a été également réalisée pour mesurer le temps de calcul nécessaire au filtrage d'un seul canal EMG. Le chronogramme enregistré pour ce faire est présenté par la figure \ref{fig:chronofiltre}. Le temps de calcul mesuré est de 3.58 ms.
+
+%TODO : rajouter figure chronofiltre
 
 \section{Validation du système}
 
