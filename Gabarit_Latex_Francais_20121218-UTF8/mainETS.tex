@@ -648,15 +648,23 @@ Le LIO possédait depuis quelques mois une exemplaire d'un microcontrôleur PIC3
 
 Ce microcontrôleur possède un cœur à virgule fixe, et intègre également dans son jeu d'instructions des instructions DSP flottantes incluant divers outils dont les FFT. La version utilisée possède également 128Ko de mémoire vive afin de pouvoir stocker une grande quantité de données.
 
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.42\linewidth]{Figures/pic32.jpg}
+	}
+	\caption{Microcontrôleur PIC32 utilisé dans le projet. Le microcontrôleur est le gros composant au milieu de la carte. Les composants nécessaire au bon fonctionnement du PIC32 sont également présents sur la carte ainsi qu'une interface de programmation et de debug via usb.}
+	\label{fig:inverseur}
+\end{figure}
+
+
 Un autre avantage du PIC32 est que la suite logicielle permettant son développement peut être utilisée dans un premier temps en version gratuite. Cette version n'inclut pas les options d'optimisation de code pendant la compilation, mais ces options ne sont pas indispensables à la réalisation du projet. 
 
-Pour des raisons économiques et pratiques, le PIC32, comme présenté sur la figure \ref{fig:pic32} %TODO mettre photos pic32
- a donc été choisi pour réaliser le système.
+Pour des raisons économiques et pratiques, le PIC32, comme présenté sur la figure \ref{fig:pic32} a donc été choisi pour réaliser le système.
  
 Le modèle choisi pour le projet est le PIC32MX795F512L. C'est le modèle le plus rapide et le plus gros de la gamme. C'est également celui possédant le plus d'entrées et sorties différentes, ainsi que la quantité de mémoire vive la plus grande des microcontrôleurs produits par Microchip.
 
-Ce modèle a été choisi également car il est commercialisé par Microchip sur une carte de développement peu coûteuse. De plus cette carte de développement se présente sous la forme d'une petite carte pouvant être montée sur une carte fille permettant de connecter simplement d'autres composants aux entrées/sorties du PIC32. Le système complet est présenté sur la figure \ref{fig:pic32comp}.
-%TODO mettre photos pic32
+Ce modèle a été choisi également car il est commercialisé par Microchip sur une carte de développement peu coûteuse. De plus cette carte de développement se présente sous la forme d'une petite carte pouvant être montée sur une carte fille permettant de connecter simplement d'autres composants aux entrées/sorties du PIC32. 
 
 
 \subsection{Adaptation des Tensions}
@@ -810,6 +818,15 @@ Si l'on prend maintenant un point de vue plus haut, nous sommes en mesure d'étu
 \end{figure}
 
 Il est nécessaire de préciser que dans cette architecture, l'ordinateur ne sert que d'intermédiaire entre le microcontrôleur et Jaco. En effet, le microcontrôleur effectue la totalité des calculs. Le mouvement effectué par l'utilisateur est envoyé sur la liaison série à l'ordinateur qui transmet la commande choisie à Jaco via la liaison USB. 
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.5\linewidth]{Figures/montage.jpg}
+	}
+	\caption{Montage complet du prototype}
+	\label{fig:archiMatMont}
+\end{figure}
 
 Il est également à noter que cette architecture va induire un délai de traitement impossible à quantifier précisément. En effet, l'ordinateur n'étant pas temps réel au sens strict, le temps entre l'information d'un mouvement effectué et le nouvement de Jaco (ou toute autre action) commandé par USB est imprévisible précisément et sera beaucoup plus long que si le PIC32 était relié à Jaco directement par un bus CAN. 
 
@@ -1263,7 +1280,6 @@ Deux onglet supplémentaires viennent s'ajouter aux quatre onglets de visualisat
 
 Enfin le dernier onglet présenté sur la figure \ref{fig:gui3} permet d'envoyer les commandes de calibration au PIC32. Ces calibrations sont la calibration du tonus au repos, du tonus maximum et de la bande de base pour le filtre, et ce pour chaque canal EMG.
 
-%TODO rajouter les deux figures manquantes.
 
 \begin{figure}
 	\centering
@@ -1451,26 +1467,37 @@ Ces résultats seront analysés dans la discussion.
 
 \section{Performances globales}
 
+Dans un premier temps, avant de quantifier les performances du système, il est nécessaire de résumé ce qu'il est possible d'exécuter avec celui-ci. 
 
+La figure \ref{fig:onset} montre le comportement du firmware pour un canal EMG. L'activité musculaire est détectée efficacement, et aucune retombée de l'activité ou de faux positif n'est enregistré. Cette détection d'activité a été réalisée en utilisant préalablement la calibration du tonus musculaire au repos et du tonus musculaire maximum. 
 
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.8\linewidth]{Figures/onset.png}
+		\includegraphics[width=0.6\linewidth]{Figures/onset.png}
 	}
 	\caption{Résultats de la détection d'activité musculaire sur un canal EMG}
 	\label{fig:onset}
 \end{figure}
 
+Le système complet a été testé : utilisation des quatre électrodes pour contrôler Jaco. La figure \ref{fig:montageglobal} présente le système complet et en utilisation. Chaque canal EMG a été calibré séparément, puis des commandes ont été envoyées au bras robotique en fonction des activités musculaires détectées. 
+
+Pour les tests, la commande à envoyer à Jaco choisie consiste à déplacer la main du robot sur l'axe $x$ et l'axe $y$. Les mouvement de rotation de la tête de l'utilisateur déplaçaient ainsi le bras à droite et à gauche tandis qu'une élévation des épaules le faisaient se déplacer en avant et en arrière. 
+
+Il est à noter que grâce à l'utilisation de la librairie de programmation fournie par Kinova, n'importe quelle action du bras peut être reliée à chacun des mouvements de l'utilisateur.
+
+Ces tests de fonctionnalité simples ont été réalisés sans utiliser de filtrage du signal EMG.
+
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.8\linewidth]{Figures/montageglobal.png}
+		\includegraphics[width=0.6\linewidth]{Figures/montageglobal.png}
 	}
 	\caption{Contrôle de Jaco par canaux EMG}
 	\label{fig:montageglobal}
 \end{figure}
 
+Une vidéo a été réalisée pour le projet afin de constater le fonctionnement du système de manière dynamique.
 
 \section{Temps de calcul et chronogrammes}
 
@@ -1480,17 +1507,53 @@ La filtrage ayant été mis en place seulement dans un second temps, le temps de
 
 Pour ce faire, l'opération réalisée consiste à mettre une sortie du PIC32 à l'état haut au moment où le calcul commence, puis à la remettre à l'état bas lorsque le calcul est effectué. Le signal est ensuite enregistré à l'aide d'un oscilloscope. Le temps passé à l'état haut est ensuite mesuré et utilisé comme temps de référence. 
 
-La figure \ref{fig:chronoonset} montre le chronogramme enregistré pour la détection d'activité des quatre canaux EMG. Le temps de calcul nécessaire à la détection d'activité sur les quatre canaux est de 1.23 ms.
+La figure \ref{fig:chronogrammes} montre les chronogrammes enregistrés pour la détection d'activité des quatre canaux EMG (en haut), et pour le filtrage d'un canal EMG. Le temps de calcul nécessaire à la détection d'activité sur les quatre canaux est de 1.23 ms et celui nécessaire au filtrage d'un seul canal EMG est de 3.58 ms.
 
-%TODO : rajouter figure chronoonset
-
-La même opération a été également réalisée pour mesurer le temps de calcul nécessaire au filtrage d'un seul canal EMG. Le chronogramme enregistré pour ce faire est présenté par la figure \ref{fig:chronofiltre}. Le temps de calcul mesuré est de 3.58 ms.
-
-%TODO : rajouter figure chronofiltre
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/chronogrammes.png}
+	}
+	\caption{Chronogrammes de mesure du temps de calcul. Le chronogramme du haut représente le temps de calcul de détection d'activité musculaire des qutre canaux EMG. Le chronogramme du bas présente le temps de calcul de filtrage d'une fenêtre d'un seul canal EMG.}
+	\label{fig:chronogrammes}
+\end{figure}
 
 \section{Validation du système}
 
 \chapter{Discussion}
+
+Les résultats ayant été présentés, une analyse de ceux-ci sera effectuée dans cette partie, dans le but de justifier le comportement du système. Ceci permettra de fixer quelles parties sont vraiment efficaces et quelles partie nécessiteront une amélioration future.
+
+\section{Performances globales du système}
+
+Dans un premier temps, et sans quantifier les performances du système, le système s'est montré capable, en utilisation normale, et en faisant de grands mouvements impliquant une part de contraction isométrique que le système est capable de commander le bras Jaco à partir de mouvements de l'utilisateur. Toute fois la sensibilité du système sans filtrage ne permet pas de détecter les mouvements de petite amplitude. 
+
+\section{Chronogrammes et temps de calculs}
+
+L'analyse des temps de calcul du système permet de tirer plusieurs conclusions de la réalisation, et du matériel choisi. 
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/chronogrammeDiscussion.png}
+	}
+	\caption{Etude du temps de calcul utilisé par le système}
+	\label{fig:chronogrammeDisc}
+\end{figure}
+
+Le chronogramme illustré dans la figure \ref{fig:chronogrammeDisc} montre la répartition du temps de calcul de la routine principale du firmware. 
+
+Les temps de calculs relevés y sont présenté à l'intérieur de la boucle principale. La courbe bleue montre la fréquence d'arrivée d'une nouvelle fenêtre de signaux EMG pour les quatre canaux. Elle permet de visualiser le temps de calcul disponible avant qu'une nouvelle fenêtre n'arrive. 
+
+Afin de rester temps réel, le système doit être capable d'effectuer tous ses calculs avant qu'une nouvelle fenêtre ne soit acquise. 
+
+En vert est montré le temps nécessaire pour détecter l'activité musculaire sur les quatre canaux. On observe que ce temps de calcul est largement inférieur au délai de traitement, et peut donc être utilisé en temps réel sans parer au bon fonctionnement du système.
+
+En rouge est illustré le temps nécessaire au filtrage d'un seul canal EMG. En considérant qu'il faut multiplier ce temps par 4 pour traiter les quatre canaux EMG, on remarque facilement que le temps nécessaire au traitement est trop long par rapport au délai entre deux fenêtre. 
+
+En effet, le délai étant de 8 ms auxquelles il faut retirer 1.23 ms de détection d'activité, pour un délai disponible de 6.77 ms. Il faut 14.32 ms pour filtrer les quatre canaux EMG. Ce temps est indisponible, et rend l'utilisation du filtre sur les quatre électrode impossible.
+
+\section{Validation des performances du système}
 
 \begin{conclusion}
 Texte de conclusion
