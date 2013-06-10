@@ -61,9 +61,9 @@
 \contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{75}{chapter.126}
 \contentsline {section}{\numberline {6.1}Performances globales du syst\IeC {\`e}me}{75}{section.127}
 \contentsline {section}{\numberline {6.2}Chronogrammes et temps de calculs}{75}{section.128}
-\contentsline {section}{\numberline {6.3}Validation des performances du syst\IeC {\`e}me}{76}{section.130}
-\contentsline {chapter}{CONCLUSION}{77}{chapter*.131}
+\contentsline {section}{\numberline {6.3}Validation des performances du syst\IeC {\`e}me}{77}{section.130}
+\contentsline {chapter}{CONCLUSION}{79}{chapter*.131}
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{79}{chapter.132}
-\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{81}{subsection.138}
-\contentsline {chapter}{BIBLIOGRAPHIE}{84}{chapter*.139}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{81}{chapter.132}
+\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{83}{subsection.138}
+\contentsline {chapter}{BIBLIOGRAPHIE}{86}{chapter*.139}

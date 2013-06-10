@@ -1551,14 +1551,33 @@ En vert est montré le temps nécessaire pour détecter l'activité musculaire s
 
 En rouge est illustré le temps nécessaire au filtrage d'un seul canal EMG. En considérant qu'il faut multiplier ce temps par 4 pour traiter les quatre canaux EMG, on remarque facilement que le temps nécessaire au traitement est trop long par rapport au délai entre deux fenêtre. 
 
-En effet, le délai étant de 8 ms auxquelles il faut retirer 1.23 ms de détection d'activité, pour un délai disponible de 6.77 ms. Il faut 14.32 ms pour filtrer les quatre canaux EMG. Ce temps est indisponible, et rend l'utilisation du filtre sur les quatre électrode impossible.
+En effet, le délai étant de 8 ms auxquelles il faut retirer 1.23 ms de détection d'activité, pour un délai disponible de 6.77 ms. Il faut 14.32 ms pour filtrer les quatre canaux EMG. Ce temps est indisponible, et rend l'utilisation du filtre sur les quatre électrodes impossible.
+
+Cette constatation permet d'établir le fait que le PIC32 est suffisamment performant pour effectuer une détection d'activité performante, mais n'est pas assez rapide pour effectuer un filtrage prédictif des quatre canaux EMG si on conserve les spécifications du projet telles qu'elles. Il est nécessaire de souligner toute fois que l'algorithme de filtrage est très complexe. 
+
+Deux solutions se présentent pour résoudre un tel problème. La première consiste à changer de microcontrôleur pour s'orienter vers une architecture pour grosse, mais plus coûteuse. La seconde est de diminuer les spécifications du projet, de plusieurs manières possibles, en baissant par exemple la fréquence d'échantillonnage du système. Si la fréquence d'échantillonnage est plus basse, plus de temps est disponible avant la prochaine fenêtre afin de faire le traitement du signal. Le signal EMG ayant une bande utile allant jusqu'à 450Hz, la fréquence d'échantillonnage théorique la plus basse est donc de 900Hz. Une fréquence d'échantillonnage de 900Hz laisserait au microcontrôleur 17.8 ms avant l'acquisition de la prochaine fenêtre.
+
+Cependant, une baisse de la fréquence d'échantillonnage entraînerait une perte d'information et un bruit de recouvrement qui pourrait poser problème dans l'hypothèse où d'autres caractéristiques du signal EMG seraient utilisées dans la suite du projet. 
+
+Enfin une dernière solution potentielle au problème serait de décomplexifier l'algorithme de filtrage afin que celui-ci prenne moins de temps à réaliser.
+
+La résolution du problème consiste donc à faire un choix important pour la suite du projet. Changer le microcontrôleur permettra d'augmenter les performances du système drastiquement tout en gardant les spécifications de base du systèmes. Baisser les spécifications du projet permettra de faire fonctionner le système intégralement, mais ne permettra pas de le faire évoluer par la suite. 
 
 \section{Validation des performances du système}
 
 \begin{conclusion}
-Texte de conclusion
+
+La réalisation du projet a permis d'établir qu'un système de contrôle hybride d'une aide technique complexe est possible en utilisant le signal EMG en temps réel et sur un dispositif embarqué. La preuve de concept faisant l'objet initial du projet avec Kinova a donc été validée. 
+
+La réalisation du système a également permis de fixer les outils mathématiques permettant de réaliser ce contrôle. L'utilisation du TKE s'est avérée fructueuse, et le filtrage adaptatif a montré qu'on pouvait améliorer drastiquement la qualité d'un signal EMG. 
+
+Le système a également pu être testé sur une dizaine de personne afin de valider la cohérence de fonctionnement, ainsi que son intervalle de son fonctionnement et sa sensibilité.
+
+Les mesures de temps de calculs ont permis de montrer que le PIC32 est trop lent pour effectuer les calculs les plus complexes relatifs au filtrage tout en conservant les spécifications requises. 
 
 \end{conclusion}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
