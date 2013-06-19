@@ -1457,7 +1457,7 @@ Cela nous permet donc de fixer une efficacité globale pour chaque sujet qui ser
 
 Les valeurs d’efficacité globale de chaque sujet seront mises en commun et comparées les unes aux autres afin de savoir si le système fonctionne de manière similaire sur plusieurs personnes ou si ses performances sont variables d’une personne à l’autre.
 Une personne ayant une détection d’activité de $100\%$ aura une efficacité de 1, une personne ayant une détection d’activité de $0\%$ aura une efficacité de 0. Ainsi, plus un score d’efficacité est bon, plus il est proche de 1.
-Une efficacité moyenne, ainsi qu’une efficacité globale moyenne pourront être déterminées ainsi que leurs écarts types. Un seuil supérieur ou égal à la valeur de $0.75$ pour l’efficacité globale permettra d’indiquer que le système est acceptable. En comparant les performances des sujets, si un sujet obtient un score plus faible que les autres, les données nous permettront d’en étudier les causes, et permettront potentiellement de trouver des pistes d’amélioration du système.
+Une efficacité moyenne, ainsi qu’une efficacité globale moyenne pourront être déterminées ainsi que leurs écarts types. En comparant les performances des sujets, si un sujet obtient un score plus faible que les autres, les données nous permettront d’en étudier les causes, et permettront potentiellement de trouver des pistes d’amélioration du système.
 
 \chapter{Résultats}
 
@@ -1520,6 +1520,27 @@ La figure \ref{fig:chronogrammes} montre les chronogrammes enregistrés pour la 
 
 \section{Validation du système}
 
+Afin de caractériser le système et d'évaluer ses performance et sa cohérence, des tests sur sujets humains sains ont été réalisés après approbation du protocole de recherche par un comité d'éthique. 
+
+Chaque sujet a été équipé d'un casque sur lequel ont été monté un laser et un capteur inertiel, ainsi que d'une électrode EMG sur le muscule sterno-cléïdo mastoïdien comme présenté par la figure \ref{fig:sujet}.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth] {Figures/sujet.png}
+	}
+	\caption{Sujet humain pour la validation du système}
+	\label{fig:sujet}
+\end{figure}
+
+Ces expérimentations ont permis d'obtenir les signaux EMG, les activités musculaire, les angles de rotations et vitesses angulaires de dix personnes. Ces données ont été compilées et mises en relations. Cette partie va présenter les données obtenues lors de ces expérimentations.
+
+Le laser a permis de mettre le capteur inertiel à l'horizontal en montant ou descendant le pointeur, obligeant le sujet à baisser ou monter la tête pour viser les cibles. De cette manière, on est sur que la rotation de la tête ne s'exprime que sur l'axe Z.
+
+Chaque test a également été réalisé une fois avec le filtrage du signal EMG activé, et une autre fois avec ce filtrage désactivé. Ceci permet de comparer l'efficacité du système avec et sans filtre et de quantifié le gain de performances apporté par celui-ci.
+
+Pour chaque sujet, on calcule l'efficacité globale du système, c'est à dire le nombre de fois qu'une activité musculaire a été détectée sur le nombre de mouvements total effectué par le sujet. La figure \ref{fig:effsujets} montre l'efficacité du système sur chaque sujet. Les barres bleues représentent l'efficacité du système avec filtre, et les barres rouges du système sans le filtrage du signal. 
+
 \begin{figure}
 	\centering
 	\fbox{
@@ -1528,6 +1549,8 @@ La figure \ref{fig:chronogrammes} montre les chronogrammes enregistrés pour la 
 	\caption{Efficacité du système pour chaque sujet}
 	\label{fig:effsujets}
 \end{figure}
+
+L'efficacité du système ayant été calculée par sujet, il est intéressant de regarder l'efficacité globale de celui-ci. Il est également utile d'observer cette efficacité en fonction des angles atteints par les sujets. La figure \ref{fig:compeff} montre l'efficacité moyenne du système, encore une fois avec et sans filtrage du signal. 
 
 \begin{figure}
 	\centering
@@ -1538,6 +1561,20 @@ La figure \ref{fig:chronogrammes} montre les chronogrammes enregistrés pour la 
 	\label{fig:compeff}
 \end{figure}
 
+Le premier couple de barres montre l'efficacité moyenne sur tous les angles du système allant de 10 degrés à 80 degrés. Celle-ci atteint une valeur de xxx pour le système avec filtrage et de yyy pour le système sans filtrage. 
+
+Le deuxième couple de barres montre l'efficacité moyenne du système sur les angles allant de 40 degrés à 80 degrés. Cette efficacité est de xxx pour le système avec filtrage et de yyy pour le système sans filtrage. 
+
+De la même manière les trois couples de barres montrent respectivement les efficacités pour les angles allant de 50 à 80 degrés, de 60 à 80 degrés et de 70 et 80 degrés. 
+
+Enfin le dernier couple de barres montre l'efficacité moyenne du système pour les angles de 10 à 30 degrés. Cette valeur est de xxx pour le système avec filtrage et de yyy pour le système sans filtrage.
+
+Il est également pertinent d'observer la répartition des sujets statistiquement quant à leur efficacité. La figure \ref{fig:effstats} montre la répartitions des efficacités pour différents intervalles d'angles. 
+
+La ligne rouge de chaque boite indique la médiane des efficacités obtenues par les sujets. La boite bleue autour délimite les premier et dernier quartiles et enfin les traits délimites les valeurs extrêmes des efficacités obtenues. Les croix rouges du graphiques présentent les données aberrantes d'un point de vue statistique.
+
+Pour chaque diagramme, la boite de gauche correspond à la répartition des efficacités avec filtrage et celle de droite celle des efficacités sans filtrage.
+
 \begin{figure}
 	\centering
 	\fbox{
@@ -1547,14 +1584,30 @@ La figure \ref{fig:chronogrammes} montre les chronogrammes enregistrés pour la 
 	\label{fig:effstats}
 \end{figure}
 
+Le premier diagramme présente ainsi la répartition de l'efficacité globale avec une médiane à xxx et une donnée aberrante correspondant au sujet S004. L'efficacité globale du système sans filtrage présente une médiane à yyy avec une données aberrante principale à une valeur de zzz correspondant au sujet S002.
+
+On retrouve la donnée aberrante du sujet S004 sur tous les autres diagrammes, et nous expliqueront dans la discussion pourquoi cette donnée est classée comme telle. 
+
+Le deuxième diagramme présente la répartition des efficacités pour les angles de 40 à 80 degrés. Avec filtrage du signal, la médiane de l'efficacité est obtenue à xxx, tandis que celle sans filtrage est obtenue à yyy. Sans le filtrage on observe toujours la donnée aberrante du sujet S002 aux alentours de $0.9$. 
+
+Le troisième diagramme présente la répartition des efficacités pour les angles allant de 50 à 80 degrés. La médianne de cette efficacité est obtenue à xxx avec filtrage et à yyy sans le filtrage. 
+
+Enfin, le dernier diagramme présente les efficacités pour les angles allant de 70 à 80 degrés. Celle-ci est fixée à 100\% avec filtrage, et également à 100\% sans le filtrage.
+
+Enfin, afin de regarder l'influence des mouvements réalisés sur l'efficacité du système, les angles et vitesses maximums atteints par les sujets ont été tracés.
+
+La figure \ref{fig:anglesmax} montre les angles maximums atteints par les sujets, toujours avec et sans filtrage. Il est à noter que le sujet S004 n'avait pas la mobilité nécessaire pour atteindre la cible située à 80 degrés avec le laser.
+
 \begin{figure}
 	\centering
 	\fbox{
 		\includegraphics[width=0.8\linewidth] {Figures/anglesMax.png}
 	}
 	\caption{Angles maximums atteints par les sujets}
-	\label{fig:effstats}
+	\label{fig:anglesmax}
 \end{figure}
+
+Enfin, la figure \ref{fig:vitessesmax} montre les vitesses maximum atteintes par les sujets lors des expérimentations. 
 
 \begin{figure}
 	\centering
@@ -1562,7 +1615,7 @@ La figure \ref{fig:chronogrammes} montre les chronogrammes enregistrés pour la 
 		\includegraphics[width=0.8\linewidth] {Figures/vitessesMax.png}
 	}
 	\caption{Vitesses maximums atteints par les sujets}
-	\label{fig:effstats}
+	\label{fig:vitessesmax}
 \end{figure}
 
 \chapter{Discussion}

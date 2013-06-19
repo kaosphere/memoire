@@ -34,9 +34,10 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces R\IeC {\'e}sultats de la d\IeC {\'e}tection d'activit\IeC {\'e} musculaire sur un canal EMG\relax }}{71}{figure.caption.121}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Contr\IeC {\^o}le de Jaco par canaux EMG\relax }}{72}{figure.caption.122}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Chronogrammes de mesure du temps de calcul. Le chronogramme du haut repr\IeC {\'e}sente le temps de calcul de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire des qutre canaux EMG. Le chronogramme du bas pr\IeC {\'e}sente le temps de calcul de filtrage d'une fen\IeC {\^e}tre d'un seul canal EMG.\relax }}{73}{figure.caption.124}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Efficacit\IeC {\'e} du syst\IeC {\`e}me pour chaque sujet\relax }}{74}{figure.caption.126}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Efficacit\IeC {\'e} du syst\IeC {\`e}me moyenne pour des intervalles d'angles diff\IeC {\'e}rents\relax }}{74}{figure.caption.127}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces R\IeC {\'e}partition et statistiques des efficacit\IeC {\'e}s pour diff\IeC {\'e}rents intervalles d'angles\relax }}{75}{figure.caption.128}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Angles maximums atteints par les sujets\relax }}{75}{figure.caption.129}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Vitesses maximums atteints par les sujets\relax }}{76}{figure.caption.130}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Etude du temps de calcul utilis\IeC {\'e} par le syst\IeC {\`e}me\relax }}{78}{figure.caption.134}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Sujet humain pour la validation du syst\IeC {\`e}me\relax }}{74}{figure.caption.126}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Efficacit\IeC {\'e} du syst\IeC {\`e}me pour chaque sujet\relax }}{75}{figure.caption.127}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Efficacit\IeC {\'e} du syst\IeC {\`e}me moyenne pour des intervalles d'angles diff\IeC {\'e}rents\relax }}{76}{figure.caption.128}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces R\IeC {\'e}partition et statistiques des efficacit\IeC {\'e}s pour diff\IeC {\'e}rents intervalles d'angles\relax }}{77}{figure.caption.129}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Angles maximums atteints par les sujets\relax }}{78}{figure.caption.130}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Vitesses maximums atteints par les sujets\relax }}{78}{figure.caption.131}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Etude du temps de calcul utilis\IeC {\'e} par le syst\IeC {\`e}me\relax }}{80}{figure.caption.135}
