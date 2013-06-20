@@ -1561,13 +1561,13 @@ L'efficacité du système ayant été calculée par sujet, il est intéressant d
 	\label{fig:compeff}
 \end{figure}
 
-Le premier couple de barres montre l'efficacité moyenne sur tous les angles du système allant de 10 degrés à 80 degrés. Celle-ci atteint une valeur de xxx pour le système avec filtrage et de yyy pour le système sans filtrage. 
+Le premier couple de barres montre l'efficacité moyenne sur tous les angles du système allant de 10 degrés à 80 degrés. Celle-ci atteint une valeur de 56\% pour le système avec filtrage et de 49.3\% pour le système sans filtrage. 
 
-Le deuxième couple de barres montre l'efficacité moyenne du système sur les angles allant de 40 degrés à 80 degrés. Cette efficacité est de xxx pour le système avec filtrage et de yyy pour le système sans filtrage. 
+Le deuxième couple de barres montre l'efficacité moyenne du système sur les angles allant de 40 degrés à 80 degrés. Cette efficacité est de 86.8\% pour le système avec filtrage et de 74\% pour le système sans filtrage. 
 
-De la même manière les trois couples de barres montrent respectivement les efficacités pour les angles allant de 50 à 80 degrés, de 60 à 80 degrés et de 70 et 80 degrés. 
+De la même manière les trois couples de barres montrent respectivement les efficacités pour les angles allant de 50 à 80 degrés, où l'efficacité avec filtrage est de 94\% et sans filtrage de 90\%, de 60 à 80 degrés, où les deux efficacité sont de 97.3\% et de 70 et 80 degrés ou les deux efficacité moyennes sont de 100\%. 
 
-Enfin le dernier couple de barres montre l'efficacité moyenne du système pour les angles de 10 à 30 degrés. Cette valeur est de xxx pour le système avec filtrage et de yyy pour le système sans filtrage.
+Enfin le dernier couple de barres montre l'efficacité moyenne du système pour les angles de 10 à 30 degrés. Cette valeur est de 4.67\% pour le système avec filtrage et de 8\% pour le système sans filtrage.
 
 Il est également pertinent d'observer la répartition des sujets statistiquement quant à leur efficacité. La figure \ref{fig:effstats} montre la répartitions des efficacités pour différents intervalles d'angles. 
 
@@ -1584,13 +1584,13 @@ Pour chaque diagramme, la boite de gauche correspond à la répartition des effi
 	\label{fig:effstats}
 \end{figure}
 
-Le premier diagramme présente ainsi la répartition de l'efficacité globale avec une médiane à xxx et une donnée aberrante correspondant au sujet S004. L'efficacité globale du système sans filtrage présente une médiane à yyy avec une données aberrante principale à une valeur de zzz correspondant au sujet S002.
+Le premier diagramme présente ainsi la répartition de l'efficacité globale avec une médiane à 58.75\% et une donnée aberrante correspondant au sujet S004. L'efficacité globale du système sans filtrage présente une médiane à 47.5\% avec une données aberrante principale à une valeur de 92.5\% correspondant au sujet S002.
 
 On retrouve la donnée aberrante du sujet S004 sur tous les autres diagrammes, et nous expliqueront dans la discussion pourquoi cette donnée est classée comme telle. 
 
-Le deuxième diagramme présente la répartition des efficacités pour les angles de 40 à 80 degrés. Avec filtrage du signal, la médiane de l'efficacité est obtenue à xxx, tandis que celle sans filtrage est obtenue à yyy. Sans le filtrage on observe toujours la donnée aberrante du sujet S002 aux alentours de $0.9$. 
+Le deuxième diagramme présente la répartition des efficacités pour les angles de 40 à 80 degrés. Avec filtrage du signal, la médiane de l'efficacité est obtenue à 94\%, tandis que celle sans filtrage est obtenue à 76\%. Sans le filtrage on observe toujours la donnée aberrante du sujet S002 à 100\%. Cette donnée sera également expliquée dans la discussion.
 
-Le troisième diagramme présente la répartition des efficacités pour les angles allant de 50 à 80 degrés. La médianne de cette efficacité est obtenue à xxx avec filtrage et à yyy sans le filtrage. 
+Le troisième diagramme présente la répartition des efficacités pour les angles allant de 50 à 80 degrés. La médianne de cette efficacité est obtenue à 100\% avec filtrage et à 95\% sans le filtrage. 
 
 Enfin, le dernier diagramme présente les efficacités pour les angles allant de 70 à 80 degrés. Celle-ci est fixée à 100\% avec filtrage, et également à 100\% sans le filtrage.
 
@@ -1663,7 +1663,92 @@ La résolution du problème consiste donc à faire un choix important pour la su
 
 \section{Validation des performances du système}
 
+Cette partie va maintenant interpréter les données acquises lors des expérimentations sur sujets humains effectuer pour valider les performances du système. Dans un premier temps, nous analyserons le comportement particulier de deux sujets et tâcherons de définir pourquoi leurs résultats diffèrent des autres. Puis dans un second temps, nous analyserons et déduirons les performances du système montrées par les tests.
 
+Les résultats ont montré dans un premier temps deux données aberrantes : celles du sujet S004 premièrement, puis celle du sujet S002. 
+
+En effectuant les tests, il s'est avéré qu'un paramètre est majeur dans les performances du système : le placement de l'électrode doit être parfait, car celui-ci influence grandement les résultats, principalement avec filtrage. De plus, il est beaucoup plus difficile de placer correctement l'électrode chez certaines personnes, dépendamment  de la musculature de la personne. En effet, chez une personne très musclée le muscule est facile à voir et l'électrode se place donc facilement. Ajouté à cela, la corpulence de la personne influence également le placement de l'électrode. 
+
+Concernant le sujet S004, on constate sur la figure \ref{fig:effsujets} que celui-ci est le seul sujet présentant une détection d'activité beaucoup plus faible que tous les autres sujets, et également le seul sujet présentant une performance plus élevée du système sans filtrage que celui avec filtrage (excepté le sujet S002 qui sera présenté juste après). Le sujet S004 est également le seul n'ayant pas pu physiquement atteindre l'angle de 80 degrés, comme vu sur la figure \ref{fig:anglesmax}. Les résultats obtenus par le sujet S004 sont donc à interpréter comme un mauvais placement d'électrode sur celui-ci. 
+
+Ainsi, si le projet continue, un protocole de placement des électrodes sur l'utilisateur devra être effectué en collaboration avec des professionnels de santé expérimenté dans le domaine de l'EMG, afin de régulariser les résultats du système.
+
+Par conséquent les données générées par le sujet S004 ont été considérées comme \textit{outlier} ou données aberrantes.
+
+Un autre sujet voit ses données se démarquer, le sujet S002. Cependant, seules ses données acquises lors des tests sans filtrage sont différentes des autres. Sur la figure \ref{fig:effsujets}, on remarque clairement que le système sans filtrage obtient de bien meilleurs résultats que pour le système avec filtrage : 92.5\% contre 62.5\%. 
+
+Ces résultats s'expliquent par un mauvais calibrage du système lors des expérimentation sans filtrage. En effet, lors du calibrage du système pour l'expérimentation sans filtrage, on demande dans un premier temps au sujet de mettre son muscule au repos, puis de le mettre en contraction maximum lors d'un mouvement d'amplitude maximum. 
+
+Cette calibration semble avoir été inefficace. En effet, comme le montre la figure \ref{fig:comps002}, qui présente les signaux EMG et les activités musculaires détectées pour le sujet S002, on voit clairement que les détections enregistrées correspondent à des faux positifs. 
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/comps002.png}
+	}
+	\caption{Signaux EMG et détections d'activités du sujet S002 pour l'angle 20 degrés.}
+	\label{fig:comps002}
+\end{figure}
+
+Ceci provient du fait que le TKE moyen enregistré pour le tonus musculaire maximum était trop proche de celui enregistré au repos. 
+
+Ce problème peut avoir plusieurs cause : 
+
+\begin{itemize}
+ \item Le sujet n'est pas allé a son angle maximum
+ \item L'enregistrement a été effectué trop tot, ou trop tard lorsque le sujet a relaché son mouvement
+\end{itemize}
+
+Dans tous les cas, le fait que cette calibration ait été erronée a été constaté trop tard, à la fin de l'expérimentation, et il n'était pas possible de faire recommencer les tests au sujet.
+
+Par conséquent, les données du système sans filtrage du sujet S002 seront considérées comme aberrantes. 
+
+Intéressons nous maintenant aux données obtenues. Dans un premier temps obervons les angles et vitesses angulaires maximums atteints par les participants. Sur la figure \ref{fig:vitesseshommes}, les couples de barres encadrés en noirs sont les vitesses mesurées sur les hommes. On castate que celles-ci sont pour quatre sujets sur cinq supérieures à toutes les vitesses atteintes par les femmes. 
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.6\linewidth]{Figures/vitesseshommes.png}
+	}
+	\caption{Vitesses de rotation atteintes par les sujets masculins}
+	\label{fig:vitesseshommes}
+\end{figure}
+
+Cependant, le système ne donne pas du tout une meilleure efficacité aux hommes qu'aux femmes. En effet, les deux meilleures efficacités avec filtrages du signal sont celles des sujets S001 et S005 qui sont des femmes. 
+
+A l'inverse, sur les sujets S001, S005 et S008, on remarque que le système ne détecte jamais l'angle de 30 degrés excepté pour les deux ou trois plus grandes vitesses de rotation. 
+
+Ceci montre que la vitesse de rotation maximum atteinte par un participant n'influe pas sur l'efficacité du système. Toute fois, l'augmentation de la vitesse de rotation peut entraîner une détection d'activité musculaire qui n'aurait pas eu lieu à une vitesse plus petite. 
+
+Le coefficient de vitesse angulaire maximum cité dans le protocole de validation ne sera donc pas calculé, car il n'apporte pas d'information supplémentaire. 
+
+Si l'on s'intéresse aux angles maximums atteints, on remarque que tout le monde, excepté le sujet S004 atteint des angles comparables d'environ 80 degrés. Le système de visée des cibles n'étant pas précis, la pondération des efficacités par l'angle maximum de chaque sujet n'apporte pas d'information supplémentaire, sauf pour le sujet S004. 
+
+En effet, ce sujet, malgré ses données aberrantes, montre que tout le monde n'est pas en mesure d'atteindre un angle de rotation fonctionnel de 80 degrés. Si l'on part du principe que le système a un fonctionnement acceptable à partir de 40 degrés, une telle personne verra son intervalle de fonctionnement diminuer de 40 à 80 degrés, à 40 à plus ou moins 70 degrés. Le système aura de ce fait une perte d'efficacité pour ces personnes là. 
+
+Intéressons nous maintenant au comportement du système en lui-même. En tenant compte des valeurs aberrantes, le système avec filtrage obtient une efficacité moyenne de 56.2\%, contre 49.3\% pour le système sans filtrage du signal. Si l'on tient compte des valeurs aberrantes, et que l'on enlève celles-ci du calcul, on obtient alors une efficacité moyenne pour le système de 59.16\% pour le système avec filtrage contre 44.44\% pour le système non filtré. Ainsi, le filtre apporte un gain d'efficacité de 33.12\% aux performances du système global sur tous les angles.
+
+En ne prenant en compte que les angles allant de 30 à 80 degrés, l'efficacité mesurée du système filtré est de 74.67\% contre 63.33\% pour le système non filtré en tenant compte des valeurs aberrantes. Si on retire les données aberrantes, on obtient une efficacité de 78.89\% pour le système filtré et de 58.75\%, soit une amélioration de 34.28\% grâce au filtrage.
+
+Si l'on ne prend en compte que les angles allant de 40 à 80 degrés, l'efficacité du système passe à 86.8\% pour le système filtré contre 74\% pour le système non filtré en tenant compte des données aberrantes. Si l'on retire les données aberrantes, on obtient une efficacité de 91.55\% pour le système avec filtrage et de 62.22\% pour le système sans filtrage. Le filtre apporte ainsi 47.14\% d'efficacité supplémentaire au système sur l'intervalle de 40 à 80 degrés.
+
+Ainsi, on effectue les mêmes calcus pour les intervalles 30-80 degrés, 50-80 degrés, 60-80 degrés et 70-80 degrés. Ces données sont réunies dans le tableau \ref{tab:perf} qui permet de visualiser facilement les performances globales du système et les performances apportées par le filtrage du signal.
+
+\begin{tableap}[*ht]
+	\caption{Tableau récapitulatif des performaces du système et du filtrage du signal}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+			{\bf Intervalle} & {\bf 10-80 degrés} & {\bf 30-80 degrés} & {\bf 40-80 degrés} & {\bf 50-80 degrés} & {\bf 60-80 degrés} & {\bf 70-80 degrés} \\
+	  \hline
+			{\bf Eff. avec filtre} & 59.16\% & 78.89\% & 91.55\% & 98.33\% & 100\% & 100\% \\
+	  \hline
+			{\bf Eff. sans filtre} & 44.44\% & 58.75\% & 62.22\% & 88.89\% & 100\% & 100\% \\
+	  \hline
+			{\bf Gain grâce au filtrage} & 33.12\% & 34.28\% & 47.14\% & 10.62\% & 0\% & 0\% \\
+	  \hline
+		\end{tabular}
+	\label{tab:perf}
+\end{tableap}
 
 \begin{conclusion}
 
