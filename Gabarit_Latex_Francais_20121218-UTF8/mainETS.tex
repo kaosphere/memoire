@@ -56,9 +56,9 @@
 
 %\codirecteur{Mme.}{Prénom Nom}{département et institution}
 
-\president{M.}{Prénom Nom}{département et institution}
+\president{M.}{Pascal Bigras}{Département de Génie de la Production Automatisée}
 
-\examinexterne{M.}{Prénom Nom}{département et institution}{}
+\examinexterne{M.}{Maarouf Saad}{Département de Génie Électrique}{}
 
 \jury{Mme.}{Prénom Nom}{département et institution}{}
 
@@ -84,7 +84,7 @@
 \begin{avantpropos}
 Ce projet a été réalisé en partenariat avec la société Canadienne Kinova dans le but d'ajouter une interface de contrôle à leur bras robotique Jaco contrôlable par le biais d'un Joystick. 
 
-Le but principal était de prendre la suite du projet de maîtrise de Véronique Maheu qui consistait en l'étude de la performance de différents classificateurs dans le cadre de la classification de mouvements à partir de huit canaux électromyographiques. 
+Le but principal était de prendre la suite du projet de maîtrise de Véronique Maheu qui consistait en l'étude de la performance de différents classificateurs dans le cadre de la classification de mouvements à partir de huit canaux électromyographiques. Le projet devait réaliser un prototype permettant le contrôle temps réel d'un bras robotique grâce à quatre canaux électromyographiques.
 
 Le projet devait aussi se servir des paramètres cepstraux du signal électromyographiques. Pendant la réalisation, il s'est avéré que des caractéristiques du signal beaucoup plus simples permettent de discriminer suffisamment les mouvements effectués par l'utilisateur. De ce fait l'utilisation des paramètres cepstraux du signal a été abandonnée au profit d'une détection d'activité musculaire simple.
 \end{avantpropos}
@@ -93,7 +93,13 @@ Le projet devait aussi se servir des paramètres cepstraux du signal électromyo
 % REMERCIEMENTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{remerciements}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo justo, porta sagittis feugiat eget, ornare rhoncus ligula. Nunc non odio sed lacus rutrum rhoncus. Mauris non congue arcu. Cras quis quam tortor. In ultrices tincidunt magna sed suscipit. Curabitur vel tellus sapien, ut tincidunt arcu. Maecenas dapibus ullamcorper urna, ut mollis mi tincidunt a. Nam eu orci nec lacus consectetur commodo. Donec purus tellus, consectetur at feugiat quis, scelerisque congue nibh. Aliquam urna dolor, congue nec euismod eget, convallis vitae libero. Sed vel magna suscipit leo suscipit porta quis et nunc. Nullam ante tellus, tincidunt a fringilla vel, rutrum non tellus. In volutpat consectetur purus, in euismod lorem feugiat vel. Aliquam sodales nisl eget sapien ullamcorper posuere consectetur orci bibendum. Vestibulum pulvinar viverra auctor. Vivamus ac sem et enim sodales dictum.
+Dans un premier temps, ce projet n'aurait pu aboutir si je n'avais pas eu le soutien de ma famille lors de mon expatriation au Canada, aussi je les remercie du fond du cœur de m'avoir soutenu dans tous mes projets de vie quels qu'ils soient.
+
+Dans un second temps, je tiens à remercier tout particulièrement le professeur Rachid Aissaoui de m'avoir donné la chance de réaliser ce projet avec lui. C'est un directeur de recherche particulièrement disponible, à l'écoute et avec des connaissances infinies qu'ils n'hésite jamais à partager. Ce fut un réel plaisir d'avoir pu être encadré par lui.
+
+Merci à toutes les personnes travaillant au LIO, pour leur bonne humeur quotidienne, et le cadre de travail agréable que tous participent à créer. Félix, Martine, Fernando, Julien, Laurence, Caroline, et tous les autres...
+
+Merci à ma Perrine d'être là chaque jour de ma vie.
 \end{remerciements}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,7 +113,7 @@ La société canadienne Kinova a conçu un bras robotique, JACO, adaptable à un
 
 L’acquisition des signaux EMG est faite avec des électrodes Delsys filtrées et pré-amplifiées en temps-réel à 2 kHz. Les électrodes sont placées sur quatre muscles présent chez les blessés médullaires de haut niveau : les deux trapèzes ainsi que les deux sternocléïdomastoïdiens. Ces muscles ont été choisis car ils permettent par leur seule activation de reconnaitre un mouvement donné : une élévation de l’épaule dans le cas des trapèzes et une rotation de la tête dans le cas des sternocléïdomastoïdiens.
 
-L’énergie de Teager-Keiser est utilisée afin de déterminer si une activité musculaire est présente ou non, et chaque mouvement détecté peut être relié à une action du bras robot. Une calibration peut être effectuée pour chaque muscle afin de définir des seuils de détection personnalisés. Enfin un système de filtrage prédicitif  temps réel a été intégré afin d’augmenter la sensibilité du système a des mouvements plus lents ou pour les personnes ayant moins de tonus musculaire.
+L’énergie de Teager-Keiser est utilisée afin de déterminer si une activité musculaire est présente ou non, et chaque mouvement détecté peut être relié à une action du bras robot. Une calibration peut être effectuée pour chaque muscle afin de définir des seuils de détection personnalisés. Enfin un système de filtrage prédicitif en temps réel a été intégré afin d’augmenter la sensibilité du système a des mouvements plus lents ou pour les personnes ayant moins de tonus musculaire.
 
 Ce projet constitue une avancée supplémentaire dans l’aide technique à la manipulation apportée aux blessés médullaire dans l’accomplissement de leurs tâches de la vie quotidienne. 
 
@@ -120,15 +126,15 @@ Ce projet constitue une avancée supplémentaire dans l’aide technique à la m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}{titre original}{Kinova, jaco, EMG control, real time, spinal cord injury }
 
-High level spinal cord injury victims don't have the capacity to use their arms, but still have control of several muscles depending on the level of injury. Those residual capacities are mostly finger and shoulder movements. Depending of the level of the injury, some people don't have enough residual muscular activity to move their fingers in order to control a simple joystick. For those people, daily life activities can be very hard to achieve. 
+High level spinal cord injury individuals do not have the capacity to use their arms, but they still have a control of several muscles depending on the level of injury. Residual capacities are mostly related to finger and shoulder movements. Depending of the level of the injury, some individuals do not have the enough residual muscular activity to move their fingers in order to control a simple joystick. For them, daily life activities can be very hard to achieve. 
 
-The Canadian corporation Kinova has developped a 7 degrees of freedom robotic arm, JACO, meant to be mounted on a motorised wheelchair in order to help spinal cord injury victims in their everyday's life. JACO can be used to grab objects or open doors only using a simple joystick. However, some poeople don't have enough musclar capacities to use this joystick, and therefor, can't use the arm.  The goal of this project is to adapt the use of JACO to spinal cord injury victims using electromyographic (EMG) signals sampled on 4 muscles of the neck and shoulders. 
+The Canadian corporation Kinova has developped a 7 degrees of freedom robotic arm, JACO, meant to be mounted on a motorised wheelchair in order to help spinal cord injury victims in their everyday's life. JACO can be used to grab objects or open doors only using a simple joystick. However, some poeople don't have enough musclar capacities to use this joystick, and therefore, can not use the robotics arm.  The goal of this project is to adapt the use of JACO to spinal cord injury individuals using electromyographic (EMG) signals from four muscles of the neck and shoulders. 
 
-EMG signal acquisition is performed using preamplified and filtered Delsys electrodes in real time at a sampling frequency of 2KHz. These electrodes are placed on 4 muscles still used by high level spinal cord injury victims : trapezius and sternocleidomastoid muscles. Those muscles were chosen beacause of their action in simple movements : shoulder elevation for trapeziuses and head rotation for sternocleidomastoids.
+EMG signal acquisition is performed using preamplified and filtered Delsys electrodes in real time at a sampling frequency of 2KHz. These electrodes are placed on 4 muscles : trapezius and sternocleidomastoid. These muscles were chosen because of their relation to elementary movements such as shoulder elevation for trapeziuses and head rotation for sternocleidomastoids.
 
-Teager-Keiser energy (TKE) is used in order to determine if a muscular onset is performed, and each move of the person can be linked to an action of the arm. A calibration can be done for each muscle in order to set a personalised detection threshold for onset detection. Finally, a real time predictive filter has been added in order to increase the sensitivity of the whole system and to be able to detect smaller and slower movements.
+The Teager-Keiser energy (TKE) operator is used in order to determine if a muscular onset is performed, and each motion of the person can be linked to an action of the arm. A calibration was done for each muscle in order to set a personalised detection threshold for onset detection. Finally, a real time predictive filter has been added in order to increase the sensitivity of the  system in its ability to detect smaller and slower movements.
 
-This project represent a step towards technical assistance brought to spinal cord injury victims and the improvement of their living conditions.
+This project represent a step towards technical assistance brought to spinal cord injury persons and the improvement of their living conditions.
 
 
 \end{abstract}
@@ -157,7 +163,7 @@ This project represent a step towards technical assistance brought to spinal cor
 \item [AVQ] Activité de la vie quotidienne
 \item [TKE] Énergie de Teager-Keiser
 \item [ETS] École de Technologie Supérieure
-\item [CRC] Contrôle de redondance cyclique
+\item [CRC] Contrôle par redondance cyclique
 \item [SOF] Start of frame
 \item [EOF] End of frame
 \item [ALU] Unité arithmétique et logique
@@ -169,37 +175,10 @@ This project represent a step towards technical assistance brought to spinal cor
 % LISTE DES SYMBOLES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{listofsymbols}[3cm]
-\item [$\textbf{EMG}$] Électromyographique
-\item [$\alpha$] FAM choice hyperparameter
-\item [$B_t$] New batch learning data block available that combines all available data up to a time $t$ (\emph{i.e.},$D_1 \cup ... \cup D_t$)
-\item [$\beta$] FAM learning hyperparameter
-\item [$\mathbf{c}$] Class input associated to $\textbf{a}$ for supervised learning
-\item [$C_k$] Label of class $k$
-\item [$|C_k|_\mathbf{LTM}$] Maximal number of samples per class in the long term memory
-\item [$D_t$] New incremental learning data block available at a time $t$
-\item [$D_t^\text{t}$] Training data set at a time $t$
-\item [$D_t^\text{v}$] Validation data set at a time $t$
-\item [$D_t^\text{f}$] Fitness estimation data set at a time $t$
-\item [$\delta_{e_1e_2}$] Particle diversity between two ensemble members $e_1$ and $e_2$
-\item [$\Delta$] Distance from a local best particle within which no personal best value can be memorized by other particles among the swarm
-\item [$\Delta\theta_{e_1e_2}$] Diversity between two classifiers $e_1$ and $e_2$ determined with a FAM specific indicator
-\item [$e_1,e_2$] Two ensemble members
-\item [$\textit{EoFAM}$] An ensemble of fuzzy ARTMAP networks
-\item [$\epsilon$] FAM match-tracking hyperparameter
-\item [$f(\textbf{h})$] Objective function for a fuzzy ARTMAP hyperparameter vector $\textbf{h}$ in a static optimization environment
-\item [$f(\textbf{h},t)$] Objective function for a fuzzy ARTMAP hyperparameter vector $\textbf{h}$ and at a time $t$ in a dynamic optimization environment
-\item [$f_e(\mathbf{h},t)$] Objective function defined by the generalization error rate.
-\item [$f_o(\textbf{h}_n,t)$] Objective function $o$ (during MOO)
-\item [$f_s(\mathbf{h},t)$] Objective function defined by the size of the $F_2$ layer (\emph{i.e.}, number of $F_2$ layer nodes)
-\item [$F^{ab}$] FAM map field
-\item [$F_1$] FAM input layer
-\item [$F_2$] FAM competitive hidden layer
-\item [$\textit{FAM}_\text{estimation}$] FAM network used to estimate fitness with the data set $D_t^\text{f}$
-\item [$\textit{FAM}_n$] FAM network associated to the best position of particle $n$
-\item [$\textit{FAM}_{n,o}$] FAM network associated to the best position of particle $n$ for the objective $o$ (during MOO)
-\item [$\textit{FAM}_\text{optimal}$] FAM network with the highest accuracy obtained after optimization on a learning block $D_t$
-\item [$\textit{FAM}_n^\text{start}$] FAM network that defines the initial state of the particle $n$ prior learning data block $D_t$. During mono-objective optimization it corresponds to the best position of particle $n$, while it is associated with the current position of particle $n$ during MOO.
-\item [$\textit{FAM}_\text{temp}$] Temporary fuzzy ARTMAP network used during fitness estimation
+\item [$Efficacite$] Valeur d'efficacité du système pour un sujet donné
+\item [$Coeff_angle$] Coefficient de normalisation de l'efficacité en fonction de l'angle maximum atteint par le sujet
+\item [$Coeff_vitesse$] Coefficient de normalisation de l'efficacité en fonction de la vitesse maximum atteinte par le sujet
+\item [$Eff_globale$] Efficacité globale pour un sujet
 
 \end{listofsymbols}
 
@@ -214,11 +193,11 @@ This project represent a step towards technical assistance brought to spinal cor
 
 \begin{introduction}
 
-Avec l’avancée des technologies de l’information, le domaine du génie des technologies de la santé est aujourd’hui en mesure de venir en aide aux personnes présentant un handicap naturel, ou résultant d’une pathologie ou d’un accident, en procurant à celles-ci des dispositifs permettant l’amélioration de leurs conditions et leur qualité de vie. Ces dispositifs sont appelés les aides techniques.
+Avec l’avancée des technologies de l’information, le domaine du génie des technologies de la santé est aujourd’hui en mesure de venir en aide aux personnes présentant un handicap naturel, ou résultant d’une pathologie ou d’un accident, en procurant à celles-ci des dispositifs permettant l’amélioration de leurs conditions et leur qualité de vie. Ces dispositifs sont appelés des aides techniques.
 
-Ce projet s’intéresse principalement aux aides techniques de type robotique développées pour aider les personnes paralysées et en fauteuils roulants motorisés à effectuer leurs activités de la vie quotidienne (AVQ).L'une d'entre elles, le bras robotique Jaco a été développé par la société canadienne Kinova, et est contrôlé par un joystick de manière à ce que son utilisateur puisse facilement effectuer des actions simples, comme l’ouverture d’une porte ou la préhension d’un objet.
+Ce projet s’intéresse principalement aux aides techniques de type robotique développées pour aider les personnes paralysées et en fauteuils roulants motorisés à effectuer leurs activités de la vie quotidienne (AVQ). L'une d'entre elles, le bras robotique Jaco a été développé par la société canadienne Kinova, et est contrôlé par un joystick de manière à ce que son utilisateur puisse facilement effectuer des actions simples, comme l’ouverture d’une porte ou la préhension d’un objet.
 
-Les blessés médullaires (BM) de haut niveau lésionnel n’ont plus l’usage de leurs bras, mais conservent des capacités de mouvements résiduelles variant selon la hauteur de leur lésion. Ces capacités résiduelles concernent des mouvements restreints des doigts et des épaules principalement. Suivant le degré d’atteinte et la hauteur de la lésion de la moelle épinière, certaines personnes ne conservent pas suffisamment de liberté de mouvement dans leurs doigts pour utiliser ne serait-ce qu’un simple joystick. Pour ces personnes, les AVQ deviennent des tâches très compliquées.
+Les blessés médullaires (BM) de haut niveau lésionnel n’ont généralement plus l’usage de leurs bras, mais conservent des capacités de mouvements résiduelles variant selon la hauteur de leur lésion. Ces capacités résiduelles concernent des mouvements restreints des doigts et des épaules principalement. Suivant le degré d’atteinte et la hauteur de la lésion de la moelle épinière, certaines personnes ne conservent pas suffisamment de liberté de mouvement dans leurs doigts pour utiliser ne serait-ce qu’un simple joystick. Pour ces personnes, les AVQ deviennent des tâches très compliquées.
 
 Le but du projet est donc de faire en sorte de diversifier les interfaces de contrôle du bras Jaco, pour permettre à des personnes incapables de le contrôler exclusivement au joystick de pouvoir avoir accès à cette avancée technologique majeure. Pour ce faire, l'utilisation du signal électromyographique (EMG) a été choisie.
 
@@ -253,6 +232,7 @@ En résumé cette étude présente la conception d'un système de contrôle d'un
 %\end{revuedelitterature}
 
 \chapter{mise en contexte}
+\label{CHmiseencontexte}
 
 Les personnes BM sont aujourd'hui en mesure de pouvoir continuer à garder une autonomie partielle dans leur vie quotidienne grâce à la combinaison de plusieurs progrès technologiques. Les fauteuils roulants motorisés sont, par exemple, une part de ce progrès qui contribue à permettre au BM de garder une certaine mobilité, et sont le point d'encrage d'autres aides techniques dont fait partie le bras robotique Jaco.
 
@@ -261,7 +241,7 @@ Ce chapitre a pour but de présenter les conditions de vie des personnes BM d'au
 
 \section{Les Blessés Médullaires}
 
-Les blessés médullaires (BM) sont des personnes victimes d'une lésion de la colonne vertébrale et plus précisément de la moelle épinière. Cette lésion peut avoir des conséquence grave sur la vie de la personne. Elle peut entraîner des paralysies ou des pertes sensorielles complètes ou partielles de différentes parties du corps. Cette lésion peut être de plusieurs natures différentes, en fonction de la hauteur de celle-ci, et de son importance. 
+Les blessés médullaires (BM) sont des personnes victimes d'une lésion de la colonne vertébrale et plus précisément de la moelle épinière. Cette lésion peut avoir des conséquences graves sur la vie de la personne. Elle peut entraîner des paralysies ou des pertes sensorielles complètes ou partielles de différentes parties du corps. Cette lésion peut être de plusieurs natures différentes, en fonction de la hauteur de celle-ci, et de son importance. 
 
 La hauteur de la lésion détermine quelles parties du corps sera touchée. Cette hauteur est décrite par le nom de la vertèbre correspondante. La figure \ref{fig:rachis} présente les quatre régions principales du rachis qui servent à nommer les vertèbres. Le cou est composé de 7 vertèbres cervicales. Ces vertèbres sont nommées à partir du crâne en descendant de C1 à C7. Par exemple, C1 correspond à la première vertèbre cervicale. 
 
@@ -367,7 +347,7 @@ Ces faits dénotent une volonté de diversifier les interfaces de contrôle des 
 	\fbox{
 		\includegraphics[width=0.8\linewidth]{Figures/jacofull.jpg}
 	}
-	\caption{Bras manipulateur Jaco, tiré de \cite{Kinova2012} avec l'autorisation de Kinova}
+	\caption{Bras manipulateur Jaco, tiré de \cite{Kinova2012}}
 	\label{fig:jacofull}
 \end{figure}
 
@@ -387,11 +367,11 @@ Cette solution permet une grande liberté et ouvre la possibilité à tout un ch
 
 L'électromyographie consiste en l'acquisition de l'activité électrique présente sur un muscle lors de sa contraction. Le signal peut être acquis en surface grâce à une électrode collée directement sur la peau au dessus du muscle, ou directement à l'intérieur du muscle de manière invasive à l'aide d'une aiguille.
 
-Le signal généré par un muscle s'exprime en millivolts (mV) et permet l'analyse de l'activité musculaire d'une personne. L'EMG est utilisé surtout en médecine pour la détection de problèmes liés au système nerveux chez un patient.
+Le signal généré par un muscle s'exprime en millivolts (mV) et permet l'analyse de l'activité musculaire d'une personne durant la contraction du muscle.
 
 Le mécanisme de contraction musculaire part du système nerveux central qui envoie un signal nerveux de contraction volontaire à un muscle. Ce signal est transporté jusqu'aux muscles en passant par la moelle épinière puis par un nerf moteur. C'est ce nerf moteur qui transmet le potentiel électrique à chaque fibre musculaire présente dans le muscle. 
 
-Chaque fibre musculaire est alors parcourue par un potentiel d'action tel que décrit sur la figure. Les fibres musculaires actionnées lors d'un mouvement sont recrutées aléatoirement et change à chaque mouvement. Ce mécanisme permet de retarder la fatigue musculaire en répartissant la charge sur des fibres différentes.
+Chaque fibre musculaire est alors parcourue par un potentiel d'action tel que décrit sur la figure. Plusieurs fibres musculaires sont recrutées lors d'un mouvement. La somme de l'action de toutes ces fibres compose la contraction globale du muscle.
 
 Le signal EMG généré est constitué de la somme de tous les potentiels d'action musculaires des fibres recruté pour le mouvement et se présente comme sur la figure \ref{fig:emg}.
 
@@ -417,7 +397,7 @@ La première partie de cette revue de littérature s’intéressera à la classi
 
 L’analyse des signaux EMG et la détermination du mouvement effectuée à partir de ceux-ci se divise en plusieurs grandes sous-parties incluant chacune un algorithme bien précis. Chacune de ces parties peut être réalisée avec plusieurs algorithmes différents impliquant chacun une précision, et une facilité d’implémentation différente. Des compromis doivent donc être faits entre la précision engendrée par un algorithme et sa complexité d’implémentation et d’exécution qui est souvent inversement proportionnelle. 
 
-La première étape de traitement des signaux EMG consiste à déterminer quand il y a une activité musculaire et quand il n’y en a pas. Celle-ci est appelé détection d’activité, ou détection d'onset, et c’est la première partie qui sera analysée. L’étape suivante est l’extraction des caractéristiques du signal qui pourront permettre ensuite au classificateur de déterminer quel mouvement a été effectué. Enfin, une analyse de différents classificateurs sera effectuée, se basant sur les mêmes critères que les autres algorithmes, à savoir la précision, la facilité d’implémentation et le temps d’exécution. 
+La première étape de traitement des signaux EMG consiste à déterminer le début et la fin d'une activité musculaire. Celle-ci est appelé détection d’activité, ou détection d'onset, et c’est la première partie qui sera analysée. L’étape suivante est l’extraction des caractéristiques du signal qui pourront permettre ensuite au classificateur de déterminer quel mouvement a été effectué. Enfin, une analyse de différents classificateurs sera effectuée, se basant sur les mêmes critères que les autres algorithmes, à savoir la précision, la facilité d’implémentation et le temps d’exécution. 
 
 Un point important est à souligner, et ce point constituera un premier point de cette étude : tous ces algorithmes mis bouts à bouts doivent, une fois le choix d’architecture effectué permettre de réaliser le traitement de quatre canaux EMG en temps réel.
 
@@ -425,59 +405,70 @@ Un point important est à souligner, et ce point constituera un premier point de
 
 Le signal électromyographique est découpé à des fins d'analyses et pour extraire les caractéristiques de celui-ci. La longueur de ces fenêtres est exprimée en temps ou en nombre d'échantillons. Un pas d’incrément est également défini, afin de choisir si les fenêtres se recouvrent ou non. 
 
-La littérature étudiée fait état de beaucoup de tailles de fenêtres et de pas d’incréments différents. La plupart sont fixés de manière heuristique. Cependant, \cite{Englehart2003} évoquent le fait que cette fenêtre ne doit pas être trop grande de manière à ce que le temps de cette fenêtre et de son temps de traitement n’excède pas les 300ms de latence maximum au-delà desquels la latence est ressentie par l’utilisateur. Ainsi, leur fenêtre est fixée à 250ms avec un pas d’incrément à 125ms de manière à garder une marge suffisante pour le temps de calcul. 
+La littérature étudiée fait état de beaucoup de tailles de fenêtres et de pas d’incréments différents. La plupart ont été fixés de manière heuristique. Cependant, \cite{Englehart2003} évoquent le fait que cette fenêtre ne doit pas être trop grande de manière à ce que le temps de cette fenêtre et de son temps de traitement n’excède pas les 300 ms de latence maximale au-delà desquels celle-ci est ressentie par l’utilisateur. Ainsi, \cite{Englehart2003} ont fixé leur fenêtre à 250 ms avec un pas d’incrément à 125 ms de manière à garder une marge suffisante pour le temps de calcul. 
 
 Une fenêtre trop petite est sujette au biais de variance généré par les variation du signal et de ces caractéristiques qui peuvent jouer sur la précision du classificateur utilisé.
 
-Un compromis doit donc être fait sur la longueur des fenêtres utilisées entre la  précision du classificateur et son temps de réponse.
+Un compromis doit donc être fait sur la longueur des fenêtres utilisées entre la  précision du classificateur et son temps de réponse. Le choix du fenêtrage pour le système sera détaillé au chapitre \ref{CHfenetrage}.
 
 \subsection{Algorithmes de détection d'activité}
 
 Une fois une fenêtre du signal acquise, la première étape est la détection d'activité musculaire, ou détection d'"onset". 
 
-La détection d’onset est le principe qui consiste à détecter le début d’une activité musculaire sur le signal EMG de manière automatique.  Pour ce faire, plusieurs algorithmes semblent bien fonctionner en combinant à la fois, une bonne précision et un nombre d’opérations flottantes à réaliser restreint. Cette détection d’onset permet d’économiser les ressources processeurs afin  de n’extraire les caractéristiques du signal que lorsque c’est utile et surtout de délimiter les zones d’activité musculaire pour la détection de mouvement. 
-Il existe ainsi plusieurs caractéristiques du signal qui peuvent être extraites afin de détecter un onset. Une première largement utilisée \citep{Chang1996, Englehart2003, Tenore2007}est la méthode du Zero Crossing Rate (ZCR). Elle calcule le nombre de fois où la courbe du signal repasse par zero. 
+La détection d’onset est le principe qui consiste à détecter le début d’une activité musculaire sur le signal EMG de manière automatique.  Pour ce faire, plusieurs algorithmes semblent bien fonctionner en combinant à la fois, une bonne précision et un nombre d’opérations restreint. Cette détection d’onset permet d’économiser les ressources du processeur afin  de n’extraire les caractéristiques du signal que lorsque c’est utile et surtout de délimiter les zones d’activité musculaire pour la détection de mouvement. 
 
-Un élément important est que \cite{Chang1996} ont développé cette méthode sur un DSP et semble fournir des résultats satisfaisants. Cette étude présente également la mise en place d’une dead zone sur l’algorithme de zero crossing, qui permet de réduire, voir de supprimer l’influence du bruit sur le ZCR.
-Le ZCR est une méthode simple à implémenter et très peu couteuse en ressources processeur pour la raison qu’elle ne nécéssite qu’un nombre d’addition égal N-1, N étant le nombre d’échantillons dans la fenêtre analysée. 
+Il existe principalement trois caractéristiques du signal qui peuvent être extraites afin de détecter un onset. Une première utilisée par \cite{Chang1996}est la méthode du Zero Crossing Rate (ZCR). Elle calcule le nombre de fois où la courbe du signal EMG brut repasse par zero. 
 
-\cite{Peleg2002} optent pour une méthode consistant à appliquer un seuil directement sur l’enveloppe du signal. Le signal est d’abord passé dans un filtre passe-haut à 30Hz, puis la valeur absolue du signal est faite, enfin, le signal est passé dans un filtre passe-bas à 2.5Hz. Cette méthode est une analogie de la méthode Mean Absolute Value (MAV), le filtre passe bas ayant pour but d’effectuer une moyenne des valeurs absolues du signal. Suite à cela, le seuil appliqué sur l’enveloppe est fixé comme étant 10 pourcents plus haut que la valeur de l’enveloppe de l’EMG au repos. 
+Un élément important à préciser est que \cite{Chang1996} ont développé cette méthode sur un DSP et semble fournir des résultats satisfaisants. Cette étude présente également la mise en place d’une zone morte sur l’algorithme de zero crossing, qui permet de réduire, voir de supprimer l’influence du bruit sur le ZCR. Cependant cette zone morte diminue la sensibilité de la détection.
+Le ZCR est une méthode simple à implémenter et très peu coûteuse en ressources processeur pour la raison qu’elle ne nécessite qu’un nombre d’additions égal à N-1, N étant le nombre d’échantillons dans la fenêtre analysée. 
 
-\cite{Tenore2007} utilisent également la méthode MAV sans toutefois préciser la manière dont ils ont choisi leur seuil de détection. 
+\cite{Peleg2002} optent pour une deuxième méthode consistant à appliquer un seuil directement sur l’enveloppe du signal. Le signal est d’abord passé dans un filtre passe-haut à 30Hz, puis la valeur absolue du signal est réalisée, enfin, le signal est passé dans un filtre passe-bas à 2.5Hz. Cette méthode est une analogie de la méthode Mean Absolute Value (MAV), le filtre passe bas ayant pour but d’effectuer une moyenne des valeurs absolues du signal. Suite à cela, le seuil appliqué sur l’enveloppe est fixé comme étant 10 pourcents plus haut que la valeur de l’enveloppe de l’EMG au repos. 
 
-Une autre méthode simple à implémenter et peu couteuse en temps de calcul est la méthode de la Teager-Kaiser Energy (TKE) qui correspond à un taux de variation du signal. Elle a été utilisée par \cite{Maheu2011} comme une caractéristique du signal utilisée dans la classification, mais peut aussi être utilisée dans la détection d’onset comme l'ont montré \cite{li2007}. Elle ne constitue qu’une soustraction et deux multiplications par échantillon dans la fenêtre d’analyse. 
+Une troisième méthode simple à implémenter et peu coûteuse en temps de calculs est la méthode de la Teager-Kaiser Energy (TKE) qui correspond à un taux de variation du signal. Elle a été utilisée par \cite{Maheu2011} comme une caractéristique du signal utilisée dans la classification, mais peut aussi être utilisée dans la détection d’onset comme l'ont montré \cite{li2007}. Elle ne constitue qu’une soustraction et deux multiplications par échantillon dans la fenêtre d’analyse. Le fonctionnement du TKE est expliqué plus en détail au chapitre \ref{CHtke}.
+
+Il existe également des projet n'effectuant pas de détection d'activité musculaire et réalisant une classification des caractéristiques du signal en continu. C'est le cas de \cite{Englehart2003} et \cite{Tenore2007}.
 
 \subsection{Caractéristiques du signal EMG utilisées}
 
-Une fois l’ctivité musculaire du signal EMG détectée, on cherche à déterminer quel mouvement a été effectué. Ce travail est effectué par un classificateur. Ce classificateur doit donc prendre des éléments de comparaison en compte pour déterminer l’action faite. Ces éléments doivent être significatifs du signal capté, et sont appelés des features, ou des caractéristiques. 
-Les caractéristiques extraites des signaux EMG sont nombreuses, aussi nous nous concentrerons sur celles ayant les meilleurs résultats dans la littérature. Ainsi la caractéristique ayant le plus de succès semble être l’auto-régression \citep{Chang1996, Peleg2002, Maheu2011}.
+Une fois l’activité musculaire du signal EMG détectée, on cherche à déterminer quel mouvement a été effectué. Ce travail est effectué par un classificateur. Ce classificateur doit prendre des éléments de comparaison en compte pour déterminer l’action faite. Ces éléments doivent être significatifs du signal capté, et sont appelés des "features", ou des caractéristiques. 
+Les caractéristiques extraites des signaux EMG sont nombreuses, aussi nous nous concentrerons sur celles les plus utilisées dans la littérature. 
 
-L’auto-régression consiste à trouver les n+1 coefficients d’un polynôme d’ordre n qui, appliqué sur un signal aléatoire, permettra de retrouver une approche du signal réel. Plusieurs algorithmes permettent de retrouver ces coefficients autorégressifs (AR).
+Une première caractéristique du signal très utilisée dans la littérature \citep{Chang1996, Peleg2002, Maheu2011}, est l'autoregression du signal EMG.
 
-\cite{Peleg2002} utilisent une auto-régression d’ordre 11. Cet ordre « a été déterminé de manière heuristique » \citep{Peleg2002}.
+L’autorégression consiste à trouver les n+1 coefficients d’un polynôme d’ordre n  qui correspond à une représentation du signal EMG brut. L'ordre de ce polynôme permet, plus il est grand d'augmenter la précision de la représentation du signal d'origine. 
 
-\cite{Chang1996} ont choisi l'utilisation des coefficients AR mais également les coefficients cepstraux obtenus à partir des AR. Ils préconisent également de fixer l’ordre de l’AR à 4 en se basant sur la littérature et en justifiant par un compromis entre une bonne représentation du signal  et un temps de calcul court. 
-L’obtention des coefficients cepstraux à partir des coefficients AR se fait grâce à une relation mathématique récursive simple dépendant de l’ordre de l'auto-régression réalisée. 
+\cite{Peleg2002} utilisent une auto-régression d’ordre 11. Cet ordre a été déterminé de manière heuristique \citep{Peleg2002}.
 
+\cite{Chang1996} ont choisi l'utilisation des coefficients AR mais également les coefficients cepstraux obtenus à partir des AR. Ils préconisent également de fixer l’ordre de l’AR à 4 en justifiant par un compromis entre une bonne représentation du signal  et un temps de calcul court. L’obtention des coefficients cepstraux à partir des coefficients AR se fait grâce à une relation mathématique récursive simple dépendant de l’ordre de l'auto-régression réalisée. %L'algorithme permettant le calcul des coefficients AR et des coefficients cepstraux à partir de ceux-ci est présentée en annexe. 
+
+Les caractéristiques utilisés dans la détection d'activité musculaire sont également utilisées dans la classification. On retrouve donc dans les caractéristiques le MAV, le TKE et le ZCR. On retrouve également dans les caractéristiques utilisées les décompositions du signal en ondelettes, ou la longueur d'onde.
 
 \subsection{Classificateurs utilisés dans la détection de mouvements}
 
-Une fois les caractéristiques du signal calculées,  celles-ci sont entrées dans un classificateur qui, grâce à un apprentissage, permet de déterminer quel mouvement a été effectué par le sujet. Encore une fois, beaucoup d’algorithmes existent pour réaliser cette opération. Toutefois, beaucoup de ceux-ci sont très consommateurs en temps de calculs, comme les réseaux de neurones (RN), où les analyses linéaires discriminantes (LDA). 
+Une fois les caractéristiques du signal calculées,  celles-ci sont entrées dans un classificateur qui, grâce à un apprentissage, permet de déterminer quel mouvement a été effectué par le sujet. Encore une fois, beaucoup d’algorithmes existent pour réaliser cette opération. Toutefois, beaucoup de ceux-ci sont très consommateurs en temps de calculs, comme les réseaux de neurones (RN).
 
-Toute fois \cite{englehart1999} ont montré que l'importance du choix du classificateur pour la reconnaissance de mouvements à partir de signaux EMG est limitée et que les gains en termes de performances de classificateurs complexes tels que les RN sont négligeables par rapport aux performances d'un classificateur plus simple comme le LDA.
+Toute fois \cite{englehart1999} ont montré que l'importance du choix du classificateur pour la reconnaissance de mouvements à partir de signaux EMG est limitée et que les gains en termes de performances de classificateurs complexes tels que les RN sont négligeables par rapport aux performances d'un classificateur plus simple comme l'analyse linéaire discriminante (LDA).
 
 Ceci étant dit nous nous intéresserons donc plus particulièrement aux deux études principales mettant en œuvre des dispositifs temps réels embarqués.
 
 \cite{Chang1996} utilisent dans leur application embarquée un algorithme utilisant les distances des maximums de vraisemblances (MMLD), tandis que \cite{Tenore2007} utilisent quant à eux un classificateur de type LDA.
 
+La classification EMG est basée sur la création d'une commande à partir de l'interprétation du résultat de la classification. Cette classification est nécessaire lorsque l'on monitore plusieurs muscles participant au même mouvement. 
+
 
 \section{Systèmes Embarqués temps réels et EMG}
 
+Dans un premier temps, il est nécessaire de définir l'appellation "système embarqué" afin de bien comprendre les enjeux que celle-ci représente pour le projet. Un système embarqué est un système électronique et informatique, souvent temps réel spécialisé dans une fonction précise. Ce système, ayant pour contraintes critiques l'espace et la consommation d'énergie. De ces critiques découlent d'autres contraintes qui sont directement liées aux deux citées précédemment : contrainte de mémoire, de puissance de calcul.
+
+Par conséquent, ces systèmes sont en général constitués d'une carte électronique comprenant un contrôleur principal (microcontrôleur ou DSP) et de matériel électronique spécialisé dans une tâche. Le programme informatique exécuté sur le calculateur est partie intégrante du système.
+
 La littérature comprend très peu d'applications embarquées de traitement temps réel de signaux EMG. Ainsi un premier article de référence a été publié par \cite{Chang1996} et rapporte la réalisation du traitement de 4 électrodes EMG afin de contrôler un pointeur informatique dans le but de remplacer une souris. Cette étude fait référence dans notre projet car elle a été développée dans le but de venir en aide aux blessés médullaires de haut niveau. 
 
-Deux études de la même époque traitent ensuite également de traitement embarqué des EMG. \cite{martinez1999} utilisent un dsp, sans toutefois préciser lequel, pour traiter un canal EMG tandis \cite{Prasad1996} ont conçu une carte à base de DSP implantée dans un ordinateur pour acquérir et traiter cinq canaux EMG.
+Deux études de la même époque traitent ensuite également de traitement embarqué des EMG. \cite{martinez1999} utilisent un DSP, sans toutefois préciser lequel, pour traiter un canal EMG tandis que \cite{Prasad1996} ont conçu une carte à base de DSP implantée dans un ordinateur pour acquérir et traiter cinq canaux EMG.
 
 Enfin l'étude la plus récente est celle de \cite{Tenore2007} qui présentent dans leur article avoir réalisé l'une des premières applications embarquées classifiant le signal EMG.
+
+Cette partie sera découpée en plusieurs grandes problématique liées au monde de l'embarqué. Dans un premier temps, la composante temps réelle sera présentée, suivie des méthodes d'acquisition du signal EMG et du matériel utilisé dans la littérature.
 
 \subsection{Le traitement temps réel}
 
@@ -490,21 +481,21 @@ Dans notre cas, et comme fixé dans la littérature du contrôle par EMG, la con
 La plupart des études utilisées pour cette revue utilisent des électrodes de surface pour faire leur reconnaissance de mouvements. Cependant, les manières de filtrer et d'échantillonner sont différentes à travers les études. Cette partie a pour but de les regrouper et de les comparer. 
 
 La plupart des études observent une fréquence d’échantillonnage de 1KHz permettant d’obtenir une bande utile théorique (respectant le théorême de Shannon) pour les signaux EMG allant jusqu’à 500Hz \citep{Chang1996, Chu2007, Englehart2003, Tenore2007}. 
-La plupart des signaux EMG bruts sont amplifiés avec des gains de l’ordre de 2000, sont passé dans des filtres passe bande entre 10 et 450 ou 500 Hz.
+La plupart des signaux EMG bruts sont d'abord amplifiés avec des gains de l’ordre de 2000, puis passés dans des filtres passe bande entre 10 et 500 Hz.
 
 \cite{Peleg2002} ont toutefois opté pour une fréquence d’échantillonnage à 500Hz, avec un filtre anti repliement à 250Hz, alors que \cite{Crawford2005} ont opté pour une fréquence d’échantillonnage à 2048 Hz.
-Lorsqu’elles sont mentionnées, la précision des ADC utilisés varie suivant les études, allant de 16 bits \citep{Englehart2003} à 12 bits \citep{Tenore2007, Fukuda2003, Prasad1996}.
+Lorsqu’elles sont mentionnées, la précision des ADC utilisés varie suivant les études, allant de 16 bits \citep{Englehart2003} à 12 bits \citep{Tenore2007, Fukuda2003, Prasad1996}. Toute fois, aucun article ne fait état d'une précision minimale dans le cas de l'acquisition de signal EMG.
 
 
 \subsection{Matériel informatique utilisé dans la littérature}
 
-La plupart des application trouvées dans la littérature n'ont pas une définition toujours précise de la notion de temps réel. La plupart des articles présentent un système exécuté sur des machines puissantes, sur des systèmes d'exploitation souvent non temps réels. 
+La plupart des applications trouvées dans la littérature n'ont pas une définition toujours précise de la notion de temps réel. La plupart des articles présentent un système exécuté sur des machines puissantes, sur des systèmes d'exploitation souvent non temps réels. 
 
 \cite{Englehart2003} ont réalisé une implémentation temps réelle d’algorithmes de reconnaissance de mouvement à partir de signaux EMG. Cette réalisation a été réalisée sous matlab et son extension de programmation temps réel sur un PC distant.
 
 Si l'on s'interesse plus particulièrement aux applications embarquées, \cite{Chang1996} ont réalisé un montage électronique basé sur un DSP TMS320C31 de chez Texas Instruments. C’est un processeur 32bits comprenant un cœur à virgule flottante tournant à une fréquence de 20MHz, avec quatre niveaux de pipe-line permettant d’exécuter une instruction à chaque cycle d’horloge. Cette architecture leur a permis d’obtenir un temps total de traitement du signal entre 140 et 160 ms ce qui satisfait à la condition évoquée au début de l’étude concernant le respect d’un temps de réponse maximum de 300 ms. Toutefois, cette étude ayant été réalisée en 1996, il existe aujourd’hui quantité de DSP plus rapide et plus efficaces.
 
-Toute fois cette étude, ainsi que celles de \cite{martinez1999} et de \cite{prasad1996} ont aujourd'hui autour d'une quinzaine d'années et le matériel informatique utilisé alors a aujourd'hui beaucoup évolué.
+Toute fois l'étude de \cite{Chang1996}, ainsi que celles de \cite{martinez1999} et de \cite{Prasad1996} ont aujourd'hui autour d'une quinzaine d'années et le matériel informatique utilisé alors a aujourd'hui beaucoup évolué.
 
 \cite{Tenore2007} ont utilisé également un DSP de chez Texas Instruments : un TMS320VC5509A couplé à un ADC dédié de chez National Instruments. Ce DSP est un processor comprenant un cœur à virgule fixe exécutant des actions relativement simples, comme le calcul du ZCR du signal, le calcul de la longueur d’onde du signal et le MAV. Ce DSP leur a permis d'implémenter un classificateur LDA.
 
@@ -843,6 +834,7 @@ La seconde partie concernera le coeur du projet : la détection d'activité musc
 Enfin une dernière partie détaillera le choix du filtre numérique appliqué sur le signal et la manière dont celui-ci est calibré pour chaque sujet et chaque canal EMG.
 
 \subsection{Découpage des fenêtres d'échantillons}
+\label{CHfenetrage}
 
 Comme vu dans la revue de littérature, l'exploitation du signal EMG ne se fait pas échantillon par échantillon, le signal est découpé en fenêtre puis chaque fenêtre est utilisée pour calculer des caractéristiques. Ces caractéristiques sont utilisées dans un classificateur pour déterminer le mouvement effectué par l'utilisateur. 
 
@@ -877,6 +869,7 @@ Puis dans un second temps, le système de vote à la majorité sera détaillé. 
 Enfin, le système de calibration pour chaque muscle et chaque sujet sera présenté.
 
 \subsubsection{Énergie de Teager-Keiser}
+\label{CHtke}
 %TODO faire des tests sur la valeur absolue du tke pour voir si ca marche toujours. faire plein de screen shots a foutre la dedans.
 
 L'étude de \cite{li2007} a montré qu'une caractéristique du signal EMG est très efficace pour la détection d'activité musculaire automatique : l'énergie de Teager-Keiser (TKE). Cette caractéristique s'apparente à un taux de variation simple du signal en comparant un échantillon à son précédent et à son suivant. Le TKE se calcule comme présenté par l'équation \ref{eq:tke}.
@@ -1624,7 +1617,11 @@ Les résultats ayant été présentés, une analyse de ceux-ci sera effectuée d
 
 \section{Performances globales du système}
 
-Dans un premier temps, et sans quantifier les performances du système, le système s'est montré capable, en utilisation normale, et en faisant de grands mouvements impliquant une part de contraction isométrique que le système est capable de commander le bras Jaco à partir de mouvements de l'utilisateur. Toute fois la sensibilité du système sans filtrage ne permet pas de détecter les mouvements de petite amplitude. 
+Dans un premier temps, et sans quantifier les performances du système, le système s'est montré capable, en utilisation normale, et en faisant de grands mouvements impliquant une part de contraction isométrique de commander le bras Jaco à partir de mouvements de l'utilisateur. Toute fois la sensibilité du système sans filtrage ne permet pas de détecter les mouvements de petite amplitude. 
+
+Ainsi, la preuve de concept est validée quand à son architecture générique. Il est possible d'effectuer une commande sur un bras robotique grâce à plusieurs signaux EMG acquis et traités en temps réel.
+
+L'ajout du filtrage du signal a permis d'augmenter grandement la sensibilité globale du système. Cependant, celui-ci est extrêmement demandeur en temps de calculs, et ne peut être implémenté sur les quatre canaux en simultané comme va le présenté la partie suivante.
 
 \section{Chronogrammes et temps de calculs}
 
@@ -1667,7 +1664,7 @@ Cette partie va maintenant interpréter les données acquises lors des expérime
 
 Les résultats ont montré dans un premier temps deux données aberrantes : celles du sujet S004 premièrement, puis celle du sujet S002. 
 
-En effectuant les tests, il s'est avéré qu'un paramètre est majeur dans les performances du système : le placement de l'électrode doit être parfait, car celui-ci influence grandement les résultats, principalement avec filtrage. De plus, il est beaucoup plus difficile de placer correctement l'électrode chez certaines personnes, dépendamment  de la musculature de la personne. En effet, chez une personne très musclée le muscule est facile à voir et l'électrode se place donc facilement. Ajouté à cela, la corpulence de la personne influence également le placement de l'électrode. 
+En effectuant les tests, il s'est avéré qu'un paramètre est majeur dans les performances du système : le placement de l'électrode doit être parfait, car celui-ci influence grandement les résultats, principalement avec filtrage. De plus, il est beaucoup plus difficile de placer correctement l'électrode chez certaines personnes, dépendamment  de la musculature de la personne. En effet, chez une personne très musclée le muscle est facile à voir et l'électrode se place donc facilement. Ajouté à cela, la corpulence de la personne influence également le placement de l'électrode. 
 
 Concernant le sujet S004, on constate sur la figure \ref{fig:effsujets} que celui-ci est le seul sujet présentant une détection d'activité beaucoup plus faible que tous les autres sujets, et également le seul sujet présentant une performance plus élevée du système sans filtrage que celui avec filtrage (excepté le sujet S002 qui sera présenté juste après). Le sujet S004 est également le seul n'ayant pas pu physiquement atteindre l'angle de 80 degrés, comme vu sur la figure \ref{fig:anglesmax}. Les résultats obtenus par le sujet S004 sont donc à interpréter comme un mauvais placement d'électrode sur celui-ci. 
 
@@ -1738,7 +1735,7 @@ Ainsi, on effectue les mêmes calcus pour les intervalles 30-80 degrés, 50-80 d
 	\caption{Tableau récapitulatif des performaces du système et du filtrage du signal}
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
-			{\bf Intervalle} & {\bf 10-80 degrés} & {\bf 30-80 degrés} & {\bf 40-80 degrés} & {\bf 50-80 degrés} & {\bf 60-80 degrés} & {\bf 70-80 degrés} \\
+			{\bf Intervalle (degrés)} & {\bf 10-80} & {\bf 30-80} & {\bf 40-80} & {\bf 50-80} & {\bf 60-80} & {\bf 70-80} \\
 	  \hline
 			{\bf Eff. avec filtre} & 59.16\% & 78.89\% & 91.55\% & 98.33\% & 100\% & 100\% \\
 	  \hline
@@ -1750,6 +1747,12 @@ Ainsi, on effectue les mêmes calcus pour les intervalles 30-80 degrés, 50-80 d
 	\label{tab:perf}
 \end{tableap}
 
+Ainsi dans le protocole de validation, il était mentionné qu'une efficacité de 75\% permettrait de dire que le système est acceptable. Cet objectif n'a pas été rempli sur l'intervalle angulaire total, mais a été atteint sur l'intervalle de 30 à 80 degrés. 
+
+Les tests avaient également pour but de valider les performances du filtrage, et de chiffrer le gain que celui-ci apporte. On a pu voir que sur le global, le filtrage apporte environ 33\% de gain en performance sur l'intervalle total, ce qui correspond à un angle moyen supplémentaire d'environ 26 degrés. 
+
+Le filtrage est donc un élément clef de la performance du système. La suite du projet devra donc en tenir compte et mettre en avant l'implémentation temps réelle du filtre sur les quatre canaux EMG en simultané. 
+
 \begin{conclusion}
 
 La réalisation du projet a permis d'établir qu'un système de contrôle hybride d'une aide technique complexe est possible en utilisant le signal EMG en temps réel et sur un dispositif embarqué. La preuve de concept faisant l'objet initial du projet avec Kinova a donc été validée. 
@@ -1759,6 +1762,8 @@ La réalisation du système a également permis de fixer les outils mathématiqu
 Le système a également pu être testé sur une dizaine de personne afin de valider la cohérence de fonctionnement, ainsi que son intervalle de son fonctionnement et sa sensibilité.
 
 Les mesures de temps de calculs ont permis de montrer que le PIC32 est trop lent pour effectuer les calculs les plus complexes relatifs au filtrage tout en conservant les spécifications requises. 
+
+Toute fois, les tests sur sujets réels ont permis de montrer l'efficacité du filtrage du signal en quantifiant son gain de performance. La preuve de concept qui faisait l'objectif du projet a donc été atteinte. Toute fois, le projet en lui même n'est qu'en partie atteint. En effet, il n'est pas possible d'effectuer un filtrage simultané sur les quatre canaux EMG en utilisant l'architecture basée sur le PIC32. Toute fois, le système est viable si développé sur une architecture plus performante, et pourra donc être réalisé dans la suite du projet.
 
 \end{conclusion}
 
