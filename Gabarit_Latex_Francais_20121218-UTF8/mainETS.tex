@@ -499,6 +499,18 @@ Toute fois l'étude de \cite{Chang1996}, ainsi que celles de \cite{martinez1999}
 
 \cite{Tenore2007} ont utilisé également un DSP de chez Texas Instruments : un TMS320VC5509A couplé à un ADC dédié de chez National Instruments. Ce DSP est un processor comprenant un cœur à virgule fixe exécutant des actions relativement simples, comme le calcul du ZCR du signal, le calcul de la longueur d’onde du signal et le MAV. Ce DSP leur a permis d'implémenter un classificateur LDA.
 
+\section{Synthèse}
+
+L'étude de la littérature présente différentes applications réalisées dans le contrôle d'appareils externes grâce aux signaux EMG. Toute fois, peu d'articles mentionnent avoir une chaîne complète qui fonctionne, c'est à dire jusqu'à l'action sur l'appareil réel contrôlé par EMG.
+
+\cite{Tenore2007} présentent leur application comme une des premières applications temps réelle embarquée permettant de contrôler un bras robotique prothétique. Toutefois, l'article présente l'efficacité du système pour la reconnaissance de mouvement, mais aucune mention n'est faite du résultat sur le contrôle du bras robotique. Aucune photo du montage complet n'est montrée, et aucune stratégie de communication entre leur système et le robot n'est présentée. Ceci laisse à penser que le projet n'est pas encore arrivé au stade de contrôle du bras réel, et n'est encore qu'au stade de développement. 
+
+De la même manière, \cite{chang1996} présente les résultats de reconnaissance de son système sans jamais parler de stratégie de communication avec le périphérique sensé être contrôlé par le système. 
+
+De plus, aucun système de la littérature sur le traitement embarqué de l'EMG ne traite la question de la sensibilité. Les types de mouvement effectués sont toujours "une rotation de la tête" ou bien "une élévation des épaules". Il n'est nulle part précisé si le mouvement effectué est de grande ou de faible amplitude. Nous verrons pourtant dans notre système que ce paramètre est d'une importance cruciale, étant donné que l'amplitude du signal EMG, dépendant de l'amplitude du mouvement effectué, influe énormément sur les performances du système.
+
+En résumé la littérature sur la classification de mouvements à partir de signaux EMG présente en grande partie des résultats présentant des pourcentages de reconnaissance, et pour une grande part ne parle pas de stratégie de contrôle du périphérique sensé être contrôlé par le système. 
+
 \chapter{Problématique et Objectifs du Projet}
 
 Aujourd'hui, l'avancée des technologies dans le domaine de la santé a permis de gros progrès médicaux, y compris dans le domaine de la réadaptation et de l'aide à la personne. Cette avancée a permis la conception d'aides techniques de plus en plus évoluées et capable d'améliorer sensiblement les condition de vie des personnes dépendantes, et plus particulièrement des blessés médullaires. 
@@ -507,11 +519,13 @@ Cependant, les personnes les plus sévèrement touchées par des blessures de la
 
 Connaissant ces paramètres, la société Kinova produisant le bras robotique manipulateur Jaco, a décidé de développer une nouvelle interface de contrôle de Jaco afin que des personnes ne possédant plus l'usage de leurs doigts soient capable d'exploiter le potentiel du robot.
 
-Pour cela, l'utilisation du signal EMG a été préconisée à la suite du projet de maîtrise \cite{Maheu2011}, aujourd'hui employée de Kinova. L'enjeu de ce projet est donc en grande partie économique pour la societé Kinova, qui sera alors en mesure d'élargir sont panel de clients potentiels.
+Pour cela, l'utilisation du signal EMG a été préconisée à la suite du projet de maîtrise de \cite{Maheu2011}. L'enjeu de ce projet est donc en grande partie économique pour la societé Kinova, qui sera alors en mesure d'élargir son panel de clients potentiels.
 
-L'étude de la littérature a également permis de constater que les applications de contrôles par EMG en temps réel étaient rares et encore plus lorsqu'on en vient à parler d'application embarquée.
+L'étude de la littérature a également permis de constater que les applications de contrôle par EMG en temps réel étaient rares et encore plus lorsqu'on en vient à parler d'application embarquée. Les résultats que ces études présentent montrent des systèmes ayant pour but le contrôle d'un dispositifs souvent robotique. Cette finalité de contrôle n'est souvent pas abordée du tout par les articles qui concentrent leur contenu sur les performances des classificateurs. 
 
-Ceci permet ainsi d'ajouter un enjeu purement scientifique au projet en participant à l'avancée scientifique du monde des technologies de la santé.
+Ces résultats présentent des systèmes très différents par leur conceptions et leurs applications. Ainsi les résultats ne se basant pas sur les mêmes standards sont difficiles à comparer de manière pertinente.
+
+Ceci permet ainsi d'ajouter un enjeu scientifique au projet en participant à l'avancée scientifique du monde des technologies de la santé.
 
 Les objectifs du projet sont les suivants : 
 
@@ -524,7 +538,7 @@ Les objectifs du projet sont les suivants :
 
 Le but principal n'est pas la réalisation d'un produit fini, mais l'établissement d'une preuve de concept pour cette application. La réalisation doit donc permettre de dire si la réalisation d'un tel produit est faisable ou non, et quels choix sont préconisés pour ce faire.
 
-Le projet est réalisé en partenariat avec le CRSNG et la société Kinova sous la forme d'un projet ENGAGE. 
+Le projet est réalisé en partenariat avec le CRSNG et la société Kinova sous la forme d'un projet d'engagement partenarial financé par le CRSNG. 
 
 \chapter{Méthodologie}
 \label{CHmethodo}
@@ -547,22 +561,34 @@ Un autre muscle à considérer serait également le muscle occipito-frontal qui 
 
 Une autre solution serait d'utiliser les muscles fléchisseurs et extenseurs du poignet. Toute fois, ces muscles sont innervés respectivement par les nerfs médian et radial dont les faisceaux passent par les dernières vertèbres cervicales ainsi que la première vertèbre thoracique. Ainsi, les blessés médullaire de haut niveau n'auront plus suffisamment, voir plus du tout d'activité résiduelle dans ces muscles.
 
-Un point vient également appuyer la sélection des muscles trapèzes et sterno-cléïdo mastoïdiens et qui va influencer la manière de développer le projet : l'acquisition de signaux EMG sur ces muscles n'implique pas de "cross-talk" c'est à dire qu'on ne voit pas l'activité d'un muscle sur l'enregistrement des autres. Cette observation a été réalisée au début de la réalisation du projet, après avoir effectué des tests préliminaires. Ainsi, en faisant des mouvements simples de rotation de la tête et d'élévation des épaules, on ne voit qu'un seul muscle s'activer. Cette considération permet de faire un choix drastique sur la complexité du projet : on choisit de ne monitorer que des mouvements unitaires simples n'activant qu'un seul muscle. 
+Un point vient également appuyer la sélection des muscles trapèzes et sterno-cléïdo mastoïdiens et qui va influencer la manière de développer le projet : l'acquisition de signaux EMG sur ces muscles n'implique pas de couplage c'est à dire qu'on ne voit pas l'activité d'un muscle sur l'enregistrement des autres. Cette observation a été réalisée au début de la réalisation du projet, après avoir effectué des tests préliminaires. Ainsi, en faisant des mouvements simples de rotation de la tête et d'élévation des épaules, on ne voit qu'un seul muscle s'activer. Cette considération permet de faire un choix drastique sur la complexité du projet : on choisit de ne monitorer que des mouvements unitaires simples n'activant qu'un seul muscle. 
 
-Ainsi, on est capable d'établir un lien direct entre l'activité musculaire d'un muscle particulier et le mouvement réalisé. Lorsqu'une activité est détectée sur un muscle sterno-cléïdo mastoïdien, c'est qu'une rotation de la tête a été effectuée, et si une activité est détectée sur un trapèze, c'est une élévation de l'épaule qui a été réalisée.
+Ainsi, on est capable d'établir un lien direct entre l'activité musculaire d'un muscle particulier et le mouvement réalisé. Lorsqu'une activité est détectée sur un muscle sterno-cléïdo mastoïdien, c'est qu'une rotation de la tête a été effectuée, et si une activité est détectée sur un trapèze, c'est une élévation de l'épaule qui a été réalisée. Détecter une élévation des deux épaules et une rotation de la tête d'un côté en même temps est également possible.
 
-Ce postulat permet de réduire le temps de calcul nécessaire au traitement des signaux en enlevant complètement l'étape de classification. Ce choix comporte des points négatifs et des points positifs. Un atout majeur est de retirer toute la charge de calculs nécessaire pour le classificateur, et de concentrer ces calculs sur la détection d'activité musculaire ainsi que sur le filtrage numérique du signal. En contrepartie, le nombre de mouvements reconnus par le systèmes est réduit à quatre mouvements unitaires : un pour chaque muscle. 
+Ce postulat permet de réduire le temps de calcul nécessaire au traitement des signaux en enlevant complètement l'étape de classification. Ce choix comporte des points négatifs et des points positifs. Un atout majeur est de retirer toute la charge de calcul nécessaire pour le classificateur, et de concentrer ces calculs sur la détection d'activité musculaire ainsi que sur le filtrage numérique du signal. En contrepartie, le nombre de mouvements reconnus par le systèmes est réduit à quatre mouvements unitaires : un pour chaque muscle. 
 
 Cependant cette perte en diversité de mouvements pourra être en partie comblée par des stratégies de communication différentes pour ces mouvements. En effet, on pourra effectuer des mouvements prolongés ou bien des mouvements composés de plusieurs activations courtes répétées. Ces stratégies permettront d'étendre la diversité de commande tout en ne reconnaissant que quatre mouvements. 
 
 
-\section{Architecture Matérielle}\label{CHarchimat}
+\section{Architecture Matérielle}
+\label{CHarchimat}
 
-Une fois le choix des muscles arrêté, les premiers choix a effectuer seront les choix architecturaux, et dans un premier temps, ceux concernant l'architecture matérielle. Ce chapitre présente les choix matériels effectués pour la conception du système tout en argumentant pourquoi chaque choix a été effectué et dans quel cadre.
+Une fois le choix des muscles arrêté, les premiers choix a effectuer seront les choix architecturaux, et dans un premier temps, ceux concernant l'architecture matérielle. Ce chapitre présente les choix matériels effectués pour la conception du système tout en argumentant pourquoi chaque choix a été effectué et dans quel cadre. Le schéma matériel global est présenté par la figure \ref{fig:archiMatTot}.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=\linewidth]{Figures/archiMatTot.png}
+	}
+	\caption{Schéma bloc présentant le système global}
+	\label{fig:archiMatTot}
+\end{figure}
+
+Les composantes de ce schéma vont être détaillées séparément tout au long de ce chapitre.
 
 \subsection{Électrodes}
 
-Le choix des électrodes est une phase importante du projet car leur choix détermine la charge de travail qui va en résulter. En effet, des électrodes donnant un signal brut, très faible (la tension d'un signal EMG étant de l'ordre du millivolt) est impossible a exploiter tel quel et nécessite des étape de filtrage et d'amplification avant de pouvoir être échantillonné. Ainsi choisir ce type d'électrode ajoute une étape de conception électronique supplémentaire afin que le signal soit exploitable.
+Le choix des électrodes est une phase importante du projet car leur choix détermine la charge de travail qui va en résulter. En effet, des électrodes donnent un signal brut très faible (la tension d'un signal EMG étant de l'ordre du millivolt). Ce signal est impossible a exploiter tel quel et nécessite des étape de filtrage et d'amplification avant de pouvoir être échantillonné. Ainsi choisir ce type d'électrode ajoute une étape de conception électronique supplémentaire afin que le signal soit exploitable.
 
 Le LIO travaille depuis maintenant plusieurs années avec des électrodes construites par la compagnie Delsys : les électrodes DE-2.3 et se présentent comme sur la figure \ref{fig:de2.3}. 
 
@@ -616,16 +642,16 @@ On étudie donc la classe de microcontrôleurs souvent utilisée dans la littér
 Ces microcontrôleurs sont divisés en plusieurs gamme présentées dans le tableau \ref{tab:tms320}.
 
 \begin{table}[ht]
-	\caption{Gammes de microcontrôleurs/DSP TMS320 de Texas Instrument }
-		\begin{tabular}{|c|c|c|c|}
+	\caption{Gammes de microcontrôleurs/DSP TMS320 de Texas Instrument, le prix représente le coût du composant seul. }
+		\begin{tabular}{|c|c|c|c|c|}
 		\hline
-			& C5000 & C6000 & Keystone Multicore\\
+			& C5000 & C6000 & Keystone Multicore & PIC32\\
 	    \hline
-	    	Horloge & jusqu'à 300MHz & jusqu'à 1GHz & jusqu'à 16GHz\\
+	    	Horloge & jusqu'à 300MHz & jusqu'à 1GHz & jusqu'à 16GHz & 80MHz\\
 	    \hline
-			Mémoire vive & 320Ko & 450Ko & DDR3 externe\\
+			Mémoire vive & 320Ko & 450Ko & DDR3 externe & 128Ko\\
 	    \hline
-	    	Prix du composant seul & \$2 - \$10 & \$5 - \$25 & \$30 - \$160\\
+	    	Prix & \$2 - \$10 & \$5 - \$25 & \$30 - \$160 & \$1.5-\$6.5\\
 	    \hline
 		\end{tabular}
 	\label{tab:tms320}
@@ -635,7 +661,9 @@ Les calculateur de type TMS320 sont des composants extrêmement gros et coûteux
 
 Il en va de même pour les calculateurs de chez Texas Instruments moins performants, les composants ont de bonnes caractéristiques mais nécessitent l'utilisation d'une suite logicielle coûteuse. 
 
-Le LIO possédait depuis quelques mois une exemplaire d'un microcontrôleur PIC32 produit par la societé Microchip ainsi que les outils hardware de programmation et de debug fournis avec celui-ci. Ce microcontrôleur répond aux critères de choix pour le projet : il possède un ADC 10 bits qui sera suffisant pour le projet et pouvant aller jusqu’à 16 canaux. Il tourne à une cadence de 80 MIPS et dispose de beaucoup de périphériques de communication dont plusieurs liaisons séries ainsi que qu’un bus CAN. 
+Cependant, par expérience, même chez Texas Instruments, certains contrôleurs sont parfois difficile à faire fonctionner. C'est le cas par exemple du microcontrôleur msp430 utilisé sur la carte de développement ez430-rf2500. Une quantité de personne importante ne parvient pas à faire marcher ce contrôleur correctement sans que Texas n'y amène aucun élément correctif.
+
+Le LIO possédait depuis quelques mois que les outils hardware de programmation et de debug de Microchip. Le microcontrôleur développé par Microchip répondant le mieux aux critères de choix pour le projet est le PIC32 : il possède un ADC 10 bits qui sera suffisant pour le projet et pouvant aller jusqu’à 16 canaux. Il tourne à une cadence de 80 MIPS pour une fréquence d'horloge de 80 MHz et dispose de beaucoup de périphériques de communication dont plusieurs liaisons séries ainsi que qu’un bus CAN. 
 
 Ce microcontrôleur possède un cœur à virgule fixe, et intègre également dans son jeu d'instructions des instructions DSP flottantes incluant divers outils dont les FFT. La version utilisée possède également 128Ko de mémoire vive afin de pouvoir stocker une grande quantité de données.
 
@@ -645,13 +673,15 @@ Ce microcontrôleur possède un cœur à virgule fixe, et intègre également da
 		\includegraphics[width=0.42\linewidth]{Figures/pic32.jpg}
 	}
 	\caption{Microcontrôleur PIC32 utilisé dans le projet. Le microcontrôleur est le gros composant au milieu de la carte. Les composants nécessaire au bon fonctionnement du PIC32 sont également présents sur la carte ainsi qu'une interface de programmation et de debug via usb.}
-	\label{fig:inverseur}
+	\label{fig:pic32}
 \end{figure}
 
 
 Un autre avantage du PIC32 est que la suite logicielle permettant son développement peut être utilisée dans un premier temps en version gratuite. Cette version n'inclut pas les options d'optimisation de code pendant la compilation, mais ces options ne sont pas indispensables à la réalisation du projet. 
 
-Pour des raisons économiques et pratiques, le PIC32, comme présenté sur la figure \ref{fig:pic32} a donc été choisi pour réaliser le système.
+Par expérience, les microcontrôleurs de la societé Microchip sont souvent plus fiables que les microcontrôleurs Atmel, qui sont le concurrent principal de Mircochip.
+
+Pour des raisons économiques, d'expérience et pratiques, le PIC32, comme présenté sur la figure \ref{fig:pic32} a donc été choisi pour réaliser le système.
  
 Le modèle choisi pour le projet est le PIC32MX795F512L. C'est le modèle le plus rapide et le plus gros de la gamme. C'est également celui possédant le plus d'entrées et sorties différentes, ainsi que la quantité de mémoire vive la plus grande des microcontrôleurs produits par Microchip.
 
@@ -799,14 +829,6 @@ Une UART (Universal asynchronous receiver transmitter) du PIC32 est utilisée po
 
 Si l'on prend maintenant un point de vue plus haut, nous sommes en mesure d'étudier le système dans son ensemble comme le présente la figure \ref{fig:archiMatTot}.
 
-\begin{figure}
-	\centering
-	\fbox{
-		\includegraphics[width=\linewidth]{Figures/archiMatTot.png}
-	}
-	\caption{Schéma bloc présentant le système global}
-	\label{fig:archiMatTot}
-\end{figure}
 
 Il est nécessaire de préciser que dans cette architecture, l'ordinateur ne sert que d'intermédiaire entre le microcontrôleur et Jaco. En effet, le microcontrôleur effectue la totalité des calculs. Le mouvement effectué par l'utilisateur est envoyé sur la liaison série à l'ordinateur qui transmet la commande choisie à Jaco via la liaison USB. 
 
@@ -823,7 +845,7 @@ Il est également à noter que cette architecture va induire un délai de traite
 
 Ainsi, les temps de traitement mesurés caractériseront uniquement la partie calculatoire effectuée sur le PIC32, et non le temps entre le signal perçu par l'électrode et la commande appliquée sur le bras robotique.
 
-\section{Choix des Caractéristiques du Signal à utiliser et des Outils algorithmiques et Mathématiques}
+\section{Choix des caractéristiques du signal à utiliser et des outils algorithmiques et mathématiques}
 
 Une fois les choix matériel effectués et le calculateur choisi, l'étape de réalisation suivante est le choix des calculs a effectuer pour le bon fonctionnement de la détection d'activité musculaire. 
 
@@ -933,7 +955,7 @@ Une fois les tonus musculaires recueillis, on sait maintenant qu'à chaque mouve
 
 Toutefois, il est peu probable que le tonus maximum soit atteint pendant un mouvement. En effet, une contraction isométrique produit un signal beaucoup plus gros qu'une contraction dans un mouvement lent. Le seuil de détection devra donc se trouver entre les deux tonus, le plus proche possible du tonus de repos sans qu'un bruit occasionnellement plus élevé sur le canal ne puisse passer au dessus du seuil. 
 
-Le seuil a donc été fixé de manière heuristique à $1/4$ de l'intervalle entre le tonus de repos et le tonus maximum. La figure \ref{fig:seuilDetection} met en image la manière dont le seuil est fixé pour chaque muscle.
+Le seuil a donc été fixé de manière expérimentale à 25\% de l'intervalle entre le tonus de repos et le tonus maximum. La figure \ref{fig:seuilDetection} met en image la manière dont le seuil est fixé pour chaque muscle.
 
 \begin{figure}
 	\centering
@@ -982,11 +1004,12 @@ Le résultat de ce système de vote à la majorité est présenté par la figure
 
 On observe qu'il n'y a plus de retour à 0 de la détection d'activité, et les faux positifs occasionnels ont également été retirés. Ce vote à la majorité provoque toute fois une légère latence de détection, en effet, il faut attendre que 16 fenêtres sur 32 soient au dessus du seuil de détection pour que l'activité soit détectée.
 
-\subsection{Filtrage}\label{CHfiltrage}
+\subsection{Filtrage par décision dirigée}
+\label{CHfiltrage}
 
 Dans un premier temps, le système a été réalisé sans filtrage numérique. Ainsi le système fonctionnait uniquement en se basant sur la détection d'activité musculaire décrite au chapitre \ref{CHdetect}.
 
-Les tests ont été concluants concernant la détection d'activité seule. Cependant le système a présenté une faiblesse : pour être détecté, un mouvement doit être très ample et comporter une composante isométrique. Les mouvements simples et lents ne demandant pas beaucoup de force ne sont pas détectés par le système. 
+Les tests ont été concluants concernant la détection d'activité seule. Cependant le système a présenté une faiblesse : pour être détecté, un mouvement doit être très ample et comporter une composante isométrique forte. Les mouvements simples et lents ne demandant pas beaucoup de force ne sont pas détectés par le système. 
 
 En résumé, le système manque de précision, et son utilisation chez des personnes blessées médullaires ayant potentiellement moins de tonus musculaire qu'une personne en bonne santé est alors compromise. 
 
@@ -1008,13 +1031,22 @@ Pour caractériser le bruit, on utilise les caractéristiques fréquentielles du
 
 Puis à chaque nouvelle fenêtre, on compare le spectre d'amplitude de cette fenêtre à celui de la bande de base pour calculer une probabilité de présence du bruit. Cette probabilité permet de fixer un gain qui amplifiera ou écrasera le spectre d'amplitude et donc par extension, le signal.
 
-Il est également à noter que l'on ne veut pas créer de déphasage du signal. La phase du signal sera donc isolée de la fft pour être réutilisée sans modification pour reconstruire le signal après que le spectre d'amplitude a été transformé.  
+Il est également à noter que l'on ne veut pas créer de déphasage du signal. La phase du signal sera donc isolée de la FFT pour être réutilisée sans modification pour reconstruire le signal après que le spectre d'amplitude a été transformé. Le schéma \ref{fig:filtre} présente le fonctionnement algorithmique global du filtre. Cette méthode découle de celle mise au point par \cite{plapous2006} dans le domaine du traitement de signal acoustique.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.7\linewidth]{Figures/filtre.png}
+	}
+	\caption{Fonctionnement algorithmique du filtre}
+	\label{fig:filtre}
+\end{figure}
 
 \subsubsection{Calibrage du Filtre}
 
 Une fois le concept du filtre posé, le mode de fonctionnement précis du filtre va maintenant être détaillé. La première étape de la réalisation du filtre est son calibrage, ou l'enregistrement de la bande de base. 
 
-Le calibrage du filtre s'effectue sur une partie de signal où l'on est sur qu'aucun EMG ne sera présent. On demande donc à l'utilisateur de ne pas bouger pendant l'acquisition de la bande de base. 
+Le calibrage du filtre s'effectue sur une partie de signal où l'on est sur qu'aucune activité musculaire ne sera présente. On demande donc à l'utilisateur de ne pas bouger pendant l'acquisition de la bande de base. 
 
 Le signal est alors acquis par fenêtre. Lorsqu'une fenêtre est acquise, on la normalise, c'est à dire qu'on retire sa moyenne à chaque échantillon (eq:normalCalib où $NFFT$ = 16), puis on calcule sa FFT (équation \ref{eq:fftcalib}).
 
@@ -1026,21 +1058,21 @@ Le signal est alors acquis par fenêtre. Lorsqu'une fenêtre est acquise, on la 
    fft = FFT_{16}(x(k)) 
 \end{align}
 
-La $fft$ calculée par cette opération est donc un tableau de 16 nombres complexes représentant la transformée de fourrier de la fenêtre.
+La FFT calculée par cette opération est donc un tableau de 16 nombres complexes représentant la transformée de fourrier de la fenêtre. En effet, lorsqu'un signal est réel, sa FFT est toujours complexe.
 
-Une fois cette FFT calculée, on met la phase du signal de côté pour ne garder que le spectre d'amplitude $M$ de la fenêtre (équation \ref{eq:amplCalib}).
+Une fois cette FFT calculée, on sauvegarde la phase du signal pour ne garder que le spectre d'amplitude $M$ de la fenêtre (équation \ref{eq:amplCalib}).
 
 \begin{align}\label{eq:amplCalib}
-   M_{k=1}^{k=NFFT}(k) = \Vert fft(k) \Vert^2 
+   M_{k=1}^{k=NFFT}(k) = \Vert fft(k) \Vert^2
 \end{align}
 
-On garde ensuite en mémoire ce spectre d'amplitude, puis on répète l'opération sur 20 fenêtres. Une fois les 20 spectres d'amplitude acquis, on calcule le spectre d'amplitude moyen de ces 20 fenêtres (équation \ref{eq:ampMoyCalib}).
+Ici, $k$ représente le nombre d'échantillons d'une fenêtre de signal. On garde ensuite en mémoire ce spectre d'amplitude, puis on répète l'opération sur 20 fenêtres. Une fois les 20 spectres d'amplitude acquis, on calcule le spectre d'amplitude moyen de ces 20 fenêtres (équation \ref{eq:ampMoyCalib}).
 
 \begin{align}\label{eq:ampMoyCalib}
    BandeBase = \frac{\sum_{n=1}^{20}amplitude(n)}{20}
 \end{align}
 
-Ce spectre d'amplitude moyen constitue la bande de base qui sera comparée à chaque fenêtre du signal pour déterminer à chaque fenêtre la probabilité de présence du bruit dans le signal.
+Ici, $n$ représente le nombre de FFT gardées en mémoire pour le calcul de la bande de base. Ce spectre d'amplitude moyen constitue la bande de base qui sera comparée à chaque fenêtre du signal pour déterminer à chaque fenêtre la probabilité de présence/absence du bruit dans le signal.
 
 \subsubsection{Description du Filtre}
 
@@ -1072,15 +1104,19 @@ On compare ensuite la probabilité obtenue avec la celle obtenue avec le spectre
    eta(k) = \alpha * \frac{M(k-1)}{M_{Bande de base}} + (1 - \alpha) * postsnr(k)
 \end{align}
 
+$eta$ est l'estimation de présence d'un signal en comparaison de l'échantillon précédent. $\alpha$ est un coefficient fixé dans l'algorithme permettant de définir quand on est en présence de bruit ou d'un signal. Il est en général fixé à une valeur proche de 1, comme 0.999 dans le cas du système.
+
 \begin{align}\label{eq:newMagEta}
    M_{new}(k) = \frac{eta}{eta+1} * M(k)
 \end{align}
 
-On calcule ensuite le gain à appliquer sur le spectre d'amplitude en comparant l'amplitude sur laquelle on a appliqué les probabilités a priori avec le spectre d'amplitude moyen (équation \ref{eq:tsnr1}, \ref{eq:tsnr2}, \ref{eq:Gtnsr} et \ref{eq:Gtsnr2}).
+$M_{new}$ correspond à la nouvelle amplitude sur laquelle on a déterminé la probabilité de présence de bruit. On calcule ensuite le gain à appliquer sur le spectre d'amplitude en comparant l'amplitude sur laquelle on a appliqué les probabilités a priori avec le spectre d'amplitude moyen (équation \ref{eq:tsnr1}, \ref{eq:tsnr2}, \ref{eq:Gtnsr} et \ref{eq:Gtsnr2}).
 
  \begin{align}\label{eq:tsnr1}
    tsnr(k) = \frac{M_{new}(k)}{M_{Bande de base}}
 \end{align}
+
+Ici $tsnr$ représente le rapport signal/bruit de la nouvelle amplitude comparée la bande de base. Elle est utilisée pour calculer $Gtsnr$ qui correspond au gain à appliquer sur l'amplitude pour trouver l'amplitude finale.
 
  \begin{align}\label{eq:tsnr2}
    Gtsnr(k) = \frac{tsnr(k)}{tsnr(k)+1}
@@ -1104,7 +1140,7 @@ Une fois la nouvelle amplitude calculée, il ne reste plus qu'à reconstruire la
    \Im(fft(k)) = -M_{new}(k) * sin(\phi(k))
 \end{align}
 
-Une fois fait, on effectue la transformée de fourrier inverse pour retrouver le signal EMG filtré.
+Une fois fait, on effectue la transformée de fourrier inverse pour retrouver le signal EMG filtré. Comme le PIC32 ne possède pas de fonction FFT inverse, on effectue la FFT du conjugé du complexe obtenu après filtrage.
 
 \section{Architecture Logicielle}
 
@@ -1154,7 +1190,7 @@ L'UART du PIC32 quant à elle possède deux interruptions, une pour l'envoi de d
 
 Une fois le fonctionnement global du PIC32 et de ses interruptions décrit, l'algorithme du programme principal ainsi que ceux des interruptions peuvent maintenant être présentés en détail. 
 
-Nous nous intéressons dans un premier temps au fonctionnement du programme principal, puis les algorithmes des deux interruptions principales seront détaillés. 
+Nous nous intéresserons dans un premier temps au fonctionnement du programme principal, puis les algorithmes des deux interruptions principales seront détaillés. 
 
 Le programme principal du firmware commence par initialiser tous les périphériques du PIC32 qui seront utilisés, ainsi que l'horloge principale et les configurations des interruptions. C'est à ce moment que l'ADC et le port série sont configurés. 
 
@@ -1180,7 +1216,7 @@ Cette partie montre comment le signal est traité, présentons maintenant commen
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.6\linewidth]{Figures/adc.png}
+		\includegraphics[width=0.6\linewidth]{Figures/adc2.png}
 	}
 	\caption{Routine d'interruption du firmware.}
 	\label{fig:adc}
@@ -1232,7 +1268,7 @@ Tous ces étages réalisés permettent de faire abstraction de toute la partie g
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.8\linewidth]{Figures/mono.png}
+		\includegraphics[width=0.9\linewidth]{Figures/mono.png}
 	}
 	\caption{Interfaçage de l'API Kinova à travers Mono.}
 	\label{fig:mono}
@@ -1381,38 +1417,76 @@ A chaque acquisition, un monitoring sera effectué sur le programme Monitor afin
 Les figures \ref{fig:validExAng}, \ref{fig:validExEMG}, \ref{fig:validExVit} et \ref{fig:validExOnset} montrent un exemple de la forme que prendront les données récoltées lors d’une acquisition sur une personne : (A20, A30, A40, A50, A60 correspondent à l’angle de rotation effectué, et V60, V90, V120, V160 et V200 correspondent aux vitesses du métronome pour l’acquisition)
 
 \begin{figure}
-	\begin{minipage}{0.40\textwidth}
-		\fbox{
-			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
-		}
-		\caption{Exemple de données d'angles de rotation de la tête}
-		\label{fig:validExAng}
-	\end{minipage}
-	\hspace{0.1\textwidth}
-	\begin{minipage}{0.40\textwidth}
-		\fbox{
-			\includegraphics[width=\textwidth]{Figures/validExVit.png}
-		}
-		\caption{Exemple de données de vitesse anglulaires de rotation de la tête}
-		\label{fig:validExVit}
-	\end{minipage}
-	\vspace*{20mm}
-	\begin{minipage}{0.40\textwidth}
-		\fbox{
-			\includegraphics[width=\textwidth]{Figures/validExEMG.png}
-		}
-		\caption{Exemple de données d'EMG de rotation de la tête}
-		\label{fig:validExEMG}
-	\end{minipage}
-	\hspace{0.1\textwidth}
-	\begin{minipage}{0.40\textwidth}
-		\fbox{
-			\includegraphics[width=\textwidth]{Figures/validExOnset.png}
-		}
-		\caption{Exemple de données de détection d'activité }
-		\label{fig:validExOnset}
-	\end{minipage}
+	\centering
+	\fbox{
+		\includegraphics[width=0.95\linewidth]{Figures/validExAngle.png}
+	}
+	\caption{Exemple de données d'angles de rotation de la tête.}
+	\label{fig:validExAng}
 \end{figure}
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.95\linewidth]{Figures/validExVit.png}
+	}
+	\caption{Exemple de données de vitesse anglulaires de rotation de la tête.}
+	\label{fig:validExVit}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.95\linewidth]{Figures/validExEMG.png}
+	}
+	\caption{Exemple de données d'EMG de rotation de la tête.}
+	\label{fig:validExEMG}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.95\linewidth]{Figures/validExOnset.png}
+	}
+	\caption{Exemple de données de détection d'activité.}
+	\label{fig:validExOnset}
+\end{figure}
+
+%\begin{figure}
+%	\begin{minipage}{0.40\textwidth}
+%		\fbox{
+%			\includegraphics[width=\textwidth]{Figures/validExAngle.png}
+%		}
+%		\caption{Exemple de données d'angles de rotation de la tête}
+%		\label{fig:validExAng}
+%	\end{minipage}
+%	\hspace{0.1\textwidth}
+%	\begin{minipage}{0.40\textwidth}
+%		\fbox{
+%			\includegraphics[width=\textwidth]{Figures/validExVit.png}
+%		}
+%		\caption{Exemple de données de vitesse anglulaires de rotation de la tête}
+%		\label{fig:validExVit}
+%	\end{minipage}
+%	\vspace*{20mm}
+%	\begin{minipage}{0.40\textwidth}
+%		\fbox{
+%			\includegraphics[width=\textwidth]{Figures/validExEMG.png}
+%		}
+%		\caption{Exemple de données d'EMG de rotation de la tête}
+%		\label{fig:validExEMG}
+%	\end{minipage}
+%	\hspace{0.1\textwidth}
+%	\begin{minipage}{0.40\textwidth}
+%		\fbox{
+%			\includegraphics[width=\textwidth]{Figures/validExOnset.png}
+%		}
+%		\caption{Exemple de données de détection d'activité }
+%		\label{fig:validExOnset}
+%	\end{minipage}
+%\end{figure}
+
+
 
 
 Ces données représentent les valeurs brutes enregistrées grâce aux capteurs inertiel et EMG. 

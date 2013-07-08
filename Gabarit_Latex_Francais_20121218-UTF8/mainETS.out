@@ -15,53 +15,54 @@
 \BOOKMARK [2][-]{subsection.27}{Le traitement temps r\351el}{section.26}% 15
 \BOOKMARK [2][-]{subsection.28}{M\351thodes d'acquisition du signal}{section.26}% 16
 \BOOKMARK [2][-]{subsection.29}{Mat\351riel informatique utilis\351 dans la litt\351rature}{section.26}% 17
-\BOOKMARK [0][]{chapter.30}{Chapitre 3 Probl\351matique et Objectifs du Projet}{}% 18
-\BOOKMARK [0][]{chapter.31}{Chapitre 4 M\351thodologie}{}% 19
-\BOOKMARK [1][]{section.32}{Choix des Muslces}{chapter.31}% 20
-\BOOKMARK [1][]{section.34}{Architecture Mat\351rielle}{chapter.31}% 21
-\BOOKMARK [2][-]{subsection.35}{\311lectrodes}{section.34}% 22
-\BOOKMARK [2][-]{subsection.38}{Microcontr\364leur}{section.34}% 23
-\BOOKMARK [2][-]{subsection.41}{Adaptation des Tensions}{section.34}% 24
-\BOOKMARK [2][-]{subsection.48}{Liaison \340 l'Ordinateur}{section.34}% 25
-\BOOKMARK [2][-]{subsection.51}{Liaison \340 Jaco}{section.34}% 26
-\BOOKMARK [2][-]{subsection.52}{Sch\351ma mat\351riel Global}{section.34}% 27
-\BOOKMARK [1][]{section.56}{Choix des Caract\351ristiques du Signal \340 utiliser et des Outils algorithmiques et Math\351matiques}{chapter.31}% 28
-\BOOKMARK [2][-]{subsection.57}{D\351coupage des fen\352tres d'\351chantillons}{section.56}% 29
-\BOOKMARK [2][-]{subsection.58}{D\351tection d'activit\351 musculaire}{section.56}% 30
-\BOOKMARK [3][-]{subsubsection.59}{\311nergie de Teager-Keiser}{subsection.58}% 31
-\BOOKMARK [3][-]{subsubsection.63}{Calibrage du seuil de d\351tection}{subsection.58}% 32
-\BOOKMARK [3][-]{subsubsection.67}{Vote \340 la majorit\351}{subsection.58}% 33
-\BOOKMARK [2][-]{subsection.70}{Filtrage}{section.56}% 34
-\BOOKMARK [3][-]{subsubsection.71}{Concept}{subsection.70}% 35
-\BOOKMARK [3][-]{subsubsection.72}{Calibrage du Filtre}{subsection.70}% 36
-\BOOKMARK [3][-]{subsubsection.77}{Description du Filtre}{subsection.70}% 37
-\BOOKMARK [1][]{section.89}{Architecture Logicielle}{chapter.31}% 38
-\BOOKMARK [2][-]{subsection.90}{Firmware}{section.89}% 39
-\BOOKMARK [3][-]{subsubsection.91}{Fonctionnement et Configuration Globale du PIC32}{subsection.90}% 40
-\BOOKMARK [3][-]{subsubsection.92}{Alogorithme global}{subsection.90}% 41
-\BOOKMARK [2][-]{subsection.95}{Application de monitorage des signaux}{section.89}% 42
-\BOOKMARK [3][-]{subsubsection.96}{Choix des Librairies et des langages}{subsection.95}% 43
-\BOOKMARK [3][-]{subsubsection.97}{Lien avec Jaco et Mono}{subsection.95}% 44
-\BOOKMARK [3][-]{subsubsection.99}{Fonctionnement Global et Sch\351ma UML du Projet}{subsection.95}% 45
-\BOOKMARK [1][]{section.104}{Validation du Syst\350me}{chapter.31}% 46
-\BOOKMARK [2][-]{subsection.105}{Protocole de validation}{section.104}% 47
-\BOOKMARK [3][-]{subsubsection.106}{Mode de recrutement}{subsection.105}% 48
-\BOOKMARK [3][-]{subsubsection.107}{Principe de fonctionnement}{subsection.105}% 49
-\BOOKMARK [3][-]{subsubsection.108}{Protocole exp\351rimental}{subsection.105}% 50
-\BOOKMARK [3][-]{subsubsection.110}{D\351roulement des acquisitions}{subsection.105}% 51
-\BOOKMARK [3][-]{subsubsection.111}{Notes importantes}{subsection.105}% 52
-\BOOKMARK [3][-]{subsubsection.112}{Exemple de donn\351es r\351colt\351es}{subsection.105}% 53
-\BOOKMARK [3][-]{subsubsection.114}{Interpr\351tation des donn\351es}{subsection.105}% 54
-\BOOKMARK [3][-]{subsubsection.118}{Comparaison des donn\351es}{subsection.105}% 55
-\BOOKMARK [0][]{chapter.119}{Chapitre 5 R\351sultats}{}% 56
-\BOOKMARK [1][]{section.120}{Performances globales}{chapter.119}% 57
-\BOOKMARK [1][]{section.123}{Temps de calcul et chronogrammes}{chapter.119}% 58
-\BOOKMARK [1][]{section.125}{Validation du syst\350me}{chapter.119}% 59
-\BOOKMARK [0][]{chapter.132}{Chapitre 6 Discussion}{}% 60
-\BOOKMARK [1][]{section.133}{Performances globales du syst\350me}{chapter.132}% 61
-\BOOKMARK [1][]{section.134}{Chronogrammes et temps de calculs}{chapter.132}% 62
-\BOOKMARK [1][]{section.136}{Validation des performances du syst\350me}{chapter.132}% 63
-\BOOKMARK [0][]{chapter*.140}{CONCLUSION}{}% 64
-\BOOKMARK [0][]{chapter.141}{Annexe I Titre de l'annexe}{}% 65
-\BOOKMARK [0][]{subsection.147}{LISTE DE R\311F\311RENCES}{}% 66
-\BOOKMARK [0][]{chapter*.148}{BIBLIOGRAPHIE}{}% 67
+\BOOKMARK [1][]{section.30}{Synth\350se}{chapter.20}% 18
+\BOOKMARK [0][]{chapter.31}{Chapitre 3 Probl\351matique et Objectifs du Projet}{}% 19
+\BOOKMARK [0][]{chapter.32}{Chapitre 4 M\351thodologie}{}% 20
+\BOOKMARK [1][]{section.33}{Choix des Muslces}{chapter.32}% 21
+\BOOKMARK [1][]{section.35}{Architecture Mat\351rielle}{chapter.32}% 22
+\BOOKMARK [2][-]{subsection.37}{\311lectrodes}{section.35}% 23
+\BOOKMARK [2][-]{subsection.40}{Microcontr\364leur}{section.35}% 24
+\BOOKMARK [2][-]{subsection.43}{Adaptation des Tensions}{section.35}% 25
+\BOOKMARK [2][-]{subsection.50}{Liaison \340 l'Ordinateur}{section.35}% 26
+\BOOKMARK [2][-]{subsection.53}{Liaison \340 Jaco}{section.35}% 27
+\BOOKMARK [2][-]{subsection.54}{Sch\351ma mat\351riel Global}{section.35}% 28
+\BOOKMARK [1][]{section.57}{Choix des caract\351ristiques du signal \340 utiliser et des outils algorithmiques et math\351matiques}{chapter.32}% 29
+\BOOKMARK [2][-]{subsection.58}{D\351coupage des fen\352tres d'\351chantillons}{section.57}% 30
+\BOOKMARK [2][-]{subsection.59}{D\351tection d'activit\351 musculaire}{section.57}% 31
+\BOOKMARK [3][-]{subsubsection.60}{\311nergie de Teager-Keiser}{subsection.59}% 32
+\BOOKMARK [3][-]{subsubsection.64}{Calibrage du seuil de d\351tection}{subsection.59}% 33
+\BOOKMARK [3][-]{subsubsection.68}{Vote \340 la majorit\351}{subsection.59}% 34
+\BOOKMARK [2][-]{subsection.71}{Filtrage par d\351cision dirig\351e}{section.57}% 35
+\BOOKMARK [3][-]{subsubsection.72}{Concept}{subsection.71}% 36
+\BOOKMARK [3][-]{subsubsection.74}{Calibrage du Filtre}{subsection.71}% 37
+\BOOKMARK [3][-]{subsubsection.79}{Description du Filtre}{subsection.71}% 38
+\BOOKMARK [1][]{section.91}{Architecture Logicielle}{chapter.32}% 39
+\BOOKMARK [2][-]{subsection.92}{Firmware}{section.91}% 40
+\BOOKMARK [3][-]{subsubsection.93}{Fonctionnement et Configuration Globale du PIC32}{subsection.92}% 41
+\BOOKMARK [3][-]{subsubsection.94}{Alogorithme global}{subsection.92}% 42
+\BOOKMARK [2][-]{subsection.97}{Application de monitorage des signaux}{section.91}% 43
+\BOOKMARK [3][-]{subsubsection.98}{Choix des Librairies et des langages}{subsection.97}% 44
+\BOOKMARK [3][-]{subsubsection.99}{Lien avec Jaco et Mono}{subsection.97}% 45
+\BOOKMARK [3][-]{subsubsection.101}{Fonctionnement Global et Sch\351ma UML du Projet}{subsection.97}% 46
+\BOOKMARK [1][]{section.106}{Validation du Syst\350me}{chapter.32}% 47
+\BOOKMARK [2][-]{subsection.107}{Protocole de validation}{section.106}% 48
+\BOOKMARK [3][-]{subsubsection.108}{Mode de recrutement}{subsection.107}% 49
+\BOOKMARK [3][-]{subsubsection.109}{Principe de fonctionnement}{subsection.107}% 50
+\BOOKMARK [3][-]{subsubsection.110}{Protocole exp\351rimental}{subsection.107}% 51
+\BOOKMARK [3][-]{subsubsection.112}{D\351roulement des acquisitions}{subsection.107}% 52
+\BOOKMARK [3][-]{subsubsection.113}{Notes importantes}{subsection.107}% 53
+\BOOKMARK [3][-]{subsubsection.114}{Exemple de donn\351es r\351colt\351es}{subsection.107}% 54
+\BOOKMARK [3][-]{subsubsection.119}{Interpr\351tation des donn\351es}{subsection.107}% 55
+\BOOKMARK [3][-]{subsubsection.123}{Comparaison des donn\351es}{subsection.107}% 56
+\BOOKMARK [0][]{chapter.124}{Chapitre 5 R\351sultats}{}% 57
+\BOOKMARK [1][]{section.125}{Performances globales}{chapter.124}% 58
+\BOOKMARK [1][]{section.128}{Temps de calcul et chronogrammes}{chapter.124}% 59
+\BOOKMARK [1][]{section.130}{Validation du syst\350me}{chapter.124}% 60
+\BOOKMARK [0][]{chapter.137}{Chapitre 6 Discussion}{}% 61
+\BOOKMARK [1][]{section.138}{Performances globales du syst\350me}{chapter.137}% 62
+\BOOKMARK [1][]{section.139}{Chronogrammes et temps de calculs}{chapter.137}% 63
+\BOOKMARK [1][]{section.141}{Validation des performances du syst\350me}{chapter.137}% 64
+\BOOKMARK [0][]{chapter*.145}{CONCLUSION}{}% 65
+\BOOKMARK [0][]{chapter.146}{Annexe I Titre de l'annexe}{}% 66
+\BOOKMARK [0][]{subsection.152}{LISTE DE R\311F\311RENCES}{}% 67
+\BOOKMARK [0][]{chapter*.153}{BIBLIOGRAPHIE}{}% 68

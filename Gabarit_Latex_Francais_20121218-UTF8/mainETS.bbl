@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -128,6 +128,15 @@ Peleg, Dori, Eyal Braiman, Elad Yom-Tov, et Gideon~F Inbar.
   prosthesis arm\fg .
 \newblock \emph{Neural Systems and Rehabilitation Engineering, IEEE
   Transactions on}, vol.~10, n$^{\circ}$~4, p. 290--293.
+
+\bibitem[Plapous\emph{ et~al.}(2006)Plapous, Cyril, Claude Marro, et Pascal
+  Scalart]{plapous2006}
+Plapous, Cyril, Claude Marro, et Pascal Scalart.
+\newblock 2006.
+\newblock \og Improved signal-to-noise ratio estimation for speech
+  enhancement\fg .
+\newblock \emph{Audio, Speech, and Language Processing, IEEE Transactions on},
+  vol.~14, n$^{\circ}$~6, p. 2098--2108.
 
 \bibitem[Prasad\emph{ et~al.}(1996)Prasad, G, S~Srinivasan, et
   KM~Patil]{Prasad1996}
