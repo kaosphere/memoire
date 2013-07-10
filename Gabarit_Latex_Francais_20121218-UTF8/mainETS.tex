@@ -371,19 +371,18 @@ Le signal généré par un muscle s'exprime en millivolts (mV) et permet l'analy
 
 Le mécanisme de contraction musculaire part du système nerveux central qui envoie un signal nerveux de contraction volontaire à un muscle. Ce signal est transporté jusqu'aux muscles en passant par la moelle épinière puis par un nerf moteur. C'est ce nerf moteur qui transmet le potentiel électrique à chaque fibre musculaire présente dans le muscle. 
 
-Chaque fibre musculaire est alors parcourue par un potentiel d'action tel que décrit sur la figure. Plusieurs fibres musculaires sont recrutées lors d'un mouvement. La somme de l'action de toutes ces fibres compose la contraction globale du muscle.
+Chaque fibre musculaire est alors parcourue par un potentiel d'action et la somme de l'action de toutes ces fibres compose la contraction globale du muscle.
 
 Le signal EMG généré est constitué de la somme de tous les potentiels d'action musculaires des fibres recruté pour le mouvement et se présente comme sur la figure \ref{fig:emg}.
 
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=1\linewidth]{Figures/emg.png}
+		\includegraphics[width=0.8\linewidth]{Figures/emg.png}
 	}
-	\caption{Signal EMG}
+	\caption{Signal EMG. Les abscisses correspondent au temps en échantillons, les ordonnées correspondent à la tension mesurée en bits.}
 	\label{fig:emg}
 \end{figure}
-
 
 \chapter{Revue de Littérature}
 
@@ -505,7 +504,7 @@ L'étude de la littérature présente différentes applications réalisées dans
 
 \cite{Tenore2007} présentent leur application comme une des premières applications temps réelle embarquée permettant de contrôler un bras robotique prothétique. Toutefois, l'article présente l'efficacité du système pour la reconnaissance de mouvement, mais aucune mention n'est faite du résultat sur le contrôle du bras robotique. Aucune photo du montage complet n'est montrée, et aucune stratégie de communication entre leur système et le robot n'est présentée. Ceci laisse à penser que le projet n'est pas encore arrivé au stade de contrôle du bras réel, et n'est encore qu'au stade de développement. 
 
-De la même manière, \cite{chang1996} présente les résultats de reconnaissance de son système sans jamais parler de stratégie de communication avec le périphérique sensé être contrôlé par le système. 
+De la même manière, \cite{Chang1996} présente les résultats de reconnaissance de son système sans jamais parler de stratégie de communication avec le périphérique sensé être contrôlé par le système. 
 
 De plus, aucun système de la littérature sur le traitement embarqué de l'EMG ne traite la question de la sensibilité. Les types de mouvement effectués sont toujours "une rotation de la tête" ou bien "une élévation des épaules". Il n'est nulle part précisé si le mouvement effectué est de grande ou de faible amplitude. Nous verrons pourtant dans notre système que ce paramètre est d'une importance cruciale, étant donné que l'amplitude du signal EMG, dépendant de l'amplitude du mouvement effectué, influe énormément sur les performances du système.
 
@@ -550,9 +549,9 @@ Le premier choix important est de choisir quels muscles seront utilisés pour r�
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.6\linewidth]{Figures/muscles.png}
+		\includegraphics[width=0.6\linewidth]{Figures/muscles2.png}
 	}
-	\caption{Muscle sterno-cléïdo mastoïdien et muscles du cou.Tiré de \cite{sternoWiki} sous la licence Creative Commons.}
+	\caption{Muscle sterno-cléïdo mastoïdien et muscles du cou. Adapté de \cite{sternoWiki} sous la licence Creative Commons. le muscle indiqué en 1 est le trapèze et le muscle indiqué en 2 est le sterno-cléïdo mastoïdien.}
 	\label{fig:muscles}
 \end{figure}
 
@@ -835,7 +834,7 @@ Il est nécessaire de préciser que dans cette architecture, l'ordinateur ne ser
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.5\linewidth]{Figures/montage.jpg}
+		\includegraphics[width=0.8\linewidth]{Figures/montage.jpg}
 	}
 	\caption{Montage complet du prototype}
 	\label{fig:archiMatMont}
@@ -900,27 +899,18 @@ L'étude de \cite{li2007} a montré qu'une caractéristique du signal EMG est tr
    TKE(k) = x^2(k) - x(k-1)*x(k+1) 
 \end{align}
 
-Ainsi, une fois une fenêtre acquise complètement, le TKE instantané (sur chaque échantillon) est calculé. La figure \ref{fig:tkeinstant} montre le TKE instantané obtenu sur un signal EMG donné.
+Ainsi, une fois une fenêtre acquise complètement, le TKE instantané (sur chaque échantillon) est calculé. La figure \ref{fig:tke} montre le TKE instantané obtenu sur un signal EMG donné.
 
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.8\linewidth]{Figures/tkeinstant.png}
+		\includegraphics[width=0.95\linewidth]{Figures/tke.png}
 	}
-	\caption{TKE instantané calculé sur un signal EMG}
+	\caption{TKE calculé sur un signal EMG. La courbe A représente le signal EMG, la courbe B présente le TKE instantané et la courbe C représente le TKE moyen.}
 	\label{fig:tkeinstant}
 \end{figure}
 
-Cependant, ce TKE par échantillon est difficile à utiliser directement, car il est très variable et fixer un seuil efficace pour détecter les activités serait très compliqué. Pour faciliter son exploitation, on effectue la moyenne du TKE sur toute la fenêtre, afin d'en obtenir son enveloppe. De cette manière, un seuil de détection est applicable plus facilement. La figure \ref{fig:tkemoy} présente le passage du TKE instantané au TKE moyen.
-
-\begin{figure}
-	\centering
-	\fbox{
-		\includegraphics[width=0.8\linewidth]{Figures/tkemoy.png}
-	}
-	\caption{TKE moyen calculé sur un signal EMG}
-	\label{fig:tkemoy}
-\end{figure}
+Cependant, ce TKE par échantillon est difficile à utiliser directement, car il est très variable et fixer un seuil efficace pour détecter les activités serait très compliqué. Pour faciliter son exploitation, on effectue la moyenne du TKE sur toute la fenêtre, afin d'en obtenir son enveloppe. De cette manière, un seuil de détection est applicable plus facilement. La figure \ref{fig:tke} présente le passage du TKE instantané au TKE moyen.
 
 Une fois le TKE d'une fenêtre calculé, le but est de savoir si le muscle est activé ou non. Pour ce faire, un seuil doit être défini. Si le TKE de la fenêtre dépasse ce seuil, alors le muscle est considéré comme étant en activité.
 
@@ -960,9 +950,9 @@ Le seuil a donc été fixé de manière expérimentale à 25\% de l'intervalle e
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.6\linewidth]{Figures/tkeSeuil2.png}
+		\includegraphics[width=0.8\linewidth]{Figures/tkeSeuil3.png}
 	}
-	\caption{Définition du seuil de détection d'activité musculaire pour un canal EMG}
+	\caption{Définition du seuil de détection d'activité musculaire pour un canal EMG. Les abscisses représentent le temps en échantillons, et les ordonnées représentent la valeur du TKE moyen en bits.}
 	\label{fig:seuilDetection}
 \end{figure}
 
@@ -975,15 +965,24 @@ Ceci entraine alors une détection d'activité qui change alors souvent d'état 
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.42\linewidth]{Figures/onsetSansVote.png}
+		\includegraphics[width=0.7\linewidth]{Figures/onsetSansVote.png}
 	}
-	\caption{Détection d'activité musculaire brute, sans vote à la majorité.}
+	\caption{Détection d'activité musculaire brute, sans vote à la majorité. Les abscisses représentent le temps en échantillons, et les ordonnées montre l'activité musculaire unitaire (1 pour une activité, 0 si pas d'activité).}
 	\label{fig:onsetSansVote}
 \end{figure}
 
 Une conséquence supplémentaire est que si le seuil se veut d'être le plus bas possible afin d'augmenter la sensibilité du système, plus il est bas, plus le système est susceptible de détecter des faux positifs. 
 
 Le choix du seuil de détection est donc difficile, voir impossible à choisir idéalement. En effet, un seuil trop haut ne sera plus assez sensible pour détecter des mouvements faibles et en ratera une parte, tandis qu'un seuil trop bas sera sensible mais détectera des faux positifs si le bruit sur le TKE le dépasse.
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.95\linewidth]{Figures/onsetAvecVote.png}
+	}
+	\caption{Détection d'activité musculaire avec vote à la majorité. La courbe A présente le TKE moyen du signal, la courbe B la détection d'activité sans vote à la majorité, et la courbe C l'activité musculaire avec vote à la majorité.}
+	\label{fig:onsetAvecVote}
+\end{figure}
 
 Afin de remédier à ces deux problèmes, une méthode inspirée du vote à la majorité de \cite{Chang1996} a été mise en place. La méthode mise en place par \cite{Chang1996} consiste à comparer la caractéristique d'une fenêtre au seuil. Puis, pour déterminer la détection d'activité, on effectue un vote à la majorité sur les cinq dernières fenêtres. Si la majorité des fenêtre est au dessus du seuil, l'activité musculaire est mise à 1, sinon elle est mise à 0.
 
@@ -993,16 +992,7 @@ La méthode mise au point pour le système consiste à mettre deux seuils de maj
 
 Le résultat de ce système de vote à la majorité est présenté par la figure \ref{fig:onsetAvecVote}.
 
-\begin{figure}
-	\centering
-	\fbox{
-		\includegraphics[width=0.6\linewidth]{Figures/onsetAvecVote.png}
-	}
-	\caption{Détection d'activité musculaire avec vote à la majorité.}
-	\label{fig:onsetAvecVote}
-\end{figure}
-
-On observe qu'il n'y a plus de retour à 0 de la détection d'activité, et les faux positifs occasionnels ont également été retirés. Ce vote à la majorité provoque toute fois une légère latence de détection, en effet, il faut attendre que 16 fenêtres sur 32 soient au dessus du seuil de détection pour que l'activité soit détectée.
+On observe qu'il n'y a plus de retour à 0 de la détection d'activité, et les faux positifs occasionnels ont également été retirés. Ce vote à la majorité provoque toute fois une légère latence de détection, en effet, il faut attendre que 16 fenêtres sur 32 soient au dessus du seuil de détection pour que l'activité soit détectée. Ce délai temporel de détection entraîne donc une latence du système additionnelle maximum de 16 fenêtre d'échantillons, ce qui correspond à une durée de 128 ms. 
 
 \subsection{Filtrage par décision dirigée}
 \label{CHfiltrage}
@@ -1541,7 +1531,7 @@ La figure \ref{fig:onset} montre le comportement du firmware pour un canal EMG. 
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.6\linewidth]{Figures/onset.png}
+		\includegraphics[width=0.9\linewidth]{Figures/onset.png}
 	}
 	\caption{Résultats de la détection d'activité musculaire sur un canal EMG}
 	\label{fig:onset}
@@ -1553,12 +1543,12 @@ Pour les tests, la commande à envoyer à Jaco choisie consiste à déplacer la 
 
 Il est à noter que grâce à l'utilisation de la librairie de programmation fournie par Kinova, n'importe quelle action du bras peut être reliée à chacun des mouvements de l'utilisateur.
 
-Ces tests de fonctionnalité simples ont été réalisés sans utiliser de filtrage du signal EMG.
+Ces tests de fonctionnalité simples ont été réalisés sans utilisation du filtrage du signal EMG.
 
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.6\linewidth]{Figures/montageglobal.png}
+		\includegraphics[width=0.9\linewidth]{Figures/montageglobal.png}
 	}
 	\caption{Contrôle de Jaco par canaux EMG}
 	\label{fig:montageglobal}
@@ -1570,11 +1560,7 @@ Une vidéo a été réalisée pour le projet afin de constater le fonctionnement
 
 Une donnée importante à collecter dans la spécification du projet est le temps de calcul nécessaire pour effectuer les calculs critiques du système, à savoir la détection d'activité musculaire et le filtrage du signal.
 
-La filtrage ayant été mis en place seulement dans un second temps, le temps de calcul nécessaire à la détection d'activité musculaire sur les quatre canaux EMG a d'abbord été enregistré. 
-
-Pour ce faire, l'opération réalisée consiste à mettre une sortie du PIC32 à l'état haut au moment où le calcul commence, puis à la remettre à l'état bas lorsque le calcul est effectué. Le signal est ensuite enregistré à l'aide d'un oscilloscope. Le temps passé à l'état haut est ensuite mesuré et utilisé comme temps de référence. 
-
-La figure \ref{fig:chronogrammes} montre les chronogrammes enregistrés pour la détection d'activité des quatre canaux EMG (en haut), et pour le filtrage d'un canal EMG. Le temps de calcul nécessaire à la détection d'activité sur les quatre canaux est de 1.23 ms et celui nécessaire au filtrage d'un seul canal EMG est de 3.58 ms.
+La filtrage ayant été mis en place seulement dans un second temps, le temps de calcul nécessaire à la détection d'activité musculaire sur les quatre canaux EMG a d'abord été enregistré. 
 
 \begin{figure}
 	\centering
@@ -1584,6 +1570,23 @@ La figure \ref{fig:chronogrammes} montre les chronogrammes enregistrés pour la 
 	\caption{Chronogrammes de mesure du temps de calcul. Le chronogramme du haut représente le temps de calcul de détection d'activité musculaire des qutre canaux EMG. Le chronogramme du bas présente le temps de calcul de filtrage d'une fenêtre d'un seul canal EMG.}
 	\label{fig:chronogrammes}
 \end{figure}
+
+Pour ce faire, l'opération réalisée consiste à mettre une sortie du PIC32 à l'état haut au moment où le calcul commence, puis à la remettre à l'état bas lorsque le calcul est effectué. Le signal est ensuite enregistré à l'aide d'un oscilloscope. Le temps passé à l'état haut est ensuite mesuré et utilisé comme temps de référence. 
+
+La figure \ref{fig:chronogrammes} montre les chronogrammes enregistrés pour la détection d'activité des quatre canaux EMG (en haut), et pour le filtrage d'un canal EMG. Le temps de calcul nécessaire à la détection d'activité sur les quatre canaux est de 1.23 ms et celui nécessaire au filtrage d'un seul canal EMG est de 3.58 ms.
+
+Ainsi, si on reporte ces temps de calculs sur un même chronogramme, on est en mesure de réaliser plus facilement le temps pris par ces opérations et le temps de calcul disponible avant la fenêtre d'échantillons suivante. Le chronogramme illustré dans la figure \ref{fig:chronogrammeDisc} montre la répartition du temps de calcul de la routine principale du firmware. 
+
+\begin{figure}
+	\centering
+	\fbox{
+		\includegraphics[width=0.8\linewidth]{Figures/chronogrammeDiscussion.png}
+	}
+	\caption{Etude du temps de calcul utilisé par le système}
+	\label{fig:chronogrammeDisc}
+\end{figure}
+
+Il reste donc 3.19 ms de temps de calcul disponible avant la prochaine disponibilité d'une fenêtre d'échantillons de signal EMG. Ce temps est insuffisant pour filtrer un autre canal EMG.
 
 \section{Validation du système}
 
@@ -1606,14 +1609,14 @@ Le laser a permis de mettre le capteur inertiel à l'horizontal en montant ou de
 
 Chaque test a également été réalisé une fois avec le filtrage du signal EMG activé, et une autre fois avec ce filtrage désactivé. Ceci permet de comparer l'efficacité du système avec et sans filtre et de quantifié le gain de performances apporté par celui-ci.
 
-Pour chaque sujet, on calcule l'efficacité globale du système, c'est à dire le nombre de fois qu'une activité musculaire a été détectée sur le nombre de mouvements total effectué par le sujet. La figure \ref{fig:effsujets} montre l'efficacité du système sur chaque sujet. Les barres bleues représentent l'efficacité du système avec filtre, et les barres rouges du système sans le filtrage du signal. 
+Pour chaque sujet, on calcule l'efficacité globale du système, c'est à dire le nombre de fois qu'une activité musculaire a été détectée sur le nombre de mouvements total effectué par le sujet. La figure \ref{fig:effsujets} montre l'efficacité du système sur chaque sujet. Les barres noires représentent l'efficacité du système avec filtre, et les barres blanches du système sans le filtrage du signal. 
 
 \begin{figure}
 	\centering
 	\fbox{
 		\includegraphics[width=0.8\linewidth] {Figures/effSujets.png}
 	}
-	\caption{Efficacité du système pour chaque sujet}
+	\caption{Efficacité du système pour chaque sujet, en noir l'efficacité moyenne d'un sujet avec filtrage, en blanc sans filtrage du signal.}
 	\label{fig:effsujets}
 \end{figure}
 
@@ -1624,7 +1627,7 @@ L'efficacité du système ayant été calculée par sujet, il est intéressant d
 	\fbox{
 		\includegraphics[width=0.8\linewidth] {Figures/compEff.png}
 	}
-	\caption{Efficacité du système moyenne pour des intervalles d'angles différents}
+	\caption{Efficacité du système moyenne pour des intervalles d'angles différents, en noir avec filtrage, en blanc sans filtrage.}
 	\label{fig:compeff}
 \end{figure}
 
@@ -1645,7 +1648,7 @@ Pour chaque diagramme, la boite de gauche correspond à la répartition des effi
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.8\linewidth] {Figures/effStats.png}
+		\includegraphics[width=0.95\linewidth] {Figures/effStats.png}
 	}
 	\caption{Répartition et statistiques des efficacités pour différents intervalles d'angles}
 	\label{fig:effstats}
@@ -1700,17 +1703,6 @@ L'ajout du filtrage du signal a permis d'augmenter grandement la sensibilité gl
 \section{Chronogrammes et temps de calculs}
 
 L'analyse des temps de calcul du système permet de tirer plusieurs conclusions de la réalisation, et du matériel choisi. 
-
-\begin{figure}
-	\centering
-	\fbox{
-		\includegraphics[width=0.8\linewidth]{Figures/chronogrammeDiscussion.png}
-	}
-	\caption{Etude du temps de calcul utilisé par le système}
-	\label{fig:chronogrammeDisc}
-\end{figure}
-
-Le chronogramme illustré dans la figure \ref{fig:chronogrammeDisc} montre la répartition du temps de calcul de la routine principale du firmware. 
 
 Les temps de calculs relevés y sont présenté à l'intérieur de la boucle principale. La courbe bleue montre la fréquence d'arrivée d'une nouvelle fenêtre de signaux EMG pour les quatre canaux. Elle permet de visualiser le temps de calcul disponible avant qu'une nouvelle fenêtre n'arrive. 
 

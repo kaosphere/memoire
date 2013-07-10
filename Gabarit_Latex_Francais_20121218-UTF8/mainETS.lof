@@ -1,8 +1,8 @@
 \select@language {french}
 \contentsline {figure}{\numberline {1.1}{\ignorespaces R\IeC {\'e}gions de la colonne vert\IeC {\'e}brale humaine. Tir\IeC {\'e} de \cite {rachisWiki} sous la licence Creative Commons.\relax }}{4}{figure.caption.11}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Bras manipulateur Jaco, tir\IeC {\'e} de \cite {Kinova2012}\relax }}{8}{figure.caption.17}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Signal EMG\relax }}{9}{figure.caption.19}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Muscle sterno-cl\IeC {\'e}\IeC {\"\i }do masto\IeC {\"\i }dien et muscles du cou.Tir\IeC {\'e} de \cite {sternoWiki} sous la licence Creative Commons.\relax }}{23}{figure.caption.34}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Signal EMG. Les abscisses correspondent au temps en \IeC {\'e}chantillons, les ordonn\IeC {\'e}es correspondent \IeC {\`a} la tension mesur\IeC {\'e}e en bits.\relax }}{9}{figure.caption.19}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Muscle sterno-cl\IeC {\'e}\IeC {\"\i }do masto\IeC {\"\i }dien et muscles du cou. Adapt\IeC {\'e} de \cite {sternoWiki} sous la licence Creative Commons. le muscle indiqu\IeC {\'e} en 1 est le trap\IeC {\`e}ze et le muscle indiqu\IeC {\'e} en 2 est le sterno-cl\IeC {\'e}\IeC {\"\i }do masto\IeC {\"\i }dien.\relax }}{23}{figure.caption.34}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Sch\IeC {\'e}ma bloc pr\IeC {\'e}sentant le syst\IeC {\`e}me global\relax }}{25}{figure.caption.36}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces \IeC {\'E}lectrode Delsys DE-2.3.\relax }}{26}{figure.caption.38}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces \IeC {\'E}lectrode Delsys neutre.\relax }}{27}{figure.caption.39}
@@ -10,37 +10,36 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces \IeC {\'E}tage inverseur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{32}{figure.caption.44}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces \IeC {\'E}tage sommateur utilis\IeC {\'e} dans l'adaptation de tension.\relax }}{33}{figure.caption.46}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Circuit \IeC {\'e}lectronique d'adaptation de la tension de sortie des \IeC {\'e}lectrodes.\relax }}{34}{figure.caption.49}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Circuit de c\IeC {\^a}blage type du composant max3232, extrait de la documentation officielle du composant produit par \cite {MAXIM3232}.\relax }}{36}{figure.caption.51}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Circuit de c\IeC {\^a}blage type du composant max3232, extrait de la documentation officielle du composant produit par \cite {MAXIM3232}.\relax }}{35}{figure.caption.51}
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Format de la trame utilis\IeC {\'e}e dans le cadre de la liaison s\IeC {\'e}rie.\relax }}{36}{figure.caption.52}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Sch\IeC {\'e}ma bloc pr\IeC {\'e}sentant le c\IeC {\^a}blage de la partie \IeC {\'e}lectronique du projet\relax }}{39}{figure.caption.55}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Sch\IeC {\'e}ma bloc pr\IeC {\'e}sentant le c\IeC {\^a}blage de la partie \IeC {\'e}lectronique du projet\relax }}{38}{figure.caption.55}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Montage complet du prototype\relax }}{39}{figure.caption.56}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces TKE instantan\IeC {\'e} calcul\IeC {\'e} sur un signal EMG\relax }}{43}{figure.caption.62}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces TKE moyen calcul\IeC {\'e} sur un signal EMG\relax }}{43}{figure.caption.63}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces D\IeC {\'e}finition du seuil de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire pour un canal EMG\relax }}{45}{figure.caption.67}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire brute, sans vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{46}{figure.caption.69}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire avec vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{48}{figure.caption.70}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Fonctionnement algorithmique du filtre\relax }}{50}{figure.caption.73}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Boucle inifinie du programme principal.\relax }}{59}{figure.caption.95}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Routine d'interruption du firmware.\relax }}{60}{figure.caption.96}
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Interfa\IeC {\c c}age de l'API Kinova \IeC {\`a} travers Mono.\relax }}{64}{figure.caption.100}
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Diagramme UML du programme de monitoring.\relax }}{65}{figure.caption.102}
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{66}{figure.caption.103}
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{67}{figure.caption.104}
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{68}{figure.caption.105}
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Description de l'angle de rotation de la t\IeC {\^e}te.\relax }}{69}{figure.caption.111}
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te.\relax }}{71}{figure.caption.115}
-\contentsline {figure}{\numberline {4.28}{\ignorespaces Exemple de donn\IeC {\'e}es de vitesse anglulaires de rotation de la t\IeC {\^e}te.\relax }}{72}{figure.caption.116}
-\contentsline {figure}{\numberline {4.29}{\ignorespaces Exemple de donn\IeC {\'e}es d'EMG de rotation de la t\IeC {\^e}te.\relax }}{73}{figure.caption.117}
-\contentsline {figure}{\numberline {4.30}{\ignorespaces Exemple de donn\IeC {\'e}es de d\IeC {\'e}tection d'activit\IeC {\'e}.\relax }}{74}{figure.caption.118}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces R\IeC {\'e}sultats de la d\IeC {\'e}tection d'activit\IeC {\'e} musculaire sur un canal EMG\relax }}{77}{figure.caption.126}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Contr\IeC {\^o}le de Jaco par canaux EMG\relax }}{78}{figure.caption.127}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Chronogrammes de mesure du temps de calcul. Le chronogramme du haut repr\IeC {\'e}sente le temps de calcul de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire des qutre canaux EMG. Le chronogramme du bas pr\IeC {\'e}sente le temps de calcul de filtrage d'une fen\IeC {\^e}tre d'un seul canal EMG.\relax }}{79}{figure.caption.129}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Sujet humain pour la validation du syst\IeC {\`e}me\relax }}{80}{figure.caption.131}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Efficacit\IeC {\'e} du syst\IeC {\`e}me pour chaque sujet\relax }}{81}{figure.caption.132}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Efficacit\IeC {\'e} du syst\IeC {\`e}me moyenne pour des intervalles d'angles diff\IeC {\'e}rents\relax }}{82}{figure.caption.133}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces R\IeC {\'e}partition et statistiques des efficacit\IeC {\'e}s pour diff\IeC {\'e}rents intervalles d'angles\relax }}{83}{figure.caption.134}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Angles maximums atteints par les sujets\relax }}{84}{figure.caption.135}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Vitesses maximums atteints par les sujets\relax }}{85}{figure.caption.136}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Etude du temps de calcul utilis\IeC {\'e} par le syst\IeC {\`e}me\relax }}{88}{figure.caption.140}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Signaux EMG et d\IeC {\'e}tections d'activit\IeC {\'e}s du sujet S002 pour l'angle 20 degr\IeC {\'e}s.\relax }}{91}{figure.caption.142}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Vitesses de rotation atteintes par les sujets masculins\relax }}{92}{figure.caption.143}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces TKE calcul\IeC {\'e} sur un signal EMG. La courbe A repr\IeC {\'e}sente le signal EMG, la courbe B pr\IeC {\'e}sente le TKE instantan\IeC {\'e} et la courbe C repr\IeC {\'e}sente le TKE moyen.\relax }}{43}{figure.caption.62}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces D\IeC {\'e}finition du seuil de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire pour un canal EMG. Les abscisses repr\IeC {\'e}sentent le temps en \IeC {\'e}chantillons, et les ordonn\IeC {\'e}es repr\IeC {\'e}sentent la valeur du TKE moyen en bits.\relax }}{45}{figure.caption.66}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire brute, sans vote \IeC {\`a} la majorit\IeC {\'e}. Les abscisses repr\IeC {\'e}sentent le temps en \IeC {\'e}chantillons, et les ordonn\IeC {\'e}es montre l'activit\IeC {\'e} musculaire unitaire (1 pour une activit\IeC {\'e}, 0 si pas d'activit\IeC {\'e}).\relax }}{46}{figure.caption.68}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces D\IeC {\'e}tection d'activit\IeC {\'e} musculaire avec vote \IeC {\`a} la majorit\IeC {\'e}. La courbe A pr\IeC {\'e}sente le TKE moyen du signal, la courbe B la d\IeC {\'e}tection d'activit\IeC {\'e} sans vote \IeC {\`a} la majorit\IeC {\'e}, et la courbe C l'activit\IeC {\'e} musculaire avec vote \IeC {\`a} la majorit\IeC {\'e}.\relax }}{47}{figure.caption.69}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Fonctionnement algorithmique du filtre\relax }}{50}{figure.caption.72}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Boucle inifinie du programme principal.\relax }}{59}{figure.caption.94}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Routine d'interruption du firmware.\relax }}{60}{figure.caption.95}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Interfa\IeC {\c c}age de l'API Kinova \IeC {\`a} travers Mono.\relax }}{64}{figure.caption.99}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Diagramme UML du programme de monitoring.\relax }}{65}{figure.caption.101}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{66}{figure.caption.102}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{67}{figure.caption.103}
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Capture d'\IeC {\'e}cran de l'interface graphique du programme de monitorage des donn\IeC {\'e}es EMG.\relax }}{68}{figure.caption.104}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Description de l'angle de rotation de la t\IeC {\^e}te.\relax }}{69}{figure.caption.110}
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Exemple de donn\IeC {\'e}es d'angles de rotation de la t\IeC {\^e}te.\relax }}{71}{figure.caption.114}
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Exemple de donn\IeC {\'e}es de vitesse anglulaires de rotation de la t\IeC {\^e}te.\relax }}{72}{figure.caption.115}
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Exemple de donn\IeC {\'e}es d'EMG de rotation de la t\IeC {\^e}te.\relax }}{73}{figure.caption.116}
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Exemple de donn\IeC {\'e}es de d\IeC {\'e}tection d'activit\IeC {\'e}.\relax }}{74}{figure.caption.117}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces R\IeC {\'e}sultats de la d\IeC {\'e}tection d'activit\IeC {\'e} musculaire sur un canal EMG\relax }}{78}{figure.caption.125}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Contr\IeC {\^o}le de Jaco par canaux EMG\relax }}{78}{figure.caption.126}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Chronogrammes de mesure du temps de calcul. Le chronogramme du haut repr\IeC {\'e}sente le temps de calcul de d\IeC {\'e}tection d'activit\IeC {\'e} musculaire des qutre canaux EMG. Le chronogramme du bas pr\IeC {\'e}sente le temps de calcul de filtrage d'une fen\IeC {\^e}tre d'un seul canal EMG.\relax }}{79}{figure.caption.128}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Etude du temps de calcul utilis\IeC {\'e} par le syst\IeC {\`e}me\relax }}{80}{figure.caption.129}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Sujet humain pour la validation du syst\IeC {\`e}me\relax }}{81}{figure.caption.131}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Efficacit\IeC {\'e} du syst\IeC {\`e}me pour chaque sujet, en noir l'efficacit\IeC {\'e} moyenne d'un sujet avec filtrage, en blanc sans filtrage du signal.\relax }}{82}{figure.caption.132}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Efficacit\IeC {\'e} du syst\IeC {\`e}me moyenne pour des intervalles d'angles diff\IeC {\'e}rents, en noir avec filtrage, en blanc sans filtrage.\relax }}{83}{figure.caption.133}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces R\IeC {\'e}partition et statistiques des efficacit\IeC {\'e}s pour diff\IeC {\'e}rents intervalles d'angles\relax }}{84}{figure.caption.134}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Angles maximums atteints par les sujets\relax }}{85}{figure.caption.135}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Vitesses maximums atteints par les sujets\relax }}{86}{figure.caption.136}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Signaux EMG et d\IeC {\'e}tections d'activit\IeC {\'e}s du sujet S002 pour l'angle 20 degr\IeC {\'e}s.\relax }}{90}{figure.caption.141}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Vitesses de rotation atteintes par les sujets masculins\relax }}{91}{figure.caption.142}
