@@ -302,3 +302,32 @@ effFStdInterval =
     0.0705    0.0805    0.0940    0.1143    0.1589    0.1801    0.1801
 
 
+
+=======================================================================================
+
+ANOVA filtrage par angle (sans S002 et S004) sans coeff
+
+anova =
+
+       NaN       NaN    0.2377    0.0271    0.2873       NaN       NaN       NaN
+
+ANOVA filtrage par intervalles
+
+anova =
+
+    0.0543    0.0543    0.0543    0.0395    0.2873       NaN       NaN
+
+
+ANOVA filtrage par intervalles avec Coeff
+
+
+anova =
+
+    0.1815    0.1815    0.1815    0.2505    0.9021    0.8720    0.8720
+
+ANOVA filtrage par angles avec coeff
+
+anova =
+
+       NaN       NaN    0.1943    0.0155    0.4198    0.8720    0.8720
+
