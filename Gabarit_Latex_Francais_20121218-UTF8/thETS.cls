@@ -910,6 +910,14 @@ hypertexnames=false%
   \chapter*{Conclusion}
   \addcontentsline{toc}{chapter}{CONCLUSION} % Ajout dans la table des matières
  }
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Contributions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{contributions}{%
+  \chapter*{Contributions}
+  \addcontentsline{toc}{chapter}{CONTRIBUTIONS} % Ajout dans la table des matières
+ }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Remerciement

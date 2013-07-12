@@ -1,11 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: mainETS.aux
-Case mismatch error between cite keys chang1996 and Chang1996
----line 105 of file mainETS.aux
- : \citation{chang1996
- :                    }
-I'm skipping whatever remains of this command
 The style file: bibETS.bst
 Database file #1: biblio.bib
 Warning--entry type for "MAXIM3232" isn't style-file defined
@@ -72,10 +67,9 @@ You're missing a field name---line 299 of file biblio.bib
  : %author = {Brands, S. and Chaum, D.},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Bha10"
 You've used 18 entries,
             2960 wiz_defined-function locations,
-            772 strings with 9247 characters,
+            770 strings with 9237 characters,
 and the built_in function-call counts, 7993 in all, are:
 = -- 663
 > -- 658
@@ -114,4 +108,4 @@ warning$ -- 0
 while$ -- 54
 width$ -- 0
 write$ -- 264
-(There were 11 error messages)
+(There were 10 error messages)

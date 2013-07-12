@@ -1,3 +1,58 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: refs.aux
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: refs.aux
 The style file: bibETS.bst
+I found no \citation commands---while reading file refs.aux
 Database file #1: refs.bib
+You're missing a field name---line 2 of file refs.bib
+ : 
+ : %  author = {mAuth1},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 12 of file refs.bib
+ : 
+ : %  author = {mAuth2},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 0 entries,
+            2960 wiz_defined-function locations,
+            643 strings with 5195 characters,
+and the built_in function-call counts, 33 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 10
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 7
+(There were 3 error messages)

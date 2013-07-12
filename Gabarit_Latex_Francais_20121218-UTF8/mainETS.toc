@@ -59,12 +59,13 @@
 \contentsline {section}{\numberline {5.1}Performances globales}{77}{section.124}
 \contentsline {section}{\numberline {5.2}Temps de calcul et chronogrammes}{79}{section.127}
 \contentsline {section}{\numberline {5.3}Validation du syst\IeC {\`e}me}{80}{section.130}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{87}{chapter.137}
-\contentsline {section}{\numberline {6.1}Performances globales du syst\IeC {\`e}me}{87}{section.138}
-\contentsline {section}{\numberline {6.2}Chronogrammes et temps de calculs}{87}{section.139}
-\contentsline {section}{\numberline {6.3}Validation des performances du syst\IeC {\`e}me}{89}{section.140}
-\contentsline {chapter}{CONCLUSION}{95}{chapter*.144}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{95}{chapter.147}
+\contentsline {section}{\numberline {6.1}Performances globales du syst\IeC {\`e}me}{95}{section.148}
+\contentsline {section}{\numberline {6.2}Chronogrammes et temps de calculs}{96}{section.149}
+\contentsline {section}{\numberline {6.3}Validation des performances du syst\IeC {\`e}me}{98}{section.150}
+\contentsline {chapter}{CONCLUSION}{103}{chapter*.151}
+\contentsline {chapter}{CONTRIBUTIONS}{105}{chapter*.152}
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Titre de l'annexe}}}{97}{chapter.145}
-\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{99}{subsection.151}
-\contentsline {chapter}{BIBLIOGRAPHIE}{102}{chapter*.152}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Conception du montage pour la validation du syst\IeC {\`e}me}}}{107}{chapter.153}
+\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{108}{equation.155}
+\contentsline {chapter}{BIBLIOGRAPHIE}{110}{chapter*.156}
