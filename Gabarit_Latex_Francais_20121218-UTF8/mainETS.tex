@@ -1812,7 +1812,7 @@ En effet, ce sujet, malgré ses données aberrantes, montre que tout le monde n'
 Intéressons nous maintenant au comportement du système en lui-même. Les deux tableaux \ref{tab:effinterval} et \ref{tab:effFinterval} montrent l'efficacité du système sur des intervalles d'angles donnés avec et sans filtrage : 
 
 \begin{table}[ht]
-	\caption{Efficacités moyennes par angles obtenues par chaque sujet avec filtrage. }
+	\caption{Efficacités moyennes par intervalle d'angles obtenues par chaque sujet avec filtrage. }
 		\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 			Angle & $10^{o}-80^{o}$ & $20^{o}-80^{o}$ & $30^{o}-80^{o}$ & $40^{o}-80^{o}$ & $50^{o}-80^{o}$ & $60^{o}-80^{o}$ & $70^{o}-80^{o}$ \\
@@ -1843,7 +1843,7 @@ Intéressons nous maintenant au comportement du système en lui-même. Les deux 
 
 
 \begin{table}[ht]
-	\caption{Efficacités moyennes par angles obtenues par chaque sujet sans filtrage. }
+	\caption{Efficacités moyennes par intervalles angles obtenues par chaque sujet sans filtrage. }
 		\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 			Angle & $10^{o}-80^{o}$ & $20^{o}-80^{o}$ & $30^{o}-80^{o}$ & $40^{o}-80^{o}$ & $50^{o}-80^{o}$ & $60^{o}-80^{o}$ & $70^{o}-80^{o}$ \\
@@ -1864,9 +1864,9 @@ Intéressons nous maintenant au comportement du système en lui-même. Les deux 
 	    \hline
 	    		S010 & 0.45 & 0.5143 & 0.6 & 0.72 & 0.9 & 1 & 1\\
 	    \hline
-	    		Moyenne  & 0.56 & 0.64 & 0.7467 & 0.868 & 0.94 & 0.9733 & 1\\
+	    		Moyenne  & 0.4925 & 0.5571 & 0.6333 & 0.74 & 0.9 & 0.9733 & 1\\
 	    \hline
-	    		Ecart Type & 0.1308 & 0.1495 & 0.1744 & 0.1829 & 0.1449 & 0.0843 & 0\\
+	    		Ecart Type & 0.1663 & 0.1737 & 0.1571 & 0.1414 & 0.1394 & 0.0644 & 0\\
 	    \hline
 		\end{tabular}
 	\label{tab:effFinterval}
@@ -1959,21 +1959,21 @@ L'influence des angles maximums et des vitesses maximum doit également être pr
 		\hline
 			Angle & $10^{o}$ & $20^{o}$ & $30^{o}$ & $40^{o}$ & $50^{o}$ & $60^{o}$ & $70^{o}$ & $80^{o}$\\
 	    \hline
-	    		S001 &  0 &  0 &  0 &  0 &  0 & 0.2138 & 0.5346 & 0.5346\\
+	    		S001 & 0 & 0 & 0.2258 & 0.5646 & 0.5646 & 0.5646 & 0.5646 & 0.5646\\
 	    \hline
-	    		S003 &  0 &  0 &  0 &  0 &  0 & 0.7066 & 0.8832 & 0.8832\\
+	    		S003 & 0 & 0 & 0 & 0 & 0.3875 & 0.9687 & 0.9687 & 0.9687\\
 	    \hline
-	    		S005 &  0 &  0 &  0 &  0 & 0.6959 & 0.6959 & 0.6959 & 0.6959\\
+	    		S005 & 0 & 0 & 0 & 0 & 0.7148 & 0.7148 & 0.7148 & 0.7148\\
 	    \hline
-	    		S006 &  0 &  0 &  0 &  0 & 0.6571 & 0.8214 & 0.8214 & 0.8214\\
+	    		S006 & 0 & 0 & 0 & 0 & 0.6749 & 0.8437 & 0.8437 & 0.8437\\
 	    \hline
-	    		S007 &  0 &  0 &  0 &  0 & 0.5772 & 0.9621 & 0.9621 & 0.9621\\
+	    		S007 & 0 & 0 & 0 & 0 & 0.5929 & 0.9882 & 0.9882 & 0.9882\\
 	    \hline
-	    		S008 &  0 &  0 &  0 &  0 & 0.9588 & 0.9588 & 0.9588 & 0.9588\\
+	    		S008 & 0 & 0 & 0 & 0 & 0.9848 & 0.9848 & 0.9848 & 0.9848\\
 	    \hline
-	    		S009 &  0 &  0 &  0 &  0 & 0.6558 & 0.6558 & 0.6558 & 0.6558\\
+	    		S009 & 0 & 0 & 0 & 0 & 0.6735 & 0.6735 & 0.6735 & 0.6735\\
 	    \hline
-	    		S010 &  0 &  0 &  0 &  0 & 0.3376 & 0.5627 & 0.5627 & 0.5627\\
+	    		S010 & 0 & 0 & 0 & 0 & 0.3468 & 0.5780 & 0.5780 & 0.5780\\
 	    \hline
 	    		Moyenne & 0 & 0 & 0.0282 & 0.0706 & 0.6175 & 0.7895 & 0.7895 & 0.7895\\
 	    \hline
@@ -1991,7 +1991,7 @@ On exploite également ces données pour déduire l'efficacité du filtrage. En 
 		\hline
 			Angle & $10^{o}$ & $20^{o}$ & $30^{o}$ & $40^{o}$ & $50^{o}$ & $60^{o}$ & $70^{o}$ & $80^{o}$\\
 	    \hline
-	    		$p$ &  NaN & NaN & 0.1943 & 0.0155 & 0.4198 & 0.8720 & 0.8720\\
+	    		$p$ &  NaN & NaN & 0.1943 & 0.0155 & 0.4198 & 0.8720 & 0.8720 & 0.8720\\
 	    \hline
 		\end{tabular}
 	\label{tab:anova}
