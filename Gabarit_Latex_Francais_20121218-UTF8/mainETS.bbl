@@ -36,7 +36,7 @@ Chu, Jun-Uk, Inhyuk Moon, Yun-Jung Lee, Shin-Ki Kim, et Mu-Seong Mun.
 \newblock 2007.
 \newblock \og A supervised feature-projection-based real-time EMG pattern
   recognition for multifunction myoelectric hand control\fg .
-\newblock \emph{Mechatronics, IEEE/ASME Transactions on}, vol.~12,
+\newblock \emph{IEEE/ASME Transactions on Mechatronics}, vol.~12,
   n$^{\circ}$~3, p. 282--290.
 
 \bibitem[Crawford\emph{ et~al.}(2005)Crawford, Beau, Kai Miller, Pradeep
@@ -56,7 +56,7 @@ Englehart, Kevin et Bernard Hudgins.
 \newblock 2003.
 \newblock \og A robust, real-time control scheme for multifunction myoelectric
   control\fg .
-\newblock \emph{Biomedical Engineering, IEEE Transactions on}, vol.~50,
+\newblock \emph{IEEE Transactions on Biomedical Engineering}, vol.~50,
   n$^{\circ}$~7, p. 848--854.
 
 \bibitem[Englehart\emph{ et~al.}(1999)Englehart, Kevin, Bernard Hudgins,
@@ -74,7 +74,7 @@ Fukuda, Osamu, Toshio Tsuji, Makoto Kaneko, et Akira Otsuka.
 \newblock 2003.
 \newblock \og A human-assisting manipulator teleoperated by EMG signals and arm
   motions\fg .
-\newblock \emph{Robotics and Automation, IEEE Transactions on}, vol.~19,
+\newblock \emph{IEEE Transactions on Robotics and Automation}, vol.~19,
   n$^{\circ}$~2, p. 210--222.
 
 \bibitem[Kinova(2012)]{Kinova2012}
@@ -126,8 +126,8 @@ Peleg, Dori, Eyal Braiman, Elad Yom-Tov, et Gideon~F Inbar.
 \newblock 2002.
 \newblock \og Classification of finger activation for use in a robotic
   prosthesis arm\fg .
-\newblock \emph{Neural Systems and Rehabilitation Engineering, IEEE
-  Transactions on}, vol.~10, n$^{\circ}$~4, p. 290--293.
+\newblock \emph{IEEE Transactions on Neural Systems and Rehabilitation
+  Engineering}, vol.~10, n$^{\circ}$~4, p. 290--293.
 
 \bibitem[Plapous\emph{ et~al.}(2006)Plapous, Cyril, Claude Marro, et Pascal
   Scalart]{plapous2006}

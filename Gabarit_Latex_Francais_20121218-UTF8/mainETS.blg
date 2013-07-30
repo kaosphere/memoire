@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: mainETS.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: mainETS.aux
 The style file: bibETS.bst
 Database file #1: biblio.bib
 Warning--entry type for "MAXIM3232" isn't style-file defined
@@ -67,45 +65,4 @@ You're missing a field name---line 299 of file biblio.bib
  : %author = {Brands, S. and Chaum, D.},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 18 entries,
-            2960 wiz_defined-function locations,
-            770 strings with 9237 characters,
-and the built_in function-call counts, 7993 in all, are:
-= -- 663
-> -- 658
-< -- 38
-+ -- 186
-- -- 168
-* -- 736
-:= -- 1267
-add.period$ -- 78
-call.type$ -- 18
-change.case$ -- 93
-chr.to.int$ -- 18
-cite$ -- 36
-duplicate$ -- 315
-empty$ -- 504
-format.name$ -- 188
-if$ -- 1658
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 122
-num.names$ -- 72
-pop$ -- 166
-preamble$ -- 1
-purify$ -- 92
-quote$ -- 0
-skip$ -- 257
-stack$ -- 0
-substring$ -- 36
-swap$ -- 62
-text.length$ -- 31
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 198
-warning$ -- 0
-while$ -- 54
-width$ -- 0
-write$ -- 264
 (There were 10 error messages)

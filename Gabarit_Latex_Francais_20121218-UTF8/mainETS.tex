@@ -60,7 +60,7 @@
 
 \examinexterne{M.}{Maarouf Saad}{Département de Génie Électrique}{}
 
-\jury{Mme.}{Prénom Nom}{département et institution}{}
+%\jury{Mme.}{Prénom Nom}{département et institution}{}
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -86,18 +86,17 @@ Ce projet a été réalisé en partenariat avec la société Canadienne Kinova d
 
 Le but principal était de prendre la suite du projet de maîtrise de Véronique Maheu qui consistait en l'étude de la performance de différents classificateurs dans le cadre de la classification de mouvements à partir de huit canaux électromyographiques. Le projet devait réaliser un prototype permettant le contrôle temps réel d'un bras robotique grâce à quatre canaux électromyographiques.
 
-Le projet devait aussi se servir des paramètres cepstraux du signal électromyographiques. Pendant la réalisation, il s'est avéré que des caractéristiques du signal beaucoup plus simples permettent de discriminer suffisamment les mouvements effectués par l'utilisateur. De ce fait l'utilisation des paramètres cepstraux du signal a été abandonnée au profit d'une détection d'activité musculaire simple.
 \end{avantpropos}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % REMERCIEMENTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{remerciements}
-Dans un premier temps, ce projet n'aurait pu aboutir si je n'avais pas eu le soutien de ma famille lors de mon expatriation au Canada, aussi je les remercie du fond du cœur de m'avoir soutenu dans tous mes projets de vie quels qu'ils soient.
-
-Dans un second temps, je tiens à remercier tout particulièrement le professeur Rachid Aissaoui de m'avoir donné la chance de réaliser ce projet avec lui. C'est un directeur de recherche particulièrement disponible, à l'écoute et avec des connaissances infinies qu'il n'hésite jamais à partager. Ce fut un réel plaisir d'avoir pu être encadré par lui.
+Dans un premier temps, je tiens à remercier tout particulièrement le professeur Rachid Aissaoui de m'avoir donné la chance de réaliser ce projet avec lui. C'est un directeur de recherche particulièrement disponible, à l'écoute et avec des connaissances infinies qu'il n'hésite jamais à partager. Ce fut un réel plaisir d'avoir pu être encadré par lui.
 
 Merci à toutes les personnes travaillant au LIO, pour leur bonne humeur quotidienne, et le cadre de travail agréable que tous participent à créer. Félix, Martine, Fernando, Julien, Laurence, Caroline, et tous les autres...
+
+Ce projet n'aurait pu aboutir si je n'avais pas eu le soutien de ma famille lors de mon expatriation au Canada, aussi je les remercie du fond du cœur de m'avoir soutenu dans tous mes projets de vie quels qu'ils soient.
 
 Merci à ma Perrine d'être là chaque jour de ma vie.
 \end{remerciements}
@@ -109,7 +108,7 @@ Merci à ma Perrine d'être là chaque jour de ma vie.
 
 Les blessés médullaires de haut niveau lésionnel n’ont plus l’usage de leurs bras, mais conservent des capacités de mouvements résiduels variant selon la hauteur de leur lésion. Ces capacités résiduelles concernent des mouvements restreints des doigts et des épaules principalement. Suivant le degré d’atteinte et la hauteur de la lésion de la moelle épinière, certaines personnes ne conservent pas suffisamment de liberté de mouvement dans leurs doigts pour utiliser ne serait-ce qu’un simple joystick. Pour ces personnes, les activités de la vie quotidienne (AVQ) deviennent des tâches très compliquées. 
 
-La société canadienne Kinova a conçu un bras robotique, JACO, adaptable à un fauteuil roulant motorisé afin d’aider les personnes à mobilité réduite à effectuer leurs actions de la vie quotidienne plus facilement. En effet, celui-ci permet la saisie d’objets ou d’ouvrir des portes de manière intuitive en n’utilisant qu’un Joystick. Cependant les personnes n’ayant plus suffisamment d’activité musculaire dans les doigts ne peuvent donc pas profiter de ce progrès. Le but de ce projet est d’adapter l’utilisation du bras JACO aux personnes blessées médullaires en utilisant les signaux électromyographiques (EMG) de 4 muscles résiduels au niveau du cou et de l’épaule. 
+La société canadienne Kinova a conçu un bras robotique, JACO, adaptable à un fauteuil roulant motorisé afin d’aider les personnes à mobilité réduite à effectuer leurs actions de la vie quotidienne plus facilement. En effet, celui-ci permet la saisie d’objets ou d’ouvrir des portes de manière intuitive en n’utilisant qu’un joystick. Cependant les personnes n’ayant plus suffisamment d’activité musculaire dans les doigts ne peuvent donc pas profiter de ce progrès. Le but de ce projet est d’adapter l’utilisation du bras JACO aux personnes blessées médullaires en utilisant les signaux électromyographiques (EMG) de 4 muscles résiduels au niveau du cou et de l’épaule. 
 
 L’acquisition des signaux EMG est faite avec des électrodes Delsys filtrées et pré-amplifiées en temps-réel à 2 kHz. Les électrodes sont placées sur quatre muscles présents chez les blessés médullaires de haut niveau : les deux trapèzes ainsi que les deux sterno-cléïdo mastoïdiens. Ces muscles ont été choisis car ils permettent par leur seule activation de reconnaitre un mouvement donné : une élévation de l’épaule dans le cas des trapèzes et une rotation de la tête dans le cas des sterno-cléïdo mastoïdiens.
 
@@ -176,9 +175,9 @@ This project represent a step towards technical assistance brought to spinal cor
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{listofsymbols}[3cm]
 \item [$Efficacite$] Valeur d'efficacité du système pour un sujet donné
-\item [$Coeff_angle$] Coefficient de normalisation de l'efficacité en fonction de l'angle maximum atteint par le sujet
-\item [$Coeff_vitesse$] Coefficient de normalisation de l'efficacité en fonction de la vitesse maximum atteinte par le sujet
-\item [$Eff_globale$] Efficacité globale pour un sujet
+\item [$Coeff_{angle}$] Coefficient de normalisation de l'efficacité en fonction de l'angle maximum atteint par le sujet
+\item [$Coeff_{vitesse}$] Coefficient de normalisation de l'efficacité en fonction de la vitesse maximum atteinte par le sujet
+\item [$Eff_{globale}$] Efficacité globale pour un sujet
 \item [$ms$] milliseconde
 \item [$Hz$] Hertz
 
@@ -209,9 +208,9 @@ Une première partie de ce mémoire sera consacrée au fait de situer le projet 
 
 La partie principale du mémoire sera alors présentée dans le chapitre \ref{CHmethodo} : la méthodologie. Ce chapitre expliquera les choix matériels, logiciels et mathématiques effectués tout au long du projet. Toutes les étapes de conceptions seront détaillées ainsi que les intéractions entre les différentes parties du système. 
 
-Enfin, la dernière partie comprendra l'étape de validation du système conçu afin de déterminer l'efficacité du système et de valider la faisabilité d'un tel projet. Cette validation sera effectuée pars l'application d'un protocole de recherche et à travers une étude effectuée sur 10 sujets sains afin de récolter des données qualitatives permettant une courte étude statistique des performences du système.
+Enfin, la dernière partie comprendra l'étape de validation du système conçu afin de déterminer l'efficacité du système et de valider la faisabilité d'un tel projet. Cette validation sera effectuée par l'application d'un protocole de recherche et à travers une étude effectuée sur dix sujets sains afin de collecter des données quantitatives permettant d'effectuer une étude statistique des performances du système.
 
-En résumé cette étude présente la conception d'un système de contrôle d'une aide technique robotisée grâce aux signaux EMG d'une personne BM et à la validation d'une preuve de concept dans le but d'une potentielle commercialisation future par la societé Kinova.
+En résumé cette étude présente la conception d'un système de contrôle d'une aide technique robotisée grâce aux signaux EMG d'une personne BM et à la validation d'une preuve de concept dans le but d'une commercialisation potentielle future par la societé Kinova.
 
 %
 %\begin{figure}[ht]
@@ -236,7 +235,7 @@ En résumé cette étude présente la conception d'un système de contrôle d'un
 \chapter{mise en contexte}
 \label{CHmiseencontexte}
 
-Les personnes BM sont aujourd'hui en mesure de pouvoir continuer à garder une autonomie partielle dans leur vie quotidienne grâce à la combinaison de plusieurs progrès technologiques. Les fauteuils roulants motorisés sont, par exemple, une part de ce progrès qui contribue à permettre au BM de garder une certaine mobilité, et sont le point d'encrage d'autres aides techniques dont fait partie le bras robotique Jaco.
+Les personnes BM sont aujourd'hui en mesure de pouvoir continuer à garder une autonomie partielle dans leur vie quotidienne grâce à la combinaison de plusieurs progrès technologiques. Les fauteuils roulants motorisés sont, par exemple, une part de ce progrès qui contribue à permettre au BM de garder une certaine mobilité, et sont le point d'ancrage d'autres aides techniques dont fait partie le bras robotique Jaco.
 
 Ce chapitre a pour but de présenter les conditions de vie des personnes BM d'aujourd'hui ainsi que les aides techniques fournies par l'industrie qui permettent d'améliorer leurs conditions quotidiennes de vie. Cette mise en contexte est nécessaire afin de discerner dans quelle mesure ce projet de maîtrise participe au processus d'aide aux AVQ des personnes BM.
 
@@ -418,7 +417,7 @@ Une fois une fenêtre du signal acquise, la première étape est la détection d
 
 La détection d’onset est le principe qui consiste à détecter le début d’une activité musculaire sur le signal EMG de manière automatique.  Pour ce faire, plusieurs algorithmes semblent bien fonctionner en combinant à la fois, une bonne précision et un nombre d’opérations restreint. Cette détection d’onset permet d’économiser les ressources du processeur afin  de n’extraire les caractéristiques du signal que lorsque c’est utile et surtout de délimiter les zones d’activité musculaire pour la détection de mouvement. 
 
-Il existe principalement trois caractéristiques du signal qui peuvent être extraites afin de détecter un onset. Une première utilisée par \cite{Chang1996}est la méthode du Zero Crossing Rate (ZCR). Elle calcule le nombre de fois où la courbe du signal EMG brut repasse par zero. 
+Il existe principalement trois caractéristiques du signal qui peuvent être extraites afin de détecter un onset. Une première utilisée par \cite{Chang1996}est la méthode du Zero Crossing Rate (ZCR). Elle calcule le nombre de fois où la courbe du signal EMG repasse par zero. 
 
 Un élément important à préciser est que \cite{Chang1996} ont développé cette méthode sur un DSP et semble fournir des résultats satisfaisants. Cette étude présente également la mise en place d’une zone morte sur l’algorithme de zero crossing, qui permet de réduire, voir de supprimer l’influence du bruit sur le ZCR. Cependant cette zone morte diminue la sensibilité de la détection.
 Le ZCR est une méthode simple à implémenter et très peu coûteuse en ressources processeur pour la raison qu’elle ne nécessite qu’un nombre d’additions égal à N-1, N étant le nombre d’échantillons dans la fenêtre analysée. 
@@ -427,7 +426,7 @@ Le ZCR est une méthode simple à implémenter et très peu coûteuse en ressour
 
 Une troisième méthode simple à implémenter et peu coûteuse en temps de calculs est la méthode de la Teager-Kaiser Energy (TKE) qui correspond à un taux de variation du signal. Elle a été utilisée par \cite{Maheu2011} comme une caractéristique du signal utilisée dans la classification, mais peut aussi être utilisée dans la détection d’onset comme l'ont montré \cite{li2007}. Elle ne constitue qu’une soustraction et deux multiplications par échantillon dans la fenêtre d’analyse. Le fonctionnement du TKE est expliqué plus en détail au chapitre \ref{CHtke}.
 
-Il existe également des projet n'effectuant pas de détection d'activité musculaire et réalisant une classification des caractéristiques du signal en continu. C'est le cas de \cite{Englehart2003} et \cite{Tenore2007}.
+Il existe également des projet n'effectuant pas de détection d'activité musculaire et réalisant une classification des caractéristiques du signal en continu. C'est le cas de \cite{Englehart2003} et \cite{Tenore2007}. Il est toutefois difficile d'opérer une comparaison entre ces méthodes, car ces articles traitent principalement de classification. Ils présentent leur procédé de détection d'activité sans en donner leurs performances.
 
 \subsection{Caractéristiques du signal EMG utilisées}
 
@@ -510,7 +509,7 @@ De la même manière, \cite{Chang1996} présente les résultats de reconnaissanc
 
 De plus, aucun système de la littérature sur le traitement embarqué de l'EMG ne traite la question de la sensibilité. Les types de mouvement effectués sont toujours "une rotation de la tête" ou bien "une élévation des épaules". Il n'est nulle part précisé si le mouvement effectué est de grande ou de faible amplitude. Nous verrons pourtant dans notre système que ce paramètre est d'une importance cruciale, étant donné que l'amplitude du signal EMG, dépendant de l'amplitude du mouvement effectué, influe énormément sur les performances du système.
 
-En résumé la littérature sur la classification de mouvements à partir de signaux EMG présente en grande partie des résultats présentant des pourcentages de reconnaissance, et pour une grande part ne parle pas de stratégie de contrôle du périphérique sensé être contrôlé par le système. 
+En résumé la littérature sur la classification de mouvements à partir de signaux EMG présente en grande partie des résultats présentant des pourcentages de reconnaissance.
 
 \chapter{Problématique et Objectifs du Projet}
 
@@ -901,7 +900,7 @@ L'étude de \cite{li2007} a montré qu'une caractéristique du signal EMG est tr
    TKE(k) = x^2(k) - x(k-1)*x(k+1) 
 \end{align}
 
-Ainsi, une fois une fenêtre acquise complètement, le TKE instantané (sur chaque échantillon) est calculé. La figure \ref{fig:tke} montre le TKE instantané obtenu sur un signal EMG donné.
+Ainsi, une fois une fenêtre acquise complètement, le TKE instantané (sur chaque échantillon) est calculé. 
 
 \begin{figure}
 	\centering
@@ -912,7 +911,7 @@ Ainsi, une fois une fenêtre acquise complètement, le TKE instantané (sur chaq
 	\label{fig:tkeinstant}
 \end{figure}
 
-Cependant, ce TKE par échantillon est difficile à utiliser directement, car il est très variable et fixer un seuil efficace pour détecter les activités serait très compliqué. Pour faciliter son exploitation, on effectue la moyenne du TKE sur toute la fenêtre, afin d'en obtenir son enveloppe. De cette manière, un seuil de détection est applicable plus facilement. La figure \ref{fig:tke} présente le passage du TKE instantané au TKE moyen.
+Cependant, ce TKE par échantillon est difficile à utiliser directement, car il est très variable et fixer un seuil efficace pour détecter les activités serait très compliqué. Pour faciliter son exploitation, on effectue la moyenne du TKE sur toute la fenêtre, afin d'en obtenir son enveloppe. De cette manière, un seuil de détection est applicable plus facilement. La figure \ref{fig:tkeinstant} présente l'obtention du TKE instantané à partir de l'EMG, et le passage du TKE instantané au TKE moyen.
 
 Une fois le TKE d'une fenêtre calculé, le but est de savoir si le muscle est activé ou non. Pour ce faire, un seuil doit être défini. Si le TKE de la fenêtre dépasse ce seuil, alors le muscle est considéré comme étant en activité.
 
@@ -1013,15 +1012,15 @@ Cette partie présente le filtre prédictif mis en place dans le système dans l
 
 \subsubsection{Concept}
 
-Le but du filtrage prédictif est de pouvoir prédire quelles partie du signal le filtre doit amplifier, et quelles parties de ce même signal il doit écraser.
+Le but du filtrage prédictif est de pouvoir prédire quelles partie du signal le filtre doit amplifier, et quelles parties de ce même signal il doit réduire.
 
-Dans notre cas, la partie du signal à écraser est le bruit analogique mesuré par les ADC du PIC32, tandis que la partie du signal à amplifier est le signal EMG généré par le muscle sur lequel est collée l'électrode.
+Dans notre cas, la partie du signal à écraser est le bruit analogique mesuré par les ADC du PIC32 ajouté au signal de tonus musculaire au repos, tandis que la partie du signal à amplifier est le signal EMG généré par le muscle sur lequel est collée l'électrode.
 
 Le filtre ayant deux élément à reconnaitre (le bruit et le signal), il faut en caractériser un des deux, et définir que lorsque l'on ne le détecte pas, c'est que l'on est en présence de l'autre. Ainsi, on choisit de caractériser le bruit. Lorsque le système détecte la présence du bruit, alors le signal est écrasé, lorsqu'il ne le détecte pas, c'est qu'un EMG est présent dans le signal, il est alors amplifié.
 
-Pour caractériser le bruit, on utilise les caractéristiques fréquentielles du signal. Le but est donc d'isoler le spectre d'amplitude du bruit afin d'en faire un modèle de comparaison. On enregistre un signal sans EMG et on calcule le spectre d'amplitude moyen de ce signal. C'est la bande de base.
+Pour caractériser le bruit, on utilise les caractéristiques fréquentielles du signal. Le but est donc d'isoler le spectre d'amplitude du bruit afin d'en faire un modèle de comparaison. On enregistre le signal d'un muscle au repos et on calcule le spectre d'amplitude moyen de ce signal. C'est la bande de base.
 
-Puis à chaque nouvelle fenêtre, on compare le spectre d'amplitude de cette fenêtre à celui de la bande de base pour calculer une probabilité de présence du bruit. Cette probabilité permet de fixer un gain qui amplifiera ou écrasera le spectre d'amplitude et donc par extension, le signal.
+Puis à chaque nouvelle fenêtre, on compare la variance du spectre d'amplitude de cette fenêtre à celui de la bande de base pour calculer une probabilité de présence du bruit. Cette probabilité permet de fixer un gain qui amplifiera ou écrasera le spectre d'amplitude et donc par extension, le signal.
 
 Il est également à noter que l'on ne veut pas créer de déphasage du signal. La phase du signal sera donc isolée de la FFT pour être réutilisée sans modification pour reconstruire le signal après que le spectre d'amplitude a été transformé. Le schéma \ref{fig:filtre} présente le fonctionnement algorithmique global du filtre. Cette méthode découle de celle mise au point par \cite{plapous2006} dans le domaine du traitement de signal acoustique.
 
@@ -1038,12 +1037,12 @@ Il est également à noter que l'on ne veut pas créer de déphasage du signal. 
 
 Une fois le concept du filtre posé, le mode de fonctionnement précis du filtre va maintenant être détaillé. La première étape de la réalisation du filtre est son calibrage, ou l'enregistrement de la bande de base. 
 
-Le calibrage du filtre s'effectue sur une partie de signal où l'on est sur qu'aucune activité musculaire ne sera présente. On demande donc à l'utilisateur de ne pas bouger pendant l'acquisition de la bande de base. 
+Le calibrage du filtre s'effectue sur une partie de signal où l'on est sur qu'aucune activité musculaire ne sera présente. On demande donc à l'utilisateur de ne pas bouger pendant l'acquisition de la bande de base. Un tonus musculaire au repos est enregistré.
 
-Le signal est alors acquis par fenêtre. Lorsqu'une fenêtre est acquise, on la normalise, c'est à dire qu'on retire sa moyenne à chaque échantillon (eq:normalCalib où $NFFT$ = 16), puis on calcule sa FFT (équation \ref{eq:fftcalib}).
+Le signal est alors acquis par fenêtre. Lorsqu'une fenêtre est acquise, on la normalise, c'est à dire qu'on retire sa moyenne à chaque échantillon (eq:normalCalib où $NFFT$ = 16), puis on calcule sa FFT (équation \ref{eq:fftcalib}). Ici $k$ représente le nombre d'échantillons dans la fenêtre étudiée.
 
 \begin{align}\label{eq:normalCalib}
-   x_{k=1}^{k=NFFT}(k) = x(k) - \frac{\sum_{n=1}^{NFFT}x(n)}{NFFT}
+   x_{k=1}^{k=NFFT}(k) = x_{brut}(k) - \frac{\sum_{n=1}^{NFFT}x(n)}{NFFT}
 \end{align}
 
 \begin{align}\label{eq:fftcalib}
@@ -1052,7 +1051,7 @@ Le signal est alors acquis par fenêtre. Lorsqu'une fenêtre est acquise, on la 
 
 La FFT calculée par cette opération est donc un tableau de 16 nombres complexes représentant la transformée de fourrier de la fenêtre. En effet, lorsqu'un signal est réel, sa FFT est toujours complexe.
 
-Une fois cette FFT calculée, on sauvegarde la phase du signal pour ne garder que le spectre d'amplitude $M$ de la fenêtre (équation \ref{eq:amplCalib}).
+Une fois cette FFT calculée, on sauvegarde la phase du signal pour ne garder que le spectre d'amplitude $M$ de la fenêtre (équation \ref{eq:amplCalib}). Ici $k$ devient la fréquence du spectre étudié.
 
 \begin{align}\label{eq:amplCalib}
    M_{k=1}^{k=NFFT}(k) = \Vert fft(k) \Vert^2
@@ -1084,13 +1083,13 @@ On calcule ensuite la probabilité a posteriori $postsnr$ de présence du filtre
    postsnr(k) = \frac{M(k)}{M_{Bande de base}} - 1
 \end{align}
 
-Cette probabilité est ensuite limitée pour ne pas créer de distorsion provoquée par une valeur trop petite (équation \ref{eq:maxPostsnr}).
+Cette probabilité est ensuite limitée pour ne pas créer de distorsion provoquée par une valeur trop petite (équation \ref{eq:maxPostsnr}). La valeur 0.01 a été trouvée expérimentalement.
 
 \begin{align}\label{eq:maxPostsnr}
    postsnr(k) = \max(postsnr(k), 0.01)
 \end{align}
 
-On compare ensuite la probabilité obtenue avec la celle obtenue avec le spectre d'amplitude de la fenêtre précédente. Cette méthode est appelée méthode de la "décision adaptative" (équation \ref{eq:etaFiltre}). Une nouvelle amplitude est alors calculée en appliquant cette probabilité sur l'amplitude d'origine (équation \ref{eq:newMagEta}).
+On compare ensuite la probabilité obtenue avec celle obtenue avec le spectre d'amplitude de la fenêtre précédente. Cette méthode est appelée méthode de la "décision dirigée" (équation \ref{eq:etaFiltre}). Une nouvelle amplitude est alors calculée en appliquant cette probabilité sur l'amplitude d'origine (équation \ref{eq:newMagEta}).
 
 \begin{align}\label{eq:etaFiltre}
    eta(k) = \alpha * \frac{M(k-1)}{M_{Bande de base}} + (1 - \alpha) * postsnr(k)
@@ -1102,7 +1101,7 @@ $eta$ est l'estimation de présence d'un signal en comparaison de l'échantillon
    M_{new}(k) = \frac{eta}{eta+1} * M(k)
 \end{align}
 
-$M_{new}$ correspond à la nouvelle amplitude sur laquelle on a déterminé la probabilité de présence de bruit. On calcule ensuite le gain à appliquer sur le spectre d'amplitude en comparant l'amplitude sur laquelle on a appliqué les probabilités a priori avec le spectre d'amplitude moyen (équation \ref{eq:tsnr1}, \ref{eq:tsnr2}, \ref{eq:Gtnsr} et \ref{eq:Gtsnr2}).
+$M_{new}$ correspond à la nouvelle amplitude sur laquelle on a déterminé la probabilité de présence de bruit. Ainsi, un gain différent est appliqué sur chaque fréquence du spectre grâce à un gain de Wiener. On calcule ensuite le gain à appliquer sur le spectre d'amplitude en comparant l'amplitude sur laquelle on a appliqué les probabilités a priori avec le spectre d'amplitude moyen (équation \ref{eq:tsnr1}, \ref{eq:tsnr2}, \ref{eq:Gtnsr} et \ref{eq:Gtsnr2}).
 
  \begin{align}\label{eq:tsnr1}
    tsnr(k) = \frac{M_{new}(k)}{M_{Bande de base}}
@@ -1119,20 +1118,20 @@ Ici $tsnr$ représente le rapport signal/bruit de la nouvelle amplitude comparé
 \end{align}
 
 \begin{align}\label{eq:Gtsnr2}
-   M_{new}(k) = Gtsnr * M(k)
+   M_{final}(k) = Gtsnr * M(k)
 \end{align}
 
-Une fois la nouvelle amplitude calculée, il ne reste plus qu'à reconstruire la fft du signal, en réunissant l'amplitude et la phase (équation\ref{eq:reconFiltre1} et \ref{eq:reconFiltre2}).
+Une fois la nouvelle amplitude calculée, il ne reste plus qu'à reconstruire la fft du signal, en réunissant l'amplitude et la phase (équation\ref{eq:reconFiltre1} et \ref{eq:reconFiltre2}). Ici $k$ correspond toujours à une fréquence sur le spectre.
 
 \begin{align}\label{eq:reconFiltre1}
-   \Re(fft(k)) = M_{new}(k) * cos(\phi(k))
+   \Re(fft(k)) = M_{final}(k) * cos(\phi(k))
 \end{align}
 
 \begin{align}\label{eq:reconFiltre2}
-   \Im(fft(k)) = -M_{new}(k) * sin(\phi(k))
+   \Im(fft(k)) = -M_{final}(k) * sin(\phi(k))
 \end{align}
 
-Une fois fait, on effectue la transformée de fourrier inverse pour retrouver le signal EMG filtré. Comme le PIC32 ne possède pas de fonction FFT inverse, on effectue la FFT du conjugé du complexe obtenu après filtrage.
+Une fois fait, on effectue la transformée de fourrier inverse pour retrouver le signal EMG filtré. Comme le PIC32 ne possède pas de fonction FFT inverse, on effectue alors la FFT du conjugé du complexe obtenu après filtrage, ce qui fournit le même résultat que la $FFT^{-1}$.
 
 \section{Architecture Logicielle}
 
@@ -1164,11 +1163,11 @@ Lorsqu'une interruption est déclenchée par un périphérique, le déroulement 
 
 Ce système d'interruption permet d'effectuer automatiquement des opérations comme l'acquisition d'un signal, ou l'envoi et la réception de messages sur le port série sans influencer le programme principal, et donc gagner du temps de calcul. 
 
-Cependant, les interruptions bloquent le cours normal du programme principal. Les interruptions doivent donc être le plus courtes possibles pour ne pas perdre trop de temps dedans. 
+Cependant, les interruptions bloquent le cours normal du programme principal. Les interruptions doivent donc être les plus courtes possibles pour ne pas perdre trop de temps dedans. 
 
 Il est donc important de bien choisir quels calculs sont effectués dans les interruptions, et quels calculs sont faits dans le programme principal. 
 
-Une interruptions peut également être interrompue par une autre interruption. Un système de priorité détermine l'ordre dans lequel ces interruptions ont lieu. Une interruption ne pourra jamais interrompre une autre interruption ayant une priorité plus haute. Ainsi l'interruption encours se terminera avant que l'autre puisse s'effectuer. 
+Une interruption peut également être interrompue par une autre interruption. Un système de priorité détermine l'ordre dans lequel ces interruptions ont lieu. Une interruption ne pourra jamais interrompre une autre interruption ayant une priorité plus haute. Ainsi l'interruption encours se terminera avant que l'autre puisse s'effectuer. 
 
 Ainsi, les deux périphériques utilisés dans le système fonctionneront à base d'interruptions, à savoir l'ADC permettant l'acquisition des quatre canaux, et l'UART permettant la communication série. 
 
@@ -1276,7 +1275,7 @@ En synthétisant :
 
 \subsubsection{Fonctionnement Global et Schéma UML du Projet}
 
-Le logiciel de monitorage des signaux est un programme basé autour de l'interface graphique réalisée grâce à la librairie Qt. Le diagramme UML du programme est présenté par la figure \ref{fig:uml}.
+Le logiciel de monitorage des signaux est un programme basé autour de l'interface graphique réalisée grâce à la librairie Qt. Le diagramme UML (Unified Modeling Language) du programme est présenté par la figure \ref{fig:uml}.
 
 \begin{figure}
 	\centering
@@ -1363,7 +1362,7 @@ La détection de l’activité musculaire se fera par un seuil appliqué sur l�
 
 Un capteur inertiel (Interlink, Microstrain) sera utilisé afin d’enregistrer l’angle de rotation de la tête ainsi que la vitesse angulaire du mouvement. Celui-ci sera disposé sur un casque de type casque d’écoute audio avec les oreilles comme point de repère de placement. 
 
-Un pointeur laser sera également disposé sur la tête du sujet afin que celui-ci puisse indiquer au sujet l’orientation précise de sa tête.
+Un pointeur laser (HTCL) sera également disposé sur la tête du sujet afin que celui-ci puisse indiquer au sujet l’orientation précise de sa tête.
  
 L’angle visé sera indiqué au sujet par des marqueurs disposés devant lui et vers lesquels il devra tourner la tête en se repérant à l’aide du pointeur laser. La vitesse visée sera indiquée au sujet par le biais d’un métronome électronique. Le sujet devra réaliser le mouvement vers le marqueur indiqué en un temps de métronome. 
 
@@ -1601,7 +1600,7 @@ Chaque sujet a été équipé d'un casque sur lequel ont été monté un laser e
 	\fbox{
 		\includegraphics[width=0.6\linewidth] {Figures/montage.png}
 	}
-	\caption{Montage réalisé pour la validation du système. $h$ représente la longueur entre la tête du sujet et la cible du centre, $l$ représente la longueur entre la cible du centre et une autre cible et $a$ représente l'angle de rotation de la tête du sujet.}
+	\caption{Montage réalisé pour la validation du système. $h$ représente la longueur entre la tête du sujet et la cible du centre, $l$ représente la longueur entre la cible du centre et une autre cible et $a$ représente l'angle de rotation de la tête du sujet. Ici $h=1.14m$ et $l\simeq20cm$.}
 	\label{fig:sujet}
 \end{figure}
 
@@ -1636,14 +1635,14 @@ La répartition des sujets a été comme présentée par le tableau \ref{tab:suj
 	    		S010 & F & 23 & 160 & 50\\
 	    \hline
 		\end{tabular}
-	\label{tab:effangles}
+	\label{tab:sujets}
 \end{table}
 
 Le laser a permis de mettre le capteur inertiel à l'horizontal en montant ou descendant le pointeur, obligeant le sujet à baisser ou monter la tête pour viser les cibles. De cette manière, on est sur que la rotation de la tête ne s'exprime que sur l'axe Z.
 
 Chaque test a également été réalisé une fois avec le filtrage du signal EMG activé, et une autre fois avec ce filtrage désactivé. Ceci permet de comparer l'efficacité du système avec et sans filtre et de quantifié le gain de performances apporté par celui-ci.
 
-Pour chaque sujet, on calcule l'efficacité globale du système, c'est à dire le nombre de fois qu'une activité musculaire a été détectée sur le nombre de mouvements total effectué par le sujet. Le tableau suivant retrace les résultats bruts obtenus par les 10 sujets avec filtrage : 
+Pour chaque sujet, on calcule l'efficacité globale du système, c'est à dire le nombre de fois qu'une activité musculaire a été détectée sur le nombre de mouvements total effectué par le sujet. Le tableau \ref{tab:effangles} retrace les résultats bruts obtenus par les 10 sujets avec filtrage : 
 
 \begin{table}[ht]
 	\caption{Efficacités moyennes par angles obtenues par chaque sujet avec filtrage. }
@@ -1689,7 +1688,7 @@ Voici les mêmes résultats mais pour le système sans filtrage :
 	    \hline
 	    		S001 & 0 & 0 & 0 & 0 & 0 & 0.4 & 1 & 1\\
 	    \hline
-			S002 & 0.4 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+			S002 & - & - & - & - & - & - & - & -\\
 	    \hline
 	    		S003 & 0 & 0 & 0 & 0 & 0 & 0.8 & 1 & 1\\
 	    \hline
@@ -1707,9 +1706,9 @@ Voici les mêmes résultats mais pour le système sans filtrage :
 	    \hline
 	    		S010 & 0 & 0 & 0 & 0 & 0.6 & 1 & 1 & 1\\
 	    \hline
-	    		Moyenne & 0.04 & 0.1 & 0.1 & 0.1 & 0.68 & 0.92 & 1 & 1\\
+	    		Moyenne & 0 & 0 & 0 & 0 & 0.6444 & 0.9111 & 1 & 1\\
 	    \hline
-	    		Ecart Type & 0.1265 & 0.3162 & 0.3162 & 0.3162 & 0.3910 & 0.1932 & 0 & 0\\
+	    		Ecart Type & 0 & 0 & 0 & 0 & 0.3972 & 0.2028 & 0 & 0\\
 	    \hline
 		\end{tabular}
 	\label{tab:effFangles}
@@ -1745,13 +1744,9 @@ De la même manière les trois couples de barres montrent respectivement les eff
 
 Enfin le dernier couple de barres montre l'efficacité moyenne du système pour les angles de 10 à 30 degrés. Cette valeur est de 4.67\% pour le système avec filtrage et de 8\% pour le système sans filtrage.
 
-Les résultats ont montré dans un premier temps deux données aberrantes : celles du sujet S004 premièrement, puis celle du sujet S002. 
+Les résultats ont montré dans un premier temps deux données particulières : celles du sujet S004 premièrement, puis celle du sujet S002. 
 
-En effectuant les tests, il s'est avéré qu'un paramètre est majeur dans les performances du système : le placement de l'électrode doit être parfait, car celui-ci influence grandement les résultats, principalement avec filtrage. De plus, il est beaucoup plus difficile de placer correctement l'électrode chez certaines personnes, dépendamment  de la musculature de la personne. En effet, chez une personne très musclée le muscle est facile à voir et l'électrode se place donc facilement. Ajouté à cela, la corpulence de la personne influence également le placement de l'électrode. 
-
-Concernant le sujet S004, on constate sur la figure \ref{fig:effsujets} que celui-ci est le seul sujet présentant une détection d'activité beaucoup plus faible que tous les autres sujets, et également le seul sujet présentant une performance plus élevée du système sans filtrage que celui avec filtrage (excepté le sujet S002 qui sera présenté juste après). Le sujet S004 est également le seul n'ayant pas pu physiquement atteindre l'angle de 80 degrés, comme vu sur la figure \ref{fig:anglesmax}. Les résultats obtenus par le sujet S004 sont donc à interpréter comme un mauvais placement d'électrode sur celui-ci. 
-
-Par conséquent les données générées par le sujet S004 ont été considérées comme \textit{outlier} ou données aberrantes.
+Concernant le sujet S004, on constate sur la figure \ref{fig:effsujets} que celui-ci est le seul sujet présentant une détection d'activité beaucoup plus faible que tous les autres sujets, et également le seul sujet présentant une performance plus élevée du système sans filtrage que celui avec filtrage (excepté le sujet S002 qui sera présenté juste après). Le sujet S004 est également le seul n'ayant pas pu physiquement atteindre l'angle de 80 degrés, comme vu sur la figure \ref{fig:anglesmax}. Tout indique que l'algorithme de filtrage du signal n'a pas fonctionné correctement pour ce sujet. Ce mauvais fonctionnement n'est pas expliqué et devra être exploré dans la suite du projet.
 
 Un autre sujet voit ses données se démarquer, le sujet S002. Cependant, seules ses données acquises lors des tests sans filtrage sont différentes des autres. Sur la figure \ref{fig:effsujets}, on remarque clairement que le système sans filtrage obtient de bien meilleurs résultats que pour le système avec filtrage : 92.5\% contre 62.5\%. 
 
@@ -1779,7 +1774,7 @@ Ce problème peut avoir plusieurs cause :
 
 Dans tous les cas, le fait que cette calibration ait été erronée a été constaté trop tard, à la fin de l'expérimentation, et il n'était pas possible de faire recommencer les tests au sujet.
 
-Par conséquent, les données du système sans filtrage du sujet S002 seront considérées comme aberrantes. 
+Par conséquent, les données du système sans filtrage du sujet S002 seront considérées comme aberrantes. Dans la suite de l'étude, on étudiera également le comportement du système en excluant également le sujet S004.
 
 Intéressons nous maintenant aux données obtenues. Dans un premier temps obervons les angles et vitesses angulaires maximums atteints par les participants. Sur la figure \ref{fig:vitesseshommes}, les couples de barres encadrés sont les vitesses mesurées sur les hommes. On constate que celles-ci sont pour quatre sujets sur cinq supérieures à toutes les vitesses atteintes par les femmes. 
 
@@ -1881,7 +1876,7 @@ Si l'on ne prend en compte que les angles allant de 40 à 80 degrés, l'efficaci
 Ainsi, on effectue les mêmes calcus pour les intervalles 30-80 degrés, 50-80 degrés, 60-80 degrés et 70-80 degrés. Ces données sont réunies dans le tableau \ref{tab:perf} qui permet de visualiser facilement les performances globales du système et les performances apportées par le filtrage du signal.
 
 \begin{tableap}[*ht]
-	\caption{Tableau récapitulatif des performaces du système et du filtrage du signal}
+	\caption{Tableau récapitulatif des performaces du système et du filtrage du signal (N=8)}
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 			{\bf Intervalle (degrés)} & {\bf 10-80} & {\bf 30-80} & {\bf 40-80} & {\bf 50-80} & {\bf 60-80} & {\bf 70-80} \\
@@ -1896,35 +1891,10 @@ Ainsi, on effectue les mêmes calcus pour les intervalles 30-80 degrés, 50-80 d
 	\label{tab:perf}
 \end{tableap}
 
-Il est également pertinent d'observer la répartition des sujets statistiquement quant à leur efficacité. La figure \ref{fig:effstats} montre la répartitions des efficacités pour différents intervalles d'angles. 
-
-La ligne centrale de chaque boite indique la médiane des efficacités obtenues par les sujets. La boite bleue autour délimite les premier et dernier quartiles et enfin les traits délimites les valeurs extrêmes des efficacités obtenues. Les croix rouges du graphiques présentent les données aberrantes d'un point de vue statistique.
-
-Pour chaque diagramme, la boite de gauche correspond à la répartition des efficacités avec filtrage et celle de droite celle des efficacités sans filtrage.
-
-\begin{figure}
-	\centering
-	\fbox{
-		\includegraphics[width=0.95\linewidth] {Figures/effStats.png}
-	}
-	\caption{Répartition et statistiques des efficacités pour différents intervalles d'angles}
-	\label{fig:effstats}
-\end{figure}
-
-Le premier diagramme présente ainsi la répartition de l'efficacité globale avec une médiane à 58.75\% et une donnée aberrante correspondant au sujet S004. L'efficacité globale du système sans filtrage présente une médiane à 47.5\% avec une données aberrante principale à une valeur de 92.5\% correspondant au sujet S002.
-
-On retrouve la donnée aberrante du sujet S004 sur tous les autres diagrammes, et nous expliqueront dans la discussion pourquoi cette donnée est classée comme telle. 
-
-Le deuxième diagramme présente la répartition des efficacités pour les angles de 40 à 80 degrés. Avec filtrage du signal, la médiane de l'efficacité est obtenue à 94\%, tandis que celle sans filtrage est obtenue à 76\%. Sans le filtrage on observe toujours la donnée aberrante du sujet S002 à 100\%. Cette donnée sera également expliquée dans la discussion.
-
-Le troisième diagramme présente la répartition des efficacités pour les angles allant de 50 à 80 degrés. La médianne de cette efficacité est obtenue à 100\% avec filtrage et à 95\% sans le filtrage. 
-
-Enfin, le dernier diagramme présente les efficacités pour les angles allant de 70 à 80 degrés. Celle-ci est fixée à 100\% avec filtrage, et également à 100\% sans le filtrage.
-
 L'influence des angles maximums et des vitesses maximum doit également être pris en compte afin de venir pondérer les efficacités des sujets. Cette pondération est assez mince en ce qui concerne les angles, mais elles est très influente en ce qui concerne les vitesses angulaires. En effet, certains participants ont atteint des vitesses presque deux fois plus grandes que d'autres, sans pour autant avoir de meilleures efficacités. Le tableau \ref{tab:effanglecoeff} montre les efficacités pondérées obtenues.
 
 \begin{table}[ht]
-	\caption{Efficacités moyennes par angles obtenues par chaque sujet sans filtrage avec application des coefficients d'angle et de vitesse. }
+	\caption{Efficacités moyennes par angles obtenues par chaque sujet avec filtrage avec application des coefficients d'angle et de vitesse. }
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 		\hline
 			Angle & $10^{o}$ & $20^{o}$ & $30^{o}$ & $40^{o}$ & $50^{o}$ & $60^{o}$ & $70^{o}$ & $80^{o}$\\
@@ -1991,7 +1961,7 @@ On exploite également ces données pour déduire l'efficacité du filtrage. En 
 		\hline
 			Angle & $10^{o}$ & $20^{o}$ & $30^{o}$ & $40^{o}$ & $50^{o}$ & $60^{o}$ & $70^{o}$ & $80^{o}$\\
 	    \hline
-	    		$p$ &  NaN & NaN & 0.1943 & 0.0155 & 0.4198 & 0.8720 & 0.8720 & 0.8720\\
+	    		$p$ &  - & - & 0.1943 & 0.0155 & 0.4198 & 0.8720 & 0.8720 & 0.8720\\
 	    \hline
 		\end{tabular}
 	\label{tab:anova}
@@ -2024,7 +1994,7 @@ Dans un premier temps, et sans quantifier les performances du système, celui-ci
 
 Ainsi, la preuve de concept est validée quand à son architecture générique. Il est possible d'effectuer une commande sur un bras robotique grâce à plusieurs signaux EMG acquis et traités en temps réel.
 
-L'ajout du filtrage adaptatif du signal a permis d'augmenter en moyenne de 33\% la sensibilité globale du système. Cependant, celui-ci est extrêmement demandeur en temps de calculs, et ne peut être implémenté sur les quatre canaux en simultané comme va le présenté la partie suivante.
+L'ajout du filtrage adaptatif du signal a permis d'augmenter en moyenne de 33\% la sensibilité globale du système. Cependant, celui-ci est extrêmement demandeur en temps de calculs, et ne peut être implémenté sur les quatre canaux en simultané comme va le présenter la partie suivante.
 
 Ce sujet sera traité dans la partie suivante de la discussion. Quant aux performances du systèmes elles seront abordées dans la dernière partie de ce mémoire.
 
@@ -2042,9 +2012,9 @@ Dans le cas de ce projet, les images vidéos collectées attestent du contrôle 
 
 L'analyse des temps de calcul du système permet de tirer plusieurs conclusions de la réalisation, et du matériel choisi. 
 
-Les temps de calculs relevés y sont présenté à l'intérieur de la boucle principale. La figure \ref{fig:chronogrammeDisc} montre la fréquence d'arrivée d'une nouvelle fenêtre de signaux EMG pour les quatre canaux. Elle permet de visualiser le temps de calcul disponible avant qu'une nouvelle fenêtre n'arrive. 
+Les temps de calculs relevés y sont présentés à l'intérieur de la boucle principale. La figure \ref{fig:chronogrammeDisc} montre la fréquence d'arrivée d'une nouvelle fenêtre de signaux EMG pour les quatre canaux. Elle permet de visualiser le temps de calcul disponible avant qu'une nouvelle fenêtre n'arrive. 
 
-Afin de rester temps réel, le système doit être capable d'effectuer tous ses calculs avant qu'une nouvelle fenêtre ne soit acquise. 
+Afin de rester en temps réel, le système doit être capable d'effectuer tous ses calculs avant qu'une nouvelle fenêtre ne soit acquise. 
 
 Le temps nécessaire pour détecter l'activité musculaire sur les quatre canaux est également observé. On observe que ce temps de calcul est largement inférieur au délai de traitement, et peut donc être utilisé en temps réel sans parer au bon fonctionnement du système.
 
@@ -2052,11 +2022,11 @@ Le troisième chronogramme illustre le temps nécessaire au filtrage d'un seul c
 
 En effet, le délai étant de 8 ms auxquelles il faut retirer 1.23 ms de détection d'activité, pour un délai disponible de 6.77 ms. Il faut 14.32 ms pour filtrer les quatre canaux EMG. Ce temps est indisponible, et rend l'utilisation du filtre sur les quatre électrodes impossible.
 
-Cette constatation permet d'établir le fait que le PIC32 est suffisamment performant pour effectuer une détection d'activité performante, mais n'est pas assez rapide pour effectuer un filtrage prédictif des quatre canaux EMG si on conserve les spécifications du projet telles qu'elles. Il est nécessaire de souligner toute fois que l'algorithme de filtrage est très complexe. 
+Cette constatation permet d'établir le fait que le PIC32 est suffisamment performant pour effectuer une détection d'activité performante, mais n'est pas assez rapide pour effectuer un filtrage prédictif des quatre canaux EMG si on conserve les spécifications du projet telles qu'elles. Il est nécessaire de souligner toute fois que l'algorithme de filtrage est très complexe et nécessite l'utilisation des transformées de Fourrier.
 
 Deux solutions se présentent pour résoudre un tel problème. La première consiste à changer de microcontrôleur pour s'orienter vers une architecture pour grosse, mais plus coûteuse. La seconde est de diminuer les spécifications du projet, de plusieurs manières possibles, en baissant par exemple la fréquence d'échantillonnage du système. Si la fréquence d'échantillonnage est plus basse, plus de temps est disponible avant la prochaine fenêtre afin de faire le traitement du signal. Le signal EMG ayant une bande utile allant jusqu'à 450Hz, la fréquence d'échantillonnage théorique la plus basse est donc de 900Hz. Une fréquence d'échantillonnage de 900Hz laisserait au microcontrôleur 17.8 ms avant l'acquisition de la prochaine fenêtre. Cette possibilité n'a pu être testée expérimentalement par manque de temps dans le projet.
 
-Cependant, une baisse de la fréquence d'échantillonnage entraînerait une perte d'information et un bruit de recouvrement qui pourrait poser problème dans l'hypothèse où d'autres caractéristiques du signal EMG seraient utilisées dans la suite du projet. 
+Cependant, une baisse de la fréquence d'échantillonnage entraînerait une perte d'information et un bruit de recouvrement qui pourrait poser un  problème dans l'hypothèse où d'autres caractéristiques du signal EMG seraient utilisées dans la suite du projet. 
 
 La résolution du problème consiste donc à faire un choix important pour la suite du projet. Changer le microcontrôleur permettra d'augmenter les performances du système drastiquement tout en gardant les spécifications de base du systèmes. Baisser les spécifications du projet permettra de faire fonctionner le système intégralement, mais ne permettra pas de le faire évoluer par la suite. 
 
@@ -2076,8 +2046,6 @@ La réalisation de tests sur sujets humains a permis de mettre en évidence les 
 
 On ne peut cependant pas en tirer la conclusion que la vitesse du mouvement n'a aucune influence sur l'efficacité du système. En effet, on a vu sur certains sujets, surtout au niveau des angles les plus faibles (30 et 40 degrés) qu'ils ne sont pas détectés à faible vitesse mais le sont à grande vitesse.
 
-Afin d'augmenter la compréhension de l'influence de tous ces paramètres, une étude à plus grande échelle devra être réalisée.
-
 On a également pu constater lors des expérimentations que mêmes des sujets saints ont une physiologie différentes qui ne leur permet pas de développer le même tonus musculaire. Il est alors normal de se demander quels seront les résultats du système sur des personnes n'ayant qu'une activité résiduelle de leurs muscles.Ces réponses devront être explorées par des tests supplémentaires.
 
 Les tests sur sujets humains ont également permis de prouver l'efficacité du filtrage prédictif sur le signal EMG. En effet, le taux de détection moyen a été amélioré d'environ 33\% entre les tests avec filtrage et les tests sans. Ceci a également été confirmé par une brève analyse de variance ayant déduit une puissance statistique de 0.0155 pour un nombre d'échantillons très réduit de N=8.
@@ -2088,15 +2056,15 @@ Enfin, un dernier point de comparaison à aborder est la performance du système
 
 Cette comparaison est très difficile pour une raison principale : tous les systèmes de la littérature présentent des résultats de classification de mouvements à partir de signaux EMG. Tous ces systèmes présentent donc des pourcentages de classifications effectués sur plusieurs sujets humains. Ainsi, pour donner un exemple générique : \cite{Tenore2007} montrent qu'ils ont un taux de détection de mouvements général de 79.2\% sur leur plateforme embarquée qui doit détecter 9 états différents : 8 mouvements et le repos. Toute fois, aucune études sur plusieurs sujets ne semble avoir été menée. 
 
-\cite{Chang1996} obtiennent un taux de reconnaissance de mouvement de 95\% sur une études de 6 sujets.
+\cite{Chang1996} obtiennent un taux de reconnaissance de mouvement de 95\% sur une études de 6 sujets sains.
 
 Ces deux articles et le reste de la littérature s'intéressent à des performances de classificateurs discriminant plusieurs types de mouvements. Cependant, aucun de ces articles ne caractérise la manière d'effectuer ce mouvement. En effet, notre projet a permis de mettre clairement en évidence l'importance du mouvement effectué. Le signal EMG d'un muscle lors d'un mouvement de petite amplitude comme réalisé dans la vie courante n'a rien à voir avec celui d'un mouvement ample, effectué spécialement pour l'occasion, et ayant une composante de contraction isométrique importante. 
 
 Ainsi, il est impossible de savoir si les systèmes de classification présentés conserveraient leur pourcentage de reconnaissance de mouvement lors de petits mouvements effectués à faible vitesse.
 
-En quelques sortes, l'étude réalisée au cours de ce projet, est une étude "qualitative" de la détection de mouvement grâce à l'EMG en fonction de l'amplitude et de la vitesse du mouvement effectué, alors que la littérature présente une étude "quantitative" de la classification de mouvement sans préciser le type de mouvement précis réalisé pour la classification. 
+En quelques sorte, l'étude réalisée au cours de ce projet, est une étude de sensibilité de la détection de mouvement grâce à l'EMG en fonction de l'amplitude et de la vitesse du mouvement effectué, alors que la littérature présente une étude de la classification de mouvement sans préciser le type de mouvement précis réalisé pour la classification. 
 
-En cela, cette étude contribue à l'augmentation de la connaissance dans la classification EMG et la reconnaissance de mouvements à partir de celle-ci.
+En cela, cette étude contribue à l'augmentation de la connaissance dans la détection de mouvement à partir d'EMG et la reconnaissance de mouvements à partir de celle-ci.
 
 \begin{conclusion}
 
@@ -2128,6 +2096,8 @@ Contributions apportées par le projet :
  \item Réalisation d'une stratégie de commande permettant de faire bouger le bras robotique Jaco à partir d'une détection d'activité musculaire.
  \item Réalisation d'un protocole expérimental permettant la validation sur plusieurs sujets humains du système global.
  \item Réalisation des outils Matlab permettant l'analyse des données extraites des expérimentations.
+ \item Participation au quinzième congrès annuel des étudiants et stagiaires du centre de recherche du CHUM.
+ \item Participation et troisième prix des présentation de projets de recherches des étudiants de l'ETS lors des journées de la découvertes 2013.
 \end{itemize}
 
 \end{contributions}

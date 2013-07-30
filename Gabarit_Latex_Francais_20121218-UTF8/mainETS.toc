@@ -31,8 +31,8 @@
 \contentsline {subsection}{\numberline {4.3.1}D\IeC {\'e}coupage des fen\IeC {\^e}tres d'\IeC {\'e}chantillons}{40}{subsection.58}
 \contentsline {subsection}{\numberline {4.3.2}D\IeC {\'e}tection d'activit\IeC {\'e} musculaire}{42}{subsection.59}
 \contentsline {subsubsection}{\numberline {4.3.2.1}\IeC {\'E}nergie de Teager-Keiser}{42}{subsubsection.60}
-\contentsline {subsubsection}{\numberline {4.3.2.2}Calibrage du seuil de d\IeC {\'e}tection}{43}{subsubsection.63}
-\contentsline {subsubsection}{\numberline {4.3.2.3}Vote \IeC {\`a} la majorit\IeC {\'e}}{46}{subsubsection.67}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Calibrage du seuil de d\IeC {\'e}tection}{44}{subsubsection.63}
+\contentsline {subsubsection}{\numberline {4.3.2.3}Vote \IeC {\`a} la majorit\IeC {\'e}}{45}{subsubsection.67}
 \contentsline {subsection}{\numberline {4.3.3}Filtrage par d\IeC {\'e}cision dirig\IeC {\'e}e}{48}{subsection.70}
 \contentsline {subsubsection}{\numberline {4.3.3.1}Concept}{49}{subsubsection.71}
 \contentsline {subsubsection}{\numberline {4.3.3.2}Calibrage du Filtre}{51}{subsubsection.73}
@@ -59,13 +59,13 @@
 \contentsline {section}{\numberline {5.1}Performances globales}{77}{section.124}
 \contentsline {section}{\numberline {5.2}Temps de calcul et chronogrammes}{79}{section.127}
 \contentsline {section}{\numberline {5.3}Validation du syst\IeC {\`e}me}{80}{section.130}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{95}{chapter.147}
-\contentsline {section}{\numberline {6.1}Performances globales du syst\IeC {\`e}me}{95}{section.148}
-\contentsline {section}{\numberline {6.2}Chronogrammes et temps de calculs}{96}{section.149}
-\contentsline {section}{\numberline {6.3}Validation des performances du syst\IeC {\`e}me}{98}{section.150}
-\contentsline {chapter}{CONCLUSION}{103}{chapter*.151}
-\contentsline {chapter}{CONTRIBUTIONS}{105}{chapter*.152}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Chapitre\ 6}\hfil }\MakeUppercase {Discussion}}}{93}{chapter.146}
+\contentsline {section}{\numberline {6.1}Performances globales du syst\IeC {\`e}me}{93}{section.147}
+\contentsline {section}{\numberline {6.2}Chronogrammes et temps de calculs}{94}{section.148}
+\contentsline {section}{\numberline {6.3}Validation des performances du syst\IeC {\`e}me}{96}{section.149}
+\contentsline {chapter}{CONCLUSION}{99}{chapter*.150}
+\contentsline {chapter}{CONTRIBUTIONS}{101}{chapter*.151}
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Conception du montage pour la validation du syst\IeC {\`e}me}}}{107}{chapter.153}
-\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{108}{equation.155}
-\contentsline {chapter}{BIBLIOGRAPHIE}{110}{chapter*.156}
+\contentsline {chapter}{{\hbox to\@tempdima {\MakeUppercase {Annexe\ I}\hfil }\MakeUppercase {Conception du montage pour la validation du syst\IeC {\`e}me}}}{103}{chapter.152}
+\contentsline {chapter}{LISTE DE R\IeC {\'E}F\IeC {\'E}RENCES}{104}{equation.154}
+\contentsline {chapter}{BIBLIOGRAPHIE}{106}{chapter*.155}
