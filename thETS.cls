@@ -6,21 +6,6 @@
 %% /usr/share/texmf/tex/latex/base/book.cls
 %%
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
-%% [01 Aout 2013]
-%%  - Simple interligne pour les titres longs
-%%  - Correction du nombre de sauts de ligne entre l'abstract et les mots clés
-%%  - Correction du comportement des listes (de figure, table et table de matieres) au niveau du retour a la ligne
-%%
-%% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
-%% [19 Avril 2013]
-%% -Compatibilité avec la nouvelle version du package caption
-%% -Corrections mineures de mise en page (merci `a Sebastien Rufiange)
-%%
-%% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
-%% [14 Fev 2013]
-%% - Correction du positionnement des floats en annexe
-%%
-%% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
 %% [28 Nov 2012]
 %% - Bonne numerotation des equation dans annexes
 %% 
@@ -288,7 +273,6 @@
 \RequirePackage{listings} %% Code listings (extraits de code)
 \RequirePackage[paper=letterpaper,tmargin=1.5in,lmargin=1.5in,rmargin=0.75in,bmargin=\newbmargin]{geometry}
 \RequirePackage{fancyhdr}
-\RequirePackage[labelfont={bf},margin=10pt,justification=centering]{caption}
 \RequirePackage[caption=false]{subfig} %% Utilisation des subfigures
 \RequirePackage{tabto}
 \setlength{\headheight}{15pt} % pour supprimer un warning avec fancyhdr
@@ -296,8 +280,6 @@
 %% Exec de l'option web pour activer hyperref (Menegon 26-07-2010)
 \ifthenelse{\equal{\WithHyperref}{true}}{
   \RequirePackage[%
-  pdftex,
-  breaklinks=true,
 pdfborder={0 0 0},%
 %%%%               Bookmarck dans le pdf
 bookmarks=true,%                  %% Cree les bookmarks ...
@@ -317,6 +299,7 @@ hypertexnames=false%
 \urlstyle{rm} % Hyphenation des références
 
 
+\RequirePackage[labelfont={bf},margin=10pt,justification=centering]{caption}
 \RequirePackage{amsthm} % a mettre apres hyperref
 
 
@@ -441,7 +424,7 @@ hypertexnames=false%
 %% Marges autour des objets flottants : figures et tableaux
 %% Ce n'est pas au point, il y aurait des ajustements à faire.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength\abovecaptionskip{0.5\baselineskip}
+\setlength\abovecaptionskip{\baselineskip}
 % belowcaptionskip: ca agrandi la taille virtuelle des figure ce qui met des warning pour le fig prenant toute la page meme si elle sont plus petite : utilise \afterpage{\clearpage}
 \setlength\belowcaptionskip{0.5\baselineskip} % 0.5 pour ajouter un peu plus d espace en dessous des table (qui sont au meme endroit dans le text ), espace recuperer pour les figures cf a la fin du .cls
 \setlength\floatsep{1.5\baselineskip}
@@ -541,9 +524,11 @@ hypertexnames=false%
         THÈSE PRÉSENTÉE
       }
       {\ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
-        THÈSE PAR ARTICLES PRÉSENTÉE}{
+        THÈSE PAR ARTICLES PRÉSENTÉE
+      }{
         MÉMOIRE PRÉSENTÉ
-      }}~À\\
+      }
+      } À\\
       L'ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
       \vfill
       COMME EXIGENCE PARTIELLE\\
@@ -644,7 +629,7 @@ hypertexnames=false%
     
     
  % Jury
-    \ifthenelse{\equal{\NomJury}{Nom d'un membre du jury}}{}{%
+    \ifthenelse{\equal{\NomExamExt}{Nom d'un membre du jury}}{}{%
 	\PrefJury~\NomJury,~\TxtJury\\
       \AffilJury\par%
       \vspace{1em}
@@ -665,7 +650,11 @@ hypertexnames=false%
   \begin{center}%
     \vspace{3em}%
     \renewcommand{\baselinestretch}{2}\small\normalsize%
-    \ifthenelse{\equal{\TypeDoc}{memoire}}{IL}{ELLE}~A FAIT L'OBJET D'UNE SOUTENANCE DEVANT JURY ET PUBLIC\\
+    \ifthenelse{\equal{\TypeDoc}{these}}{
+      ELLE
+    }{
+      IL
+    } A FAIT L'OBJET D'UNE SOUTENANCE DEVANT JURY ET PUBLIC\\
     LE \MakeUppercase{\@datesoutenance}\\
     À L'ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
   \end{center}\par%
@@ -722,7 +711,7 @@ hypertexnames=false%
 %% Modification des chapitres numérotés
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\@makechapterhead}[1]{{
-        \singlespacing\normalfont\bfseries%
+        \normalfont\bfseries%
         \begin{center}
         \etchapterheadstyle{\@chapapp{ \thechapter}} % CHAPTER 1
         \vskip 3\p@%
@@ -737,7 +726,7 @@ hypertexnames=false%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\@makeschapterhead}[1]{{
     \thispagestyle{empty}
-        \singlespacing\normalfont\bfseries%
+        \normalfont\bfseries%
         \begin{center}
         \etchapterheadstyle{#1} % TITLE OF CHAPTER
         \end{center}
@@ -834,7 +823,7 @@ hypertexnames=false%
   
 }
 {
-  \vspace{2\baselineskip} %Ajout de 3 retours à la ligne avant les Mot clés
+  \vspace{3\baselineskip} %Ajout de 3 retours à la ligne avant les Mot clés
   {\bf Mot-clés :}
   %{\MotCles}
   %% tabulation Nicolas Lussier-Clément 2012
@@ -873,7 +862,7 @@ hypertexnames=false%
   \end{center}
 }
 {
-  \vspace{2\baselineskip} %Ajout de 3 retours à la ligne avant les Mot clés
+  \vspace{3\baselineskip} %Ajout de 3 retours à la ligne avant les Mot clés
   {\bf Keywords:} % \KeyWords
   %% tabulation Nicolas Lussier-Clément 2012
   \newdimen\stringwidth
@@ -918,17 +907,10 @@ hypertexnames=false%
 %% Conclusion
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{conclusion}{%
-
-\ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
-  \chapter*{Conclusion générale}
-  \addcontentsline{toc}{chapter}{CONCLUSION GÉNÉRALE} 
-}{
   \chapter*{Conclusion}
-  \addcontentsline{toc}{chapter}{CONCLUSION} 
-}
-% Ajout dans la table des matières
+  \addcontentsline{toc}{chapter}{CONCLUSION} % Ajout dans la table des matières
  }
-
+ 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Contributions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -981,7 +963,7 @@ hypertexnames=false%
       \leavevmode %
       \advance\leftskip\@tempdima%
       \hskip -\leftskip%
-      #1%\nobreak
+      #1\nobreak
       \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
       \hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par%
       \penalty\@highpenalty%
@@ -1035,7 +1017,7 @@ hypertexnames=false%
      \leavevmode \normalsize%
      \advance\leftskip \tocLeftMarginSecondLineFigure%
       \hskip -\leftskip%
-      {\figurename\mbox{\hspace{4pt}}#1}%\nobreak%
+      {\figurename\mbox{\hspace{4pt}}#1}\nobreak%
        \leaders\hbox{$\m@th%
         \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
         mu$} \hfil\nobreak\hb@xt@%
@@ -1079,7 +1061,7 @@ hypertexnames=false%
       \leavevmode \normalsize%
      \advance\leftskip \tocLeftMarginSecondLineTable %5.2em%8.4em%
       \hskip -\leftskip%
-      {\tablename\mbox{\hspace{4pt}}#1}%\nobreak%
+      {\tablename\mbox{\hspace{4pt}}#1}\nobreak%
        \leaders\hbox{$\m@th%
         \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
         mu$} \hfil\nobreak\hb@xt@%
@@ -1120,7 +1102,7 @@ hypertexnames=false%
      \leavevmode \normalsize%
      \advance\leftskip \tocLeftMarginSecondLineFigure%
       \hskip -\leftskip%
-      {\lstlistingname\mbox{\hspace{4pt}}#1}%\nobreak%
+      {\lstlistingname\mbox{\hspace{4pt}}#1}\nobreak%
        \leaders\hbox{$\m@th%
         \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
         mu$} \hfil\nobreak\hb@xt@%
@@ -1355,7 +1337,7 @@ hypertexnames=false%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \renewcommand{\@makeschapterhead}[1]{{
     \thispagestyle{empty}
-       \singlespacing \normalfont\bfseries%
+        \normalfont\bfseries%
         \begin{center}
            \MakeUppercase{##1} % TITLE OF ANNEXE
         \end{center}
@@ -1433,9 +1415,6 @@ hypertexnames=false%
 %
 \def\fps@figure{htbp}
 \def\fps@table{htbp}
-
-\def\fps@figureap{htbp}
-\def\fps@tableap{htbp}
 
 %
 % Énumération avec des lettres, aligné à gauche

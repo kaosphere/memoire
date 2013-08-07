@@ -48,7 +48,7 @@
 
 \datesoutenance{``Date de soutenance''}
 
-\datedepot{``Date du dépôt au Bureau des cycles supérieurs''}
+\datedepot{``7 août 2013''}
 
 \directeur{M. }{Rachid Aissaoui}{Département de Génie de la Production Automatisée}
 
@@ -58,9 +58,9 @@
 
 \president{M.}{Pascal Bigras}{Département de Génie de la Production Automatisée}
 
-\examinexterne{M.}{Maarouf Saad}{Département de Génie Électrique}{}
+\examinexterne{M.}{Maxime Raison}{Professeur à l'école Polytechnique de Montréal}{}
 
-%\jury{Mme.}{Prénom Nom}{département et institution}{}
+%\jury{Mme.}{Maxime Raison}{Professeur à l'école Polytechnique de Montréal}{}
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -110,7 +110,7 @@ Les blessés médullaires de haut niveau lésionnel n’ont plus l’usage de le
 
 La société canadienne Kinova a conçu un bras robotique, JACO, adaptable à un fauteuil roulant motorisé afin d’aider les personnes à mobilité réduite à effectuer leurs actions de la vie quotidienne plus facilement. En effet, celui-ci permet la saisie d’objets ou d’ouvrir des portes de manière intuitive en n’utilisant qu’un joystick. Cependant les personnes n’ayant plus suffisamment d’activité musculaire dans les doigts ne peuvent donc pas profiter de ce progrès. Le but de ce projet est d’adapter l’utilisation du bras JACO aux personnes blessées médullaires en utilisant les signaux électromyographiques (EMG) de 4 muscles résiduels au niveau du cou et de l’épaule. 
 
-L’acquisition des signaux EMG est faite avec des électrodes Delsys filtrées et pré-amplifiées en temps-réel à 2 kHz. Les électrodes sont placées sur quatre muscles présents chez les blessés médullaires de haut niveau : les deux trapèzes ainsi que les deux sterno-cléïdo mastoïdiens. Ces muscles ont été choisis car ils permettent par leur seule activation de reconnaitre un mouvement donné : une élévation de l’épaule dans le cas des trapèzes et une rotation de la tête dans le cas des sterno-cléïdo mastoïdiens.
+L’acquisition des signaux EMG est faite avec des électrodes Delsys filtrées et pré-amplifiées en temps-réel à 2 kHz. Les électrodes sont placées sur quatre muscles présents chez les blessés médullaires de haut niveau : les deux trapèzes ainsi que les deux sterno-cléïdo mastoïdiens. 
 
 L’énergie de Teager-Keiser est utilisée afin de déterminer si une activité musculaire est présente ou non, et chaque mouvement détecté peut être relié à une action du bras robot. Une calibration peut être effectuée pour chaque muscle afin de définir des seuils de détection personnalisés. Enfin un système de filtrage prédicitif en temps réel a été intégré afin d’augmenter la sensibilité du système a des mouvements plus lents ou pour les personnes ayant moins de tonus musculaire.
 
@@ -123,7 +123,7 @@ Ce projet constitue une avancée supplémentaire dans l’aide technique à la m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ABSTRACT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}{titre original}{Kinova, jaco, EMG control, real time, spinal cord injury }
+\begin{abstract}{utilisation de signaux électromyographiques pour le contrôle d'un bras robotique pour usagers de fauteuils roulants motorisés.}{Kinova, jaco, EMG control, real time, spinal cord injury }
 
 High level spinal cord injury individuals do not have the capacity to use their arms, but they still have a control of several muscles depending on the level of injury. Residual capacities are mostly related to finger and shoulder movements. Depending of the level of the injury, some individuals do not have the enough residual muscular activity to move their fingers in order to control a simple joystick. For them, daily life activities can be very hard to achieve. 
 
@@ -240,7 +240,7 @@ Les personnes BM sont aujourd'hui en mesure de pouvoir continuer à garder une a
 Ce chapitre a pour but de présenter les conditions de vie des personnes BM d'aujourd'hui ainsi que les aides techniques fournies par l'industrie qui permettent d'améliorer leurs conditions quotidiennes de vie. Cette mise en contexte est nécessaire afin de discerner dans quelle mesure ce projet de maîtrise participe au processus d'aide aux AVQ des personnes BM.
 
 
-\section{Les Blessés Médullaires}
+\section{Les blessés médullaires}
 
 Les blessés médullaires (BM) sont des personnes victimes d'une lésion de la colonne vertébrale et plus précisément de la moelle épinière. Cette lésion peut avoir des conséquences graves sur la vie de la personne. Elle peut entraîner des paralysies ou des pertes sensorielles complètes ou partielles de différentes parties du corps. Cette lésion peut être de plusieurs natures différentes, en fonction de la hauteur de celle-ci, et de son importance. 
 
@@ -257,7 +257,7 @@ Enfin, les vertèbres pelviennes ou sacrées terminent la colonne vertébrales. 
 	\fbox{
 		\includegraphics[width=0.4\linewidth]{Figures/rachis.png}
 	}
-	\caption{Régions de la colonne vertébrale humaine. Tiré de \cite{rachisWiki} sous la licence Creative Commons.}
+	\caption{Régions de la colonne vertébrale humaine. \\ Tiré de \cite{rachisWiki} sous la licence Creative Commons.}
 	\label{fig:rachis}
 \end{figure}
 
@@ -269,9 +269,9 @@ Le projet portant principalement sur les personnes BM de haut niveau, les consé
 	\caption{Conséquence motrices en fonction de la hauteur de la lésion médullaire.}
 		\begin{tabular}{|c|c|}
 		\hline
-	    	 	C7 - C8 & Mouvements complets du cou et de la tête \\
+	    	 	C7-C8 & Mouvements complets du cou et de la tête \\
 	    	 	& Bons mouvements des épaules\\
-	    	 	& Système nerveux parasympathique compromis, Possibilité d'hyperréflexie autonome\\
+	    	 	& Système nerveux parasympathique compromis, hyperréflexie autonome possible\\
 	    	 	& Paralysie complète du tronc et des jambes\\
 	    	 	& Mouvement partiel des doigts, bons mouvement du reste du bras\\
 	    \hline
@@ -283,7 +283,7 @@ Le projet portant principalement sur les personnes BM de haut niveau, les consé
 	    		& Mouvements limités des épaules\\
 	    		& Aucun mouvement du coude\\
 		\hline
-			C1 - C3 & Mouvements de la tête limités en fonction du tonus musculaire résiduel\\
+			C1-C3 & Mouvements de la tête limités en fonction du tonus musculaire résiduel\\
 			 & Paralysie complète des bras\\
 			 & utilisation des muscles du thorax et diaphragme pour respirer impossible\\	    
 	    \hline
@@ -299,23 +299,23 @@ Le tableau \ref{tab:typelesion} présente les quatre grands types de lésions m�
 	\caption{Types de lésions de la moelle épinière et conséquences.}
 		\begin{tabular}{|c|c|}
 		\hline
-	    	 	Syndrome cordonal antérieur & Partie frontale de la moelle épinière endommagée\\
-	    	 	& Perte de sensation de douleur, toucher et chaleur\\
+	    	 	Syndrome cordonal & Partie frontale de la moelle épinière endommagée\\
+	    	 	antérieur & Perte de sensation de douleur, toucher et chaleur\\
 	    	 	& Possibilité de retrouver un mouvement plus tard\\
 	    \hline
-	    	 	Syndrome cordonal postérieur & Partie dorsale de la moelle épinière endommagée\\
-	    	 	& Conservation du tonus musculaire et des sensations \\
+	    	 	Syndrome cordonal & Partie dorsale de la moelle épinière endommagée\\
+	    	 	postérieur & Conservation du tonus musculaire et des sensations \\
 	    	 	& Perte de coordination des mouvements des membres\\
 	    \hline
-	    		Syndrome cordonal central & Centre de la moelle épinière endommagé\\
-	    		& Perte de l'usage des bras\\
+	    		Syndrome cordonal & Centre de la moelle épinière endommagé\\
+	    		central & Perte de l'usage des bras\\
 	    		& Conservation possible de certaines fonctions des jambes\\
 	    		& Contrôle des intestins et de la vessie possible \\
 	    		& Guérison progressive possible\\
 	    	\hline
-	    		Syndrome de Brown-Séquard & Dommages concentrés sur un côté seulement de la moelle \\
-	    		& Perte de mouvement du côté de la lésion mais conservation des sensations\\
-	    		& Perte des sensation du côté opposé mais conservation des mouvements\\
+	    		Syndrome de & Dommages concentrés sur un côté seulement de la moelle \\
+	    		Brown-Séquard& Perte motrice du côté de la lésion, conservation des sensations\\
+	    		& Perte sensorielle du côté opposé, conservation des mouvements\\
 	    \hline
 		\end{tabular}
 	\label{tab:typelesion}
@@ -364,7 +364,7 @@ Jaco est également livré avec une suite logicielle intégrée permettant de co
 
 Cette solution permet une grande liberté et ouvre la possibilité à tout un chacun de pouvoir développer une nouvelle méthode de contrôle pour le bras.
 
-\section{Le Signal Électromyographique (EMG)}
+\section{Le signal électromyographique (EMG)}
 
 L'électromyographie consiste en l'acquisition de l'activité électrique présente sur un muscle lors de sa contraction. Le signal peut être acquis en surface grâce à une électrode collée directement sur la peau au dessus du muscle, ou directement à l'intérieur du muscle de manière invasive à l'aide d'une aiguille.
 
@@ -456,7 +456,7 @@ Ceci étant dit nous nous intéresserons donc plus particulièrement aux deux é
 La classification EMG est basée sur la création d'une commande à partir de l'interprétation du résultat de la classification. Cette classification est nécessaire lorsque l'on monitore plusieurs muscles participant au même mouvement. 
 
 
-\section{Systèmes Embarqués temps réels et EMG}
+\section{Systèmes embarqués temps réels et EMG}
 
 Dans un premier temps, il est nécessaire de définir l'appellation "système embarqué" afin de bien comprendre les enjeux que celle-ci représente pour le projet. Un système embarqué est un système électronique et informatique, souvent temps réel spécialisé dans une fonction précise. Ce système, ayant pour contraintes critiques l'espace et la consommation d'énergie. De ces critiques découlent d'autres contraintes qui sont directement liées aux deux citées précédemment : contrainte de mémoire, de puissance de calcul.
 
@@ -543,7 +543,7 @@ Le projet est réalisé en partenariat avec le CRSNG et la société Kinova sous
 \chapter{Méthodologie}
 \label{CHmethodo}
 
-\section{Choix des Muslces}
+\section{Choix des muscles}
 
 Le premier choix important est de choisir quels muscles seront utilisés pour réaliser la commande. Dans un premier temps, le critère principal est que les muscles choisis doivent toujours être fonctionnels chez les blessés médullaires. Ainsi, les muscles choisis par \cite{Chang1996}, les trapèzes et les sterno-cléïdo mastoïdiens sont considérés comme un choix judicieux dans un premier temps. En effet, ces deux muscles sont innervés en partie par des nerfs passant par la seconde vertèbre cervicale, ainsi, la plupart des blessés médullaires conserveront au moins une activité résiduelle dans ces muscles. 
 
@@ -552,7 +552,7 @@ Le premier choix important est de choisir quels muscles seront utilisés pour r�
 	\fbox{
 		\includegraphics[width=0.6\linewidth]{Figures/muscles2.png}
 	}
-	\caption{Muscle sterno-cléïdo mastoïdien et muscles du cou. Adapté de \cite{sternoWiki} sous la licence Creative Commons. le muscle indiqué en 1 est le trapèze et le muscle indiqué en 2 est le sterno-cléïdo mastoïdien.}
+	\caption{Muscle sterno-cléïdo mastoïdien et muscles du cou. \\Adapté de \cite{sternoWiki} sous la licence Creative Commons. le muscle indiqué en 1 est le trapèze et le muscle indiqué en 2 est le sterno-cléïdo mastoïdien.}
 	\label{fig:muscles}
 \end{figure}
 
@@ -578,7 +578,7 @@ Une fois le choix des muscles arrêté, les premiers choix a effectuer seront le
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=\linewidth]{Figures/archiMatTot.png}
+		\includegraphics[width=0.9\linewidth]{Figures/archiMatTot.png}
 	}
 	\caption{Schéma bloc présentant le système global}
 	\label{fig:archiMatTot}
@@ -688,7 +688,7 @@ Le modèle choisi pour le projet est le PIC32MX795F512L. C'est le modèle le plu
 Ce modèle a été choisi également car il est commercialisé par Microchip sur une carte de développement peu coûteuse. De plus cette carte de développement se présente sous la forme d'une petite carte pouvant être montée sur une carte fille permettant de connecter simplement d'autres composants aux entrées/sorties du PIC32. 
 
 
-\subsection{Adaptation des Tensions}
+\subsection{Adaptation des tensions}
 
 Les électrodes étant alimentées en $+5V/-5V$, et le PIC32 fonctionnant à $3.3V$, il est nécessaire d’adapter les signaux des électrodes de $+5V/-5V$ à $0V/3.3V$ afin de ne pas créer de sur-tension dans le microcontrôleur. Pour ce faire, un montage composé de deux étages d'amplificateurs opérationnels est nécessaire.  Les amplificateurs utilisés pour cette réalisation sont des composants intégrés de type LM741CN. Ces composants, bien que peu récents ont l'avantage d'avoir un comportement aujourd'hui bien maîtrisé et connu. 
 
@@ -704,11 +704,9 @@ Le premier étage est un montage inverseur ayant un gain de $1/3$. Ce montage es
 \end{figure}
 
 La fonction de transfert de cet étage d'amplification peut être calculée par l'équation \ref{eq:inverseur}. Ainsi, on fixe respectivement les valeurs des résistances $R1$ et $R2$ à $11Kohm$ et $3.3Kohm$.
-
 \begin{align}\label{eq:inverseur}
    Vout = -Vin \times ( \frac{R2}{R1} )
 \end{align}
-
 Cet étage permet théoriquement d'amener la tension entre $-5V$ et $+5V$ à une tension comprise entre $-1.5V$ et $+1.5V$. En pratique, à cause des variations de valeurs des composants, et des caractéristiques de l'amplificateur opérationnel utilisé (imperfections statiques, tension d'offset), la tension est ramenée entre $-1.75V$ et $1.5V$.
 
 Le deuxième étage est un offset réalisé par un montage sommateur inverseur permettant de repasser la plage de tension dans un intervalle positif. Le montage est décrit par la figure \ref{fig:sommateur1}. 
@@ -723,17 +721,13 @@ Le deuxième étage est un offset réalisé par un montage sommateur inverseur p
 \end{figure}
 
 La fonction de transfert de cet étage d'amplification peut être calculée par l'équation \ref{eq:sommateur1}. 
-
 \begin{align}\label{eq:sommateur1}
    Vout = -R3 \times ( \frac{V1}{R1} + \frac{V2}{R2})
 \end{align}
-
 Soit, si $R1 = R2 = R3$ : 
-
 \begin{align}\label{eq:sommateur2}
    Vout = -(V1 + V2)
 \end{align}
-
 Ainsi, V1 représente la sortie du premier étage d'amplification et V2 la tension d'offset à ajouter à V1 pour faire passer toute la plage de tension dans les tension négatives (en théorie donc -1.5V). Enfin le facteur $-1$ généré par la partie inverseuse du montage permet de repasser l'intervalle de tension dans les tensions positives uniquement.
 
 Le plus important pour le signal final est de ne pas dépasser $3.3V$ pour les crêtes hautes et de ne pas passer sous les $0V$ pour les crêtes basses. Le signal doit également être centré par rapport à cette plage de tension, et donc être centré aux alentours de $1.75V$.
@@ -754,7 +748,7 @@ Cependant il est à souligner que la valeur exacte des composants électroniques
 Le schéma \ref{fig:adapttension} présente les valeurs de composants pratiques pour la réalisation du circuit. Celles-ci sont définies en tenant compte des imperfections statiques des amplificateurs et des variations des composants.
 
 
-\subsection{Liaison à l'Ordinateur}
+\subsection{Liaison à l'ordinateur}
 
 Une fois les électrodes connectée au microcontrôleur, celui-ci doit maintenant être connecté à l'ordinateur. Cette partie a pour but de présenter la liaison série réalisée entre la carte électronique du PIC32 et l'ordinateur utilisé pour visualiser les signaux en temps réel.
 
@@ -767,7 +761,7 @@ Afin de faire la transition entre ces deux niveaux de tension, un composant éle
 	\fbox{
 		\includegraphics[width=0.6\linewidth]{Figures/max3232.png}
 	}
-	\caption{Circuit de câblage type du composant max3232, extrait de la documentation officielle du composant produit par \cite{MAXIM3232}.}
+	\caption{Circuit de câblage type du composant max3232. \\Extrait de la documentation officielle du composant produit par \cite{MAXIM3232}.}
 	\label{fig:max3232}
 \end{figure}
 
@@ -804,7 +798,7 @@ Le système au stade de prototype étant connecté un ordinateur par une liaison
 
 De ce fait, le programme de monitorage des données du système doit également s'interfacer avec Jaco de manière à lui transférer des commandes en fonction des mouvements détectés. Cette connexion est effectuée grâce à la liaison USB disponible sur Jaco et utilise les librairies de programmation fournies par Kinova.
 
-\subsection{Schéma matériel Global}
+\subsection{Schéma matériel global}
 
 La partie \ref{CHarchimat} présente les différentes composantes nécessaire à la réalisation matérielle du projet. Cette partie a pour but de synthétiser tous les choix effectuer de manière à donner du recul et un point de vue global du prototype entier. 
 
@@ -817,7 +811,7 @@ Ainsi on voit sur la figure \ref{fig:cablagePic} que les quatre électrodes sont
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=\linewidth]{Figures/cablagePic.png}
+		\includegraphics[width=0.95\linewidth]{Figures/cablagePic.png}
 	}
 	\caption{Schéma bloc présentant le câblage de la partie électronique du projet}
 	\label{fig:cablagePic}
@@ -845,7 +839,7 @@ Il est également à noter que cette architecture va induire un délai de traite
 
 Ainsi, les temps de traitement mesurés caractériseront uniquement la partie calculatoire effectuée sur le PIC32, et non le temps entre le signal perçu par l'électrode et la commande appliquée sur le bras robotique.
 
-\section{Choix des caractéristiques du signal à utiliser et des outils algorithmiques et mathématiques}
+\section{Choix des caractéristiques du signal et des outils algorithmiques et mathématiques}
 
 Une fois les choix matériel effectués et le calculateur choisi, l'étape de réalisation suivante est le choix des calculs a effectuer pour le bon fonctionnement de la détection d'activité musculaire. 
 
@@ -895,7 +889,6 @@ Enfin, le système de calibration pour chaque muscle et chaque sujet sera prése
 %TODO faire des tests sur la valeur absolue du tke pour voir si ca marche toujours. faire plein de screen shots a foutre la dedans.
 
 L'étude de \cite{li2007} a montré qu'une caractéristique du signal EMG est très efficace pour la détection d'activité musculaire automatique : l'énergie de Teager-Keiser (TKE). Cette caractéristique s'apparente à un taux de variation simple du signal en comparant un échantillon à son précédent et à son suivant. Le TKE se calcule comme présenté par l'équation \ref{eq:tke}.
-
 \begin{align}\label{eq:tke}
    TKE(k) = x^2(k) - x(k-1)*x(k+1) 
 \end{align}
@@ -929,11 +922,9 @@ De manière à calibrer efficacement le seuil de détection d'activité musculai
 \end{itemize}
 
 On acquiert ces données en se basant sur le TKE d'un muscule lorsqu'il est au repos, ainsi que lorsqu'il est en contraction isométrique maximum, c'est à dire que le muscle se contracte au maximum, tout en maintenant l'articulation fixe. Les équations \ref{eq:calibZero} et \ref{eq:calibMax} présentent les calculs permettant d'obtenir les données.
-
 \begin{align}\label{eq:calibZero}
    Tonus_{repos} = \frac{\sum_{n=1}^{20}TKE(x_{repos}(n))}{20} 
 \end{align}
-
 \begin{align}\label{eq:calibMax}
    Tonus_{max} = \frac{\sum_{n=1}^{20}TKE_{max}(x_{max}(n))}{20} 
 \end{align}
@@ -1033,104 +1024,78 @@ Il est également à noter que l'on ne veut pas créer de déphasage du signal. 
 	\label{fig:filtre}
 \end{figure}
 
-\subsubsection{Calibrage du Filtre}
+\subsubsection{Calibrage du filtre}
 
 Une fois le concept du filtre posé, le mode de fonctionnement précis du filtre va maintenant être détaillé. La première étape de la réalisation du filtre est son calibrage, ou l'enregistrement de la bande de base. 
 
 Le calibrage du filtre s'effectue sur une partie de signal où l'on est sur qu'aucune activité musculaire ne sera présente. On demande donc à l'utilisateur de ne pas bouger pendant l'acquisition de la bande de base. Un tonus musculaire au repos est enregistré.
 
 Le signal est alors acquis par fenêtre. Lorsqu'une fenêtre est acquise, on la normalise, c'est à dire qu'on retire sa moyenne à chaque échantillon (eq:normalCalib où $NFFT$ = 16), puis on calcule sa FFT (équation \ref{eq:fftcalib}). Ici $k$ représente le nombre d'échantillons dans la fenêtre étudiée.
-
 \begin{align}\label{eq:normalCalib}
    x_{k=1}^{k=NFFT}(k) = x_{brut}(k) - \frac{\sum_{n=1}^{NFFT}x(n)}{NFFT}
 \end{align}
-
 \begin{align}\label{eq:fftcalib}
    fft = FFT_{16}(x(k)) 
 \end{align}
-
 La FFT calculée par cette opération est donc un tableau de 16 nombres complexes représentant la transformée de fourrier de la fenêtre. En effet, lorsqu'un signal est réel, sa FFT est toujours complexe.
 
 Une fois cette FFT calculée, on sauvegarde la phase du signal pour ne garder que le spectre d'amplitude $M$ de la fenêtre (équation \ref{eq:amplCalib}). Ici $k$ devient la fréquence du spectre étudié.
-
 \begin{align}\label{eq:amplCalib}
    M_{k=1}^{k=NFFT}(k) = \Vert fft(k) \Vert^2
 \end{align}
-
 Ici, $k$ représente le nombre d'échantillons d'une fenêtre de signal. On garde ensuite en mémoire ce spectre d'amplitude, puis on répète l'opération sur 20 fenêtres. Une fois les 20 spectres d'amplitude acquis, on calcule le spectre d'amplitude moyen de ces 20 fenêtres (équation \ref{eq:ampMoyCalib}).
-
 \begin{align}\label{eq:ampMoyCalib}
    BandeBase = \frac{\sum_{n=1}^{20}amplitude(n)}{20}
 \end{align}
-
 Ici, $n$ représente le nombre de FFT gardées en mémoire pour le calcul de la bande de base. Ce spectre d'amplitude moyen constitue la bande de base qui sera comparée à chaque fenêtre du signal pour déterminer à chaque fenêtre la probabilité de présence/absence du bruit dans le signal.
 
-\subsubsection{Description du Filtre}
+\subsubsection{Description du filtre}
 
 Une fois la bande de base du filtre calibrée, le filtre peut être mis en fonctionnement à chaque fenêtre de signal acquise. Cette partie détaille le fonctionnement algorithmique du filtre. 
 
 Une nouvelle fenêtre est acquise. Dans un premier temps, elle est sujette au même traitement que pour la calibration : elle est normalisée (équation \ref{eq:normalCalib}) puis sa FFT est calculée (équation \ref{eq:fftcalib}).
 
 Une fois la FFT obtenue, on sépare le spectre d'amplitude (équation \ref{eq:amplCalib}) de la phase $\phi$ qui cette fois-ci est aussi calculée (équation \ref{eq:phaseFiltre}). En effet, celle-ci sera nécessaire pour reconstruire le signal une fois que l'amplitude aura été modifiée.
-
 \begin{align}\label{eq:phaseFiltre}
    \phi(k) = atan2(\Im(fft(k)), \Re(fft(k)))
 \end{align}
-
 On calcule ensuite la probabilité a posteriori $postsnr$ de présence du filtre en faisant le rapport entre le spectre d'amplitude de la fenêtre et le spectre d'amplitude moyen (équation \ref{eq:probFiltre}).
-
 \begin{align}\label{eq:probFiltre}
    postsnr(k) = \frac{M(k)}{M_{Bande de base}} - 1
 \end{align}
-
 Cette probabilité est ensuite limitée pour ne pas créer de distorsion provoquée par une valeur trop petite (équation \ref{eq:maxPostsnr}). La valeur 0.01 a été trouvée expérimentalement.
-
 \begin{align}\label{eq:maxPostsnr}
    postsnr(k) = \max(postsnr(k), 0.01)
 \end{align}
-
 On compare ensuite la probabilité obtenue avec celle obtenue avec le spectre d'amplitude de la fenêtre précédente. Cette méthode est appelée méthode de la "décision dirigée" (équation \ref{eq:etaFiltre}). Une nouvelle amplitude est alors calculée en appliquant cette probabilité sur l'amplitude d'origine (équation \ref{eq:newMagEta}).
-
 \begin{align}\label{eq:etaFiltre}
    eta(k) = \alpha * \frac{M(k-1)}{M_{Bande de base}} + (1 - \alpha) * postsnr(k)
 \end{align}
-
 $eta$ est l'estimation de présence d'un signal en comparaison de l'échantillon précédent. $\alpha$ est un coefficient fixé dans l'algorithme permettant de définir quand on est en présence de bruit ou d'un signal. Il est en général fixé à une valeur proche de 1, comme 0.999 dans le cas du système.
-
 \begin{align}\label{eq:newMagEta}
    M_{new}(k) = \frac{eta}{eta+1} * M(k)
 \end{align}
-
 $M_{new}$ correspond à la nouvelle amplitude sur laquelle on a déterminé la probabilité de présence de bruit. Ainsi, un gain différent est appliqué sur chaque fréquence du spectre grâce à un gain de Wiener. On calcule ensuite le gain à appliquer sur le spectre d'amplitude en comparant l'amplitude sur laquelle on a appliqué les probabilités a priori avec le spectre d'amplitude moyen (équation \ref{eq:tsnr1}, \ref{eq:tsnr2}, \ref{eq:Gtnsr} et \ref{eq:Gtsnr2}).
-
- \begin{align}\label{eq:tsnr1}
+\begin{align}\label{eq:tsnr1}
    tsnr(k) = \frac{M_{new}(k)}{M_{Bande de base}}
 \end{align}
-
 Ici $tsnr$ représente le rapport signal/bruit de la nouvelle amplitude comparée la bande de base. Elle est utilisée pour calculer $Gtsnr$ qui correspond au gain à appliquer sur l'amplitude pour trouver l'amplitude finale.
-
- \begin{align}\label{eq:tsnr2}
+\begin{align}\label{eq:tsnr2}
    Gtsnr(k) = \frac{tsnr(k)}{tsnr(k)+1}
 \end{align}
-
- \begin{align}\label{eq:Gtnsr}
+\begin{align}\label{eq:Gtnsr}
    Gtsnr(k) = \max(Gtsnr(k), 0.01)
 \end{align}
-
 \begin{align}\label{eq:Gtsnr2}
    M_{final}(k) = Gtsnr * M(k)
 \end{align}
-
 Une fois la nouvelle amplitude calculée, il ne reste plus qu'à reconstruire la fft du signal, en réunissant l'amplitude et la phase (équation\ref{eq:reconFiltre1} et \ref{eq:reconFiltre2}). Ici $k$ correspond toujours à une fréquence sur le spectre.
-
 \begin{align}\label{eq:reconFiltre1}
    \Re(fft(k)) = M_{final}(k) * cos(\phi(k))
 \end{align}
-
 \begin{align}\label{eq:reconFiltre2}
    \Im(fft(k)) = -M_{final}(k) * sin(\phi(k))
 \end{align}
-
 Une fois fait, on effectue la transformée de fourrier inverse pour retrouver le signal EMG filtré. Comme le PIC32 ne possède pas de fonction FFT inverse, on effectue alors la FFT du conjugé du complexe obtenu après filtrage, ce qui fournit le même résultat que la $FFT^{-1}$.
 
 \section{Architecture Logicielle}
@@ -1149,7 +1114,7 @@ Le PIC32 est programmable en langage C, ainsi qu'en assembleur bien qu'il soit p
 
 Cette partie décrira le fonctionnement du PIC32 ainsi que l'algorithme global du firmware. 
 
-\subsubsection{Fonctionnement et Configuration Globale du PIC32}
+\subsubsection{Fonctionnement et configuration globale du PIC32}
 
 Pour présenter le firmware, il est important de présenter la manière de fonctionner du PIC32. La différence principale entre un microcontrôleur et un ordinateur moderne est qu'il est impossible d'exécuter plusieurs programmes en parallèle sur un microcontrôleur. En effet, c'est le système d'exploitation qui permet dans un ordinateur de paralléliser les opérations effectuées. 
 
@@ -1225,7 +1190,7 @@ Ce programme permet également de faire le lien entre le PIC32 et le bras roboti
 
 Enfin la conception complète, à savoir le diagramme UML du programme ainsi que son algorithme principal seront détaillés, ainsi que toute les fonctionnalités finales du programme.
 
-\subsubsection{Choix des Librairies et des langages}
+\subsubsection{Choix des librairies et des langages}
 
 Le choix des langages de programmation ont été effectués au début du projet. En lisant la documentation fournie par Kinova, il s'est avéré possible d'interfacer Jaco avec un programme C++. De plus, l'état de l'art de la robotique moderne utilise largement le langage C++, qui en est devenu un des standards. 
 
@@ -1273,7 +1238,7 @@ En synthétisant :
  \item Le programme se connecte à Jaco en appelant les méthodes de la classe Jaco
 \end{itemize}
 
-\subsubsection{Fonctionnement Global et Schéma UML du Projet}
+\subsubsection{Fonctionnement global et schéma UML du projet}
 
 Le logiciel de monitorage des signaux est un programme basé autour de l'interface graphique réalisée grâce à la librairie Qt. Le diagramme UML (Unified Modeling Language) du programme est présenté par la figure \ref{fig:uml}.
 
@@ -1487,29 +1452,25 @@ Ces données représentent les valeurs brutes enregistrées grâce aux capteurs 
 Une fois les données acquises, 4 paramètres seront estimés pour évaluer la sensibilité du système correspondant au sujet testé : l’efficacité, le coefficient de l’angle maximum, le coefficient de la vitesse angulaire maximale ainsi que l’efficacité globale.
 
 Le paramètre de l’efficacité est définit comme le rapport entre le nombre de détections sur le nombre d’essais total comme montré par l'équation \ref{eq:validEff}.
-
 \begin{align}\label{eq:validEff}
    Efficacite = \frac{Nb\ de\ détections}{Nb\ d'essais\ total} 
 \end{align}
-
 On est en mesure de donner une valeur entre 0 et 1 à l’efficacité du système pour une personne donnée. La valeur 1 indique que le système a détecté toutes les activités réalisées par la personne et la valeur 0 indique au contraire que le système n’en a détecté aucune. 
 
 Cependant ce paramètre ne prend pas en compte les angles et vitesses angulaires atteintes lors des expérimentations. On détermine donc un coefficient d’angle ainsi qu’un coefficient de vitesse angulaire, qui viendront pondérer le coefficient d’efficacité de chaque sujet. Ces coefficients seront basés sur l’angle maximum atteint par un sujet et la vitesse angulaire atteinte par un sujet. Ainsi les résultats seront pondérés relativement au sujet ayant atteint l’angle et la vitesse angulaire les plus grands. 
 
 Ainsi on fixe un angle maximum égal au plus grand atteint par un sujet, ce sujet aura un coefficient d’angle de 1. Les autres auront un coefficient défini comme le définit l'équation \ref{eq:validCoeffAng}. 
-
 \begin{align}\label{eq:validCoeffAng}
    Coeff_{angle} = \frac{Angle\ max\ du\ sujet}{Angle\ max\ atteint\ par\ un\ sujet} 
 \end{align}
-
 De la même manière un coefficient de vitesse angulaire sera appliqué. On fixe une vitesse angulaire maximum atteinte par un sujet, celui-ci aura un coefficient de vitesse angulaire de 1. Les autres auront un coefficient défini comme le définit l'équation \ref{eq:validCoeffVit}.
-
 \begin{align}\label{eq:validCoeffVit}
    Coeff_{vitesse} = \frac{Vitesse\ angulaire\ max\ du\ sujet}{Vitesse\ angulaire\ max\ atteint\ par\ un\ sujet} 
 \end{align}
-
 Cela nous permet donc de fixer une efficacité globale pour chaque sujet qui sera calculée à partir de l’équation suivante : 
-
+\begin{align}\label{eq:validCoeffGlobal}
+   Eff_{globale} = Efficacite * Coeff_{angle} * Coeff_{vitesse} 
+\end{align}
 
 \subsubsection{Comparaison des données}
 
@@ -1583,7 +1544,7 @@ Ainsi, si on reporte ces temps de calculs sur un même chronogramme, on est en m
 	\fbox{
 		\includegraphics[width=0.8\linewidth]{Figures/chronogrammeDiscussion.png}
 	}
-	\caption{Etude du temps de calcul utilisé par le système}
+	\caption{Etude du temps de calcul utilisé par le système.}
 	\label{fig:chronogrammeDisc}
 \end{figure}
 
@@ -1789,7 +1750,7 @@ Intéressons nous maintenant aux données obtenues. Dans un premier temps obervo
 
 Cependant, le système ne donne pas du tout une meilleure efficacité aux hommes qu'aux femmes. En effet, les deux meilleures efficacités avec filtrages du signal sont celles des sujets S001 et S005 qui sont des femmes. 
 
-A l'inverse, sur les sujets S001, S005 et S008, on remarque que le système ne détecte jamais l'angle de 30 degrés excepté pour les deux ou trois plus grandes vitesses de rotation.  
+À l'inverse, sur les sujets S001, S005 et S008, on remarque que le système ne détecte jamais l'angle de 30 degrés excepté pour les deux ou trois plus grandes vitesses de rotation.  
 
 Si l'on s'intéresse aux angles maximums atteints présentés par la figure \ref{fig:anglesmax}, on remarque que tout le monde, excepté le sujet S004 atteint des angles comparables d'environ 80 degrés. Le système de visée des cibles n'étant pas précis, la pondération des efficacités par l'angle maximum de chaque sujet n'apporte pas d'information supplémentaire, sauf pour le sujet S004. 
 
@@ -1977,7 +1938,7 @@ Grâce à ce type de visualisation, il est très facile d'observer rapidement si
 \begin{figure}
 	\centering
 	\fbox{
-		\includegraphics[width=0.8\linewidth] {Figures/mapS005Fon.png}
+		\includegraphics[width=0.7\linewidth] {Figures/mapS005Fon.png}
 	}
 	\caption{Carte de détection du sujet S005 pour le système avec filtrage. En abscisses sont représentées les vitesses angulaires et en ordonnées les angles. La zone blanche constitue la zone où une activité musculaire a été détectée et la zone noire une zone ou aucune activité musculaire n'a été détectée.}
 	\label{fig:cartedetection}
@@ -2130,11 +2091,9 @@ Cette annexe a pour but de décrire la procédure de construction de l'expérien
 La première étape est de fixer la position du sujet. Pour cela, on place des marqueurs au sol pour fixer la position de la chaise au sol. La personne doit être assise au fond de la chaise, contre le dossier, pour que la tête soit environ toujours à la même distance de la cible centrale. 
 
 Afin de placer correctement les cibles désignant les angles, on mesure la distance entre la tête du sujet et la cible centrale. Puis connaissant l'angle cible, on trouve la distance $l$ grâce à la relation décrite par l'équation \ref{eq:montage}.
-
 \begin{align}\label{eq:montage}
    l = h*tan(a*\frac{\pi}{180} )
 \end{align}
-
 Ainsi on est en mesure de placer correctement chaque cible sur le mur grâce à une relation trigonométrique simple.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2150,12 +2109,12 @@ Ainsi on est en mesure de placer correctement chaque cible sur le mur grâce à 
 %Changement d'interligne pour passer en simple pour les références et la bibliographie.
 
 %\newpage
-\singlespacing
+%\singlespacing
 %\nociterefs{*} %Ici vous devez inclure les références qui ne sont pas cités, ou étoiles pour toutes les réfs
-\bibliographystylerefs{bibETS}
-\addcontentsline{toc}{chapter}{LISTE DE RÉFÉRENCES}
-\bibliographyrefs{refs} % à décommanter et indiquer la liste des fichiers bib
-\onehalfspacing
+%\bibliographystylerefs{bibETS}
+%\addcontentsline{toc}{chapter}{LISTE DE RÉFÉRENCES}
+%\bibliographyrefs{refs} % à décommanter et indiquer la liste des fichiers bib
+%\onehalfspacing
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 
