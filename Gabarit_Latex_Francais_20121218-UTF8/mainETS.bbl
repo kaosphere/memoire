@@ -48,7 +48,7 @@ Crawford, Beau, Kai Miller, Pradeep Shenoy, et Rajesh Rao.
 \newblock In \emph{Proceedings of the National Conference on Artificial
   Intelligence}.
 \newblock p. 523.
-\newblock Menlo Park, CA; Cambridge, MA; London; AAAI Press; MIT Press; 1999.
+\newblock Menlo Park, CA; Cambridge, MA; London; AAAI Press; MIT Press;.
 
 \bibitem[Englehart et Hudgins(2003)Englehart, Kevin et Bernard
   Hudgins]{Englehart2003}
@@ -96,7 +96,7 @@ Li, Xiaoyan, Ping Zhou, et Alexander~S Aruin.
 Maheu, V.
 \newblock 2011.
 \newblock \og Développement des critères d'apprentissage pour le contrôle
-  d'un bras robot manipulateur à 7DDL par le traitement des signaux EMG chez
+  d'un bras robot manipulateur à 7 DDL par le traitement des signaux EMG chez
   les blessés médullaires.\fg .
 \newblock Maîtrise en génie des technologies de la santé, Montréal, École
   de Technologie Supérieure, 133~p.
@@ -106,9 +106,9 @@ Maheu, V.
 Martinez, R, R~Munoz, L~Leija, PR~Hernandez, et Ja~Alvarez.
 \newblock 1999.
 \newblock \og A control unit for myoelectrically controlled prosthesis\fg .
-\newblock In \emph{[Engineering in Medicine and Biology, 1999. 21st Annual
-  Conf. and the 1999 Annual Fall Meeting of the Biomedical Engineering Soc.]
-  BMES/EMBS Conference, 1999. Proceedings of the First Joint}.
+\newblock In \emph{[Engineering in Medicine and Biology. 21st Annual Conf. and
+  the 1999 Annual Fall Meeting of the Biomedical Engineering Soc.] BMES/EMBS
+  Conference. Proceedings of the First Joint}.
 \newblock p. 641--vol.
 \newblock IEEE.
 
@@ -154,8 +154,8 @@ Tenore, Francesco, Ander Ramos, Amir Fahmy, Soumyadipta Acharya, Ralph
 \newblock 2007.
 \newblock \og Towards the control of individual fingers of a prosthetic hand
   using surface EMG signals\fg .
-\newblock In \emph{Engineering in Medicine and Biology Society, 2007. EMBS
-  2007. 29th Annual International Conference of the IEEE}.
+\newblock In \emph{Engineering in Medicine and Biology Society. EMBS. 29th
+  Annual International Conference of the IEEE}.
 \newblock p. 6145--6148.
 \newblock IEEE.
 

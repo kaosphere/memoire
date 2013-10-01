@@ -23,46 +23,46 @@
 \BOOKMARK [2][-]{subsection.37}{\311lectrodes}{section.35}% 23
 \BOOKMARK [2][-]{subsection.40}{Microcontr\364leur}{section.35}% 24
 \BOOKMARK [2][-]{subsection.43}{Adaptation des tensions}{section.35}% 25
-\BOOKMARK [2][-]{subsection.50}{Liaison \340 l'ordinateur}{section.35}% 26
-\BOOKMARK [2][-]{subsection.53}{Liaison \340 Jaco}{section.35}% 27
-\BOOKMARK [2][-]{subsection.54}{Sch\351ma mat\351riel global}{section.35}% 28
-\BOOKMARK [1][]{section.57}{Choix des caract\351ristiques du signal et des outils algorithmiques et math\351matiques}{chapter.32}% 29
-\BOOKMARK [2][-]{subsection.58}{D\351coupage des fen\352tres d'\351chantillons}{section.57}% 30
-\BOOKMARK [2][-]{subsection.59}{D\351tection d'activit\351 musculaire}{section.57}% 31
-\BOOKMARK [3][-]{subsubsection.60}{\311nergie de Teager-Keiser}{subsection.59}% 32
-\BOOKMARK [3][-]{subsubsection.63}{Calibrage du seuil de d\351tection}{subsection.59}% 33
-\BOOKMARK [3][-]{subsubsection.67}{Vote \340 la majorit\351}{subsection.59}% 34
-\BOOKMARK [2][-]{subsection.70}{Filtrage par d\351cision dirig\351e}{section.57}% 35
-\BOOKMARK [3][-]{subsubsection.71}{Concept}{subsection.70}% 36
-\BOOKMARK [3][-]{subsubsection.73}{Calibrage du filtre}{subsection.70}% 37
-\BOOKMARK [3][-]{subsubsection.78}{Description du filtre}{subsection.70}% 38
-\BOOKMARK [1][]{section.90}{Architecture Logicielle}{chapter.32}% 39
-\BOOKMARK [2][-]{subsection.91}{Firmware}{section.90}% 40
-\BOOKMARK [3][-]{subsubsection.92}{Fonctionnement et configuration globale du PIC32}{subsection.91}% 41
-\BOOKMARK [3][-]{subsubsection.93}{Alogorithme global}{subsection.91}% 42
-\BOOKMARK [2][-]{subsection.96}{Application de monitorage des signaux}{section.90}% 43
-\BOOKMARK [3][-]{subsubsection.97}{Choix des librairies et des langages}{subsection.96}% 44
-\BOOKMARK [3][-]{subsubsection.98}{Lien avec Jaco et Mono}{subsection.96}% 45
-\BOOKMARK [3][-]{subsubsection.100}{Fonctionnement global et sch\351ma UML du projet}{subsection.96}% 46
-\BOOKMARK [1][]{section.105}{Validation du Syst\350me}{chapter.32}% 47
-\BOOKMARK [2][-]{subsection.106}{Protocole de validation}{section.105}% 48
-\BOOKMARK [3][-]{subsubsection.107}{Mode de recrutement}{subsection.106}% 49
-\BOOKMARK [3][-]{subsubsection.108}{Principe de fonctionnement}{subsection.106}% 50
-\BOOKMARK [3][-]{subsubsection.109}{Protocole exp\351rimental}{subsection.106}% 51
-\BOOKMARK [3][-]{subsubsection.111}{D\351roulement des acquisitions}{subsection.106}% 52
-\BOOKMARK [3][-]{subsubsection.112}{Notes importantes}{subsection.106}% 53
-\BOOKMARK [3][-]{subsubsection.113}{Exemple de donn\351es r\351colt\351es}{subsection.106}% 54
-\BOOKMARK [3][-]{subsubsection.118}{Interpr\351tation des donn\351es}{subsection.106}% 55
-\BOOKMARK [3][-]{subsubsection.123}{Comparaison des donn\351es}{subsection.106}% 56
-\BOOKMARK [0][]{chapter.124}{Chapitre 5 R\351sultats}{}% 57
-\BOOKMARK [1][]{section.125}{Performances globales}{chapter.124}% 58
-\BOOKMARK [1][]{section.128}{Temps de calcul et chronogrammes}{chapter.124}% 59
-\BOOKMARK [1][]{section.131}{Validation du syst\350me}{chapter.124}% 60
-\BOOKMARK [0][]{chapter.147}{Chapitre 6 Discussion}{}% 61
-\BOOKMARK [1][]{section.148}{Performances globales du syst\350me}{chapter.147}% 62
-\BOOKMARK [1][]{section.149}{Chronogrammes et temps de calculs}{chapter.147}% 63
-\BOOKMARK [1][]{section.150}{Validation des performances du syst\350me}{chapter.147}% 64
-\BOOKMARK [0][]{chapter*.151}{CONCLUSION}{}% 65
-\BOOKMARK [0][]{chapter*.152}{CONTRIBUTIONS}{}% 66
-\BOOKMARK [0][]{chapter.153}{Annexe I Conception du montage pour la validation du syst\350me}{}% 67
-\BOOKMARK [0][]{equation.155}{BIBLIOGRAPHIE}{}% 68
+\BOOKMARK [2][-]{subsection.48}{Liaison \340 l'ordinateur}{section.35}% 26
+\BOOKMARK [2][-]{subsection.51}{Liaison \340 Jaco}{section.35}% 27
+\BOOKMARK [2][-]{subsection.52}{Sch\351ma mat\351riel global}{section.35}% 28
+\BOOKMARK [1][]{section.55}{Choix des caract\351ristiques du signal et des outils algorithmiques et math\351matiques}{chapter.32}% 29
+\BOOKMARK [2][-]{subsection.56}{D\351coupage des fen\352tres d'\351chantillons}{section.55}% 30
+\BOOKMARK [2][-]{subsection.57}{D\351tection d'activit\351 musculaire}{section.55}% 31
+\BOOKMARK [3][-]{subsubsection.58}{\311nergie de Teager-Keiser}{subsection.57}% 32
+\BOOKMARK [3][-]{subsubsection.61}{Calibrage du seuil de d\351tection}{subsection.57}% 33
+\BOOKMARK [3][-]{subsubsection.65}{Vote \340 la majorit\351}{subsection.57}% 34
+\BOOKMARK [2][-]{subsection.68}{Filtrage par d\351cision dirig\351e}{section.55}% 35
+\BOOKMARK [3][-]{subsubsection.69}{Concept}{subsection.68}% 36
+\BOOKMARK [3][-]{subsubsection.71}{Calibrage du filtre}{subsection.68}% 37
+\BOOKMARK [3][-]{subsubsection.76}{Description du filtre}{subsection.68}% 38
+\BOOKMARK [1][]{section.88}{Architecture Logicielle}{chapter.32}% 39
+\BOOKMARK [2][-]{subsection.89}{Firmware}{section.88}% 40
+\BOOKMARK [3][-]{subsubsection.90}{Fonctionnement et configuration globale du PIC32}{subsection.89}% 41
+\BOOKMARK [3][-]{subsubsection.91}{Alogorithme global}{subsection.89}% 42
+\BOOKMARK [2][-]{subsection.94}{Application de monitorage des signaux}{section.88}% 43
+\BOOKMARK [3][-]{subsubsection.95}{Choix des librairies et des langages}{subsection.94}% 44
+\BOOKMARK [3][-]{subsubsection.96}{Lien avec Jaco et Mono}{subsection.94}% 45
+\BOOKMARK [3][-]{subsubsection.98}{Fonctionnement global et sch\351ma UML du projet}{subsection.94}% 46
+\BOOKMARK [1][]{section.103}{Validation du Syst\350me}{chapter.32}% 47
+\BOOKMARK [2][-]{subsection.104}{Protocole de validation}{section.103}% 48
+\BOOKMARK [3][-]{subsubsection.105}{Mode de recrutement}{subsection.104}% 49
+\BOOKMARK [3][-]{subsubsection.106}{Principe de fonctionnement}{subsection.104}% 50
+\BOOKMARK [3][-]{subsubsection.107}{Protocole exp\351rimental}{subsection.104}% 51
+\BOOKMARK [3][-]{subsubsection.109}{D\351roulement des acquisitions}{subsection.104}% 52
+\BOOKMARK [3][-]{subsubsection.110}{Notes importantes}{subsection.104}% 53
+\BOOKMARK [3][-]{subsubsection.111}{Donn\351es r\351colt\351es}{subsection.104}% 54
+\BOOKMARK [3][-]{subsubsection.116}{Interpr\351tation des donn\351es}{subsection.104}% 55
+\BOOKMARK [3][-]{subsubsection.121}{Comparaison des donn\351es}{subsection.104}% 56
+\BOOKMARK [0][]{chapter.122}{Chapitre 5 R\351sultats}{}% 57
+\BOOKMARK [1][]{section.123}{Performances globales}{chapter.122}% 58
+\BOOKMARK [1][]{section.126}{Temps de calcul et chronogrammes}{chapter.122}% 59
+\BOOKMARK [1][]{section.129}{Validation du syst\350me}{chapter.122}% 60
+\BOOKMARK [0][]{chapter.144}{Chapitre 6 Discussion}{}% 61
+\BOOKMARK [1][]{section.145}{Performances globales du syst\350me}{chapter.144}% 62
+\BOOKMARK [1][]{section.146}{Chronogrammes et temps de calculs}{chapter.144}% 63
+\BOOKMARK [1][]{section.147}{Validation des performances du syst\350me}{chapter.144}% 64
+\BOOKMARK [0][]{chapter*.148}{CONCLUSION}{}% 65
+\BOOKMARK [0][]{chapter*.149}{CONTRIBUTIONS}{}% 66
+\BOOKMARK [0][]{chapter.150}{Annexe I Conception du montage pour la validation du syst\350me}{}% 67
+\BOOKMARK [0][]{equation.152}{BIBLIOGRAPHIE}{}% 68
